@@ -1,0 +1,6 @@
+16:54:09 **** Incremental Build of configuration x86_64-debug for project TestFix ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+16:54:09 Build Finished (took 85ms)
+

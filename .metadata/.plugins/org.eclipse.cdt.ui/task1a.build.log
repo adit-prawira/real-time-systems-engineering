@@ -1,0 +1,8 @@
+20:16:38 **** Build of configuration armv7le-debug for project task1a ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/task1a.d,-MT,build/armv7le-debug/src/task1a.o -o build/armv7le-debug/src/task1a.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/task1a.c
+make: qcc: No such file or directory
+make: *** [build/armv7le-debug/src/task1a.o] Error 1
+
+20:16:38 Build Finished (took 140ms)
+

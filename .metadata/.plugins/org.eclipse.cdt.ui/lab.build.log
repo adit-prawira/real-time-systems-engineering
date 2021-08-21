@@ -1,0 +1,8 @@
+20:03:52 **** Build of configuration armv7le-debug for project lab ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/lab.d,-MT,build/armv7le-debug/src/lab.o -o build/armv7le-debug/src/lab.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab.c
+make: qcc: No such file or directory
+make: *** [build/armv7le-debug/src/lab.o] Error 1
+
+20:03:52 Build Finished (took 140ms)
+

@@ -1,0 +1,6 @@
+16:46:56 **** Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+16:46:56 Build Finished (took 116ms)
+

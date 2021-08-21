@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define NTHD_START "=======Numerical Thread started=======\n"
+#define CTHD_START "=======Character Thread started=======\n"
+#define NTHD_END "=======Numerical Thread started=======\n"
+#define CTHD_END "=======Character Thread started=======\n"
+
+// type definition for the message at the start and end
+typedef struct {
+	char start[100];
+	char end[100];
+}message;
+
+// type definition that will store maximum character per line
+typedef struct {
+	int threadNumber;
+	int upperBound;
+	char type;
+	message msg;
+} appData;
+
+void *printThread(void * data){
+	appData *thread = (appData*) data;
+	printf("%s", thread->msg.start);
+	return 0;
+}
+
+
+int main(void) {
+	pthread_t thread1, thread2;
+	appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+	appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+	void *returnValue;
+
+	pthread_create(&thread1, NULL, printThread, &threadData1);
+	pthread_create(&thread2, NULL, printThread, &threadData2);
+	pthread_join(thread1, &returnValue);
+	pthread_join(thread2, &returnValue);
+	return EXIT_SUCCESS;
+}

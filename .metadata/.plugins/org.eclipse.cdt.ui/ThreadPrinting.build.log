@@ -1,0 +1,11 @@
+21:53:45 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:61:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+
+21:53:45 Build Finished (took 225ms)
+

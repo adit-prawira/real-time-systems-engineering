@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <mqueue.h>
+#include <sys/syspage.h>
+
+#define MESSAGE_SIZE 1000
+#define Q_FLAGS O_RDWR | O_CREAT | O_EXCL
+#define Q_Mode S_IRUSR | S_IWUSR
+const char * MqueueLocation = "/net/aditya2/test_queue";
+//const char *MqueueLocation = "/test_queue";
+int main(void) {
+	mqd_t qd;
+	char buffer[MESSAGE_SIZE] = {};
+	struct mq_attr attr;
+
+	attr.mq_maxmsg = 100; // declare maximum number of messages
+	attr.mq_msgsize = MESSAGE_SIZE;
+	attr.mq_flags = 0;
+	attr.mq_curmsgs = 0;
+	attr.mq_sendwait = 0;
+	attr.mq_recvwait = 0;
+
+	struct mq_attr *msgAttributes = &attr;
+
+	qd = mq_open(MqueueLocation, Q_FLAGS, Q_Mode, msgAttributes);
+	if(qd != -1){
+		for(int i =0 ; i <= 5; i++){
+			sprintf(buffer, "message %d", i);
+			printf("Sending message to mqueue: '%s'\n", buffer);
+			mq_send(qd, buffer, MESSAGE_SIZE, 0);
+			sleep(2); // blocked for 2 seconds
+		}
+
+		mq_send(qd, "done", 5, 0);
+		printf("\nWait 10 seconds before closing mqueue\n");
+		sleep(10);
+		mq_close(qd);
+		mq_unlink(MqueueLocation);
+	}else{
+		printf("\nmqueue could not be opened\n");
+	}
+
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,8 @@
+10:58:06 **** Build of configuration x86_64-debug for project lab2 ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab2.d,-MT,build/x86_64-debug/src/lab2.o -o build/x86_64-debug/src/lab2.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab2.c
+make: qcc: No such file or directory
+make: *** [build/x86_64-debug/src/lab2.o] Error 1
+
+10:58:06 Build Finished (took 81ms)
+

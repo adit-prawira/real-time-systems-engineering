@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define NUMERICAL_THREAD "=======Numerical Thread started=======\n";
+#define CHARACTER_THREAD "=======Character Thread started=======\n";
+// type definition that will store maximum character per line;
+typedef struct {
+	int threadNumber;
+	int upperBound;
+	char type;
+} appData;
+
+void *printThread(void * data){
+	appData *thread = (appData*) data;
+	return 0;
+}
+
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

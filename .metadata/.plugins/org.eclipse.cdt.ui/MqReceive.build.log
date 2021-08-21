@@ -1,0 +1,14 @@
+19:34:18 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/MqReceive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+
+19:34:18 Build Finished (took 333ms)
+

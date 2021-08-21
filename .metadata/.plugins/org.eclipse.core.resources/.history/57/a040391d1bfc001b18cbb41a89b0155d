@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <mqueue.h>
+#include <sys/syspage.h>
+#define MESSAGE_SIZE 1000
+
+const char * MqueueLocation = "/net/aditya2/test_queue";
+//const char *MqueueLocation = "/test_queue";
+int main(void) {
+	mqd_t qd;
+	char buffer[MESSAGE_SIZE] = {};
+	struct mq_attr attribute;
+
+	if((qd = mq_open(MqueueLocation, O_RDONLY)) != -1){
+		mq_getattr(qd, &attribute);
+		printf("max. %u messages, %u bytes; waiting: %u\n",
+				attribute.mq_maxmsg, attribute.mq_msgsize, attribute.mq_curmsgs);
+		while(mq_receive(qd, buffer, MESSAGE_SIZE, NULL) > 0){
+			printf("Receiving message from mqueue: '%s'\n", buffer);
+			if(!strcmp(buffer, "done")) break;
+		}
+		mq_close(qd);
+	}else{
+		printf("\nmqueue could not be opened\n");
+	}
+	return EXIT_SUCCESS;
+}

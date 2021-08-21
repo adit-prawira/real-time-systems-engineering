@@ -1,0 +1,6 @@
+19:36:36 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+19:36:36 Build Finished (took 76ms)
+

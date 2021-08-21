@@ -1,0 +1,7 @@
+15:26:25 **** Build of configuration armv7le-debug for project ThreadPriority ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPriority.d,-MT,build/armv7le-debug/src/ThreadPriority.o -o build/armv7le-debug/src/ThreadPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPriority.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPriority   build/armv7le-debug/src/ThreadPriority.o  
+
+15:26:25 Build Finished (took 399ms)
+

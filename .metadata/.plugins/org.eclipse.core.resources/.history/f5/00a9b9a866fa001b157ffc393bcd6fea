@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// type definition that will store maximum character per line;
+typedef struct {
+	int upperBound;
+	char type;
+} appData;
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

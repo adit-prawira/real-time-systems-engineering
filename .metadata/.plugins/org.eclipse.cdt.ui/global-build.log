@@ -1,0 +1,2715 @@
+10:43:12 **** Build of configuration armv7le-debug for project lab2 ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/lab2.d,-MT,build/armv7le-debug/src/lab2.o -o build/armv7le-debug/src/lab2.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab2.c
+make: qcc: No such file or directory
+make: *** [build/armv7le-debug/src/lab2.o] Error 1
+10:44:22 **** Incremental Build of configuration x86_64-debug for project lab2 ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab2.d,-MT,build/x86_64-debug/src/lab2.o -o build/x86_64-debug/src/lab2.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab2.c
+make: qcc: No such file or directory
+make: *** [build/x86_64-debug/src/lab2.o] Error 1
+10:47:06 **** Build of configuration x86-debug for project lab2 ****
+make -j3 all 
+qcc -Vgcc_ntox86 -c -Wp,-MMD,build/x86-debug/src/lab2.d,-MT,build/x86-debug/src/lab2.o -o build/x86-debug/src/lab2.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab2.c
+make: qcc: No such file or directory
+make: *** [build/x86-debug/src/lab2.o] Error 1
+10:58:06 **** Build of configuration x86_64-debug for project lab2 ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab2.d,-MT,build/x86_64-debug/src/lab2.o -o build/x86_64-debug/src/lab2.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab2.c
+make: qcc: No such file or directory
+make: *** [build/x86_64-debug/src/lab2.o] Error 1
+11:01:38 **** Build of configuration armv7le-debug for project task1 ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/task1.d,-MT,build/armv7le-debug/src/task1.o -o build/armv7le-debug/src/task1.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/task1.c
+make: qcc: No such file or directory
+make: *** [build/armv7le-debug/src/task1.o] Error 1
+20:03:52 **** Build of configuration armv7le-debug for project lab ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/lab.d,-MT,build/armv7le-debug/src/lab.o -o build/armv7le-debug/src/lab.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab.c
+make: qcc: No such file or directory
+make: *** [build/armv7le-debug/src/lab.o] Error 1
+20:16:38 **** Build of configuration armv7le-debug for project task1a ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/task1a.d,-MT,build/armv7le-debug/src/task1a.o -o build/armv7le-debug/src/task1a.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/task1a.c
+make: qcc: No such file or directory
+make: *** [build/armv7le-debug/src/task1a.o] Error 1
+12:05:55 **** Build of configuration armv7le-debug for project Thread ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/Thread.d,-MT,build/armv7le-debug/src/Thread.o -o build/armv7le-debug/src/Thread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Thread.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/Thread   build/armv7le-debug/src/Thread.o  
+13:33:17 **** Incremental Build of configuration x86_64-debug for project Thread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Thread.d,-MT,build/x86_64-debug/src/Thread.o -o build/x86_64-debug/src/Thread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Thread.c
+src/Thread.c: In function 'thread_ex':
+src/Thread.c:12:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(20);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Thread   build/x86_64-debug/src/Thread.o  
+13:33:58 **** Incremental Build of configuration x86_64-debug for project Thread ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:34:46 **** Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+13:34:49 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:36:23 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+13:37:07 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+src/ThreadState.c: In function 'thread_ex':
+src/ThreadState.c:7:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(20);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+13:41:57 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+src/ThreadState.c: In function 'thread_ex':
+src/ThreadState.c:7:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(20);
+  ^
+src/ThreadState.c: In function 'main':
+src/ThreadState.c:14:6: warning: unused variable 'n' [-Wunused-variable]
+  int n;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+13:44:20 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:47:08 **** Build of configuration armv7le-debug for project ThreadExample ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadExample.d,-MT,build/armv7le-debug/src/ThreadExample.o -o build/armv7le-debug/src/ThreadExample.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadExample.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadExample   build/armv7le-debug/src/ThreadExample.o  
+13:52:44 **** Incremental Build of configuration x86_64-debug for project ThreadExample ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadExample.d,-MT,build/x86_64-debug/src/ThreadExample.o -o build/x86_64-debug/src/ThreadExample.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadExample.c
+src/ThreadExample.c: In function 'thread_ex':
+src/ThreadExample.c:37:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(td->d);
+    ^
+src/ThreadExample.c: In function 'main':
+src/ThreadExample.c:53:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&th1, &retval);
+               ^
+In file included from src/ThreadExample.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/ThreadExample.c:55:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&th2, &retval);
+               ^
+In file included from src/ThreadExample.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadExample   build/x86_64-debug/src/ThreadExample.o  
+13:53:00 **** Incremental Build of configuration x86_64-debug for project ThreadExample ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadExample.d,-MT,build/x86_64-debug/src/ThreadExample.o -o build/x86_64-debug/src/ThreadExample.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadExample.c
+src/ThreadExample.c: In function 'thread_ex':
+src/ThreadExample.c:37:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(td->d);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadExample   build/x86_64-debug/src/ThreadExample.o  
+14:05:55 **** Incremental Build of configuration x86_64-debug for project ThreadExample ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadExample.d,-MT,build/x86_64-debug/src/ThreadExample.o -o build/x86_64-debug/src/ThreadExample.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadExample.c
+src/ThreadExample.c: In function 'thread_ex':
+src/ThreadExample.c:37:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(td->d);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadExample   build/x86_64-debug/src/ThreadExample.o  
+14:06:03 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+src/ThreadState.c: In function 'secondChildThread':
+src/ThreadState.c:17:2: error: expected ';' before 'scanf'
+  scanf("%d", &n);
+  ^
+src/ThreadState.c:15:6: warning: unused variable 'n' [-Wunused-variable]
+  int n;
+      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadState.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ThreadState.o] Error 1
+14:06:34 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:14:17 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:14:55 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:17:21 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:26:47 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:27:55 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:28:57 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+src/ThreadState.c: In function 'secondChildThread':
+src/ThreadState.c:20:2: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+  pritnf("Enter a number here: ");
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+build/x86_64-debug/src/ThreadState.o: In function `secondChildThread':
+/Users/adityaaaap/ide-7.0-workspace/ThreadState//src/ThreadState.c:20: undefined reference to `pritnf'
+Makefile:60: recipe for target 'build/x86_64-debug/ThreadState' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/ThreadState] Error 1
+14:29:17 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+build/x86_64-debug/src/ThreadState.o: In function `secondChildThread':
+/Users/adityaaaap/ide-7.0-workspace/ThreadState//src/ThreadState.c:20: undefined reference to `pritnf'
+Makefile:60: recipe for target 'build/x86_64-debug/ThreadState' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/ThreadState] Error 1
+14:29:29 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:31:01 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:34:11 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:37:08 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:38:08 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:44:55 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:46:06 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+14:58:04 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:00:13 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:01:42 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:02:37 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:02:46 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:03:45 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:04:55 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+src/ThreadState.c: In function 'secondChildThread':
+src/ThreadState.c:17:7: warning: unused variable 'message' [-Wunused-variable]
+  char message[] = "Enter a number";
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:05:42 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:06:24 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:07:46 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadState.d,-MT,build/x86_64-debug/src/ThreadState.o -o build/x86_64-debug/src/ThreadState.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadState.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadState   build/x86_64-debug/src/ThreadState.o  
+15:08:21 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:08:58 **** Incremental Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:26:25 **** Build of configuration armv7le-debug for project ThreadPriority ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPriority.d,-MT,build/armv7le-debug/src/ThreadPriority.o -o build/armv7le-debug/src/ThreadPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPriority.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPriority   build/armv7le-debug/src/ThreadPriority.o  
+15:36:52 **** Build of configuration armv7le-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPrints.d,-MT,build/armv7le-debug/src/ThreadPrints.o -o build/armv7le-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPrints   build/armv7le-debug/src/ThreadPrints.o  
+15:54:31 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:23:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:30:10: warning: unused variable 'threadData1' [-Wunused-variable]
+  appData threadData1 = {1, 10, 'c', {CTHD_START, CTHD_END}};
+          ^
+src/ThreadPrints.c:29:21: warning: unused variable 'thread2' [-Wunused-variable]
+  pthread_t thread1, thread2;
+                     ^
+src/ThreadPrints.c:29:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+15:55:27 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:23:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+15:59:40 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:31:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:31:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:32:10: error: redefinition of 'threadData1'
+  appData threadData1 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+          ^
+src/ThreadPrints.c:31:10: note: previous definition of 'threadData1' was here
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+          ^
+src/ThreadPrints.c:32:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:32:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:35:2: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+  pthread_create(&thread1, NULL, printThread, &threadData1);
+  ^
+src/ThreadPrints.c:36:47: error: 'threadData2' undeclared (first use in this function)
+  pthread_create(&thread2, NULL, printThread, &threadData2);
+                                               ^
+src/ThreadPrints.c:36:47: note: each undeclared identifier is reported only once for each function it appears in
+src/ThreadPrints.c:37:2: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+  pthread_join(thread1, &returnValue);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+15:59:52 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:31:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:31:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:32:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:32:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:35:2: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+  pthread_create(&thread1, NULL, printThread, &threadData1);
+  ^
+src/ThreadPrints.c:37:2: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+  pthread_join(thread1, &returnValue);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:00:38 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:13:21 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:35:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:35:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:38:2: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+  pthread_create(&thread1, NULL, printThread, &threadData1);
+  ^
+src/ThreadPrints.c:39:2: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+  pthread_join(thread1, &returnValue);
+  ^
+src/ThreadPrints.c:40:2: warning: implicit declaration of function 'pthread_attr_init' [-Wimplicit-function-declaration]
+  pthread_attr_init(&threadAttributes2);
+  ^
+src/ThreadPrints.c:41:2: error: 'threadParams2' undeclared (first use in this function)
+  threadParams2.sched_priority = 1;
+  ^
+src/ThreadPrints.c:41:2: note: each undeclared identifier is reported only once for each function it appears in
+src/ThreadPrints.c:42:2: warning: implicit declaration of function 'pthread_attr_setsschedparam' [-Wimplicit-function-declaration]
+  pthread_attr_setsschedparam(&threadAttributes2, &threadParams2);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:13:44 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:40:2: warning: implicit declaration of function 'pthread_attr_init' [-Wimplicit-function-declaration]
+  pthread_attr_init(&threadAttributes2);
+  ^
+src/ThreadPrints.c:41:2: error: 'threadParams2' undeclared (first use in this function)
+  threadParams2.sched_priority = 1;
+  ^
+src/ThreadPrints.c:41:2: note: each undeclared identifier is reported only once for each function it appears in
+src/ThreadPrints.c:42:2: warning: implicit declaration of function 'pthread_attr_setsschedparam' [-Wimplicit-function-declaration]
+  pthread_attr_setsschedparam(&threadAttributes2, &threadParams2);
+  ^
+src/ThreadPrints.c:43:2: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+  pthread_create(&thread2, NULL, printThread, &threadData2);
+  ^
+src/ThreadPrints.c:44:2: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+  pthread_join(thread2, &returnValue);
+  ^
+src/ThreadPrints.c:32:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:14:09 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:34:21: error: storage size of 'threadParams2' isn't known
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:40:2: warning: implicit declaration of function 'pthread_attr_init' [-Wimplicit-function-declaration]
+  pthread_attr_init(&threadAttributes2);
+  ^
+src/ThreadPrints.c:42:2: warning: implicit declaration of function 'pthread_attr_setsschedparam' [-Wimplicit-function-declaration]
+  pthread_attr_setsschedparam(&threadAttributes2, &threadParams2);
+  ^
+src/ThreadPrints.c:43:2: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+  pthread_create(&thread2, NULL, printThread, &threadData2);
+  ^
+src/ThreadPrints.c:44:2: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+  pthread_join(thread2, &returnValue);
+  ^
+src/ThreadPrints.c:34:21: warning: unused variable 'threadParams2' [-Wunused-variable]
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:32:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:14:26 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:34:21: error: storage size of 'threadParams2' isn't known
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:36:10: warning: unused variable 'threadData2' [-Wunused-variable]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+          ^
+src/ThreadPrints.c:34:21: warning: unused variable 'threadParams2' [-Wunused-variable]
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:33:17: warning: unused variable 'threadAttributes2' [-Wunused-variable]
+  pthread_attr_t threadAttributes2;
+                 ^
+src/ThreadPrints.c:32:21: warning: unused variable 'thread2' [-Wunused-variable]
+  pthread_t thread1, thread2;
+                     ^
+src/ThreadPrints.c:32:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+src/ThreadPrints.c:31:8: warning: unused variable 'returnValue' [-Wunused-variable]
+  void *returnValue;
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:15:03 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:35:21: error: storage size of 'threadParams2' isn't known
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:37:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:37:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:37:10: warning: unused variable 'threadData2' [-Wunused-variable]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+          ^
+src/ThreadPrints.c:35:21: warning: unused variable 'threadParams2' [-Wunused-variable]
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:34:17: warning: unused variable 'threadAttributes2' [-Wunused-variable]
+  pthread_attr_t threadAttributes2;
+                 ^
+src/ThreadPrints.c:33:8: warning: unused variable 'returnValue' [-Wunused-variable]
+  void *returnValue;
+        ^
+src/ThreadPrints.c:32:21: warning: unused variable 'thread2' [-Wunused-variable]
+  pthread_t thread1, thread2;
+                     ^
+src/ThreadPrints.c:32:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:15:19 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:35:21: error: storage size of 'threadParams2' isn't known
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:37:10: warning: unused variable 'threadData2' [-Wunused-variable]
+  appData threadData2 = {2, 10, 'i', {NTHD_START, NTHD_END}};
+          ^
+src/ThreadPrints.c:35:21: warning: unused variable 'threadParams2' [-Wunused-variable]
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:34:17: warning: unused variable 'threadAttributes2' [-Wunused-variable]
+  pthread_attr_t threadAttributes2;
+                 ^
+src/ThreadPrints.c:33:8: warning: unused variable 'returnValue' [-Wunused-variable]
+  void *returnValue;
+        ^
+src/ThreadPrints.c:32:21: warning: unused variable 'thread2' [-Wunused-variable]
+  pthread_t thread1, thread2;
+                     ^
+src/ThreadPrints.c:32:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:16:09 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:37:10: warning: unused variable 'threadData2' [-Wunused-variable]
+  appData threadData2 = {2, 10, 'i', {NTHD_START, NTHD_END}};
+          ^
+src/ThreadPrints.c:35:21: warning: unused variable 'threadParams2' [-Wunused-variable]
+  struct sched_param threadParams2;
+                     ^
+src/ThreadPrints.c:34:17: warning: unused variable 'threadAttributes2' [-Wunused-variable]
+  pthread_attr_t threadAttributes2;
+                 ^
+src/ThreadPrints.c:33:8: warning: unused variable 'returnValue' [-Wunused-variable]
+  void *returnValue;
+        ^
+src/ThreadPrints.c:32:21: warning: unused variable 'thread2' [-Wunused-variable]
+  pthread_t thread1, thread2;
+                     ^
+src/ThreadPrints.c:32:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:16:24 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:43:2: warning: implicit declaration of function 'pthread_attr_setsschedparam' [-Wimplicit-function-declaration]
+  pthread_attr_setsschedparam(&threadAttributes2, &threadParams2);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+build/x86_64-debug/src/ThreadPrints.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/ThreadPrints//src/ThreadPrints.c:43: undefined reference to `pthread_attr_setsschedparam'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/ThreadPrints' failed
+make: *** [build/x86_64-debug/ThreadPrints] Error 1
+16:16:58 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:40:2: warning: implicit declaration of function 'pthread_attr_setsschedparam' [-Wimplicit-function-declaration]
+  pthread_attr_setsschedparam(&threadAttributes2, &threadParams2);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+build/x86_64-debug/src/ThreadPrints.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/ThreadPrints//src/ThreadPrints.c:40: undefined reference to `pthread_attr_setsschedparam'
+Makefile:60: recipe for target 'build/x86_64-debug/ThreadPrints' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/ThreadPrints] Error 1
+16:17:58 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:18:41 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:18:57 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:37:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:37:32: warning: overflow in implicit constant conversion [-Woverflow]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:19:21 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:37:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:37:32: warning: overflow in implicit constant conversion [-Woverflow]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:19:59 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:36:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 10, 'char', {CTHD_START, CTHD_END}};
+                                ^
+src/ThreadPrints.c:36:32: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:37:32: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 10, 'int', {NTHD_START, NTHD_END}};
+                                ^
+src/ThreadPrints.c:37:32: warning: overflow in implicit constant conversion [-Woverflow]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:26:03 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:28:8: error: 'count' undeclared (first use in this function)
+  while(count < thread->upperBound){
+        ^
+src/ThreadPrints.c:28:8: note: each undeclared identifier is reported only once for each function it appears in
+src/ThreadPrints.c:29:20: warning: multi-character character constant [-Wmultichar]
+   if(thread->type=='int'){
+                    ^
+src/ThreadPrints.c:40:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:52:35: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 1, 10, 'char', {CTHD_START, CTHD_END}};
+                                   ^
+src/ThreadPrints.c:52:35: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:53:35: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 1, 10, 'int', {NTHD_START, NTHD_END}};
+                                   ^
+src/ThreadPrints.c:53:35: warning: overflow in implicit constant conversion [-Woverflow]
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrints.o' failed
+make: *** [build/x86_64-debug/src/ThreadPrints.o] Error 1
+16:26:22 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:30:20: warning: multi-character character constant [-Wmultichar]
+   if(thread->type=='int'){
+                    ^
+src/ThreadPrints.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:53:35: warning: multi-character character constant [-Wmultichar]
+  appData threadData1 = {1, 1, 10, 'char', {CTHD_START, CTHD_END}};
+                                   ^
+src/ThreadPrints.c:53:35: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:54:35: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 1, 10, 'int', {NTHD_START, NTHD_END}};
+                                   ^
+src/ThreadPrints.c:54:35: warning: overflow in implicit constant conversion [-Woverflow]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:27:24 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:30:20: warning: multi-character character constant [-Wmultichar]
+   if(thread->type=='int'){
+                    ^
+src/ThreadPrints.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:54:35: warning: multi-character character constant [-Wmultichar]
+  appData threadData2 = {2, 1, 10, 'int', {NTHD_START, NTHD_END}};
+                                   ^
+src/ThreadPrints.c:54:35: warning: overflow in implicit constant conversion [-Woverflow]
+src/ThreadPrints.c:49:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:27:51 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:49:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:28:05 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:49:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:28:48 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+src/ThreadPrints.c: In function 'main':
+src/ThreadPrints.c:50:12: warning: unused variable 'thread1' [-Wunused-variable]
+  pthread_t thread1, thread2;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:29:59 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:31:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread->delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:31:18 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:35:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread->delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:32:20 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:34:27 **** Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:35:27 **** Build of configuration armv7le-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPrints.d,-MT,build/armv7le-debug/src/ThreadPrints.o -o build/armv7le-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPrints   build/armv7le-debug/src/ThreadPrints.o  
+16:35:55 **** Incremental Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:38:16 **** Build of configuration x86_64-debug for project ThreadPrints ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrints.d,-MT,build/x86_64-debug/src/ThreadPrints.o -o build/x86_64-debug/src/ThreadPrints.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrints.c
+src/ThreadPrints.c: In function 'printThread':
+src/ThreadPrints.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread->delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrints   build/x86_64-debug/src/ThreadPrints.o  
+16:46:56 **** Build of configuration x86_64-debug for project ThreadState ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:51:26 **** Build of configuration x86_64-debug for project ThreadExample ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:52:25 **** Build of configuration armv7le-debug for project TestFix ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TestFix.d,-MT,build/armv7le-debug/src/TestFix.o -o build/armv7le-debug/src/TestFix.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TestFix.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TestFix   build/armv7le-debug/src/TestFix.o  
+16:53:55 **** Build of configuration x86_64-debug for project TestFix ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TestFix.d,-MT,build/x86_64-debug/src/TestFix.o -o build/x86_64-debug/src/TestFix.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TestFix.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TestFix   build/x86_64-debug/src/TestFix.o  
+16:54:09 **** Incremental Build of configuration x86_64-debug for project TestFix ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:59:32 **** Build of configuration armv7le-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPrinting.d,-MT,build/armv7le-debug/src/ThreadPrinting.o -o build/armv7le-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPrinting   build/armv7le-debug/src/ThreadPrinting.o  
+17:00:41 **** Incremental Build of configuration armv7le-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:01:00 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:02:06 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:32:25: error: 'MAX_CAHARCTERS' undeclared (first use in this function)
+  while(characterCount < MAX_CAHARCTERS){
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrinting.o' failed
+                         ^
+src/ThreadPrinting.c:32:25: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ThreadPrinting.o] Error 1
+17:02:27 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:02:52 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:03:38 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:03:55 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:04:36 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:08:27 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:10:18 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:11:44 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:12:11 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:16:16 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:32:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:17:16 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:21:27 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:22:15 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:23:16 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:26:51 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:27:51 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:31:08 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:31:44 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+10:37:35 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:42:26 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:49:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:43:21 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:43:37 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:43:51 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:44:10 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:44:41 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:45:01 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:45:15 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:45:27 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:46:02 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:46:18 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:47:02 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(0.25);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:47:35 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:50:01 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:50:33 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/ThreadPrinting.c:30:11: warning: unused variable 'thread' [-Wunused-variable]
+  appData *thread = (appData*) data;
+           ^
+src/ThreadPrinting.c:29:6: warning: unused variable 'characterCount' [-Wunused-variable]
+  int characterCount = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+10:57:50 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:09:49 **** Build of configuration armv7le-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPrinting.d,-MT,build/armv7le-debug/src/ThreadPrinting.o -o build/armv7le-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPrinting   build/armv7le-debug/src/ThreadPrinting.o  
+11:10:01 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:10:17 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:11:45 **** Build of configuration armv7le-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPrinting.d,-MT,build/armv7le-debug/src/ThreadPrinting.o -o build/armv7le-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPrinting   build/armv7le-debug/src/ThreadPrinting.o  
+11:12:01 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+src/ThreadPrinting.c: In function 'main':
+src/ThreadPrinting.c:61:35: error: 's' undeclared (first use in this function)
+  pthread_attr_t threadAttributes2;s
+                                   ^
+src/ThreadPrinting.c:61:35: note: each undeclared identifier is reported only once for each function it appears in
+src/ThreadPrinting.c:62:2: error: expected ';' before 'struct'
+  struct sched_param threadParams2;
+  ^
+src/ThreadPrinting.c:73:2: error: 'threadParams2' undeclared (first use in this function)
+  threadParams2.sched_priority = 1;
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ThreadPrinting.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrinting.o' failed
+11:12:23 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+src/ThreadPrinting.c: In function 'main':
+src/ThreadPrinting.c:61:35: error: 's' undeclared (first use in this function)
+  pthread_attr_t threadAttributes2;s
+                                   ^
+src/ThreadPrinting.c:61:35: note: each undeclared identifier is reported only once for each function it appears in
+src/ThreadPrinting.c:62:2: error: expected ';' before 'struct'
+  struct sched_param threadParams2;
+  ^
+src/ThreadPrinting.c:73:2: error: 'threadParams2' undeclared (first use in this function)
+  threadParams2.sched_priority = 1;
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ThreadPrinting.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ThreadPrinting.o' failed
+11:14:07 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:45:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:15:26 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:15:52 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:16:10 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+11:48:04 **** Build of configuration armv7le-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/MqSend.d,-MT,build/armv7le-debug/src/MqSend.o -o build/armv7le-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/MqSend   build/armv7le-debug/src/MqSend.o  
+11:48:25 **** Build of configuration armv7le-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/MqReceive.d,-MT,build/armv7le-debug/src/MqReceive.o -o build/armv7le-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/MqReceive   build/armv7le-debug/src/MqReceive.o  
+12:11:05 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+12:11:09 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+17:45:21 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:57:16 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:35:3: error: too many arguments to function 'mq_close'
+   mq_close(qd, buffer, MESSAGE_SIZE, 0);
+   ^
+In file included from src/MqSend.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/mqueue.h:75:14: note: declared here
+ extern int   mq_close(mqd_t __mqdes);
+              ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/MqSend.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/MqSend.o] Error 1
+17:57:46 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+12:11:23 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:18:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+12:54:38 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:49:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+12:55:47 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+12:56:00 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:00:04 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:00:19 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'ussleep' [-Wimplicit-function-declaration]
+   ussleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+build/x86_64-debug/src/ThreadPrinting.o: In function `printThread':
+/Users/adityaaaap/ide-7.0-workspace/ThreadPrinting//src/ThreadPrinting.c:48: undefined reference to `ussleep'
+Makefile:60: recipe for target 'build/x86_64-debug/ThreadPrinting' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/ThreadPrinting] Error 1
+13:00:28 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:02:23 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:06:10 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:06:18 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:48:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:10:33 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:36:48 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:37:12 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:38:01 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:51:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:41:34 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:42:10 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:42:29 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:42:48 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:43:03 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:45:09 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:45:21 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:45:42 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:45:52 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:46:33 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(1);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:47:10 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:48:19 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(1);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:48:37 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:49:19 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:49:45 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:36:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:51:56 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:57:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay); // sleep for 1 microseconds
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:52:18 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:57:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay); // sleep for 1 microseconds
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:52:23 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:52:40 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:57:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay); // sleep for 1 microseconds
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:55:17 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:50:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:57:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay); // sleep for 1 microseconds
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+13:59:54 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:46:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+14:00:09 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:00:20 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:46:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:53:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay); // sleep for 1 seconds
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+14:04:19 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:46:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+14:08:27 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:16:34 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:46:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:53:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay); // sleep for 1 seconds
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+14:16:46 **** Build of configuration x86_64-debug for project ThreadExample ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:18:11 **** Incremental Build of configuration x86_64-debug for project ThreadExample ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:34:25 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+14:34:37 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:34:55 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+14:35:40 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+14:35:45 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+14:37:00 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:37:46 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:18:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+14:38:12 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+15:34:13 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:34:14 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:35:09 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:36:14 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+15:36:21 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:36:28 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:37:58 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+15:39:16 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:39:37 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:18:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+15:44:42 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+15:45:34 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:46:06 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+15:46:31 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:46:36 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:18:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+18:41:26 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+18:42:26 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:45:15 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:45:19 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:18:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+18:45:27 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:45:45 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:49:03 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:49:09 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:56:46 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:18:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+18:59:12 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:19 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:33 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:36 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:36 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:38 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:53 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:01:56 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:02:43 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:04:50 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:05:37 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:07:12 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:10:17: error: unknown type name 's'
+ int main(void) {s
+                 ^
+src/MqSend.c:11:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'qd'
+  mqd_t qd;
+        ^
+src/MqSend.c:23:2: error: 'qd' undeclared (first use in this function)
+  qd = mq_open(MqueueLocation, Q_FLAGS, Q_Mode, msgAttributes);
+  ^
+src/MqSend.c:23:2: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/MqSend.o' failed
+make: *** [build/x86_64-debug/src/MqSend.o] Error 1
+19:07:32 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:08:32 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:08:57 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:09:08 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:11:36 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:19:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+19:13:35 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:13:42 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:13:51 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:14:10 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:14:14 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:19:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+19:14:42 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:14:46 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:14:50 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:19:38 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:19:44 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:19:50 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:19:55 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/MqReceive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+19:20:25 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:20:52 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:20:54 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:20:55 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:20:59 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:21:13 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:21:22 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:21:59 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:22:07 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:22:16 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:22:18 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:22:20 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:30 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:34 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:34 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:36 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:36 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:37 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:38 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:38 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:38 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:39 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:39 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:39 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:23:55 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:26:11 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:26:18 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:27:08 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:31:12 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:31:20 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:32:17 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:04 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:33:10 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/MqReceive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+19:33:32 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/MqReceive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+19:33:47 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:33:51 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:53 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:54 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:55 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:55 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:56 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:56 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:59 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:59 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:59 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:34:00 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:34:00 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:34:01 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:34:13 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:34:18 **** Incremental Build of configuration x86_64-debug for project MqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqReceive.d,-MT,build/x86_64-debug/src/MqReceive.o -o build/x86_64-debug/src/MqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqReceive.c
+src/MqReceive.c: In function 'main':
+src/MqReceive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/MqReceive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqReceive   build/x86_64-debug/src/MqReceive.o  
+19:34:44 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:35:08 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/MqSend.d,-MT,build/x86_64-debug/src/MqSend.o -o build/x86_64-debug/src/MqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/MqSend.c
+src/MqSend.c: In function 'main':
+src/MqSend.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/MqSend   build/x86_64-debug/src/MqSend.o  
+19:36:36 **** Incremental Build of configuration x86_64-debug for project MqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:37:18 **** Build of configuration armv7le-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/Send.d,-MT,build/armv7le-debug/src/Send.o -o build/armv7le-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/Send   build/armv7le-debug/src/Send.o  
+19:37:53 **** Build of configuration armv7le-debug for project Receive ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/Receive.d,-MT,build/armv7le-debug/src/Receive.o -o build/armv7le-debug/src/Receive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Receive.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/Receive   build/armv7le-debug/src/Receive.o  
+19:38:05 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+src/Send.c: In function 'main':
+src/Send.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:38:19 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+src/Send.c: In function 'main':
+src/Send.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:38:38 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Receive.d,-MT,build/x86_64-debug/src/Receive.o -o build/x86_64-debug/src/Receive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Receive.c
+src/Receive.c: In function 'main':
+src/Receive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/Receive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Receive   build/x86_64-debug/src/Receive.o  
+19:38:43 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:38:47 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:38:54 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:38:58 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:42:40 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+src/Send.c: In function 'main':
+src/Send.c:17:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:42:46 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Receive.d,-MT,build/x86_64-debug/src/Receive.o -o build/x86_64-debug/src/Receive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Receive.c
+src/Receive.c: In function 'main':
+src/Receive.c:14:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/Receive.c:23:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buffer, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Receive   build/x86_64-debug/src/Receive.o  
+19:43:44 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+src/Send.c: In function 'main':
+src/Send.c:30:41: error: 'hostname' undeclared (first use in this function)
+    printf("%s sending message: '%s'\n", hostname, buffer);
+                                         ^
+src/Send.c:30:41: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/Send.o' failed
+make: *** [build/x86_64-debug/src/Send.o] Error 1
+19:45:35 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:46:19 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:47:55 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:48:00 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:48:18 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:53:44 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+19:57:32 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:57:36 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:57:39 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:01:29 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:02:02 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:02:04 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:02:12 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:02:19 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Receive.d,-MT,build/x86_64-debug/src/Receive.o -o build/x86_64-debug/src/Receive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Receive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Receive   build/x86_64-debug/src/Receive.o  
+20:02:58 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:03:53 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:03:58 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:03 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:05 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:07 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:09 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:11 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:13 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:33 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:35 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:06:17 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:08:11 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:09:44 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:10:52 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:11:28 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:11:33 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:12:14 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:13:02 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:47:45 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:55:18 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:56:03 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+20:56:18 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:59:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+20:58:56 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+20:59:29 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+21:00:06 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Receive.d,-MT,build/x86_64-debug/src/Receive.o -o build/x86_64-debug/src/Receive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Receive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Receive   build/x86_64-debug/src/Receive.o  
+21:00:23 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:00:30 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:00:47 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+21:01:12 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:01:42 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+21:01:58 **** Incremental Build of configuration x86_64-debug for project Send ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Send.d,-MT,build/x86_64-debug/src/Send.o -o build/x86_64-debug/src/Send.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Send.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Send   build/x86_64-debug/src/Send.o  
+21:04:39 **** Build of configuration armv7le-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/sending.d,-MT,build/armv7le-debug/src/sending.o -o build/armv7le-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/sending   build/armv7le-debug/src/sending.o  
+21:05:38 **** Build of configuration armv7le-debug for project receiving ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/receiving.d,-MT,build/armv7le-debug/src/receiving.o -o build/armv7le-debug/src/receiving.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/receiving.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/receiving   build/armv7le-debug/src/receiving.o  
+21:06:22 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:06:32 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:09:05 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+src/sending.c: In function 'main':
+src/sending.c:31:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostnm, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:09:21 **** Incremental Build of configuration x86_64-debug for project receiving ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/receiving.d,-MT,build/x86_64-debug/src/receiving.o -o build/x86_64-debug/src/receiving.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/receiving.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/receiving   build/x86_64-debug/src/receiving.o  
+21:15:13 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+src/sending.c: In function 'main':
+src/sending.c:31:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostnm, '\0', 100);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:22:17 **** Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:22:45 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:23:20 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:25:52 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:32:16 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:32:49 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:33:12 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:35:06 **** Build of configuration x86_64-debug for project receiving ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/receiving.d,-MT,build/x86_64-debug/src/receiving.o -o build/x86_64-debug/src/receiving.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/receiving.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/receiving   build/x86_64-debug/src/receiving.o  
+21:35:31 **** Incremental Build of configuration x86_64-debug for project receiving ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/receiving.d,-MT,build/x86_64-debug/src/receiving.o -o build/x86_64-debug/src/receiving.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/receiving.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/receiving   build/x86_64-debug/src/receiving.o  
+21:49:08 **** Build of configuration armv7le-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ThreadPrinting.d,-MT,build/armv7le-debug/src/ThreadPrinting.o -o build/armv7le-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ThreadPrinting   build/armv7le-debug/src/ThreadPrinting.o  
+21:49:29 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:60:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+21:50:44 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:52:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1);
+     ^
+src/ThreadPrinting.c:63:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(thread -> delay);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+21:52:24 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+21:53:36 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+21:53:45 **** Incremental Build of configuration x86_64-debug for project ThreadPrinting ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ThreadPrinting.d,-MT,build/x86_64-debug/src/ThreadPrinting.o -o build/x86_64-debug/src/ThreadPrinting.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ThreadPrinting.c
+src/ThreadPrinting.c: In function 'printThread':
+src/ThreadPrinting.c:61:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(thread -> delay);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ThreadPrinting   build/x86_64-debug/src/ThreadPrinting.o  
+21:57:55 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:58:27 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/sending.d,-MT,build/x86_64-debug/src/sending.o -o build/x86_64-debug/src/sending.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/sending.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/sending   build/x86_64-debug/src/sending.o  
+21:58:53 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:58:56 **** Incremental Build of configuration x86_64-debug for project receiving ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/receiving.d,-MT,build/x86_64-debug/src/receiving.o -o build/x86_64-debug/src/receiving.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/receiving.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/receiving   build/x86_64-debug/src/receiving.o  
+18:13:51 **** Build of configuration armv7le-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/overlap.d,-MT,build/armv7le-debug/src/overlap.o -o build/armv7le-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/overlap   build/armv7le-debug/src/overlap.o  
+18:53:48 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:29:6: error: 'thread' undeclared (first use in this function)
+   if(thread->a == 5){
+      ^
+src/overlap.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlap.c: At top level:
+src/overlap.c:69:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char argv[]) {
+     ^
+src/overlap.c: In function 'main':
+src/overlap.c:74:17: error: invalid type argument of unary '*' (have 'pthread_t {aka int}')
+  pthread_create(*uThread, NULL, userThread, thread);
+                 ^
+src/overlap.c:74:45: error: incompatible type for argument 4 of 'pthread_create'
+Makefile:55: recipe for target 'build/x86_64-debug/src/overlap.o' failed
+  pthread_create(*uThread, NULL, userThread, thread);
+                                             ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/overlap.c:75:17: error: invalid type argument of unary '*' (have 'pthread_t {aka int}')
+  pthread_create(*cThread, NULL, changerThread, thread);
+                 ^
+src/overlap.c:75:48: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(*cThread, NULL, changerThread, thread);
+                                                ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/overlap.o] Error 1
+18:54:09 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlap.c: At top level:
+src/overlap.c:69:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char argv[]) {
+     ^
+src/overlap.c: In function 'main':
+src/overlap.c:74:17: error: invalid type argument of unary '*' (have 'pthread_t {aka int}')
+  pthread_create(*uThread, NULL, userThread, thread);
+                 ^
+src/overlap.c:74:45: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(*uThread, NULL, userThread, thread);
+                                             ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/overlap.c:75:17: error: invalid type argument of unary '*' (have 'pthread_t {aka int}')
+  pthread_create(*cThread, NULL, changerThread, thread);
+                 ^
+src/overlap.c:75:48: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(*cThread, NULL, changerThread, thread);
+                                                ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/overlap.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/overlap.o] Error 1
+18:54:25 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlap.c: At top level:
+src/overlap.c:69:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char argv[]) {
+     ^
+src/overlap.c: In function 'main':
+src/overlap.c:74:17: error: invalid type argument of unary '*' (have 'pthread_t {aka int}')
+  pthread_create(*uThread, NULL, userThread, thread);
+                 ^
+src/overlap.c:74:45: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(*uThread, NULL, userThread, thread);
+                                             ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/overlap.c:75:17: error: invalid type argument of unary '*' (have 'pthread_t {aka int}')
+  pthread_create(*cThread, NULL, changerThread, thread);
+                 ^
+src/overlap.c:75:48: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(*cThread, NULL, changerThread, thread);
+                                                ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/overlap.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/overlap.o' failed
+18:54:46 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlap.c: At top level:
+src/overlap.c:69:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char argv[]) {
+     ^
+src/overlap.c: In function 'main':
+src/overlap.c:74:45: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(&uThread, NULL, userThread, thread);
+                                             ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/overlap.c:75:48: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(&cThread, NULL, changerThread, thread);
+                                                ^
+In file included from src/overlap.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'appData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+Makefile:55: recipe for target 'build/x86_64-debug/src/overlap.o' failed
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/overlap.o] Error 1
+18:55:06 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlap.c: At top level:
+src/overlap.c:69:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char argv[]) {
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:55:08 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:55:13 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:56:22 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:56:37 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'user_thread':
+src/overlap.c:29:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1);       //usleep is used to make sure the scheduler gives other threads a chance to run
+    ^
+src/overlap.c: In function 'main':
+src/overlap.c:58:18: warning: unused variable 'st' [-Wunused-variable]
+  pthread_t ct,ut,st;
+                  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:57:05 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:57:19 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:57:37 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:57:44 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:58:12 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'user_thread':
+src/overlap.c:29:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1);       //usleep is used to make sure the scheduler gives other threads a chance to run
+    ^
+src/overlap.c: In function 'main':
+src/overlap.c:58:18: warning: unused variable 'st' [-Wunused-variable]
+  pthread_t ct,ut,st;
+                  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:58:26 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:59:05 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:59:20 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlap.c: In function 'main':
+src/overlap.c:72:30: warning: unused variable 'st' [-Wunused-variable]
+  pthread_t cThread, uThread, st;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+18:59:51 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:00:28 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:00:37 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:00:45 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:01:03 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:01:12 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'user_thread':
+src/overlap.c:29:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1);       //usleep is used to make sure the scheduler gives other threads a chance to run
+    ^
+src/overlap.c: In function 'main':
+src/overlap.c:58:18: warning: unused variable 'st' [-Wunused-variable]
+  pthread_t ct,ut,st;
+                  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:01:50 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:04:32 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:05:27 **** Build of configuration armv7le-debug for project overlapMutex ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/overlapMutex.d,-MT,build/armv7le-debug/src/overlapMutex.o -o build/armv7le-debug/src/overlapMutex.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapMutex.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/overlapMutex   build/armv7le-debug/src/overlapMutex.o  

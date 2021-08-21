@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.qnx.tools.ide.qde.ui.QDELaunch">
+<booleanAttribute key="auto_pick_program" value="false"/>
+<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="192.168.1.118"/>
+<booleanAttribute key="defaults_pending" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="build/armv7le-debug/TestFix"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="TestFix"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/TestFix"/>
+<listEntry value="/TestFix/build/armv7le-debug/TestFix"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+<listEntry value="1"/>
+</listAttribute>
+</launchConfiguration>

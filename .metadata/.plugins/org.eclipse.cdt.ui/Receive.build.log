@@ -1,0 +1,7 @@
+21:00:06 **** Incremental Build of configuration x86_64-debug for project Receive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Receive.d,-MT,build/x86_64-debug/src/Receive.o -o build/x86_64-debug/src/Receive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Receive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Receive   build/x86_64-debug/src/Receive.o  
+
+21:00:07 Build Finished (took 223ms)
+

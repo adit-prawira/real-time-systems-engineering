@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct {
+	int upperBound;
+	char type;
+} appData;
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

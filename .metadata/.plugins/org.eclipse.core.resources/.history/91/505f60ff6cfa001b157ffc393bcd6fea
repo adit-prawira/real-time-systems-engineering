@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+#define NTHD_START "=======Numerical Thread started=======\n"
+#define CTHD_START "=======Character Thread started=======\n"
+#define NTHD_END "=======Numerical Thread started=======\n"
+#define CTHD_END "=======Character Thread started=======\n"
+
+// type definition for the message at the start and end
+typedef struct {
+	char start[100];
+	char end[100];
+}message;
+
+// type definition that will store maximum character per line
+typedef struct {
+	int threadNumber;
+	int delay;
+	int upperBound;
+	char type;
+	message msg;
+} appData;
+
+void *printThread(void * data){
+	appData *thread = (appData*) data;
+	printf("%s", thread->msg.start);
+	while(count < thread->upperBound){
+		if(thread->type=='int'){
+			printf("%d", count);
+		}else{
+			char ch = (96 + count) + '0';
+			printf("%c", ch);
+		}
+		count++;
+		if(count == thread->upperBound){
+			count = 0;
+			printf("\n");
+		}
+	}
+	printf("%s", thread->msg.end);
+	return 0;
+}
+
+
+int main(int argc, char *argv[]) {
+	pthread_t thread1, thread2;
+	void *returnValue;
+	pthread_attr_t threadAttributes2;
+	struct sched_param threadParams2;
+	appData threadData1 = {1, 1, 10, 'char', {CTHD_START, CTHD_END}};
+	appData threadData2 = {2, 1, 10, 'int', {NTHD_START, NTHD_END}};
+	// creating the second thread with customized setups
+	pthread_attr_init(&threadAttributes2);
+	threadParams2.sched_priority = 1;
+	pthread_attr_setschedparam(&threadAttributes2, &threadParams2);
+	pthread_create(&thread1, NULL, printThread, &threadData1);
+	pthread_join(thread1, &returnValue);
+
+
+	pthread_create(&thread2, NULL, printThread, &threadData2);
+	pthread_join(thread2, &returnValue);
+	return EXIT_SUCCESS;
+}

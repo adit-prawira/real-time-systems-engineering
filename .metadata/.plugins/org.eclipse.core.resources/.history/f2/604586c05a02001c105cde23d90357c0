@@ -1,0 +1,29 @@
+/*
+  Problem Specification:
+ *Pass appData structure to a thread and use variable a and b 100 times whenever a is set to 5.
+ *Use a local "uses" variable to count 100 of our uses.
+ *Increment application's useCount in case someone else want to keep track of how many times
+  our data has been used
+ *Add a small usleep to make sure the scheduler gives the other threads a chance to run.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+typedef struct {
+	int a, b;
+	int result, result2;
+	int useCount, useCount2;
+	int maxUse, maxUse2;
+}appData;
+
+void *userThread(void *data){
+	int uses = 0;
+	appData *threadData = (appData*)data;
+
+}
+
+int main(int argc, char argv[]) {
+
+	return EXIT_SUCCESS;
+}
