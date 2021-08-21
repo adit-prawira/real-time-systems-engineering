@@ -71,18 +71,17 @@
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
 <stringAttribute key="org.eclipse.cdt.launch.PLATFFORM" value="qnx"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="build/armv7le-debug/overlapSemaphore"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="overlapSemaphore"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="overlapUnamedSemaphore"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.WORKING_DIRECTORY" value=""/>
 <stringAttribute key="org.eclipse.cdt.testsrunner.launch.TESTS_RUNNER" value="org.eclipse.cdt.testsrunner.gtest"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/overlapSemaphore"/>
+<listEntry value="/overlapUnamedSemaphore"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.launchbar.core.originalName" value="overlapSemaphore"/>
+<stringAttribute key="org.eclipse.launchbar.core.originalName" value="overlapUnamedSemaphore"/>
 <stringAttribute key="org.eclipse.launchbar.core.providerClass" value="com.qnx.tools.ide.qde.debug.internal.core.QDEProjectLaunchConfigurationProvider"/>
 <booleanAttribute key="org.eclipse.linuxtools.valgrind.cachegrind.BRANCH_SIM" value="false"/>
 <booleanAttribute key="org.eclipse.linuxtools.valgrind.cachegrind.CACHE_SIM" value="true"/>

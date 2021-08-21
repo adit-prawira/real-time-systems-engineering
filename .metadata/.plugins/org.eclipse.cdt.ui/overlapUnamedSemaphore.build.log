@@ -1,0 +1,25 @@
+19:59:07 **** Incremental Build of configuration x86_64-debug for project overlapUnamedSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlapUnamedSemaphore.d,-MT,build/x86_64-debug/src/overlapUnamedSemaphore.o -o build/x86_64-debug/src/overlapUnamedSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapUnamedSemaphore.c
+src/overlapUnamedSemaphore.c: In function 'userThread':
+src/overlapUnamedSemaphore.c:34:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+src/overlapUnamedSemaphore.c: In function 'main':
+src/overlapUnamedSemaphore.c:66:30: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+  sem_init(&thread.semaphore, NULL, 1);
+                              ^
+In file included from src/overlapUnamedSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+src/overlapUnamedSemaphore.c:67:2: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+  pthread_create(&uThread, NULL, userThread, &thread);
+  ^
+src/overlapUnamedSemaphore.c:70:2: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+  pthread_join(uThread, &returnValue);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlapUnamedSemaphore   build/x86_64-debug/src/overlapUnamedSemaphore.o  
+
+19:59:07 Build Finished (took 337ms)
+
