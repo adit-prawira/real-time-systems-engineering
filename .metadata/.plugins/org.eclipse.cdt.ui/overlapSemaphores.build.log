@@ -1,0 +1,7 @@
+19:34:39 **** Build of configuration armv7le-debug for project overlapSemaphores ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/overlapSemaphores.d,-MT,build/armv7le-debug/src/overlapSemaphores.o -o build/armv7le-debug/src/overlapSemaphores.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapSemaphores.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/overlapSemaphores   build/armv7le-debug/src/overlapSemaphores.o  
+
+19:34:40 Build Finished (took 553ms)
+

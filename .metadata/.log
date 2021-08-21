@@ -9387,3 +9387,6 @@ org.eclipse.core.runtime.CoreException: Program path is empty
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-08-21 19:05:28.289
 !MESSAGE Indexed 'overlapMutex' (1 sources, 16 headers) in 0.2 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-08-21 19:34:43.192
+!MESSAGE Indexed 'overlapSemaphores' (1 sources, 16 headers) in 0.187 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

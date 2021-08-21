@@ -58,7 +58,7 @@ void * changerThread(void *data){
 		}else{
 			threadData->a = 5;
 		}
-		threadData->b += (threadData->a)+usleep(1000);
+		threadData->b = (threadData->a)+usleep(1000);
 		usleep(1);
 	}
 	return 0;
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
 	pthread_join(cThread, &retval);
 	pthread_join(uThread, &retval);
 
-	printf("Result should be %d,is %d\n", thread.maxUse*(5+5), thread.result);
+	printf("Result should be %d, but is %d\n", thread.maxUse*(5+5), thread.result);
 	printf("Main terminating...\n");
 	return EXIT_SUCCESS;
 }

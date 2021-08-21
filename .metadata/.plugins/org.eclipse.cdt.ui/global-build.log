@@ -2713,3 +2713,76 @@ qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overl
 make -j3 all 
 qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/overlapMutex.d,-MT,build/armv7le-debug/src/overlapMutex.o -o build/armv7le-debug/src/overlapMutex.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapMutex.c
 qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/overlapMutex   build/armv7le-debug/src/overlapMutex.o  
+19:30:16 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlapMutex.d,-MT,build/x86_64-debug/src/overlapMutex.o -o build/x86_64-debug/src/overlapMutex.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapMutex.c
+src/overlapMutex.c: In function 'userThread':
+src/overlapMutex.c:41:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlapMutex   build/x86_64-debug/src/overlapMutex.o  
+19:30:50 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:31:03 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:31:08 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:31:48 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:31:56 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlap.d,-MT,build/x86_64-debug/src/overlap.o -o build/x86_64-debug/src/overlap.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlap.c
+src/overlap.c: In function 'userThread':
+src/overlap.c:37:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlap   build/x86_64-debug/src/overlap.o  
+19:32:15 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlapMutex.d,-MT,build/x86_64-debug/src/overlapMutex.o -o build/x86_64-debug/src/overlapMutex.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapMutex.c
+src/overlapMutex.c: In function 'userThread':
+src/overlapMutex.c:41:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlapMutex   build/x86_64-debug/src/overlapMutex.o  
+19:32:44 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlapMutex.d,-MT,build/x86_64-debug/src/overlapMutex.o -o build/x86_64-debug/src/overlapMutex.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapMutex.c
+src/overlapMutex.c: In function 'userThread':
+src/overlapMutex.c:41:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlapMutex   build/x86_64-debug/src/overlapMutex.o  
+19:33:19 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/overlapMutex.d,-MT,build/x86_64-debug/src/overlapMutex.o -o build/x86_64-debug/src/overlapMutex.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapMutex.c
+src/overlapMutex.c: In function 'userThread':
+src/overlapMutex.c:41:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/overlapMutex   build/x86_64-debug/src/overlapMutex.o  
+19:33:34 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:36 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:38 **** Incremental Build of configuration x86_64-debug for project overlap ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:33:44 **** Incremental Build of configuration x86_64-debug for project overlapMutex ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:34:39 **** Build of configuration armv7le-debug for project overlapSemaphores ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/overlapSemaphores.d,-MT,build/armv7le-debug/src/overlapSemaphores.o -o build/armv7le-debug/src/overlapSemaphores.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/overlapSemaphores.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/overlapSemaphores   build/armv7le-debug/src/overlapSemaphores.o  
