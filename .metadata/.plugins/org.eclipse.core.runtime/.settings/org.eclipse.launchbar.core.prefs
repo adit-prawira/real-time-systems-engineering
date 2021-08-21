@@ -21,6 +21,7 @@ LaunchTargetManager/configs/launchConfiguration=com.qnx.tools.ide.target.qconn\:
 LaunchTargetManager/configs/launchConfiguration\ (1)=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/overlap=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/overlapMutex=com.qnx.tools.ide.target.qconn\:192.168.1.118
+LaunchTargetManager/configs/overlapSemaphore=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/receiving=com.qnx.tools.ide.target.qconn\:192.168.1.91
 LaunchTargetManager/configs/remote\ core\ ThreadState=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/sending=com.qnx.tools.ide.target.qconn\:192.168.1.118
@@ -54,5 +55,5 @@ com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlap/activeLaunchM
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/receiving/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.91
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/sending/activeLaunchMode=run
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/sending/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.118
-configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.default\:remote core ThreadState,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadState,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.TestFix,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TestFix,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadExample,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadPrinting,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/sending,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/receiving,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlap,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlapMutex,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlapSemaphores
+configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.default\:remote core ThreadState,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadState,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.TestFix,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TestFix,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadExample,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadPrinting,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/sending,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/receiving,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlap,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlapMutex,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/overlapSemaphore
 eclipse.preferences.version=1

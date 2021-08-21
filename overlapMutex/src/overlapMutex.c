@@ -81,7 +81,7 @@ int main(void) {
 
 	pthread_mutex_destroy(&thread.mutex);
 
-	printf("Result should be %d,is %d\n", thread.maxUse*(5+5), thread.result);
+	printf("Result should be %d, and it is %d by mutexe\n", thread.maxUse*(5+5), thread.result);
 	printf("Main terminating...\n");
 	return EXIT_SUCCESS;
 }
