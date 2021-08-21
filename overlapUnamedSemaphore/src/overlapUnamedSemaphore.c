@@ -63,6 +63,8 @@ int main(void) {
 	pthread_t uThread, cThread;
 	appData thread = {5, 5, 0, 0, 0, 0, 100, 0};
 	void *returnValue;
+
+
 	sem_init(&thread.semaphore, NULL, 1);
 	pthread_create(&uThread, NULL, userThread, &thread);
 	pthread_create(&cThread, NULL, changerThread, &thread);

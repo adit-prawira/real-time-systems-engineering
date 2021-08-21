@@ -9422,3 +9422,366 @@ org.eclipse.core.runtime.CoreException: Launch aborted by user
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-08-21 19:58:34.854
 !MESSAGE Indexed 'overlapUnamedSemaphore' (1 sources, 16 headers) in 0.144 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-08-21 20:01:06.505
+!MESSAGE Indexed 'overlapNamedSemaphore' (1 sources, 16 headers) in 0.106 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.qnx.tools.ide.qde.debug.ui 4 -1 2021-08-21 20:35:06.231
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.debug.core.DebugException: Error in final launch sequence
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.executeAndWait(QDELaunchConfigurationDelegate.java:296)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launchDebugSession(QDELaunchConfigurationDelegate.java:273)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:128)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.runtime.CoreException: Cannot prepare and download the binary
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.executeAndWait(QDELaunchConfigurationDelegate.java:290)
+	... 7 more
+Caused by: org.eclipse.core.runtime.CoreException: Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1060)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	... 18 more
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 4 5012 2021-08-21 20:35:06.232
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot prepare and download the binary
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.executeAndWait(QDELaunchConfigurationDelegate.java:290)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launchDebugSession(QDELaunchConfigurationDelegate.java:273)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:128)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.runtime.CoreException: Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1060)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	... 18 more
+!SUBENTRY 2 com.qnx.tools.ide.qde.debug.core 4 -1 2021-08-21 20:35:06.233
+!MESSAGE Cannot prepare and download the binary
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1060)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	... 18 more
+!SUBENTRY 3 com.qnx.tools.ide.qde.debug.core 4 0 2021-08-21 20:35:06.233
+!MESSAGE Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+!STACK 0
+com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 4 5012 2021-08-21 20:35:06.233
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot prepare and download the binary
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.executeAndWait(QDELaunchConfigurationDelegate.java:290)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launchDebugSession(QDELaunchConfigurationDelegate.java:273)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:128)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.runtime.CoreException: Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1060)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	... 18 more
+!SUBENTRY 2 com.qnx.tools.ide.qde.debug.core 4 -1 2021-08-21 20:35:06.233
+!MESSAGE Cannot prepare and download the binary
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1060)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	... 18 more
+!SUBENTRY 3 com.qnx.tools.ide.qde.debug.core 4 0 2021-08-21 20:35:06.234
+!MESSAGE Error starting remote application /tmp/overlapNamedSemaphore: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+!STACK 0
+com.qnx.tools.ide.utils.target.QConnException: Target launcher@<192.168.1.118:8000>: Unknown response error Exec format error
+	at com.qnx.tools.ide.utils.target.TargetBinary.parseResponse(TargetBinary.java:149)
+	at com.qnx.tools.ide.utils.target.TargetServiceLaunch.launch(TargetServiceLaunch.java:145)
+	at com.qnx.tools.ide.utils.target.TargetProcess.startProcess(TargetProcess.java:44)
+	at com.qnx.tools.ide.utils.target.TargetProcess.<init>(TargetProcess.java:20)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.remoteLaunch(QDELaunchUtils.java:1058)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.startApplicationOnTarget(QDELaunchUtils.java:885)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFFinalLaunchSequence.stepLaunch(QDEDSFFinalLaunchSequence.java:312)
+	at sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:459)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:373)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:420)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+!SESSION 2021-08-21 20:35:16.875 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_AU
+Framework arguments:  -keyring /Users/adityaaaap/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/adityaaaap/.eclipse_keyring
+
+!ENTRY org.eclipse.equinox.registry 2 0 2021-08-21 20:35:19.027
+!MESSAGE The extensions and extension-points from the bundle "com.qnx.doc.ide.userguide" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-08-21 20:35:25.171
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2021-08-21 20:35:25.572
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:35:26.380
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:35:26.380
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:35:26.381
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:35:26.381
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:35:26.381
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-08-21 20:35:33.118
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-08-21 20:35:33.127
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.qde.debug.ui 4 -1 2021-08-21 20:35:59.663
+!MESSAGE Launch aborted by user
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 4 -1 2021-08-21 20:35:59.663
+!MESSAGE Launch aborted by user
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch aborted by user
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.handleVerificationError(QDELaunchConfigurationDelegate.java:803)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.verifyBinary(QDELaunchConfigurationDelegate.java:226)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.setProgramPath(QDELaunchConfigurationDelegate.java:213)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.autocomplete(QDELaunchConfigurationDelegate.java:185)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:125)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 com.qnx.tools.ide.qde.debug.ui 1 -1 2021-08-21 20:35:59.664
+!MESSAGE Launch aborted by user
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 1 -1 2021-08-21 20:35:59.664
+!MESSAGE Launch aborted by user
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-08-21 20:37:26.624
+!MESSAGE Indexed 'overlapNamedSemaphore' (1 sources, 16 headers) in 0.723 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2021-08-21 20:37:36.581 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_AU
+Framework arguments:  -keyring /Users/adityaaaap/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/adityaaaap/.eclipse_keyring
+
+!ENTRY org.eclipse.equinox.registry 2 0 2021-08-21 20:37:38.452
+!MESSAGE The extensions and extension-points from the bundle "com.qnx.doc.ide.userguide" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-08-21 20:37:42.873
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2021-08-21 20:37:43.257
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:37:43.953
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:37:43.954
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:37:43.954
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:37:43.955
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-08-21 20:37:43.955
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-08-21 20:37:50.763
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-08-21 20:37:50.768
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-08-21 20:38:20.318
+!MESSAGE Indexed 'overlapNamedSemaphore' (1 sources, 16 headers) in 0.986 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.qnx.tools.ide.qde.debug.ui 4 -1 2021-08-21 20:55:59.286
+!MESSAGE Launch aborted by user
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 4 -1 2021-08-21 20:55:59.286
+!MESSAGE Launch aborted by user
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch aborted by user
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.handleVerificationError(QDELaunchConfigurationDelegate.java:803)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.verifyBinary(QDELaunchConfigurationDelegate.java:226)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.setProgramPath(QDELaunchConfigurationDelegate.java:213)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.autocomplete(QDELaunchConfigurationDelegate.java:185)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:125)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 com.qnx.tools.ide.qde.debug.ui 1 -1 2021-08-21 20:55:59.288
+!MESSAGE Launch aborted by user
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 1 -1 2021-08-21 20:55:59.288
+!MESSAGE Launch aborted by user

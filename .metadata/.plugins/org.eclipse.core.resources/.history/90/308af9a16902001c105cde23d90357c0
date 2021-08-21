@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <semaphore.h>
+#include <fcntl.h>
+
+typedef struct {
+	int a;
+	int b;
+	int result;
+	int result2;
+	int useCount;
+	int useCount2;
+	int maxUse;
+	int maxUse2;
+
+}appData;
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}
