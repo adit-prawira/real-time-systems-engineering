@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <sync.h>
+#include <sys/neutrino.h>
+#include <pthread.h>
+
+pthread_barrier_t barrier;
+
+void * thread1(void *notUsed){
+	time_t now;
+	time(&now);
+	printf("Thread 1 starting at: %s\n", ctime(&now));
+	fflush(stdout);
+
+	// sleep for 3 seconds
+	sleep(3);
+	time(&now);
+	printf("Thread 1 reached barrier at: %s\n", ctime(&now));
+
+	pthread_barrier_wait(&barrier);
+
+	// after this point, all threads are expected to be completed
+	time(&now);
+	printf("Barrier in thread 1 is completed at: %s\n", ctime(&now));
+	return 0;
+}
+
+void * thread2(void * notUsed){
+	time_t now;
+	time(&now);
+	printf("Thread 2 starting at: %s\n", ctime(&now));
+
+	// sleep for 6 seconds
+	sleep(6);
+	time(&now);
+	printf("Thread 2  reached barrier at: %s\n", ctime(&now));
+
+	pthread_barrier_wait(&barrier);
+
+	// after this point all thread will be completed
+	time(&now);
+	printf("Barrier in thread 2 is completed at: %s\n", ctime(&now));
+	return 0;
+}
+
+void *thread3(void * notUsed){
+	return 0;
+}
+
+
+int main(void) {
+	puts("Starting Barrier program\n");
+	char hostname[100];
+	memset(hostname, '\0', NULL);
+	hostname[99] = '\n';
+	gethostname(hostname, sizeof(hostname));
+	printf("Barrier running in machine -> %s\n", hostname);
+
+	return EXIT_SUCCESS;
+}

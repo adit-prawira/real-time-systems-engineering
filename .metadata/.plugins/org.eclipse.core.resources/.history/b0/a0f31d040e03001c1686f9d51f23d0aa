@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+int dataReadyCount = 0;
+
+// utilize default attributes to initialize mutex and conditional variable
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t condvar = PTHREAD_COND_INITIALIZER;
+
+// Consumer thread
+void *consumer(void *notUsed){
+	return 0;
+}
+
+// Producer thread
+void * producer(void *notUser){
+	return 0;
+}
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

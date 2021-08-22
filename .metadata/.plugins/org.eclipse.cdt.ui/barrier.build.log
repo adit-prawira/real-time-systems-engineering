@@ -1,0 +1,21 @@
+15:50:43 **** Incremental Build of configuration x86_64-debug for project barrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/barrier.d,-MT,build/x86_64-debug/src/barrier.o -o build/x86_64-debug/src/barrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/barrier.c
+src/barrier.c: In function 'thread1':
+src/barrier.c:17:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(3);
+  ^
+src/barrier.c: In function 'main':
+src/barrier.c:71:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/barrier.c:73:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/barrier.c:83:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(1);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/barrier   build/x86_64-debug/src/barrier.o  
+
+15:50:43 Build Finished (took 273ms)
+

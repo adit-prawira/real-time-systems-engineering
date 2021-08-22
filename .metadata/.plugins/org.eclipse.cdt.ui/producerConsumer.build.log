@@ -1,0 +1,18 @@
+16:13:26 **** Incremental Build of configuration x86_64-debug for project producerConsumer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumer.d,-MT,build/x86_64-debug/src/producerConsumer.o -o build/x86_64-debug/src/producerConsumer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumer.c
+src/producerConsumer.c: In function 'producer':
+src/producerConsumer.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumer.c: In function 'main':
+src/producerConsumer.c:59:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumer.c:61:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumer   build/x86_64-debug/src/producerConsumer.o  
+
+16:13:26 Build Finished (took 301ms)
+
