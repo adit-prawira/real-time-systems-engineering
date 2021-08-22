@@ -1,0 +1,18 @@
+20:11:35 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:18:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(1); // add 1 second delay
+  ^
+src/cpPriority.c:37:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:68:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+
+20:11:36 Build Finished (took 341ms)
+

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+int dataIsReady = 0;
+typedef struct {
+	char c;
+	int bit;
+	pthread_mutex_t mutex;
+	pthread_cond_t condvar;
+}appData;
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

@@ -4018,3 +4018,2387 @@ src/producerConsumer.c:61:2: warning: implicit declaration of function 'gethostn
   gethostname(hostname, sizeof(hostname));
   ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumer   build/x86_64-debug/src/producerConsumer.o  
+16:15:22 **** Build of configuration armv7le-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/producerConsumerExtended.d,-MT,build/armv7le-debug/src/producerConsumerExtended.o -o build/armv7le-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/producerConsumerExtended   build/armv7le-debug/src/producerConsumerExtended.o  
+16:28:41 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:38:22: error: incompatible type for argument 1 of 'pthread_mutex_lock'
+   pthread_mutex_lock(threadProducer->mutex);
+                      ^
+In file included from src/producerConsumerExtended.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:342:12: note: expected 'pthread_mutex_t * {aka struct _sync *}' but argument is of type 'pthread_mutex_t {aka struct _sync}'
+Makefile:55: recipe for target 'build/x86_64-debug/src/producerConsumerExtended.o' failed
+ extern int pthread_mutex_lock(pthread_mutex_t *__mutex);
+            ^
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:58:51: error: 'PTHREAD_CON_INITIALIZER' undeclared (first use in this function)
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_CON_INITIALIZER};
+                                                   ^
+src/producerConsumerExtended.c:58:51: note: each undeclared identifier is reported only once for each function it appears in
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/producerConsumerExtended.c:66:18: error: 'pthread' undeclared (first use in this function)
+  pthread_create(&pthread, NULL, producer, &data);
+                  ^
+src/producerConsumerExtended.c:57:12: warning: unused variable 'pThread' [-Wunused-variable]
+  pthread_t pThread, cThread;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/producerConsumerExtended.o] Error 1
+16:29:05 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:38:22: error: incompatible type for argument 1 of 'pthread_mutex_lock'
+   pthread_mutex_lock(threadProducer->mutex);
+                      ^
+In file included from src/producerConsumerExtended.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:342:12: note: expected 'pthread_mutex_t * {aka struct _sync *}' but argument is of type 'pthread_mutex_t {aka struct _sync}'
+ extern int pthread_mutex_lock(pthread_mutex_t *__mutex);
+            ^
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/producerConsumerExtended.o' failed
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/producerConsumerExtended.c:66:18: error: 'pthread' undeclared (first use in this function)
+  pthread_create(&pthread, NULL, producer, &data);
+                  ^
+src/producerConsumerExtended.c:66:18: note: each undeclared identifier is reported only once for each function it appears in
+src/producerConsumerExtended.c:57:12: warning: unused variable 'pThread' [-Wunused-variable]
+  pthread_t pThread, cThread;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/producerConsumerExtended.o] Error 1
+16:29:12 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:38:22: error: incompatible type for argument 1 of 'pthread_mutex_lock'
+Makefile:55: recipe for target 'build/x86_64-debug/src/producerConsumerExtended.o' failed
+   pthread_mutex_lock(threadProducer->mutex);
+                      ^
+In file included from src/producerConsumerExtended.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:342:12: note: expected 'pthread_mutex_t * {aka struct _sync *}' but argument is of type 'pthread_mutex_t {aka struct _sync}'
+ extern int pthread_mutex_lock(pthread_mutex_t *__mutex);
+            ^
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/producerConsumerExtended.c:66:18: error: 'pthread' undeclared (first use in this function)
+  pthread_create(&pthread, NULL, producer, &data);
+                  ^
+src/producerConsumerExtended.c:66:18: note: each undeclared identifier is reported only once for each function it appears in
+src/producerConsumerExtended.c:57:12: warning: unused variable 'pThread' [-Wunused-variable]
+  pthread_t pThread, cThread;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/producerConsumerExtended.o] Error 1
+16:29:33 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+Makefile:55: recipe for target 'build/x86_64-debug/src/producerConsumerExtended.o' failed
+  ^
+src/producerConsumerExtended.c:66:18: error: 'pthread' undeclared (first use in this function)
+  pthread_create(&pthread, NULL, producer, &data);
+                  ^
+src/producerConsumerExtended.c:66:18: note: each undeclared identifier is reported only once for each function it appears in
+src/producerConsumerExtended.c:57:12: warning: unused variable 'pThread' [-Wunused-variable]
+  pthread_t pThread, cThread;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/producerConsumerExtended.o] Error 1
+16:29:44 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumerExtended   build/x86_64-debug/src/producerConsumerExtended.o  
+16:36:37 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumerExtended   build/x86_64-debug/src/producerConsumerExtended.o  
+16:38:23 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:46:27 **** Build of configuration armv7le-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/cpPriority.d,-MT,build/armv7le-debug/src/cpPriority.o -o build/armv7le-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/cpPriority   build/armv7le-debug/src/cpPriority.o  
+17:42:29 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:26:19: error: 'appData {aka struct <anonymous>}' has no member named 'c'
+     threadConsumer->c, threadConsumer->bit);
+                   ^
+src/cpPriority.c:26:38: error: 'appData {aka struct <anonymous>}' has no member named 'bit'
+     threadConsumer->c, threadConsumer->bit);
+                                      ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:36:17: error: 'appData {aka struct <anonymous>}' has no member named 'c'
+   threadProducer->c = '@';
+                 ^
+src/cpPriority.c:37:17: error: 'appData {aka struct <anonymous>}' has no member named 'bit'
+   threadProducer->bit = 0;
+                 ^
+src/cpPriority.c:41:18: error: 'appData {aka struct <anonymous>}' has no member named 'c'
+    threadProducer->c++;
+                  ^
+src/cpPriority.c:42:18: error: 'appData {aka struct <anonymous>}' has no member named 'bit'
+    threadProducer->bit++;
+                  ^
+src/cpPriority.c:43:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/cpPriority.c:46:20: error: 'appData {aka struct <anonymous>}' has no member named 'c'
+      threadProducer->c, threadProducer->bit);
+                    ^
+src/cpPriority.c:46:39: error: 'appData {aka struct <anonymous>}' has no member named 'bit'
+      threadProducer->c, threadProducer->bit);
+                                       ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:63:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("Starting consumer/producer (main thread priority:%d)...\n");
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+17:42:36 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:44:15 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:59:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("%c", 0);
+  ^
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumerExtended   build/x86_64-debug/src/producerConsumerExtended.o  
+build/x86_64-debug/src/producerConsumerExtended.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/producerConsumerExtended//src/producerConsumerExtended.c:59: undefined reference to `prtinf'
+Makefile:60: recipe for target 'build/x86_64-debug/producerConsumerExtended' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/producerConsumerExtended] Error 1
+17:45:59 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumerExtended   build/x86_64-debug/src/producerConsumerExtended.o  
+17:46:31 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumerExtended   build/x86_64-debug/src/producerConsumerExtended.o  
+17:47:30 **** Incremental Build of configuration x86_64-debug for project producerConsumerExtended ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/producerConsumerExtended.d,-MT,build/x86_64-debug/src/producerConsumerExtended.o -o build/x86_64-debug/src/producerConsumerExtended.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/producerConsumerExtended.c
+src/producerConsumerExtended.c: In function 'producer':
+src/producerConsumerExtended.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/producerConsumerExtended.c: In function 'main':
+src/producerConsumerExtended.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/producerConsumerExtended.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/producerConsumerExtended   build/x86_64-debug/src/producerConsumerExtended.o  
+17:54:45 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:35:64: error: too few arguments to function 'pthread_getschedparam'
+  printf("->Producer thread started(thread priority:%d)...\n",  pthread_getschedparam(pthread_self()));
+                                                                ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:211:12: note: declared here
+ extern int pthread_getschedparam(const pthread_t __thr, int *__policy, struct sched_param *__param);
+            ^
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:64:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("Starting consumer/producer (main thread priority:%d)...\n");
+  ^
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+  sleep(Number_of_packjets);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+17:55:07 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:64:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("Starting consumer/producer (main thread priority:%d)...\n");
+  ^
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+build/x86_64-debug/src/cpPriority.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/cpPriority//src/cpPriority.c:64: undefined reference to `prtinf'
+Makefile:60: recipe for target 'build/x86_64-debug/cpPriority' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/cpPriority] Error 1
+17:55:22 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:64:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("Starting consumer/producer (main thread priority:10)...\n");
+  ^
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+build/x86_64-debug/src/cpPriority.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/cpPriority//src/cpPriority.c:64: undefined reference to `prtinf'
+Makefile:60: recipe for target 'build/x86_64-debug/cpPriority' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/cpPriority] Error 1
+17:55:34 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+17:56:02 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:35:64: error: too few arguments to function 'pthread_getschedparam'
+  printf("->Producer thread started(thread priority:%d)...\n",  pthread_getschedparam(pthread_self()));
+                                                                ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:211:12: note: declared here
+ extern int pthread_getschedparam(const pthread_t __thr, int *__policy, struct sched_param *__param);
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+            ^
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:64:70: error: too few arguments to function 'pthread_getschedparam'
+  printf("Starting consumer/producer (main thread priority:%d)...\n", pthread_getschedparam(pthread_self()));
+                                                                      ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:211:12: note: declared here
+ extern int pthread_getschedparam(const pthread_t __thr, int *__policy, struct sched_param *__param);
+            ^
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+17:56:21 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:35:64: error: too few arguments to function 'pthread_getschedparam'
+  printf("->Producer thread started(thread priority:%d)...\n",  pthread_getschedparam(pthread_self()));
+                                                                ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:211:12: note: declared here
+ extern int pthread_getschedparam(const pthread_t __thr, int *__policy, struct sched_param *__param);
+            ^
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:64:70: error: too few arguments to function 'pthread_getschedparam'
+  printf("Starting consumer/producer (main thread priority:%d)...\n", pthread_getschedparam(pthread_self()));
+                                                                      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:211:12: note: declared here
+ extern int pthread_getschedparam(const pthread_t __thr, int *__policy, struct sched_param *__param);
+            ^
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+17:56:52 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:35:63: error: expected expression before ')' token
+  printf("->Producer thread started(thread priority:10)...\n", );
+                                                               ^
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+17:56:59 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:11: warning: unused variable 'threadConsumer' [-Wunused-variable]
+  appData *threadConsumer= (appData*) data;
+           ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:36:11: warning: unused variable 'threadProducer' [-Wunused-variable]
+  appData *threadProducer = (appData*)data;
+           ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(Number_of_packjets);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:15:24 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:29:3: error: expected ';' before 'printf'
+   printf("consumer: got that from producer : %c\n",dataValue);
+   ^
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: error: 'threadConumser' undeclared (first use in this function)
+   threadConumser->readfinnished= 1;
+   ^
+src/cpPriority.c:31:3: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c:21:7: warning: variable 'dataValue' set but not used [-Wunused-but-set-variable]
+  char dataValue;
+       ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+18:15:40 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:29:3: error: expected ';' before 'printf'
+   printf("consumer: got that from producer : %c\n",dataValue);
+   ^
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: error: 'threadConsumser' undeclared (first use in this function)
+   threadConsumser->readfinnished= 1;
+   ^
+src/cpPriority.c:31:3: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c:21:7: warning: variable 'dataValue' set but not used [-Wunused-but-set-variable]
+  char dataValue;
+       ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+18:15:56 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: error: 'threadConsumser' undeclared (first use in this function)
+   threadConsumser->readfinnished= 1;
+   ^
+src/cpPriority.c:31:3: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+18:16:27 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:18:32 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:87:28: error: 'ctAttribute' undeclared (first use in this function)
+  pthread_create(&cthread, &ctAttribute, consumer, &data);
+                            ^
+src/cpPriority.c:87:28: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c:70:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+18:18:39 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:87:28: error: 'ctAttribute' undeclared (first use in this function)
+  pthread_create(&cthread, &ctAttribute, consumer, &data);
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+                            ^
+src/cpPriority.c:87:28: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+18:18:50 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:21:34 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:51:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:52:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:22:01 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:52:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:22:23 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:51:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:52:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:22:43 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:25:23 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:36:2: error: expected ';' before 'printf'
+  printf("->Consumer thread finished...\n");
+  ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:50:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:57:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+18:25:56 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:50:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:57:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:27:13 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:28:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:51:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:57:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:58:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:31:56 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:32:34 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:53:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:54:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:33:04 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:55:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:56:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:34:23 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:49:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c:54:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:35:25 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:54:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:55:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:36:03 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:50:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c:55:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:37:09 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:50:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c:55:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (index++) % Buffer_size;
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:40:15 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:41:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:61:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/cpPriority.c:63:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:41:07 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:62:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/cpPriority.c:64:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:41:33 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:62:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/cpPriority.c:64:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:42:41 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:62:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', NULL);
+  ^
+src/cpPriority.c:64:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:44:23 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:59:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:45:17 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:70:2: error: expected ';' before 'sleep'
+  sleep(Number_of_packets+1);
+  ^
+src/cpPriority.c:59:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+18:45:22 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:59:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:46:05 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:59:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+18:46:36 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:43:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:60:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:59:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:05:37 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:19:9: error: 'threadProducer' undeclared (first use in this function)
+  while(!threadProducer->readfinnished){
+         ^
+src/cpPriority.c:19:9: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:49:37: error: 'dataValue' undeclared (first use in this function)
+   threadProducer->buffer[index++] = dataValue++;
+                                     ^
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:45:7: warning: unused variable 'data_value' [-Wunused-variable]
+  char data_value = 'A';
+       ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[2]')
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:24: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+src/cpPriority.c:74:24: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:24: warning: overflow in implicit constant conversion [-Woverflow]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:24: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+src/cpPriority.c:74:24: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[3]')
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:51: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+src/cpPriority.c:74:51: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:51: warning: overflow in implicit constant conversion [-Woverflow]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:51: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+src/cpPriority.c:74:51: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:17: warning: missing braces around initializer [-Wmissing-braces]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                 ^
+src/cpPriority.c:74:17: note: (near initialization for 'data')
+src/cpPriority.c:72:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:71:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:09:00 **** Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:49:37: error: 'dataValue' undeclared (first use in this function)
+   threadProducer->buffer[index++] = dataValue++;
+                                     ^
+src/cpPriority.c:49:37: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:45:7: warning: unused variable 'data_value' [-Wunused-variable]
+  char data_value = 'A';
+       ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[2]')
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:24: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+src/cpPriority.c:74:24: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:24: warning: overflow in implicit constant conversion [-Woverflow]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:24: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+src/cpPriority.c:74:24: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[3]')
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:51: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+src/cpPriority.c:74:51: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:51: warning: overflow in implicit constant conversion [-Woverflow]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:51: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+src/cpPriority.c:74:51: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:17: warning: missing braces around initializer [-Wmissing-braces]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                 ^
+src/cpPriority.c:74:17: note: (near initialization for 'data')
+src/cpPriority.c:72:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:71:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:09:21 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[2]')
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:24: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+src/cpPriority.c:74:24: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:24: warning: overflow in implicit constant conversion [-Woverflow]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:24: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                        ^
+src/cpPriority.c:74:24: note: (near initialization for 'data.buffer[2]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[3]')
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:51: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+src/cpPriority.c:74:51: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:2: warning: braces around scalar initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+  ^
+src/cpPriority.c:74:2: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:51: warning: overflow in implicit constant conversion [-Woverflow]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+In file included from src/cpPriority.c:3:0:
+src/cpPriority.c:74:51: error: field name not in record or union initializer
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                                                   ^
+src/cpPriority.c:74:51: note: (near initialization for 'data.buffer[3]')
+src/cpPriority.c:74:17: warning: missing braces around initializer [-Wmissing-braces]
+  appData data = {0, 0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+                 ^
+src/cpPriority.c:74:17: note: (near initialization for 'data')
+src/cpPriority.c:72:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:71:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:09:33 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:72:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:71:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:11:30 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:56:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:72:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:71:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:12:15 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:30:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:31:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:57:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:73:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:72:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:13:22 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:60:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:76:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:75:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:15:19 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:61:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:77:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:76:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:16:09 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:57:3: error: expected ';' before 'printf'
+   printf("producer: Data(%c) from stimulated h/w is ready\n",
+   ^
+src/cpPriority.c:61:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:77:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:76:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:16:14 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:61:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:77:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:76:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:19:09 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:80:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:19:38 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:63:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:78:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:20:08 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:60:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:76:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:75:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:20:16 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:60:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:76:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:75:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:21:02 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:62:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:78:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:77:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:21:30 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:61:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:76:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:75:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:22:40 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:61:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:76:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:75:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:25:02 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:80:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:25:32 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:80:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:26:34 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:78:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:27:14 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:80:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:30:23 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:68:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:93:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&pThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:83:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:82:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:31:47 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:67:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:92:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&pThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:82:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:81:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:32:15 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:67:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:92:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&pThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:82:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:81:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:32:30 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:67:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:92:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&cThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:93:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&pThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:82:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:81:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:32:39 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:67:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:90:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&pThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:82:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:81:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:34:11 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:67:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:89:15: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+  pthread_join(&pThread, NULL);
+               ^
+In file included from src/cpPriority.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/cpPriority.c:81:8: warning: unused variable 'retval' [-Wunused-variable]
+  void *retval;
+        ^
+src/cpPriority.c:80:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:34:52 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:67:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:80:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:37:45 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:35:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:80:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:39:56 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:40:43 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:43:17 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:79:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:44:46 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:82:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:45:48 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:83:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:46:15 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:83:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:46:21 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:82:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:47:10 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:83:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:47:28 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:47:42 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:85:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:48:23 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:34:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:35:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:86:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:52:41 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:34:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:35:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:96:2: error: 'ptAttrsched_priority' undeclared (first use in this function)
+  ptAttrsched_priority = 5;
+  ^
+src/cpPriority.c:96:2: note: each undeclared identifier is reported only once for each function it appears in
+src/cpPriority.c:86:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:52:53 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:34:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:35:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:96:8: error: 'pthread_attr_t {aka struct _thread_attr}' has no member named 'sched_priority'
+  ptAttr.sched_priority = 5;
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+        ^
+src/cpPriority.c:102:8: error: 'pthread_attr_t {aka struct _thread_attr}' has no member named 'sched_priority'
+  ptAttr.sched_priority = 2;
+        ^
+src/cpPriority.c:86:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:53:07 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:34:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:35:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:96:8: error: 'pthread_attr_t {aka struct _thread_attr}' has no member named 'sched_priority'
+  ptAttr.sched_priority = 5;
+        ^
+src/cpPriority.c:102:8: error: 'pthread_attr_t {aka struct _thread_attr}' has no member named 'sched_priority'
+  ctAttr.sched_priority = 2;
+        ^
+src/cpPriority.c:86:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:54:02 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:34:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:35:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+Makefile:55: recipe for target 'build/x86_64-debug/src/cpPriority.o' failed
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:96:8: error: 'pthread_attr_t {aka struct _thread_attr}' has no member named 'sched_priority'
+  ptAttr.sched_priority = 5;
+        ^
+src/cpPriority.c:102:8: error: 'pthread_attr_t {aka struct _thread_attr}' has no member named 'sched_priority'
+  ctAttr.sched_priority = 2;
+        ^
+src/cpPriority.c:86:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/cpPriority.o] Error 1
+19:54:25 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:34:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:35:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:66:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:86:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:55:48 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:70:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:81:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:56:16 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:82:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:56:44 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:57:02 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:16:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:85:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:57:20 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:57:31 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:58:10 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:58:39 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:58:45 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:59:07 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:32:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:64:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:84:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+19:59:29 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:16:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+src/cpPriority.c:17:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("Consumer thread is running (thread priority:10)...\n");
+  ^
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:85:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+build/x86_64-debug/src/cpPriority.o: In function `consumer':
+/Users/adityaaaap/ide-7.0-workspace/cpPriority//src/cpPriority.c:17: undefined reference to `prtinf'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/cpPriority' failed
+make: *** [build/x86_64-debug/cpPriority] Error 1
+19:59:38 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:16:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+src/cpPriority.c:33:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:65:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'main':
+src/cpPriority.c:85:7: warning: unused variable 'hostname' [-Wunused-variable]
+  char hostname[100];
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+20:11:35 **** Incremental Build of configuration x86_64-debug for project cpPriority ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/cpPriority.d,-MT,build/x86_64-debug/src/cpPriority.o -o build/x86_64-debug/src/cpPriority.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/cpPriority.c
+src/cpPriority.c: In function 'consumer':
+src/cpPriority.c:18:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(1); // add 1 second delay
+  ^
+src/cpPriority.c:37:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+src/cpPriority.c: In function 'producer':
+src/cpPriority.c:68:9: warning: operation on 'index' may be undefined [-Wsequence-point]
+   index = (++index) % Buffer_size;
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
