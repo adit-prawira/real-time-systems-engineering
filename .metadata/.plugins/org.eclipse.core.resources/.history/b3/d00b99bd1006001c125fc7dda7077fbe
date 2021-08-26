@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	printf("Fixed Sequence Traffic Lights State Machine\n");
+	int runTimes = 30, counter = 0;
+	enum states CurrentState;
+
+	while(counter < runtimes){
+		SingleStep_TrafficLight_SM(&CurrentState);
+		counter++;
+	}
+	return EXIT_SUCCESS;
+}

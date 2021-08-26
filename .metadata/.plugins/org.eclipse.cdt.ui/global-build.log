@@ -6402,3 +6402,316 @@ src/cpPriority.c:68:9: warning: operation on 'index' may be undefined [-Wsequenc
    index = (++index) % Buffer_size;
          ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/cpPriority   build/x86_64-debug/src/cpPriority.o  
+11:01:50 **** Build of configuration armv7le-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/StateMachine.d,-MT,build/armv7le-debug/src/StateMachine.o -o build/armv7le-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/StateMachine   build/armv7le-debug/src/StateMachine.o  
+11:15:46 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c: In function 'main':
+src/StateMachine.c:22:9: error: 'Done' undeclared (first use in this function)
+Makefile:55: recipe for target 'build/x86_64-debug/src/StateMachine.o' failed
+  while(!Done){
+         ^
+src/StateMachine.c:22:9: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/StateMachine.o] Error 1
+11:16:28 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+build/x86_64-debug/src/StateMachine.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:25: undefined reference to `Initialise0'
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:29: undefined reference to `DoSomething1'
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:30: undefined reference to `Test1'
+Makefile:60: recipe for target 'build/x86_64-debug/StateMachine' failed
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:37: undefined reference to `DoSomething2'
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:38: undefined reference to `Test2'
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:44: undefined reference to `DoSomething3'
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:45: undefined reference to `Test3'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/StateMachine] Error 1
+11:17:10 **** Build of configuration armv7le-debug for project TrafficLights ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLights.d,-MT,build/armv7le-debug/src/TrafficLights.o -o build/armv7le-debug/src/TrafficLights.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLights.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLights   build/armv7le-debug/src/TrafficLights.o  
+11:20:20 **** Build of configuration armv7le-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/StateMachine.d,-MT,build/armv7le-debug/src/StateMachine.o -o build/armv7le-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/StateMachine   build/armv7le-debug/src/StateMachine.o  
+11:48:14 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c:28:5: error: redefinition of 'Test2'
+ int Test2(){
+     ^
+src/StateMachine.c:20:5: note: previous definition of 'Test2' was here
+ int Test2(){
+     ^
+src/StateMachine.c: In function 'initialise0':
+src/StateMachine.c:37:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print("State: %d\n", CurrentState);
+  ^
+src/StateMachine.c: At top level:
+src/StateMachine.c:42:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/StateMachine.c:46:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/StateMachine.c: In function 'main':
+src/StateMachine.c:63:5: error: 'CUrrentState' undeclared (first use in this function)
+     CUrrentState = State2;
+     ^
+src/StateMachine.c:63:5: note: each undeclared identifier is reported only once for each function it appears in
+src/StateMachine.c:76:8: warning: implicit declaration of function 'Test3' [-Wimplicit-function-declaration]
+    if(!Test3())
+        ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/StateMachine.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/StateMachine.o] Error 1
+11:48:25 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c:28:5: error: redefinition of 'Test2'
+ int Test2(){
+     ^
+src/StateMachine.c:20:5: note: previous definition of 'Test2' was here
+ int Test2(){
+     ^
+src/StateMachine.c: In function 'initialise0':
+src/StateMachine.c:37:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print("State: %d\n", CurrentState);
+  ^
+src/StateMachine.c: At top level:
+src/StateMachine.c:42:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/StateMachine.c:46:1: error: expected identifier or '(' before '}' token
+ }
+Makefile:55: recipe for target 'build/x86_64-debug/src/StateMachine.o' failed
+ ^
+src/StateMachine.c: In function 'main':
+src/StateMachine.c:76:8: warning: implicit declaration of function 'Test3' [-Wimplicit-function-declaration]
+    if(!Test3())
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/StateMachine.o] Error 1
+11:48:45 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c:28:5: error: redefinition of 'Test2'
+ int Test2(){
+     ^
+src/StateMachine.c:20:5: note: previous definition of 'Test2' was here
+ int Test2(){
+     ^
+src/StateMachine.c: In function 'initialise0':
+src/StateMachine.c:37:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print("State: %d\n", CurrentState);
+  ^
+src/StateMachine.c: At top level:
+src/StateMachine.c:46:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/StateMachine.c: In function 'main':
+src/StateMachine.c:76:8: warning: implicit declaration of function 'Test3' [-Wimplicit-function-declaration]
+    if(!Test3())
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/StateMachine.o' failed
+make: *** [build/x86_64-debug/src/StateMachine.o] Error 1
+11:48:52 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c:28:5: error: redefinition of 'Test2'
+ int Test2(){
+     ^
+src/StateMachine.c:20:5: note: previous definition of 'Test2' was here
+ int Test2(){
+     ^
+src/StateMachine.c: In function 'initialise0':
+src/StateMachine.c:37:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/StateMachine.o' failed
+  print("State: %d\n", CurrentState);
+  ^
+src/StateMachine.c: In function 'main':
+src/StateMachine.c:76:8: warning: implicit declaration of function 'Test3' [-Wimplicit-function-declaration]
+    if(!Test3())
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/StateMachine.o] Error 1
+11:49:11 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c: In function 'initialise0':
+src/StateMachine.c:37:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print("State: %d\n", CurrentState);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+build/x86_64-debug/src/StateMachine.o: In function `initialise0':
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:37: undefined reference to `print'
+build/x86_64-debug/src/StateMachine.o: In function `doSomething1':
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:40: undefined reference to `print'
+build/x86_64-debug/src/StateMachine.o: In function `doSomething2':
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:44: undefined reference to `print'
+build/x86_64-debug/src/StateMachine.o: In function `doSomething3':
+/Users/adityaaaap/ide-7.0-workspace/StateMachine//src/StateMachine.c:48: undefined reference to `print'
+Makefile:60: recipe for target 'build/x86_64-debug/StateMachine' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/StateMachine] Error 1
+11:49:55 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:50:54 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:51:26 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:51:31 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+src/StateMachine.c: In function 'Test3':
+Makefile:55: recipe for target 'build/x86_64-debug/src/StateMachine.o' failed
+src/StateMachine.c:32:5: error: 'num' undeclared (first use in this function)
+  if(num > 0)
+     ^
+src/StateMachine.c:32:5: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/StateMachine.o] Error 1
+11:51:37 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:52:38 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:53:19 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:53:45 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+11:54:25 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+12:06:33 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:06:42 **** Incremental Build of configuration x86_64-debug for project TrafficLights ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLights.d,-MT,build/x86_64-debug/src/TrafficLights.o -o build/x86_64-debug/src/TrafficLights.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLights.c
+src/TrafficLights.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLights.c:15:10: error: switch quantity not an integer
+  switch (currentState){
+          ^
+src/TrafficLights.c:17:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state1;
+                ^
+src/TrafficLights.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLights.c:22:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state2;
+                ^
+src/TrafficLights.c:27:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state3;
+                ^
+src/TrafficLights.c:32:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state4;
+                ^
+src/TrafficLights.c:37:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state5;
+                ^
+src/TrafficLights.c:42:18: error: 'state6' undeclared (first use in this function)
+   currentState = state6;
+                  ^
+src/TrafficLights.c:42:18: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLights.c:47:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state1;
+                ^
+src/TrafficLights.c: In function 'main':
+src/TrafficLights.c:57:18: error: 'runtimes' undeclared (first use in this function)
+  while(counter < runtimes){
+                  ^
+src/TrafficLights.c:55:6: warning: unused variable 'runTimes' [-Wunused-variable]
+  int runTimes = 30, counter = 0;
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLights.o' failed
+make: *** [build/x86_64-debug/src/TrafficLights.o] Error 1
+12:08:24 **** Incremental Build of configuration x86_64-debug for project TrafficLights ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLights.d,-MT,build/x86_64-debug/src/TrafficLights.o -o build/x86_64-debug/src/TrafficLights.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLights.c
+src/TrafficLights.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLights.c:17:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state1;
+                ^
+src/TrafficLights.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLights.c:42:19: error: 'state6' undeclared (first use in this function)
+   *currentState = state6;
+                   ^
+src/TrafficLights.c:42:19: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLights.c:15:2: warning: enumeration value 'stat6' not handled in switch [-Wswitch]
+  switch (*currentState){
+  ^
+src/TrafficLights.c: In function 'main':
+src/TrafficLights.c:57:18: error: 'runtimes' undeclared (first use in this function)
+  while(counter < runtimes){
+                  ^
+src/TrafficLights.c:55:6: warning: unused variable 'runTimes' [-Wunused-variable]
+  int runTimes = 30, counter = 0;
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLights.o' failed
+make: *** [build/x86_64-debug/src/TrafficLights.o] Error 1
+12:08:34 **** Incremental Build of configuration x86_64-debug for project TrafficLights ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLights.d,-MT,build/x86_64-debug/src/TrafficLights.o -o build/x86_64-debug/src/TrafficLights.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLights.c
+src/TrafficLights.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLights.c:17:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state1;
+                ^
+src/TrafficLights.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLights.o' failed
+   ^
+src/TrafficLights.c:42:19: error: 'state6' undeclared (first use in this function)
+   *currentState = state6;
+                   ^
+src/TrafficLights.c:42:19: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLights.c:15:2: warning: enumeration value 'stat6' not handled in switch [-Wswitch]
+  switch (*currentState){
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLights.o] Error 1
+12:08:45 **** Incremental Build of configuration x86_64-debug for project TrafficLights ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLights.d,-MT,build/x86_64-debug/src/TrafficLights.o -o build/x86_64-debug/src/TrafficLights.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLights.c
+src/TrafficLights.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLights.c:17:16: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   currentState = state1;
+                ^
+src/TrafficLights.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLights   build/x86_64-debug/src/TrafficLights.o  
+12:09:18 **** Incremental Build of configuration x86_64-debug for project TrafficLights ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLights.d,-MT,build/x86_64-debug/src/TrafficLights.o -o build/x86_64-debug/src/TrafficLights.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLights.c
+src/TrafficLights.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLights.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLights   build/x86_64-debug/src/TrafficLights.o  

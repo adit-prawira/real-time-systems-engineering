@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+enum states{
+	State0,
+	State1,
+	State2,
+	State3
+};
+
+enum states CurState;
+int Test1();
+int Test2();
+int Test3();
+
+void Initialise0();
+void DoSomething1();
+void DoSomething2();
+void DoSomething3();
+
+int main(void) {
+	while(!Done){
+		switch(CurState){
+		case State0:
+			Initialise0();
+			CurState = State1;
+			break;
+		case State1:
+			DoSomething1();
+			if(Test1()){
+				CurState = State3;
+			}else{
+				CurState = State2;
+			}
+		}
+	}
+	return EXIT_SUCCESS;
+}

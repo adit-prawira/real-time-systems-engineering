@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+enum states{
+	State0,
+	State1,
+	State2,
+	State3
+};
+
+enum states CurState;
+int Test1();
+int Test2();
+int Test3();
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

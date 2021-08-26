@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+enum states{
+	State0,
+	State1,
+	State2,
+	State3
+};
+enum states CurrentState;
+int done = 0;
+void initialise0(){
+	print("State: %d\n", CurrentState);
+}
+void doSomething1(){
+	print("State: %d\n", CurrentState);
+	}
+}
+void doSomething2(){
+	print("State: %d\n", CurrentState);
+	}
+}
+void doSomething3(){
+	print("State: %d\n", CurrentState);
+}
+int main(void) {
+	while(!done){
+		switch(CurrentState){
+		case State0;
+
+		}
+	}
+	return EXIT_SUCCESS;
+}

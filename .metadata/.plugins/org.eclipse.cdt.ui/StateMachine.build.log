@@ -1,0 +1,6 @@
+12:06:33 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+12:06:33 Build Finished (took 76ms)
+

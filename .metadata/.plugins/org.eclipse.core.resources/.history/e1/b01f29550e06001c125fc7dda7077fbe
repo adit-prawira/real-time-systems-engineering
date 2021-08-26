@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+enum states{
+	State0,
+	State1,
+	State2,
+	State3
+};
+enum states CurrentState;
+int done = 0;
+void Initialise0(){
+	printf("State 0");
+}
+int main(void) {
+
+	return EXIT_SUCCESS;
+}
