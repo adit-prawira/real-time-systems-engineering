@@ -1,6 +1,7 @@
-12:06:33 **** Incremental Build of configuration x86_64-debug for project StateMachine ****
+14:06:30 **** Build of configuration x86_64-debug for project StateMachine ****
 make -j3 all 
-make: Nothing to be done for 'all'.
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
 
-12:06:33 Build Finished (took 76ms)
+14:06:31 Build Finished (took 445ms)
 

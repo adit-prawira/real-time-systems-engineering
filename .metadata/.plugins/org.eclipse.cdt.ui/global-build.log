@@ -6715,3 +6715,2063 @@ src/TrafficLights.c:21:3: warning: implicit declaration of function 'sleep' [-Wi
    sleep(1);
    ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLights   build/x86_64-debug/src/TrafficLights.o  
+12:41:55 **** Build of configuration armv7le-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightsThread.d,-MT,build/armv7le-debug/src/TrafficLightsThread.o -o build/armv7le-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightsThread   build/armv7le-debug/src/TrafficLightsThread.o  
+13:09:20 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'getMessage':
+src/TrafficLightsThread.c:69:24: error: 'threadConumser' undeclared (first use in this function)
+     pthread_cond_wait(&threadConumser->condvar, &threadConsumer->mutex);
+                        ^
+src/TrafficLightsThread.c:69:24: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:74:25: error: 'threadCOnsumer' undeclared (first use in this function)
+   pthread_mutex_unlock(&threadCOnsumer->mutex);
+                         ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:09:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'getMessage':
+src/TrafficLightsThread.c:69:24: error: 'threadConsumser' undeclared (first use in this function)
+     pthread_cond_wait(&threadConsumser->condvar, &threadConsumer->mutex);
+                        ^
+src/TrafficLightsThread.c:69:24: note: each undeclared identifier is reported only once for each function it appears in
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:09:44 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:18:07 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:34:4: error: 'currentState' undeclared (first use in this function)
+   *currentState = state2;
+    ^
+src/TrafficLightsThread.c:34:4: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:37:19: error: 'generateThread' undeclared (first use in this function)
+   pthread_create(&generateThread, NULL, generateMessage, &data);
+                   ^
+src/TrafficLightsThread.c:37:41: error: 'generateMessage' undeclared (first use in this function)
+   pthread_create(&generateThread, NULL, generateMessage, &data);
+                                         ^
+src/TrafficLightsThread.c:38:19: error: 'getThread' undeclared (first use in this function)
+   pthread_create(&getThread, NULL, getMessage, &data);
+                   ^
+src/TrafficLightsThread.c:38:36: error: 'getMessage' undeclared (first use in this function)
+   pthread_create(&getThread, NULL, getMessage, &data);
+                                    ^
+src/TrafficLightsThread.c: In function 'main':
+src/TrafficLightsThread.c:102:28: warning: unused variable 'getThread' [-Wunused-variable]
+  pthread_t generateThread, getThread;
+                            ^
+src/TrafficLightsThread.c:102:12: warning: unused variable 'generateThread' [-Wunused-variable]
+  pthread_t generateThread, getThread;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+13:18:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:38:41: error: 'generateMessage' undeclared (first use in this function)
+   pthread_create(&generateThread, NULL, generateMessage, &cData);
+                                         ^
+src/TrafficLightsThread.c:38:41: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:39:36: error: 'getMessage' undeclared (first use in this function)
+   pthread_create(&getThread, NULL, getMessage, &cData);
+                                    ^
+src/TrafficLightsThread.c:47:4: error: 'currentState' undeclared (first use in this function)
+   *currentState = state4;
+    ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:19:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:38:41: error: 'generateMessage' undeclared (first use in this function)
+   pthread_create(&generateThread, NULL, generateMessage, &cData);
+                                         ^
+src/TrafficLightsThread.c:38:41: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:39:36: error: 'getMessage' undeclared (first use in this function)
+   pthread_create(&getThread, NULL, getMessage, &cData);
+                                    ^
+src/TrafficLightsThread.c:47:8: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   cData->currentState = state4;
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:19:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:38:41: error: 'generateMessage' undeclared (first use in this function)
+   pthread_create(&generateThread, NULL, generateMessage, &cData);
+                                         ^
+src/TrafficLightsThread.c:38:41: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:39:36: error: 'getMessage' undeclared (first use in this function)
+   pthread_create(&getThread, NULL, getMessage, &cData);
+                                    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:19:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:34:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:38:41: error: 'generateMessage' undeclared (first use in this function)
+   pthread_create(&generateThread, NULL, generateMessage, cData);
+                                         ^
+src/TrafficLightsThread.c:38:41: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:39:36: error: 'getMessage' undeclared (first use in this function)
+   pthread_create(&getThread, NULL, getMessage, cData);
+                                    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+13:20:07 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:65:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:22:22 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:22:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:23:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'main':
+src/TrafficLightsThread.c:102:40: error: incompatible type for argument 1 of 'singlestep_trafficlight_statemachine'
+   singlestep_trafficlight_statemachine(data.currentStates);
+                                        ^
+src/TrafficLightsThread.c:25:6: note: expected 'enum states *' but argument is of type 'enum states'
+ void singlestep_trafficlight_statemachine(enum states * currentState){
+      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:23:38 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:28:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:26:12: error: 'data' redeclared as different kind of symbol
+  appData * data = (adppData*)data;
+            ^
+src/TrafficLightsThread.c:25:53: note: previous definition of 'data' was here
+ void singlestep_trafficlight_statemachine(appData * data){
+                                                     ^
+src/TrafficLightsThread.c:26:20: error: 'adppData' undeclared (first use in this function)
+  appData * data = (adppData*)data;
+                    ^
+src/TrafficLightsThread.c:26:20: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:26:29: error: expected expression before ')' token
+  appData * data = (adppData*)data;
+                             ^
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:34:4: error: 'currentState' undeclared (first use in this function)
+   *currentState = state2;
+    ^
+src/TrafficLightsThread.c:37:3: error: too few arguments to function 'pthread_join'
+   pthread_join()
+   ^
+In file included from src/TrafficLightsThread.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: declared here
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+src/TrafficLightsThread.c:38:3: error: expected ';' before 'printf'
+   printf("EWG-NSR(%d)\n", data->currentState);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:29:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:26:12: error: 'data' redeclared as different kind of symbol
+  appData * data = (adppData*)data;
+            ^
+src/TrafficLightsThread.c:25:53: note: previous definition of 'data' was here
+ void singlestep_trafficlight_statemachine(appData * data){
+                                                     ^
+src/TrafficLightsThread.c:26:20: error: 'adppData' undeclared (first use in this function)
+  appData * data = (adppData*)data;
+                    ^
+src/TrafficLightsThread.c:26:20: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsThread.c:26:29: error: expected expression before ')' token
+  appData * data = (adppData*)data;
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+                             ^
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:33:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'generateMessage':
+src/TrafficLightsThread.c:94:42: error: 'threadConsumer' undeclared (first use in this function)
+    singlestep_trafficlight_statemachine(&threadConsumer->currentStates);
+                                          ^
+src/TrafficLightsThread.c:94:42: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:33:52 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:34:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:26:2: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+  prtinf("The state %d\n", *currentState);
+  ^
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+build/x86_64-debug/src/TrafficLightsThread.o: In function `singlestep_trafficlight_statemachine':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsThread//src/TrafficLightsThread.c:26: undefined reference to `prtinf'
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightsThread' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrafficLightsThread] Error 1
+13:34:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:37:10 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:37:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:38:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:38:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:40:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:42:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:44:01 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:45:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:47:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:47:25 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:47:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:48:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:48:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:49:24 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'getMessage':
+src/TrafficLightsThread.c:67:2: error: 'dataisReady' undeclared (first use in this function)
+  dataisReady = 0;
+  ^
+src/TrafficLightsThread.c:67:2: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:49:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:49:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:50:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:51:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:52:29 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:53:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'generateMessage':
+src/TrafficLightsThread.c:81:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:56:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:27:17: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+  switch (curData->currentState){
+                 ^
+src/TrafficLightsThread.c:29:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState = state1;
+          ^
+src/TrafficLightsThread.c:32:34: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   printf("EWR-NSR(%d)\n", curData->currentState);
+                                  ^
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c:34:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState= state2;
+          ^
+src/TrafficLightsThread.c:37:34: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   printf("EWG-NSR(%d)\n", curData->currentState);
+                                  ^
+src/TrafficLightsThread.c:39:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState = state3;
+          ^
+src/TrafficLightsThread.c:42:34: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   printf("EWY-NSR(%d)\n", curData->currentState);
+                                  ^
+src/TrafficLightsThread.c:44:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState = state4;
+          ^
+src/TrafficLightsThread.c:47:34: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   printf("EWR-NSR(%d)\n", curData->currentState);
+                                  ^
+src/TrafficLightsThread.c:49:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState = state5;
+          ^
+src/TrafficLightsThread.c:52:34: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   printf("EWR-NSG(%d)\n", curData->currentState);
+                                  ^
+src/TrafficLightsThread.c:54:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState = state6;
+          ^
+src/TrafficLightsThread.c:57:34: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   printf("EWR-NSY(%d)\n", curData->currentState);
+                                  ^
+src/TrafficLightsThread.c:59:10: error: 'appData {aka struct <anonymous>}' has no member named 'currentState'
+   curData->currentState = state1;
+          ^
+src/TrafficLightsThread.c: In function 'generateMessage':
+src/TrafficLightsThread.c:98:42: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+     singlestep_trafficlight_statemachine(&threadProducer->currentStates);
+                                          ^
+src/TrafficLightsThread.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'enum states *'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsThread.o' failed
+src/TrafficLightsThread.c:81:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsThread.o] Error 1
+13:56:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'generateMessage':
+src/TrafficLightsThread.c:98:42: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+     singlestep_trafficlight_statemachine(&threadProducer->currentState);
+                                          ^
+src/TrafficLightsThread.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'enum states *'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+src/TrafficLightsThread.c:81:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+13:59:29 **** Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:04:22 **** Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'getMessage':
+src/TrafficLightsThread.c:71:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadConsumer);
+                                         ^
+src/TrafficLightsThread.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+src/TrafficLightsThread.c: In function 'generateMessage':
+src/TrafficLightsThread.c:81:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+14:05:36 **** Build of configuration armv7le-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightThreads.d,-MT,build/armv7le-debug/src/TrafficLightThreads.o -o build/armv7le-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightThreads   build/armv7le-debug/src/TrafficLightThreads.o  
+14:05:41 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'getMessage':
+src/TrafficLightThreads.c:71:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadConsumer);
+                                         ^
+src/TrafficLightThreads.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:81:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:06:30 **** Build of configuration x86_64-debug for project StateMachine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/StateMachine.d,-MT,build/x86_64-debug/src/StateMachine.o -o build/x86_64-debug/src/StateMachine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/StateMachine.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/StateMachine   build/x86_64-debug/src/StateMachine.o  
+14:06:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'getMessage':
+src/TrafficLightThreads.c:71:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadConsumer);
+                                         ^
+src/TrafficLightThreads.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:06:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'getMessage':
+src/TrafficLightThreads.c:71:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadConsumer);
+                                         ^
+src/TrafficLightThreads.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:96:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadProducer);
+                                         ^
+src/TrafficLightThreads.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:08:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:96:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadProducer);
+                                         ^
+src/TrafficLightThreads.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:11:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:12:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:13:20 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:14:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:15:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:16:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:16:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:17:38 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:18:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:19:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:21:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:21:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:24:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:25:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:80:15: warning: unused variable 'valueE' [-Wunused-variable]
+  char valueN, valueE;
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:27:55 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:28:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:28:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:29:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:30:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:31:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:33:28 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:34:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:35:16 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:37:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:38:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:40:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:90:42: error: 'threadConsumer' undeclared (first use in this function)
+    singlestep_trafficlight_statemachine(&threadConsumer->currentState);
+                                          ^
+src/TrafficLightThreads.c:90:42: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightThreads.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightThreads.o' failed
+14:40:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:41:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+14:44:10 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:86:10: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    value = NULL;
+          ^
+src/TrafficLightThreads.c:87:55: warning: comparison between pointer and integer
+    if(threadProducer->currentState == state2 && value == NULL){
+                                                       ^
+src/TrafficLightThreads.c:92:55: warning: comparison between pointer and integer
+    if(threadProducer->currentState == state5 && value == NULL){
+                                                       ^
+src/TrafficLightThreads.c:99:18: error: 'valueE' undeclared (first use in this function)
+     scanf("%c", &valueE);
+                  ^
+src/TrafficLightThreads.c:99:18: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightThreads.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightThreads.o] Error 1
+14:46:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:86:10: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    value = NULL;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+10:52:38 **** Incremental Build of configuration x86_64-debug for project TrafficLightThreads ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightThreads.d,-MT,build/x86_64-debug/src/TrafficLightThreads.o -o build/x86_64-debug/src/TrafficLightThreads.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightThreads.c
+src/TrafficLightThreads.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightThreads.c:32:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightThreads.c: In function 'generateMessage':
+src/TrafficLightThreads.c:80:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightThreads   build/x86_64-debug/src/TrafficLightThreads.o  
+15:17:27 **** Build of configuration armv7le-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightsSM.d,-MT,build/armv7le-debug/src/TrafficLightsSM.o -o build/armv7le-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightsSM   build/armv7le-debug/src/TrafficLightsSM.o  
+15:33:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:14:26: error: 'td' undeclared (first use in this function)
+   pthread_rwlock_rdlock(&td->dataSource);
+                          ^
+src/TrafficLightsSM.c:14:26: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsSM.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:31:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+src/TrafficLightsSM.c:32:26: error: 'td' undeclared (first use in this function)
+   pthread_rwlock_wrlock(&td->dataSource);
+                          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:33:40 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:31:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:31: warning: The 'gets' function is dangerous and should not be used.
+15:34:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:31:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:31: warning: The 'gets' function is dangerous and should not be used.
+15:35:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:21:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:31:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:31: warning: The 'gets' function is dangerous and should not be used.
+15:35:22 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:22:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:32:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:32: warning: The 'gets' function is dangerous and should not be used.
+15:35:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:22:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:32:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:32: warning: The 'gets' function is dangerous and should not be used.
+15:41:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:13:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:3: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+   prtinf("State %d\n", datat.currentState);
+   ^
+src/TrafficLightsSM.c:78:24: error: 'datat' undeclared (first use in this function)
+   prtinf("State %d\n", datat.currentState);
+                        ^
+src/TrafficLightsSM.c:78:24: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:41:53 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:13:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:3: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+   prtinf("State %d\n", data.currentState);
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   ^
+src/TrafficLightsSM.c:78:28: error: 'struct resource' has no member named 'currentState'
+   prtinf("State %d\n", data.currentState);
+                            ^
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:42:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:13:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:3: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+   prtinf("State %d\n", data.currentState);
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   ^
+src/TrafficLightsSM.c:78:28: error: 'struct resource' has no member named 'currentState'
+   prtinf("State %d\n", data.currentState);
+                            ^
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:43:16 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:13:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:28: error: 'struct resource' has no member named 'currentState'
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   printf("State %d\n", data.currentState);
+                            ^
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:43:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:13:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:28: error: 'struct resource' has no member named 'currentState'
+   printf("State %d\n", data.currentState);
+                            ^
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:43:53 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:13:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:44:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:14:14: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  int counter = 0;
+              ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:44:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:15:8: warning: type defaults to 'int' in declaration of 'maxRuntimes' [-Wimplicit-int]
+  const maxRuntimes;
+        ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:79: warning: The 'gets' function is dangerous and should not be used.
+15:46:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c:14:27: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  enum states currentState = state0;
+                           ^
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:25:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+15:50:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:58:8: error: 'td' undeclared (first use in this function)
+  while(td->counter < MAX_RUNTIME){
+        ^
+src/TrafficLightsSM.c:58:8: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+src/TrafficLightsSM.c:79:26: error: 'dataSource' undeclared (first use in this function)
+   pthread_rwlock_wrlock(&dataSource);
+                          ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:50:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:58:8: error: 'td' undeclared (first use in this function)
+  while(td->counter < MAX_RUNTIME){
+        ^
+src/TrafficLightsSM.c:58:8: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:78:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+15:50:26 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:79:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:79: warning: The 'gets' function is dangerous and should not be used.
+15:52:40 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:80:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:80: warning: The 'gets' function is dangerous and should not be used.
+15:56:08 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:58:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightsSM.c:58:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:84:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:84: warning: The 'gets' function is dangerous and should not be used.
+15:56:20 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:58:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightsSM.c:58:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:84:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:84: warning: The 'gets' function is dangerous and should not be used.
+15:57:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:84:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:84: warning: The 'gets' function is dangerous and should not be used.
+15:58:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:58:7: warning: variable 'current' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:86:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:86: warning: The 'gets' function is dangerous and should not be used.
+16:00:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsSM.c:24:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:04:39 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:49:12: error: 'currentState' undeclared (first use in this function)
+   switch (*currentState){
+            ^
+src/TrafficLightsSM.c:49:12: note: each undeclared identifier is reported only once for each function it appears in
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+src/TrafficLightsSM.c:59:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+16:05:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:37:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:59:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:59: warning: The 'gets' function is dangerous and should not be used.
+16:07:01 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:32:63: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   if(td->currentState == state2 || td->currentState == state5 && new!=current){
+                                                               ^
+src/TrafficLightsSM.c:36:4: error: expected ';' before 'printf'
+    printf("Enter e/n:\n");
+    ^
+src/TrafficLightsSM.c:39:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:64:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightsSM.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightsSM.o' failed
+16:07:10 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:32:63: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   if(td->currentState == state2 || td->currentState == state5 && new!=current){
+                                                               ^
+src/TrafficLightsSM.c:39:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:64:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:64: warning: The 'gets' function is dangerous and should not be used.
+16:08:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:30:63: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   if(td->currentState == state2 || td->currentState == state5 && new!=current){
+                                                               ^
+src/TrafficLightsSM.c:37:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:62:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:62: warning: The 'gets' function is dangerous and should not be used.
+16:08:52 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:37:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:62:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:62: warning: The 'gets' function is dangerous and should not be used.
+16:13:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:32:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(1);
+     ^
+src/TrafficLightsSM.c:29:3: warning: enumeration value 'state0' not handled in switch [-Wswitch]
+   switch (td->currentState){
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:81:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:81: warning: The 'gets' function is dangerous and should not be used.
+16:14:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:35:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(1);
+     ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:84:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:84: warning: The 'gets' function is dangerous and should not be used.
+16:15:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:36:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(1);
+     ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:85:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:85: warning: The 'gets' function is dangerous and should not be used.
+16:15:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:16:55 **** Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsSM.d,-MT,build/x86_64-debug/src/TrafficLightsSM.o -o build/x86_64-debug/src/TrafficLightsSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsSM.c
+src/TrafficLightsSM.c: In function 'consumer':
+src/TrafficLightsSM.c:30:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/TrafficLightsSM.c: In function 'producer':
+src/TrafficLightsSM.c:86:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsSM   build/x86_64-debug/src/TrafficLightsSM.o  
+build/x86_64-debug/src/TrafficLightsSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightsSM//src/TrafficLightsSM.c:86: warning: The 'gets' function is dangerous and should not be used.
+16:17:32 **** Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:19:00 **** Build of configuration armv7le-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightSM.d,-MT,build/armv7le-debug/src/TrafficLightSM.o -o build/armv7le-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightSM   build/armv7le-debug/src/TrafficLightSM.o  
+16:19:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:30:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/TrafficLightSM.c:31:3: warning: enumeration value 'state0' not handled in switch [-Wswitch]
+   switch (td->currentState){
+   ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:20:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:30:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/TrafficLightSM.c:31:3: warning: enumeration value 'state0' not handled in switch [-Wswitch]
+   switch (td->currentState){
+   ^
+src/TrafficLightSM.c:24:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightSM.c:24:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:88:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:88: warning: The 'gets' function is dangerous and should not be used.
+16:21:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:30:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/TrafficLightSM.c:31:3: warning: enumeration value 'state0' not handled in switch [-Wswitch]
+   switch (td->currentState){
+   ^
+src/TrafficLightSM.c:24:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightSM.c:24:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:76:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[2] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+16:21:18 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:34:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+     sleep(1);
+     ^
+src/TrafficLightSM.c:31:3: warning: enumeration value 'state0' not handled in switch [-Wswitch]
+   switch (td->currentState){
+   ^
+src/TrafficLightSM.c:24:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightSM.c:24:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:76:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[2] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+16:21:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:30:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/TrafficLightSM.c:24:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightSM.c:24:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:76:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[2] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+16:22:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:30:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightSM.c:24:20: warning: variable 'new' set but not used [-Wunused-but-set-variable]
+  char current = 0, new = 0;
+                    ^
+src/TrafficLightSM.c:24:7: warning: unused variable 'current' [-Wunused-variable]
+  char current = 0, new = 0;
+       ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:76:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[2] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+16:29:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:31:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:31:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:32:18 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:33:12 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:34:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:35:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:36:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:36:15 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:88:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:88: warning: The 'gets' function is dangerous and should not be used.
+16:37:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:81:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:81: warning: The 'gets' function is dangerous and should not be used.
+16:38:12 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:88:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:88: warning: The 'gets' function is dangerous and should not be used.
+16:38:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:39:07 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:81:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:81: warning: The 'gets' function is dangerous and should not be used.
+16:39:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:88:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);// reading keyboard input
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:88: warning: The 'gets' function is dangerous and should not be used.
+16:40:20 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'consumer':
+src/TrafficLightSM.c:66:5: error: expected ';' before 'current'
+     current = new;
+     ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightSM.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightSM.o] Error 1
+16:40:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:40:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:41:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:46:38 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:47:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:86:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:86: warning: The 'gets' function is dangerous and should not be used.
+16:50:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+src/TrafficLightSM.c: In function 'main':
+src/TrafficLightSM.c:96:23: error: 'MAX_RUNTIMES' undeclared (first use in this function)
+  while(data.counter < MAX_RUNTIMES){
+                       ^
+src/TrafficLightSM.c:96:23: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightSM.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightSM.o' failed
+16:50:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:83:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:83: warning: The 'gets' function is dangerous and should not be used.
+16:51:28 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:85:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);// reading keyboard input
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:85: warning: The 'gets' function is dangerous and should not be used.
+16:51:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:86:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:86: warning: The 'gets' function is dangerous and should not be used.
+16:53:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:24:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:87:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:87: warning: The 'gets' function is dangerous and should not be used.
+16:55:20 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:25:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:93:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:93: warning: The 'gets' function is dangerous and should not be used.
+16:57:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:25:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:94:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:94: warning: The 'gets' function is dangerous and should not be used.
+16:58:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:25:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:94:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:94: warning: The 'gets' function is dangerous and should not be used.

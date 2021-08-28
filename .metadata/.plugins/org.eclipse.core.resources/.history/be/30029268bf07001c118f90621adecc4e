@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+void * consumer(void *data){
+	return 0;
+}
+
+void *producer(void * data){
+	return 0;
+}
+int main(void) {
+
+	return EXIT_SUCCESS;
+}

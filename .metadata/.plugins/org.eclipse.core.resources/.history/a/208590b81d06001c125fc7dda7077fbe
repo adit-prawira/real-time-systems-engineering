@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+
+enum states {
+	state0,
+	state1,
+	state2,
+	state3,
+	state4,
+	state5,
+	state6,
+};
+
+typedef struct{
+	char msgChar;
+	int readFinishes;
+	enum states currentState;
+	pthread_mutex_t mutex;
+	pthread_cond_t condvar;
+}appData;
+
+int dataIsReady = 0;
+void singlestep_trafficlight_statemachine(appData * data){
+	appData * data = (adppData*)data;
+	switch (data->currentState){
+	case state0:
+		data->currentState = state1;
+		break;
+	case state1:
+		printf("EWR-NSR(%d)\n", data->currentState);
+		sleep(1);
+		*currentState = state2;
+		break;
+	case state2:
+		pthread_join()
+		printf("EWG-NSR(%d)\n", data->currentState);
+		sleep(2);
+		data->currentState = state3;
+		break;
+	case state3:
+		printf("EWY-NSR(%d)\n", data->currentState);
+		sleep(1);
+		data->currentState = state4;
+		break;
+	case state4:
+		printf("EWR-NSR(%d)\n", data->currentState);
+		sleep(1);
+		data->currentState = state5;
+		break;
+	case state5:
+		printf("EWR-NSG(%d)\n", data->currentState);
+		sleep(2);
+		data->currentState = state6;
+		break;
+	case state6:
+		printf("EWR-NSY(%d)\n", data->currentState);
+		sleep(1);
+		data->currentState = state1;
+		break;
+	}
+}
+
+// get message thread (consumer thread)
+void * getMessage(void *data){
+	appData *threadConsumer = (appData*) data;
+	pthread_mutex_lock(&threadConsumer->mutex);
+		while(!dataIsReady)
+			pthread_cond_wait(&threadConsumer->condvar, &threadConsumer->mutex);
+		printf("Received from producer: %c\n", threadConsumer->msgChar);
+		dataIsReady = 0;
+		pthread_cond_signal(&threadConsumer->condvar);
+	pthread_mutex_unlock(&threadConsumer->mutex);
+	return 0;
+}
+
+// generate message thread (producer thread)
+void * generateMessage(void *data){
+	appData *threadProducer = (appData*) data;
+	pthread_mutex_lock(&threadProducer->mutex);
+		while(dataIsReady){
+			pthread_cond_wait(&threadProducer->condvar, &threadProducer->mutex);
+		}
+		if(threadProducer->currentState == state2)
+			printf("Enter 'n' to stop cars from North-South Road\n");
+			scanf("%c", &threadProducer->msgChar);
+		if(threadProducer->currentState == state5)
+			printf("Enter 'e' to stop cars from East-West Road\n");
+			scanf("%c", &threadProducer->msgChar);
+		dataIsReady = 1;
+		pthread_cond_signal(&threadProducer->condvar);
+	pthread_mutex_unlock(&threadProducer->mutex);
+	return 0;
+}
+
+int main(int argc, char *argv[]) {
+	printf("Fixed Sequence Traffic Lights State Machine\n");
+	pthread_t generateThread, getThread;
+	appData data = {'n', 0, state0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+	pthread_create(&generateThread, NULL, generateMessage, &data);
+	pthread_create(&getThread, NULL, getMessage, &data);
+	while(!data.readFinishes){
+		singlestep_trafficlight_statemachine(&data);
+	}
+	return EXIT_SUCCESS;
+}

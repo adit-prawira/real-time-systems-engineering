@@ -1,0 +1,22 @@
+14:04:22 **** Build of configuration x86_64-debug for project TrafficLightsThread ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightsThread.d,-MT,build/x86_64-debug/src/TrafficLightsThread.o -o build/x86_64-debug/src/TrafficLightsThread.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightsThread.c
+src/TrafficLightsThread.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightsThread.c:33:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/TrafficLightsThread.c: In function 'getMessage':
+src/TrafficLightsThread.c:71:41: warning: passing argument 1 of 'singlestep_trafficlight_statemachine' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine(&threadConsumer);
+                                         ^
+src/TrafficLightsThread.c:25:6: note: expected 'appData * {aka struct <anonymous> *}' but argument is of type 'appData ** {aka struct <anonymous> **}'
+ void singlestep_trafficlight_statemachine(appData *data){
+      ^
+src/TrafficLightsThread.c: In function 'generateMessage':
+src/TrafficLightsThread.c:81:7: warning: unused variable 'value' [-Wunused-variable]
+  char value;
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightsThread   build/x86_64-debug/src/TrafficLightsThread.o  
+
+14:04:23 Build Finished (took 525ms)
+

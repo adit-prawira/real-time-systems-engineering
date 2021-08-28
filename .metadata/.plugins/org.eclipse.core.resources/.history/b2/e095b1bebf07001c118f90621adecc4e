@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+struct resource{
+	volatile char byte1
+	pthread_rwlock_t dataSource;
+}appData;
+
+void * consumer(void *data){
+	return 0;
+}
+
+void *producer(void * notUsed){
+	puts("Producer thread started...");
+	char buf[2] = {};
+	return 0;
+}
+
+int main(void) {
+
+	return EXIT_SUCCESS;
+}

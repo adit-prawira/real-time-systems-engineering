@@ -1,0 +1,119 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+
+enum states {
+	state0,
+	state1,
+	state2,
+	state3,
+	state4,
+	state5,
+	state6,
+};
+
+typedef struct{
+	char msgChar;
+	int readFinishes;
+	enum states currentState;
+	pthread_mutex_t mutex;
+	pthread_cond_t condvar;
+}appData;
+
+int dataIsReady = 0;
+void singlestep_trafficlight_statemachine(enum states * currentState){
+	switch (*currentState){
+	case state0:
+		*currentState = state1;
+		break;
+	case state1:
+		printf("EWR-NSR(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state2;
+		break;
+	case state2:
+		printf("EWG-NSR(%d)\n", *currentState);
+		sleep(2);
+		*currentState = state3;
+		break;
+	case state3:
+		printf("EWY-NSR(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state4;
+		break;
+	case state4:
+		printf("EWR-NSR(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state5;
+		break;
+	case state5:
+		printf("EWR-NSG(%d)\n", *currentState);
+		sleep(2);
+		*currentState = state6;
+		break;
+	case state6:
+		printf("EWR-NSY(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state1;
+		break;
+	}
+}
+
+// get message thread (consumer thread)
+void * getMessage(void *data){
+	appData *threadConsumer = (appData*) data;
+	while(!threadConsumer->readFinishes){
+		pthread_mutex_lock(&threadConsumer->mutex);
+			while(!dataIsReady)
+				pthread_cond_wait(&threadConsumer->condvar, &threadConsumer->mutex);
+			singlestep_trafficlight_statemachine(&threadConsumer->currentState);
+			dataIsReady = 0;
+			pthread_cond_signal(&threadConsumer->condvar);
+		pthread_mutex_unlock(&threadConsumer->mutex);
+	}
+	return 0;
+}
+
+// generate message thread (producer thread)
+void * generateMessage(void *data){
+	char value;
+	appData *threadProducer = (appData*) data;
+	dataIsReady = 1;
+
+	while(!threadProducer->readFinishes){
+		pthread_mutex_lock(&threadProducer->mutex);
+			value = NULL;
+			if(threadProducer->currentState == state2 && value == NULL){
+				printf("Enter 'n' to stop cars from North-South Road\n");
+				scanf("%c", &value);
+				threadProducer->msgChar = value;
+			}
+			if(threadProducer->currentState == state5 && value == NULL){
+				printf("Enter 'e' to stop cars from East-West Road\n");
+				scanf("%c", &value);
+				threadProducer->msgChar = value;
+			}
+			if(threadProducer->currentState == state0){
+				threadProducer->msgChar = state1;
+			}
+			dataIsReady = 1;
+			while(dataIsReady){
+				pthread_cond_wait(&threadProducer->condvar, &threadProducer->mutex);
+			}
+
+			pthread_cond_signal(&threadProducer->condvar);
+		pthread_mutex_unlock(&threadProducer->mutex);
+	}
+	return 0;
+}
+
+int main(int argc, char *argv[]) {
+	printf("Fixed Sequence Traffic Lights State Machine\n");
+	pthread_t generateThread, getThread;
+	appData data = {'0', 0, state0, PTHREAD_MUTEX_INITIALIZER, PTHREAD_COND_INITIALIZER};
+	pthread_create(&generateThread, NULL, generateMessage, &data);
+	pthread_create(&getThread, NULL, getMessage, &data);
+	pthread_join(generateThread, NULL);
+	return EXIT_SUCCESS;
+}

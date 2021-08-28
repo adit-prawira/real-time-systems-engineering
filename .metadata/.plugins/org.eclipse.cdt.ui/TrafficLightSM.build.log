@@ -1,0 +1,17 @@
+16:58:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:25:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:94:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);// reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:94: warning: The 'gets' function is dangerous and should not be used.
+
+16:58:09 Build Finished (took 247ms)
+

@@ -40,7 +40,6 @@ int main(void) {
 		switch(CurrentState){
 		case State0:
 			CurrentState = State1;
-			printf("State %d\n", CurrentState);
 			break;
 		case State1:
 

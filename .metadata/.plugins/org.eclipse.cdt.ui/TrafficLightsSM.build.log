@@ -1,0 +1,6 @@
+16:17:32 **** Build of configuration x86_64-debug for project TrafficLightsSM ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+16:17:33 Build Finished (took 934ms)
+

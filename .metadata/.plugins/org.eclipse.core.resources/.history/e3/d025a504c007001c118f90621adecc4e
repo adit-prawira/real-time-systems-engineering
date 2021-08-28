@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+typedef struct {
+	volatile char byte1;
+	pthread_rwlock_t dataSource;
+	int readFinished;
+}appData;
+
+void * consumer(void *data){
+	return 0;
+}
+
+void *producer(void * data){
+	puts("Producer thread started...");
+	appData *td = (appData*) data;
+
+	char buf[2] = {};
+	printf("Enter e/n:\n");
+	while(td->readF){}
+	return 0;
+}
+
+int main(void) {
+
+	return EXIT_SUCCESS;
+}

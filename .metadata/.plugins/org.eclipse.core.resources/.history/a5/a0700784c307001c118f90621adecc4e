@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#define MAX_RUNTIME 30
+
+enum states {
+	state0, state1, state2, state3, state4, state5, state6
+};
+
+typedef struct{
+	volatile char byte1;
+	enum states currentState;
+	int counter;
+	pthread_rwlock_t dataSource;
+}appData;
+
+void singlestep_trafficlight_statemachine(enum states * currentState){
+	switch (*currentState){
+	case state0:
+		*currentState = state1;
+		break;
+	case state1:
+		printf("EWR-NSR(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state2;
+		break;
+	case state2:
+		printf("EWG-NSR(%d)\n", *currentState);
+		sleep(2);
+		*currentState = state3;
+		break;
+	case state3:
+		printf("EWY-NSR(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state4;
+		break;
+	case state4:
+		printf("EWR-NSR(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state5;
+		break;
+	case state5:
+		printf("EWR-NSG(%d)\n", *currentState);
+		sleep(2);
+		*currentState = state6;
+		break;
+	case state6:
+		printf("EWR-NSY(%d)\n", *currentState);
+		sleep(1);
+		*currentState = state1;
+		break;
+	}
+}
+
+void * consumer(void *data){
+	puts("Consumer thread started...");
+	char current = 0, new = 0;
+	while(td->counter < MAX_RUNTIME){
+		pthread_rwlock_rdlock(&dataSource);
+			new = data.byte1;
+		pthread_rwlock_unlock(&dataSource);
+		if(new != current){
+			printf("Consumer received: %c\n", new);
+			current = new;
+			printf("Enter e/n:\n");
+		}
+		sleep(1);
+	}
+	return 0;
+}
+
+void *producer(void * data){
+	puts("Producer thread started...");
+	appData *td = (appData*) data;
+	char buf[2] = {};
+	printf("Enter e/n:\n");
+	while(td->counter < MAX_RUNTIME){
+
+		gets(buf);// reading keyboard input
+		pthread_rwlock_wrlock(&dataSource);
+			data.byte1 = buf[0];
+		pthread_rwlock_unlock(&dataSource);
+	}
+	return 0;
+}
+
+int main(int argc, char *argv[]) {
+	pthread_t cThread, pThread;
+	pthread_rwlock_init(&dataSource, NULL);
+	pthread_create(&pThread, NULL, producer, NULL);
+	pthread_create(&cThread, NULL, consumer, NULL);
+	pthread_join(pThread, NULL);
+	pthread_join(cThread, NULL);
+
+	puts("Main Terminated...");
+	return EXIT_SUCCESS;
+}
