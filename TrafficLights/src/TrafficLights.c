@@ -24,39 +24,39 @@ void * generateMessage(void *data){
 
 void singlestep_trafficlight_statemachine(enum states * currentState){
 	switch (*currentState){
-	case state0:
-		*currentState = state1;
-		break;
-	case state1:
-		printf("EWR-NSR(%d)\n", *currentState);
-		sleep(1);
-		*currentState = state2;
-		break;
-	case state2:
-		printf("EWG-NSR(%d)\n", *currentState);
-		sleep(2);
-		*currentState = state3;
-		break;
-	case state3:
-		printf("EWY-NSR(%d)\n", *currentState);
-		sleep(1);
-		*currentState = state4;
-		break;
-	case state4:
-		printf("EWR-NSR(%d)\n", *currentState);
-		sleep(1);
-		*currentState = state5;
-		break;
-	case state5:
-		printf("EWR-NSG(%d)\n", *currentState);
-		sleep(2);
-		*currentState = state6;
-		break;
-	case state6:
-		printf("EWR-NSY(%d)\n", *currentState);
-		sleep(1);
-		*currentState = state1;
-		break;
+		case state0:
+			*currentState = state1;
+			break;
+		case state1:
+			printf("EWR-NSR(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state2;
+			break;
+		case state2:
+			printf("EWG-NSR(%d)\n", *currentState);
+			sleep(2);
+			*currentState = state3;
+			break;
+		case state3:
+			printf("EWY-NSR(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state4;
+			break;
+		case state4:
+			printf("EWR-NSR(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state5;
+			break;
+		case state5:
+			printf("EWR-NSG(%d)\n", *currentState);
+			sleep(2);
+			*currentState = state6;
+			break;
+		case state6:
+			printf("EWR-NSY(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state1;
+			break;
 	}
 }
 

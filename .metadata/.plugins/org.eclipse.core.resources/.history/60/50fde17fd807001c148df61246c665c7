@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <sys/netmgr.h>
+#include <sys/neutrino.h>
+#include <errno.h>
+#define PULSE_CODE = _PULSE_CODE_MINAVAIL
+
+char *progName = "TrafficLightTimer.c";
+enum states{
+	state0, state1, state2, satte3, state4, state5, state6
+};
+typedef union{
+	struct _pulse pulse;
+}message_t;
+
+int main(void) {
+	puts("Traffic Light with timer started...\n");
+	enum states currentState = state0;
+	struct sigevent event;
+	struct itimerspec iTimeRY, iTimeG;
+	timer_t timerId;
+	int rcvid;
+	message_t msg;
+
+	// crete communication channel
+	chid = CreateChannel(0);
+
+	return EXIT_SUCCESS;
+}

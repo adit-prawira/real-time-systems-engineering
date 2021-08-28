@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <sys/netmgr.h>
+#include <sys/neutrino.h>
+#include <errno.h>
+#define PULSE_CODE = _PULSE_CODE_MINAVAIL
+
+char *progName = "TrafficLightTimer.c";
+enum states{
+	state0, state1, state2, satte3, state4, state5, state6
+};
+typedef union{
+	struct _pulse pulse;
+}message_t;
+
+int main(void) {
+	puts("Traffic Light with timer started...\n");
+	enum states currentState = state0;
+	struct sigevent event;
+	struct itimerspec iTimeRY, iTimeG;
+	timer_t timerId;
+	int rcvid;
+	message_t msg;
+
+	// create communication channel
+	chid = ChannelCreate(0);
+	event.sigev_notify = SIGEV_PULSE;
+	event.sigev_coid = ConnectAttach(ND_LOCAL_NODE, 0, chid, _NTO_SIDE_CHANNEL, 0);
+	if(event.sigev_coid == -1){
+		printf(stderr,  "%s: couldn't ConnectAttach to self\n", progName);
+	}
+	return EXIT_SUCCESS;
+}

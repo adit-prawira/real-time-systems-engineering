@@ -1,0 +1,28 @@
+19:03:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightTimer.d,-MT,build/x86_64-debug/src/TrafficLightTimer.o -o build/x86_64-debug/src/TrafficLightTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightTimer.c
+src/TrafficLightTimer.c: In function 'main':
+src/TrafficLightTimer.c:73:10: warning: passing argument 1 of 'printf' from incompatible pointer type [-Wincompatible-pointer-types]
+   printf(stderr,  "%s: couldn't ConnectAttach to self\n", progName);
+          ^
+In file included from src/TrafficLightTimer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:176:12: note: expected 'const char *' but argument is of type 'FILE * {aka struct _Filet *}'
+ extern int printf(const char *__format, ...);
+            ^
+src/TrafficLightTimer.c:79:2: warning: implicit declaration of function 'pthread_getschedparam' [-Wimplicit-function-declaration]
+  pthread_getschedparam(pthread_self(), NULL, &threadParam);
+  ^
+src/TrafficLightTimer.c:79:24: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+  pthread_getschedparam(pthread_self(), NULL, &threadParam);
+                        ^
+src/TrafficLightTimer.c:85:10: warning: passing argument 1 of 'printf' from incompatible pointer type [-Wincompatible-pointer-types]
+   printf(stderr, "%s: couldn't create a timer, errno -> %d\n", progName, errno);
+          ^
+In file included from src/TrafficLightTimer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:176:12: note: expected 'const char *' but argument is of type 'FILE * {aka struct _Filet *}'
+ extern int printf(const char *__format, ...);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightTimer   build/x86_64-debug/src/TrafficLightTimer.o  
+
+19:03:14 Build Finished (took 332ms)
+

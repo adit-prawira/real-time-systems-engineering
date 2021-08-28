@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <sys/netmgr.h>
+#include <sys/neutrino.h>
+#include <errno.h>
+
+char *progName = "TrafficLightTimer.c";
+enum states{
+	state0, state1, state2, satte3, state4, state5, state6
+};
+typedef union{
+	struct _pulse pulse;
+}message_t;
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}
