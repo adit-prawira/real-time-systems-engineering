@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <mqueue.h>
+#define MESSAGESIZE 2
+enum states {
+	state0, state1, state2, state3, state4, state5, state6
+};
+
+void singlestep_trafficlight_statemachine(enum states * currentState){
+	switch (*currentState){
+		case state0:
+			*currentState = state1;
+			break;
+		case state1:
+			printf("EWR-NSR(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state2;
+			break;
+		case state2:
+			printf("EWG-NSR(%d)\n", *currentState);
+			sleep(2);
+			*currentState = state3;
+			break;
+		case state3:
+			printf("EWY-NSR(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state4;
+			break;
+		case state4:
+			printf("EWR-NSR(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state5;
+			break;
+		case state5:
+			printf("EWR-NSG(%d)\n", *currentState);
+			sleep(2);
+			*currentState = state6;
+			break;
+		case state6:
+			printf("EWR-NSY(%d)\n", *currentState);
+			sleep(1);
+			*currentState = state1;
+			break;
+	}
+}
+int main(void) {
+	mqd_t qd;
+	char buf[MESSAGESIZE] = {};
+	struct mq_attr attribute;
+	const char * mqueueLocation = "/net/receive/traffic_light_queue";
+	qd = mq_open(mqueueLocation, O_RDONLY);
+	if(qd != -1){
+		mq_getattr(qd, &attribute);
+		printf("max. %u msgs, %u bytes; waiting: %u\n", attribute.mq_maxmsg,
+				attribute.ma_msgsize, attribute.mq_curmsgs);
+		while(mq_receive(qd, buf, MESSAGE, NULL) > 0){
+			printf("Received from mqueue: '%s'\n", buf);
+			if(!strcmp(buf, "done")) break;
+		}
+		mq_close(qd);
+	}
+	printf("Receive process terminated...\n");
+	return EXIT_SUCCESS;
+}

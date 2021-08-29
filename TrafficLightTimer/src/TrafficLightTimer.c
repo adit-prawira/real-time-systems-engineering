@@ -19,37 +19,37 @@ void singlestep_trafficlight_statemachine(enum states *currentState,
 		timer_t timerId, const struct itimerspec* iTimeG,
 		const struct itimerspec* iTimeRY) {
 	switch (*currentState) {
-	case 0:
-		*currentState = state1;
-		break;
-	case 1:
-		printf("EWR-NSR(%d) -> Wait for 1 second\n", *currentState);
-		*currentState = state2;
-		break;
-	case 2:
-		timer_settime(timerId, 0, &*iTimeG, NULL);
-		printf("EWG-NSR(%d) -> Wait for 2 seconds\n", *currentState);
-		*currentState = state3;
-		break;
-	case 3:
-		timer_settime(timerId, 0, &*iTimeRY, NULL);
-		printf("EWY-NSR(%d) -> Wait for 1 second\n", *currentState);
-		*currentState = state4;
-		break;
-	case 4:
-		printf("EWR-NSR(%d) -> Wait for 1 second\n", *currentState);
-		*currentState = state5;
-		break;
-	case 5:
-		timer_settime(timerId, 0, &*iTimeG, NULL);
-		printf("EWR-NSG(%d) -> Wait for 2 seconds\n", *currentState);
-		*currentState = state6;
-		break;
-	case 6:
-		timer_settime(timerId, 0, &*iTimeRY, NULL);
-		printf("EWR-NSY(%d) -> Wait for 1 second\n", *currentState);
-		*currentState = state1;
-		break;
+		case 0:
+			*currentState = state1;
+			break;
+		case 1:
+			printf("EWR-NSR(%d) -> Wait for 1 second\n", *currentState);
+			*currentState = state2;
+			break;
+		case 2:
+			timer_settime(timerId, 0, &*iTimeG, NULL);
+			printf("EWG-NSR(%d) -> Wait for 2 seconds\n", *currentState);
+			*currentState = state3;
+			break;
+		case 3:
+			timer_settime(timerId, 0, &*iTimeRY, NULL);
+			printf("EWY-NSR(%d) -> Wait for 1 second\n", *currentState);
+			*currentState = state4;
+			break;
+		case 4:
+			printf("EWR-NSR(%d) -> Wait for 1 second\n", *currentState);
+			*currentState = state5;
+			break;
+		case 5:
+			timer_settime(timerId, 0, &*iTimeG, NULL);
+			printf("EWR-NSG(%d) -> Wait for 2 seconds\n", *currentState);
+			*currentState = state6;
+			break;
+		case 6:
+			timer_settime(timerId, 0, &*iTimeRY, NULL);
+			printf("EWR-NSY(%d) -> Wait for 1 second\n", *currentState);
+			*currentState = state1;
+			break;
 	}
 }
 

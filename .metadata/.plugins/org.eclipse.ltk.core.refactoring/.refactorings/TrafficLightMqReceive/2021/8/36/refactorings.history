@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Create method singlestep_trafficlight_statemachine_receive" description="Extract Method Refactoring" fileName="file:/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqReceive/src/TrafficLightMqReceive.c" flags="4" id="org.eclipse.cdt.internal.ui.refactoring.extractfunction.ExtractFunctionRefactoring" name="singlestep_trafficlight_statemachine_receive" replaceDuplicates="false" selection="517,674" stamp="1630229719276" visibility="public"/>
+</session>

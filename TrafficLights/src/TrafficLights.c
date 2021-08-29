@@ -12,15 +12,6 @@ enum states {
 	state6,
 };
 
-// get message thread (consumer thread)
-void * getMessage(void *data){
-	return 0;
-}
-
-// generate message thread (producer thread)
-void * generateMessage(void *data){
-	return 0;
-}
 
 void singlestep_trafficlight_statemachine(enum states * currentState){
 	switch (*currentState){

@@ -9963,3 +9963,700 @@ In file included from src/TrafficLightTimer.c:1:0:
  extern int printf(const char *__format, ...);
             ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightTimer   build/x86_64-debug/src/TrafficLightTimer.o  
+19:06:39 **** Incremental Build of configuration x86_64-debug for project TrafficLightTimer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:36:49 **** Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:37:58 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+17:38:03 **** Build of configuration x86_64-debug for project receiving ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/receiving.d,-MT,build/x86_64-debug/src/receiving.o -o build/x86_64-debug/src/receiving.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/receiving.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/receiving   build/x86_64-debug/src/receiving.o  
+17:41:09 **** Build of configuration armv7le-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightMqSend.d,-MT,build/armv7le-debug/src/TrafficLightMqSend.o -o build/armv7le-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightMqSend   build/armv7le-debug/src/TrafficLightMqSend.o  
+17:41:32 **** Build of configuration armv7le-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightMqReceive.d,-MT,build/armv7le-debug/src/TrafficLightMqReceive.o -o build/armv7le-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightMqReceive   build/armv7le-debug/src/TrafficLightMqReceive.o  
+18:06:39 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:52:14: warning: unused variable 'currentState' [-Wunused-variable]
+  enum states currentState = state0;
+              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:06:44 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:55:14: error: 'struct mq_attr' has no member named 'ma_msgsize'
+     attribute.ma_msgsize, attribute.mq_curmsgs);
+              ^
+src/TrafficLightMqReceive.c:56:29: error: 'MESSAGE' undeclared (first use in this function)
+   while(mq_receive(qd, buf, MESSAGE, NULL) > 0){
+                             ^
+src/TrafficLightMqReceive.c:56:29: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightMqReceive.c:58:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqReceive.o' failed
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightMqReceive.o] Error 1
+18:06:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:55:14: error: 'struct mq_attr' has no member named 'ma_msgsize'
+     attribute.ma_msgsize, attribute.mq_curmsgs);
+              ^
+src/TrafficLightMqReceive.c:58:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqReceive.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightMqReceive.o] Error 1
+18:07:10 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:58:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+18:08:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:08:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:09:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:52:14: warning: unused variable 'currentState' [-Wunused-variable]
+  enum states currentState = state0;
+              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:10:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:58:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+18:20:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:69:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);
+     ^
+src/TrafficLightMqSend.c:52:14: warning: unused variable 'currentState' [-Wunused-variable]
+  enum states currentState = state0;
+              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:69: warning: The 'gets' function is dangerous and should not be used.
+18:20:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:52:14: warning: unused variable 'currentState' [-Wunused-variable]
+  enum states currentState = state0;
+              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:21:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:52:14: warning: unused variable 'currentState' [-Wunused-variable]
+  enum states currentState = state0;
+              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:22:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:52:14: warning: unused variable 'currentState' [-Wunused-variable]
+  enum states currentState = state0;
+              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:22:48 **** Incremental Build of configuration x86_64-debug for project sending ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:24:38 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:24:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:25:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:25:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:58:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+18:26:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:26:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:28:52 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:69:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:69: warning: The 'gets' function is dangerous and should not be used.
+18:29:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:30:56 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:70:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:70: warning: The 'gets' function is dangerous and should not be used.
+18:40:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:70:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:70: warning: The 'gets' function is dangerous and should not be used.
+18:41:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:70:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);
+     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:70: warning: The 'gets' function is dangerous and should not be used.
+18:45:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:70:5: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+     gets(buf);
+     ^
+src/TrafficLightMqSend.c:80:12: error: 'currentState' undeclared (first use in this function)
+    switch (currentState){
+            ^
+src/TrafficLightMqSend.c:80:12: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqSend.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightMqSend.o] Error 1
+18:52:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:53:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+18:55:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:56:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:58:12: error: switch quantity not an integer
+    switch (buf -'0'){
+            ^
+src/TrafficLightMqReceive.c:78:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightMqReceive.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqReceive.o' failed
+18:56:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:58:12: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    switch ((int)buf){
+            ^
+src/TrafficLightMqReceive.c:78:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+18:56:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:57:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:57:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:57:44 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:58:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:58:53 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:59:40 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:77:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:00:22 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:00:24 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:77:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:01:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:01:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:77:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")) break;
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:07:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:93:6: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+      gets(buf);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:93: warning: The 'gets' function is dangerous and should not be used.
+19:07:12 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:62:6: warning: implicit declaration of function 'prtinf' [-Wimplicit-function-declaration]
+      prtinf("Received '%c' -> stopping car from North-South Road\n", buf[1]);
+      ^
+src/TrafficLightMqReceive.c:78:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+build/x86_64-debug/src/TrafficLightMqReceive.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqReceive//src/TrafficLightMqReceive.c:62: undefined reference to `prtinf'
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightMqReceive' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrafficLightMqReceive] Error 1
+19:07:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:78:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:07:53 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:81:6: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+      gets(buf);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:81: warning: The 'gets' function is dangerous and should not be used.
+19:08:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:81:6: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+      gets(buf);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:81: warning: The 'gets' function is dangerous and should not be used.
+19:09:06 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:09:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:10:01 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:16:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:81:6: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+      gets(buf);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:81: warning: The 'gets' function is dangerous and should not be used.
+19:16:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:20:18: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+    char *state = buf[0];
+                  ^
+src/TrafficLightMqReceive.c:42:7: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(strcmp(buf, "done")){
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:16:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:16:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:17:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:41:7: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(strcmp(buf, "done")){
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:17:21 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:41:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:17:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:17:56 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:18:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:21:18: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+    char *state = buf[0];
+                  ^
+src/TrafficLightMqReceive.c:43:7: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(strcmp(buf, "done")){
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:19:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:79:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:20:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:81:6: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+      gets(buf);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:81: warning: The 'gets' function is dangerous and should not be used.
+19:21:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:21:16 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:79:7: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(strcmp(buf, "done")){
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:21:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:79:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:22:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:22:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:24:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:79:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:24:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:81:6: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+      gets(buf);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:81: warning: The 'gets' function is dangerous and should not be used.
+19:26:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:39:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:26:41 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:27:01 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:27:43 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:39:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:28:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:36:21 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:41:29: error: 'attr' undeclared (first use in this function)
+   while(mq_receive(qd, buf, attr.mq_msgsize, NULL) > 0){
+                             ^
+src/TrafficLightMqReceive.c:41:29: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightMqReceive.c:43:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqReceive.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightMqReceive.o] Error 1
+19:36:29 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:41:29: error: 'attr' undeclared (first use in this function)
+   while(mq_receive(qd, buf, attr.mq_msgsize, NULL) > 0){
+                             ^
+src/TrafficLightMqReceive.c:41:29: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightMqReceive.c:43:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqReceive.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightMqReceive.o] Error 1
+19:36:52 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+src/TrafficLightMqReceive.c: In function 'main':
+src/TrafficLightMqReceive.c:43:8: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+    if(!strcmp(buf, "done")){
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:37:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:85:46: error: incompatible type for argument 1 of 'singlestep_trafficlight_statemachine_send'
+    singlestep_trafficlight_statemachine_send(currentState, buf, qd);
+                                              ^
+src/TrafficLightMqSend.c:12:6: note: expected 'enum states *' but argument is of type 'enum states'
+ void singlestep_trafficlight_statemachine_send(enum states *currentState,
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightMqSend.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightMqSend.o] Error 1
+19:37:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:39:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:41:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:42:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:42:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:43:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:44:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:46:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:46:26 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:48:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:48:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:50:12 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:51:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:52:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:53:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(*buf);
+   ^
+src/TrafficLightMqSend.c: In function 'main':
+src/TrafficLightMqSend.c:85:61: warning: passing argument 2 of 'singlestep_trafficlight_statemachine_send' from incompatible pointer type [-Wincompatible-pointer-types]
+    singlestep_trafficlight_statemachine_send(&currentState, &buf, &qd);
+                                                             ^
+src/TrafficLightMqSend.c:12:6: note: expected 'char **' but argument is of type 'char (*)[2]'
+ void singlestep_trafficlight_statemachine_send(enum states *currentState,
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:55:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:55:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+19:56:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:57:15 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+19:57:24 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:58:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.

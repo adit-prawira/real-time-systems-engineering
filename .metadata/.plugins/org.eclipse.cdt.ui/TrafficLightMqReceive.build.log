@@ -1,0 +1,7 @@
+19:57:15 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqReceive ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqReceive.d,-MT,build/x86_64-debug/src/TrafficLightMqReceive.o -o build/x86_64-debug/src/TrafficLightMqReceive.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqReceive.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqReceive   build/x86_64-debug/src/TrafficLightMqReceive.o  
+
+19:57:15 Build Finished (took 231ms)
+
