@@ -1,0 +1,7 @@
+21:34:01 **** Build of configuration armv7le-debug for project NativeMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/NativeMessagePassServer.d,-MT,build/armv7le-debug/src/NativeMessagePassServer.o -o build/armv7le-debug/src/NativeMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassServer.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/NativeMessagePassServer   build/armv7le-debug/src/NativeMessagePassServer.o  
+
+21:34:01 Build Finished (took 342ms)
+

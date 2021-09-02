@@ -10709,3 +10709,11 @@ In file included from src/TrafficLightTimer.c:1:0:
  extern int printf(const char *__format, ...);
             ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightTimer   build/x86_64-debug/src/TrafficLightTimer.o  
+21:34:01 **** Build of configuration armv7le-debug for project NativeMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/NativeMessagePassServer.d,-MT,build/armv7le-debug/src/NativeMessagePassServer.o -o build/armv7le-debug/src/NativeMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassServer.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/NativeMessagePassServer   build/armv7le-debug/src/NativeMessagePassServer.o  
+21:37:53 **** Build of configuration armv7le-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/NativeMessagePassClient.d,-MT,build/armv7le-debug/src/NativeMessagePassClient.o -o build/armv7le-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/NativeMessagePassClient   build/armv7le-debug/src/NativeMessagePassClient.o  

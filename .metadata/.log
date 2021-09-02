@@ -325,3 +325,9 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/adity
 
 !ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-09-02 18:55:47.603
 !MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-09-02 21:34:02.714
+!MESSAGE Indexed 'NativeMessagePassServer' (1 sources, 16 headers) in 1.48 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-09-02 21:37:54.672
+!MESSAGE Indexed 'NativeMessagePassClient' (1 sources, 16 headers) in 0.215 sec: 1,161 declarations; 1,023 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
