@@ -1,13 +1,13 @@
-19:58:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+20:51:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
 make -j3 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
 src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
-src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
-   gets(buf);
-   ^
+src/TrafficLightMqSend.c:27:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
 build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
 /Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
 
-19:58:58 Build Finished (took 300ms)
+20:51:02 Build Finished (took 345ms)
 

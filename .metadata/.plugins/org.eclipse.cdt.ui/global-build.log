@@ -10660,3 +10660,52 @@ src/TrafficLightMqSend.c:27:3: warning: implicit declaration of function 'gets' 
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
 build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
 /Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+20:39:36 **** Build of configuration x86_64-debug for project TrafficLightSM ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightSM.d,-MT,build/x86_64-debug/src/TrafficLightSM.o -o build/x86_64-debug/src/TrafficLightSM.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightSM.c
+src/TrafficLightSM.c: In function 'singlestep_trafficlight_statemachine':
+src/TrafficLightSM.c:28:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/TrafficLightSM.c: In function 'producer':
+src/TrafficLightSM.c:106:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf); // reading keyboard input
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightSM   build/x86_64-debug/src/TrafficLightSM.o  
+build/x86_64-debug/src/TrafficLightSM.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightSM//src/TrafficLightSM.c:106: warning: The 'gets' function is dangerous and should not be used.
+20:51:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightMqSend ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightMqSend.d,-MT,build/x86_64-debug/src/TrafficLightMqSend.o -o build/x86_64-debug/src/TrafficLightMqSend.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightMqSend.c
+src/TrafficLightMqSend.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightMqSend.c:27:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightMqSend   build/x86_64-debug/src/TrafficLightMqSend.o  
+build/x86_64-debug/src/TrafficLightMqSend.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightMqSend//src/TrafficLightMqSend.c:27: warning: The 'gets' function is dangerous and should not be used.
+20:56:55 **** Incremental Build of configuration x86_64-debug for project TrafficLightTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightTimer.d,-MT,build/x86_64-debug/src/TrafficLightTimer.o -o build/x86_64-debug/src/TrafficLightTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightTimer.c
+src/TrafficLightTimer.c: In function 'main':
+src/TrafficLightTimer.c:79:10: warning: passing argument 1 of 'printf' from incompatible pointer type [-Wincompatible-pointer-types]
+   printf(stderr,  "%s: couldn't ConnectAttach to self\n", progName);
+          ^
+In file included from src/TrafficLightTimer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:176:12: note: expected 'const char *' but argument is of type 'FILE * {aka struct _Filet *}'
+ extern int printf(const char *__format, ...);
+            ^
+src/TrafficLightTimer.c:85:2: warning: implicit declaration of function 'pthread_getschedparam' [-Wimplicit-function-declaration]
+  pthread_getschedparam(pthread_self(), NULL, &threadParam);
+  ^
+src/TrafficLightTimer.c:85:24: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+  pthread_getschedparam(pthread_self(), NULL, &threadParam);
+                        ^
+src/TrafficLightTimer.c:91:10: warning: passing argument 1 of 'printf' from incompatible pointer type [-Wincompatible-pointer-types]
+   printf(stderr, "%s: couldn't create a timer, errno -> %d\n", progName, errno);
+          ^
+In file included from src/TrafficLightTimer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:176:12: note: expected 'const char *' but argument is of type 'FILE * {aka struct _Filet *}'
+ extern int printf(const char *__format, ...);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightTimer   build/x86_64-debug/src/TrafficLightTimer.o  

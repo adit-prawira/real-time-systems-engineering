@@ -15,6 +15,8 @@ typedef union{
 	struct _pulse pulse;
 }message_t;
 
+// Single step traffic light state machine with no block methods
+// but setting new value to the timer instead
 void singlestep_trafficlight_statemachine(enum states *currentState,
 		timer_t timerId, const struct itimerspec* iTimeG,
 		const struct itimerspec* iTimeRY) {
@@ -27,11 +29,13 @@ void singlestep_trafficlight_statemachine(enum states *currentState,
 			*currentState = state2;
 			break;
 		case 2:
+			// set timer to 2 seconds
 			timer_settime(timerId, 0, &*iTimeG, NULL);
 			printf("EWG-NSR(%d) -> Wait for 2 seconds\n", *currentState);
 			*currentState = state3;
 			break;
 		case 3:
+			// set timer back to 1 second
 			timer_settime(timerId, 0, &*iTimeRY, NULL);
 			printf("EWY-NSR(%d) -> Wait for 1 second\n", *currentState);
 			*currentState = state4;
@@ -41,11 +45,13 @@ void singlestep_trafficlight_statemachine(enum states *currentState,
 			*currentState = state5;
 			break;
 		case 5:
+			// set timer to 2 seconds
 			timer_settime(timerId, 0, &*iTimeG, NULL);
 			printf("EWR-NSG(%d) -> Wait for 2 seconds\n", *currentState);
 			*currentState = state6;
 			break;
 		case 6:
+			// set timer back to 1 second
 			timer_settime(timerId, 0, &*iTimeRY, NULL);
 			printf("EWR-NSY(%d) -> Wait for 1 second\n", *currentState);
 			*currentState = state1;

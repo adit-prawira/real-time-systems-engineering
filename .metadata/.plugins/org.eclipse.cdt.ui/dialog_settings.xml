@@ -8,6 +8,8 @@
 	</section>
 	<section name="RenameInformationPopup">
 	</section>
+	<section name="CRenameRefactoringInputPage">
+	</section>
 	<section name="ExtractFunctionWizard">
 		<item value="public" key="AccessModifier"/>
 	</section>

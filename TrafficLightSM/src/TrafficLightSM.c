@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+
 #define MAX_RUNTIME 30
 #define MAX_BUFF_SIZE 2
+
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -14,51 +16,49 @@ typedef struct{
 	pthread_rwlock_t dataSource;
 }appData;
 
+// Single step trafficlight state machine, where it will take pointer of the
+// current state and the current counter
 void singlestep_trafficlight_statemachine(enum states * currentState, int *counter){
 	switch (*currentState){
 		case state0:
 			*currentState = state1;
-			*counter += 1;
 			break;
 		case state1:
 			printf("EWR-NSR(%d) -> Wait for 1 second\n", *currentState);
 			sleep(1);
 			*currentState = state2;
-			*counter += 1;
 			break;
 		case state2:
 			printf("EWG-NSR(%d) -> Wait for 2 seconds\n", *currentState);
 			sleep(2);
 			*currentState = state3;
-			*counter += 1;
 			break;
 		case state3:
 			printf("EWY-NSR(%d) -> Wait for 1 second\n", *currentState);
 			sleep(1);
 			*currentState = state4;
-			*counter += 1;
 			break;
 		case state4:
 			printf("EWR-NSR(%d) -> Wait for 1 second\n", *currentState);
 			sleep(1);
 			*currentState = state5;
-			*counter += 1;
 			break;
 		case state5:
 			printf("EWR-NSG(%d) -> Wait for 2 seconds\n", *currentState);
 			sleep(2);
 			*currentState = state6;
-			*counter += 1;
 			break;
 		case state6:
 			printf("EWR-NSY(%d) -> Wait for 1 second\n", *currentState);
 			sleep(1);
 			*currentState = state1;
-			*counter += 1;
 			break;
 	}
+	*counter += 1;
 }
 
+// Consumer thread that will print messages and wait for a keyboard input
+// in the case when one road turns green.
 void * consumer(void *data){
 	puts("Consumer thread started...");
 	appData *td = (appData*) data;
@@ -83,6 +83,8 @@ void * consumer(void *data){
 	return 0;
 }
 
+// Producer thread that will read keyboard input every time state2 and state5 are met
+// where in those case one of the road will turn green.
 void *producer(void * data){
 	puts("Producer thread started...");
 	appData *td = (appData*) data;
