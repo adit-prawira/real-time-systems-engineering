@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/dispatch.h>
+#define LOCAL_ATTACH_POINT "slogger2"
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}
