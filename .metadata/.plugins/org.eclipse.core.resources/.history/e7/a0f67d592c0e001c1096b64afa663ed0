@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#define BUF_SIZE 100
+
+typedef struct {
+	struct _pulse header;
+	int clientId;
+	int data;
+}messageData; // message data struct as type definition
+
+
+
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

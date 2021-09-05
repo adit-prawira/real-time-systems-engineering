@@ -11126,3 +11126,166 @@ src/NativeMessagePassServer.c:148:4: warning: implicit declaration of function '
     sleep(1);
     ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassServer   build/x86_64-debug/src/NativeMessagePassServer.o  
+19:30:56 **** Build of configuration armv7le-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ConnectMessagePassServer.d,-MT,build/armv7le-debug/src/ConnectMessagePassServer.o -o build/armv7le-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ConnectMessagePassServer   build/armv7le-debug/src/ConnectMessagePassServer.o  
+19:31:14 **** Build of configuration armv7le-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ConnectMessagePassClient.d,-MT,build/armv7le-debug/src/ConnectMessagePassClient.o -o build/armv7le-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ConnectMessagePassClient   build/armv7le-debug/src/ConnectMessagePassClient.o  
+20:07:05 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:36:10: error: 'EXIT_FAILRE' undeclared (first use in this function)
+   return EXIT_FAILRE;
+          ^
+src/ConnectMessagePassServer.c:36:10: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassServer.c:52:3: error: 'receiveId' undeclared (first use in this function)
+   receiveId = MsgReceive(channelId, &message, sizeof(message), NULL);
+   ^
+src/ConnectMessagePassServer.c:52:26: error: 'channelId' undeclared (first use in this function)
+   receiveId = MsgReceive(channelId, &message, sizeof(message), NULL);
+                          ^
+src/ConnectMessagePassServer.c:100:12: error: 'replyMessage' undeclared (first use in this function)
+    sprintf(replyMessage.buf, "Message %d received", messageNum);
+            ^
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/ConnectMessagePassServer.c:105:44: warning: implicit declaration of function 'size' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+    MsgReply(receiveId, EOK, &replyMessage, size(replyMessage));
+                                            ^
+src/ConnectMessagePassServer.c:112:9: error: 'EXIST_SUCCESS' undeclared (first use in this function)
+  return EXIST_SUCCESS;
+         ^
+src/ConnectMessagePassServer.c:47:8: warning: variable 'replayMessage' set but not used [-Wunused-but-set-variable]
+  reply replayMessage;
+        ^
+src/ConnectMessagePassServer.c:44:6: warning: unused variable 'receiveID' [-Wunused-variable]
+  int receiveID, messageNum = 0;
+      ^
+src/ConnectMessagePassServer.c:113:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+20:07:19 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:52:3: error: 'receiveId' undeclared (first use in this function)
+   receiveId = MsgReceive(channelID, &message, sizeof(message), NULL);
+   ^
+src/ConnectMessagePassServer.c:52:3: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassServer.c:100:12: error: 'replyMessage' undeclared (first use in this function)
+    sprintf(replyMessage.buf, "Message %d received", messageNum);
+            ^
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+    ^
+src/ConnectMessagePassServer.c:105:44: warning: implicit declaration of function 'size' [-Wimplicit-function-declaration]
+    MsgReply(receiveId, EOK, &replyMessage, size(replyMessage));
+                                            ^
+src/ConnectMessagePassServer.c:112:9: error: 'EXIST_SUCCESS' undeclared (first use in this function)
+  return EXIST_SUCCESS;
+         ^
+src/ConnectMessagePassServer.c:47:8: warning: variable 'replayMessage' set but not used [-Wunused-but-set-variable]
+  reply replayMessage;
+        ^
+src/ConnectMessagePassServer.c:44:6: warning: unused variable 'receiveID' [-Wunused-variable]
+  int receiveID, messageNum = 0;
+      ^
+src/ConnectMessagePassServer.c:113:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+20:07:58 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:100:12: error: 'replyMessage' undeclared (first use in this function)
+    sprintf(replyMessage.buf, "Message %d received", messageNum);
+            ^
+src/ConnectMessagePassServer.c:100:12: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/ConnectMessagePassServer.c:105:44: warning: implicit declaration of function 'size' [-Wimplicit-function-declaration]
+    MsgReply(receiveId, EOK, &replyMessage, size(replyMessage));
+                                            ^
+src/ConnectMessagePassServer.c:112:9: error: 'EXIST_SUCCESS' undeclared (first use in this function)
+  return EXIST_SUCCESS;
+         ^
+src/ConnectMessagePassServer.c:47:8: warning: variable 'replayMessage' set but not used [-Wunused-but-set-variable]
+  reply replayMessage;
+        ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+src/ConnectMessagePassServer.c:113:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+20:08:44 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/ConnectMessagePassServer.c:105:44: warning: implicit declaration of function 'size' [-Wimplicit-function-declaration]
+    MsgReply(receiveId, EOK, &replyMessage, size(replyMessage));
+                                            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+build/x86_64-debug/src/ConnectMessagePassServer.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/ConnectMessagePassServer//src/ConnectMessagePassServer.c:105: undefined reference to `size'
+Makefile:60: recipe for target 'build/x86_64-debug/ConnectMessagePassServer' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/ConnectMessagePassServer] Error 1
+20:08:57 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
