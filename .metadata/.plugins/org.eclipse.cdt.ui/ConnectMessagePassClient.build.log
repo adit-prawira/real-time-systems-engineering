@@ -1,7 +1,15 @@
-19:31:14 **** Build of configuration armv7le-debug for project ConnectMessagePassClient ****
+21:47:44 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
 make -j3 all 
-qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/ConnectMessagePassClient.d,-MT,build/armv7le-debug/src/ConnectMessagePassClient.o -o build/armv7le-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
-qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/ConnectMessagePassClient   build/armv7le-debug/src/ConnectMessagePassClient.o  
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
 
-19:31:15 Build Finished (took 344ms)
+21:47:44 Build Finished (took 234ms)
 

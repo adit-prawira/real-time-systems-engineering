@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#include <sys/netmgr.h>
+
+#define BUF_SIZE 100
+
+typedef struct{
+	struct _pulse header;
+	int clientId;
+	int data;
+}messageData;
+
+typedef struct {
+	struct _pulse header;
+	char buf[BUF_SZIE];
+}reply;
+int client(int serverProcessId, int serverChannelId);
+
+int main(int argc, char *argv[]) {
+	printf("Client side running...\n");
+	int serverProcessId = 1000, serverChannelId = 1;
+
+	int returnVal = 0;
+	returnVal = client(serverProcessId, serverChannelId);
+
+	printf("Client side terminating...\n");
+	return EXIT_SUCCESS;
+}
+
+int client(int serverProcessId, int severChannelId){
+	messageData message;
+	reply reply;
+	int serverConnectionId;
+	int index = 0; // initialize the first index for constructing loop iteration number
+
+	printf("----> Attempting to connect to server with process ID of %d\n", serverProcessId);
+	printf("----> On Channel: %d\n", serverChannelId);
+
+	// set server connection ID
+	serverConnectionId = ConnectAttach(ND_LOCAL_NODE, serverProcessId, severChannelId, _NTO_SIDE_CHANNEL, 0);
+
+	// Check if connection has been made
+	if(serverConnectionId == -1){
+		printf("ERROR: Unable to connect to the server!\n");
+		return EXIT_FAILURE;
+	}
+
+	printf("Client connected to the server\n");
+
+	// pre-define the message data
+	message.header.type = 0x00;
+	message.header.subtype = 0x00;
+	message.clientId = 500;
+
+	for(index = 0; index < 5; index ++){
+		message.data = 10+index;
+		printf("Client (ID: %d): Sending data packet with integer of %d", message.data);
+		fflush(stdout);
+
+		// wants to check if client receive a reply from server side. If yes, break the loop early
+		if(MsgSend(serverConnectionId, &message, sizeof(message), &reply, sizeof(reply)) == -1){
+			printf("ERROR: Data has not been sent successfully or there is no reply being sent back from server\n");
+			break;
+		}
+	}
+
+	return EXIT_SUCCESS;
+}

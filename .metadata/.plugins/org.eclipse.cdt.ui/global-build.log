@@ -11289,3 +11289,972 @@ src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 
     sleep(1);
     ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+20:36:43 **** Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+20:36:54 **** Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:17:11: error: 'BUF_SZIE' undeclared here (not in a function)
+  char buf[BUF_SZIE];
+           ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:39:35: error: 'serverChannelId' undeclared (first use in this function)
+  printf("----> On Channel: %d\n", serverChannelId);
+                                   ^
+src/ConnectMessagePassClient.c:39:35: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+20:37:12 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:17:11: error: 'BUF_SZIE' undeclared here (not in a function)
+  char buf[BUF_SZIE];
+           ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:42:69: error: 'severChannelId' undeclared (first use in this function)
+  serverConnectionId = ConnectAttach(ND_LOCAL_NODE, serverProcessId, severChannelId, _NTO_SIDE_CHANNEL, 0);
+                                                                     ^
+src/ConnectMessagePassClient.c:42:69: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+20:37:19 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:17:11: error: 'BUF_SZIE' undeclared here (not in a function)
+  char buf[BUF_SZIE];
+           ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+20:37:27 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+20:37:56 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:38:03 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:39:09 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:39:30 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+20:40:59 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:103:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+20:41:04 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:41:26 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:41:44 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+20:42:05 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:42:17 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:25:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:69:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+20:56:49 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:26:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:70:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+20:56:57 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:46:2: error: unknown type name 'File'
+  File *filePtr;
+  ^
+src/ConnectMessagePassServer.c:47:10: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  filePtr = fopen("/tmp/myServer.info", "w+b");
+          ^
+src/ConnectMessagePassServer.c:50:58: warning: passing argument 4 of 'fwrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   int dataNum = fwrite(serverIDS, sizeof(int), NUM_SIZE, filePtr);
+                                                          ^
+In file included from src/ConnectMessagePassServer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:171:15: note: expected 'FILE * {aka struct _Filet *}' but argument is of type 'int *'
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+ extern size_t fwrite(const void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassServer.c:115:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+20:57:14 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:115:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:04:44 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:115:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:05:05 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:39:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:84:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:05:37 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:06:21 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:39:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:84:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:10:09 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:16: error: 'NUM_SIZE' undeclared (first use in this function)
+  int serverIDS[NUM_SIZE];
+                ^
+src/ConnectMessagePassServer.c:30:16: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:52:42: error: 'dataNum' undeclared (first use in this function)
+   printf("Successfully write %d data\n", dataNum);
+                                          ^
+src/ConnectMessagePassServer.c:117:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/ConnectMessagePassServer.c:30:6: warning: unused variable 'serverIDS' [-Wunused-variable]
+  int serverIDS[NUM_SIZE];
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+21:10:32 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:30:16: error: 'NUM_SIZE' undeclared (first use in this function)
+  int serverIDS[NUM_SIZE];
+                ^
+src/ConnectMessagePassServer.c:30:16: note: each undeclared identifier is reported only once for each function it appears in
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:117:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/ConnectMessagePassServer.c:30:6: warning: unused variable 'serverIDS' [-Wunused-variable]
+  int serverIDS[NUM_SIZE];
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+21:10:49 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:116:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:10:59 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:116:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:11:06 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:11:11 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:11:17 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:17:57 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:38:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:25:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:83:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+src/ConnectMessagePassClient.c:87:9: error: 'filePtr' undeclared (first use in this function)
+  fclose(filePtr);
+         ^
+src/ConnectMessagePassClient.c:87:9: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+21:18:03 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:38:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:25:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:83:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+src/ConnectMessagePassClient.c:87:9: error: 'filePtr' undeclared (first use in this function)
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+  fclose(filePtr);
+         ^
+src/ConnectMessagePassClient.c:87:9: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:18:26 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:38:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:25:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:83:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:18:47 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:38:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:25:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:83:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:19:00 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:115:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:19:11 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:20:33 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:20:38 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:22:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:31:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:115:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:20:43 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:21:20 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:21:28 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:27:32 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:27:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:38:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:58:24: error: incompatible type for argument 1 of 'fwrite'
+   int dataNum = fwrite(idToStore, sizeof(struct ids), 1, filePtr);
+                        ^
+In file included from src/ConnectMessagePassServer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:171:15: note: expected 'const void *' but argument is of type 'struct ids'
+ extern size_t fwrite(const void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassServer.c:123:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+21:28:41 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:27:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:38:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:58:24: error: incompatible type for argument 1 of 'fwrite'
+   int dataNum = fwrite(idToStore, sizeof(serverIds), 1, filePtr);
+                        ^
+In file included from src/ConnectMessagePassServer.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:171:15: note: expected 'const void *' but argument is of type 'serverIds {aka struct <anonymous>}'
+ extern size_t fwrite(const void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassServer.c:123:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassServer.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassServer.o' failed
+21:28:53 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:27:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:38:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:123:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:31:34 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:31:43 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:29:11: error: incompatible types when returning type 'size_t {aka long unsigned int}' but 'serverIds {aka struct <anonymous>}' was expected
+     return( fread( idFile, sizeof(serverIds), 1, fp ) );
+           ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:50:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:95:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:32:45 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:53:12: warning: 'serverProcessId' is used uninitialized in this function [-Wuninitialized]
+  returnVal = client(serverProcessId, serverChannelId);
+            ^
+src/ConnectMessagePassClient.c:53:12: warning: 'serverChannelId' is used uninitialized in this function [-Wuninitialized]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:33:44 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:54:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:99:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:34:11 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:49:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:94:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:34:27 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:49:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c:33:12: warning: unused variable 'ids' [-Wunused-variable]
+  serverIds ids;
+            ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:94:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:35:24 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:54:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:99:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:35:54 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:36:03 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:54:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:36:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:99:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:37:10 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:27:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:38:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:123:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:37:29 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+src/ConnectMessagePassServer.c: In function 'main':
+src/ConnectMessagePassServer.c:27:6: warning: variable 'returnValue' set but not used [-Wunused-but-set-variable]
+  int returnValue = 0;
+      ^
+src/ConnectMessagePassServer.c: In function 'server':
+src/ConnectMessagePassServer.c:38:20: warning: implicit declaration of function 'getpid' [-Wimplicit-function-declaration]
+  serverProcessID = getpid();
+                    ^
+src/ConnectMessagePassServer.c:124:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+21:38:55 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:37:12: error: incompatible type for argument 1 of 'fread'
+   if(fread(ids, sizeof(serverIds), 1, filePtr )!= 0){
+            ^
+In file included from src/ConnectMessagePassClient.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:165:15: note: expected 'void *' but argument is of type 'serverIds {aka struct <anonymous>}'
+ extern size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassClient.c:50:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:32:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:95:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+21:39:58 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:37:12: error: incompatible type for argument 1 of 'fread'
+   if(fread(ids, sizeof(serverIds), 1, filePtr)!= 0){
+            ^
+In file included from src/ConnectMessagePassClient.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:165:15: note: expected 'void *' but argument is of type 'serverIds {aka struct <anonymous>}'
+ extern size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassClient.c:50:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:32:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:95:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:40:59 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:37:14: error: incompatible type for argument 1 of 'fread'
+   if((fread( ids, sizeof( serverIds), 1, filePtr))!= 0){
+              ^
+In file included from src/ConnectMessagePassClient.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:165:15: note: expected 'void *' but argument is of type 'serverIds {aka struct <anonymous>}'
+ extern size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassClient.c:50:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:32:7: warning: unused variable 'ch' [-Wunused-variable]
+  char ch;
+       ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:95:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:41:23 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:37:13: error: incompatible type for argument 1 of 'fread'
+   if((fread(ids, sizeof(serverIds), 1, filePtr)) != 0){
+             ^
+In file included from src/ConnectMessagePassClient.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:165:15: note: expected 'void *' but argument is of type 'serverIds {aka struct <anonymous>}'
+ extern size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassClient.c:50:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+src/ConnectMessagePassClient.c:95:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:41:38 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:37:12: error: incompatible type for argument 1 of 'fread'
+   if(fread(ids, sizeof(serverIds), 1, filePtr)!= 0){
+            ^
+In file included from src/ConnectMessagePassClient.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:165:15: note: expected 'void *' but argument is of type 'serverIds {aka struct <anonymous>}'
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+ extern size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__fp);
+               ^
+src/ConnectMessagePassClient.c:50:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:95:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:42:25 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:26:36: warning: 'struct student_data' declared inside parameter list
+ size_t read_data( FILE *fp, struct student_data *p )
+                                    ^
+src/ConnectMessagePassClient.c:26:36: warning: its scope is only this definition or declaration, which is probably not what you want
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:28:31: error: invalid application of 'sizeof' to incomplete type 'struct student_data'
+     return( fread( p, sizeof( struct student_data ), 1, fp ) );
+                               ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:40:25: warning: passing argument 2 of 'read_data' from incompatible pointer type [-Wincompatible-pointer-types]
+   if(read_data(filePtr, &ids)!= 0){
+                         ^
+src/ConnectMessagePassClient.c:26:8: note: expected 'struct student_data *' but argument is of type 'serverIds * {aka struct <anonymous> *}'
+ size_t read_data( FILE *fp, struct student_data *p )
+        ^
+src/ConnectMessagePassClient.c:53:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:98:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:42:40 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:26:36: warning: 'struct student_data' declared inside parameter list
+ size_t read_data( FILE *fp, struct student_data *p )
+                                    ^
+src/ConnectMessagePassClient.c:26:36: warning: its scope is only this definition or declaration, which is probably not what you want
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:40:25: warning: passing argument 2 of 'read_data' from incompatible pointer type [-Wincompatible-pointer-types]
+   if(read_data(filePtr, &ids)!= 0){
+                         ^
+src/ConnectMessagePassClient.c:26:8: note: expected 'struct student_data *' but argument is of type 'serverIds * {aka struct <anonymous> *}'
+ size_t read_data( FILE *fp, struct student_data *p )
+        ^
+src/ConnectMessagePassClient.c:53:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:98:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:43:39 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:43:46 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:26:36: warning: 'struct student_data' declared inside parameter list
+ size_t read_data( FILE *fp, struct student_data *p )
+                                    ^
+src/ConnectMessagePassClient.c:26:36: warning: its scope is only this definition or declaration, which is probably not what you want
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:39:25: warning: passing argument 2 of 'read_data' from incompatible pointer type [-Wincompatible-pointer-types]
+   if(read_data(filePtr, &ids)!= 0){
+                         ^
+src/ConnectMessagePassClient.c:26:8: note: expected 'struct student_data *' but argument is of type 'serverIds * {aka struct <anonymous> *}'
+ size_t read_data( FILE *fp, struct student_data *p )
+        ^
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:45:43 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:46:14 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c:26:36: warning: 'struct serverIds' declared inside parameter list
+ size_t read_data( FILE *fp, struct serverIds *p )
+                                    ^
+src/ConnectMessagePassClient.c:26:36: warning: its scope is only this definition or declaration, which is probably not what you want
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:28:31: error: invalid application of 'sizeof' to incomplete type 'struct serverIds'
+     return( fread( p, sizeof( struct serverIds ), 1, fp ) );
+                               ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:32:19: error: storage size of 'ids' isn't known
+  struct serverIds ids;
+                   ^
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c:32:19: warning: unused variable 'ids' [-Wunused-variable]
+  struct serverIds ids;
+                   ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+   ^
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:46:50 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'read_data':
+src/ConnectMessagePassClient.c:28:31: error: invalid application of 'sizeof' to incomplete type 'struct serverIdss'
+     return( fread( p, sizeof( struct serverIdss ), 1, fp ) );
+                               ^
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+src/ConnectMessagePassClient.c: In function 'read_data':
+Makefile:55: recipe for target 'build/x86_64-debug/src/ConnectMessagePassClient.o' failed
+src/ConnectMessagePassClient.c:29:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/ConnectMessagePassClient.o] Error 1
+21:46:58 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  
+21:47:40 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:47:44 **** Incremental Build of configuration x86_64-debug for project ConnectMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassClient.d,-MT,build/x86_64-debug/src/ConnectMessagePassClient.o -o build/x86_64-debug/src/ConnectMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassClient.c
+src/ConnectMessagePassClient.c: In function 'main':
+src/ConnectMessagePassClient.c:52:6: warning: variable 'returnVal' set but not used [-Wunused-but-set-variable]
+  int returnVal = 0;
+      ^
+src/ConnectMessagePassClient.c: In function 'client':
+src/ConnectMessagePassClient.c:97:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassClient   build/x86_64-debug/src/ConnectMessagePassClient.o  

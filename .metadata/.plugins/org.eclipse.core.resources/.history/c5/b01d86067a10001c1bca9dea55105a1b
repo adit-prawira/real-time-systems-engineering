@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#include <sys/netmgr.h>
+
+#define BUF_SIZE 100
+
+typedef struct{
+	struct _pulse header;
+	int clientId;
+	int data;
+}messageData;
+
+typedef struct {
+	struct _pulse header;
+	char buf[BUF_SZIE];
+}reply;
+int client(int serverId, int serverChannelId);
+
+int main(int argc, char *argv[]) {
+	printf("Client side running...\n");
+	int serverId = 1000, serverChannelId = 1;
+
+	int returnVal = 0;
+	returnVal = client(serverId, serverChannelId);
+
+	printf("Client side terminating...\n");
+	return EXIT_SUCCESS;
+}
+
+int client(int serverId, int severChannelId){
+	messageData message;
+	reply reply;
+
+	return EXIT_SUCCESS;
+}

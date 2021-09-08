@@ -4,6 +4,7 @@
 #include <sys/iofunc.h>
 #define BUF_SIZE 100
 
+
 typedef struct {
 	struct _pulse header;
 	int clientId;
@@ -15,6 +16,10 @@ typedef struct {
 	char buf[BUF_SIZE];
 }reply;
 
+typedef struct{
+	int serverProcessId;
+	int serverChannelId;
+}serverIds;
 int server();
 
 int main(int argc, char *argv[]) {
@@ -27,8 +32,12 @@ int main(int argc, char *argv[]) {
 
 int server(){
 	int serverProcessID = 0, channelID = 0;
+
+	serverIds idToStore;
+
 	serverProcessID = getpid();
 	channelID = ChannelCreate(_NTO_CHF_DISCONNECT); // the flag will be utilise to allow detach
+
 
 	if(channelID == -1){
 		// the case where channel ID is not defined/found
@@ -40,6 +49,18 @@ int server(){
 	printf("------> Process ID: %d\n", serverProcessID);
 	printf("------> Channel ID: %d\n", channelID);
 
+	FILE *filePtr;
+	filePtr = fopen("/tmp/myServer.info", "w+");
+
+	if(filePtr != NULL){
+		idToStore.serverProcessId = serverProcessID;
+		idToStore.serverChannelId = channelID;
+		int dataNum = fwrite(&idToStore, sizeof(serverIds), 1, filePtr);
+		printf("Successfully write %d data\n", dataNum);
+	}else{
+		printf("Error opening file");
+	}
+	fclose(filePtr);
 	messageData message;
 	int receiveId, messageNum = 0;
 	int stayAlive = 0, living = 0;
@@ -98,10 +119,10 @@ int server(){
 			}
 
 			sprintf(replyMessage.buf, "Message %d received", messageNum);
-			printf("\nServer data packet from ClientID(%d) with value of %d,", message.clientId, message.data);
+			printf("\nServer data packet from ClientID(%d) with value of %d", message.clientId, message.data);
 			fflush(stdout);
 			sleep(1);
-			printf("-----> replying with: '%s'\n", replyMessage.buf);
+			printf("\n-----> replying with: '%s'\n", replyMessage.buf);
 			MsgReply(receiveId, EOK, &replyMessage, sizeof(replyMessage));
 		}else{
 			printf("\nERROR: Server received unrecognized entity, but could not handle it properly\n");
@@ -109,5 +130,6 @@ int server(){
 	}
 	printf("\nServer is requested to Destroy connection Channel\n");
 	ChannelDestroy(channelID);
+
 	return EXIT_SUCCESS;
 }
