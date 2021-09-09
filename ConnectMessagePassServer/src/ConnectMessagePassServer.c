@@ -2,8 +2,13 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <sys/iofunc.h>
+#include <unistd.h>
+
 #define BUF_SIZE 100
 
+enum states{
+	state0, state1, state2, state3, state4, state5, state6
+};
 
 typedef struct {
 	struct _pulse header;
@@ -20,14 +25,14 @@ typedef struct{
 	int serverProcessId;
 	int serverChannelId;
 }serverIds;
+
 int server();
 
 int main(int argc, char *argv[]) {
 	printf("Server side running...\n");
-	int returnValue = 0;
-	returnValue = server();
+	int returnValue = server();
 	printf("Server side terminating...\n");
-	return EXIT_SUCCESS;
+	return returnValue;
 }
 
 int server(){
@@ -49,18 +54,18 @@ int server(){
 	printf("------> Process ID: %d\n", serverProcessID);
 	printf("------> Channel ID: %d\n", channelID);
 
-	FILE *filePtr;
-	filePtr = fopen("/tmp/myServer.info", "w+");
-
-	if(filePtr != NULL){
+	FILE *file;
+	file = fopen("/tmp/myServer.info", "w+");
+	if(file != NULL){
 		idToStore.serverProcessId = serverProcessID;
 		idToStore.serverChannelId = channelID;
-		int dataNum = fwrite(&idToStore, sizeof(serverIds), 1, filePtr);
+		int dataNum = fwrite(&idToStore, sizeof(serverIds), 1, file);
 		printf("Successfully write %d data\n", dataNum);
 	}else{
 		printf("Error opening file");
 	}
-	fclose(filePtr);
+	fclose(file);
+
 	messageData message;
 	int receiveId, messageNum = 0;
 	int stayAlive = 0, living = 0;

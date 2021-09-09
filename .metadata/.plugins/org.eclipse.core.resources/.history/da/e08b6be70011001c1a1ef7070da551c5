@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#include <pthread.h>
+
+#define FILE_LOCATION "/tmp/trafficLightServer.info"
+
+typedef struct {
+	int serverProcessId;
+	int serverChannelId;
+}serverIds;
+
+int main(void) {
+
+	return EXIT_SUCCESS;
+}

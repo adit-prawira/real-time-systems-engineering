@@ -18,6 +18,7 @@ typedef struct {
 	struct _pulse header;
 	char buf[BUF_SIZE];
 }reply;
+
 typedef struct{
 	int serverProcessId;
 	int serverChannelId;
@@ -31,12 +32,12 @@ int main(int argc, char *argv[]) {
 	printf("Client side running...\n");
 	serverIds ids;
 
-	FILE *filePtr;
+	FILE *file;
 
 	int serverProcessId = 0, serverChannelId = 0;
-	filePtr = fopen(FILE_LOCATION, "r");
-	if(filePtr != NULL){
-		if(read_data(filePtr, &ids)!= 0){
+	file = fopen(FILE_LOCATION, "r");
+	if(file != NULL){
+		if(read_data(file, &ids)!= 0){
 			serverProcessId = ids.serverProcessId;
 			serverChannelId = ids.serverChannelId;
 		}else{
@@ -46,14 +47,13 @@ int main(int argc, char *argv[]) {
 	}else{
 		printf("Cannot open the file\n");
 	}
-	fclose(filePtr);
+	fclose(file);
 
 
-	int returnVal = 0;
-	returnVal = client(serverProcessId, serverChannelId);
+	int returnVal= client(serverProcessId, serverChannelId);
 
 	printf("Client side terminating...\n");
-	return EXIT_SUCCESS;
+	return returnVal;
 }
 
 int client(int serverProcessId, int serverChannelId){

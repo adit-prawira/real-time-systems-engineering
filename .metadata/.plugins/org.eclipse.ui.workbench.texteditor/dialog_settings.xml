@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="replyMessage" key="selection"/>
+		<item value="serverProcessId" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="serverId"/>
 			<item value="replayMessage"/>
 			<item value="receiveID"/>
 			<item value="serverPID"/>
@@ -15,9 +16,9 @@
 			<item value="coid"/>
 			<item value="serverConnectionId"/>
 			<item value="serverConnectionid"/>
-			<item value="LOCAL_ATTACH_POINT"/>
 		</list>
 		<list key="replacehistory">
+			<item value="serverProcessId"/>
 			<item value="replyMessage"/>
 			<item value="receiveId"/>
 			<item value="serverProcessID"/>

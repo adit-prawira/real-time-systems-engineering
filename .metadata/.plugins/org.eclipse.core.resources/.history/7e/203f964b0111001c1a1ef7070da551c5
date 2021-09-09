@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#include <pthread.h>
+
+#define FILE_LOCATION "/tmp/trafficLightServer.info"
+
+typedef struct {
+	int serverProcessId;
+	int serverChannelId;
+}serverIds;
+
+void writeServerInfo(serverIds *ids){
+	FILE *file;
+	file = fopen(FILE_LOCATION, "w");
+	if(file != NULL){
+		ids->serverChannelId = ChannelCreate(_NTO_CHF_DISCONNECT);
+	}else{
+		ids->serverChannelId = 0;
+		ids->serverProcessId = 0;
+		printf("ERROR: Cannot create server info file\n");
+	}
+}
+int main(void) {
+
+	return EXIT_SUCCESS;
+}

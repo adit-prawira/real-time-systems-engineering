@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#include <pthread.h>
+
+void *server(void *data){
+	pthread_exit(EXIT_FAILURE);
+}
+int main(void) {
+
+	return EXIT_SUCCESS;
+}
