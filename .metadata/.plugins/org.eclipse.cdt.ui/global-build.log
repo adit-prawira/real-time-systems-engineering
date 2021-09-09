@@ -12579,3 +12579,499 @@ In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmg
  extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
              ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+11:54:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'serverStateMachine':
+src/TrafficLightServer.c:86:4: error: continue statement not within a loop
+    continue;
+    ^
+src/TrafficLightServer.c:92:102: error: 'messageNum' undeclared (first use in this function)
+   printf("\nServer received _PULSE_CODE_UNBLOCK(code: %d) after %d messages\n", _PULSE_CODE_UNBLOCK, messageNum);
+                                                                                                      ^
+src/TrafficLightServer.c:92:102: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightServer.c:104:2: error: continue statement not within a loop
+  continue;
+  ^
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:116:16: warning: implicit declaration of function '__VOID' [-Wimplicit-function-declaration]
+   pthread_exit(__VOID(EXIT_FAILURE));
+                ^
+src/TrafficLightServer.c:116:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightServer.c:117:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return __VOID(EXIT_FAILURE);
+          ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightServer.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightServer.o] Error 1
+11:57:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:114:16: warning: implicit declaration of function '__VOID' [-Wimplicit-function-declaration]
+   pthread_exit(__VOID(EXIT_FAILURE));
+                ^
+src/TrafficLightServer.c:114:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+build/x86_64-debug/src/TrafficLightServer.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightServer//src/TrafficLightServer.c:114: undefined reference to `__VOID'
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightServer' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrafficLightServer] Error 1
+11:58:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:114:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+11:59:24 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:114:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+12:13:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:116:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+12:22:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+12:24:18 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+12:30:55 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:41:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:46:53 **** Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:46:58 **** Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:114:2: warning: implicit declaration of function 'ConnecDetach' [-Wimplicit-function-declaration]
+  ConnecDetach(td->params.serverConnectionId);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:114: undefined reference to `ConnecDetach'
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightClient' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrafficLightClient] Error 1
+14:47:15 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:48:26 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:48:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:51:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+14:51:39 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:52:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:52:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:53:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+14:53:40 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:54:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:54:22 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:54:28 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:55:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+14:56:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:56:22 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:56:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:59:56 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:97:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:112:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+14:59:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:01:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:94:2: error: expected ';' before 'if'
+  if(serverConnectionId == -1){
+  ^
+src/TrafficLightClient.c:111:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightClient.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightClient.o] Error 1
+15:02:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:96:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:111:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+15:02:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:96:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:111:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+15:03:18 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:03:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:96:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c:111:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+15:03:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:03:53 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:04:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:04:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+15:04:53 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:04:56 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:05:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:05:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:06:23 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:120:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+15:09:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+15:10:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:96:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+15:10:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.

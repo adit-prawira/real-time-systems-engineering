@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/iofunc.h>
+#include <sys/netmgr.h>
+#include <pthread.h>
+
+//#define FILE_LOCATION "/tmp/trafficLightServer.info"
+#define FILE_LOCATION "/net/serverAditya/tmp/trafficLightServer.info"
+#define BUF_SIZE 100
+
+enum states {
+	state0, state1, state2, state3, state4, state5, state6
+};
+
+typedef struct {
+	int serverProcessId;
+	int serverChannelId;
+}serverIds;
+
+typedef struct {
+	struct _pulse header;
+	int clientId;
+	int data;
+//	volatile char messageChar;
+}messageData;
+
+typedef struct {
+	struct _pulse header;
+	char buf[BUF_SIZE];
+}replyData;
+
+typedef struct {
+	int serverConnectionId;
+	int messageNum;
+	int stayAlive;
+	int living;
+}serverParams;
+
+typedef struct {
+	messageData message;
+	replyData replyMessage;
+	serverIds serverIdentity;
+	serverParams params;
+	enum states currentState;
+	pthread_mutex_t mutex;
+}clientData;
+
+
+// return the size of data that has been stored in the read file
+// if it fails to read then return 0
+size_t read_data( FILE *fp, serverIds *p )
+{
+    return( fread( p, sizeof( serverIds ), 1, fp ) );
+}
+
+// This function will perform direct mutation to accessIds
+// and store serverChannelId, and serverProcessId, where those two properties were created by server-side
+void getServerInfo(serverIds *accessIds){
+	FILE *file;
+	serverIds ids;
+	file = fopen(FILE_LOCATION, "r");
+	if(file != NULL && read_data(file, &ids)!= 0){
+		accessIds->serverChannelId =ids.serverChannelId;
+		accessIds->serverProcessId =ids.serverProcessId;
+		printf("Successfully get Server Connection and Channel IDs from file\n"); // logs successfully file opening and read methods
+	}else{
+		printf("Cannot open the file\n"); // logs unsuccessful file access process
+	}
+	fclose(file); // close file after performing the process
+}
+
+// helper function to initialize the clientData typedef
+void clientDataInit(clientData *sensor){
+	sensor->message.header.type = 0x00;
+	sensor->message.header.subtype = 0x00;
+	sensor->message.clientId = 500;
+	sensor->params.stayAlive = 0;
+	sensor->params.living = 0;
+	sensor->params.messageNum = 0;
+	sensor->currentState = state0;
+	pthread_mutex_init(&sensor->mutex, NULL);
+	getServerInfo(&sensor->serverIdentity);
+};
+
+void *client(void *data){
+	clientData *td = (clientData*) data;
+	printf("THREAD STATUS: Attempting to connect to server with process ID of %d\n", td->serverIdentity.serverProcessId);
+	printf("On Channel ID: %d\n", td->serverIdentity.serverChannelId);
+
+	td->params.serverConnectionId = ConnectAttach(ND_LOCAL_NODE, td->serverIdentity.serverProcessId,
+			td->serverIdentity.serverChannelId, _NTO_SIDE_CHANNEL, 0);
+
+	if(td->params.serverConnectionId == -1){
+		printf("ERROR: Unable ")
+	}
+	return 0;
+}
+int main(int argc, char *argv[]) {
+	clientData sensor;
+	clientDataInit(&sensor);
+
+	// test if reading process is good
+	printf("%d\n", sensor.serverIdentity.serverProcessId);
+	printf("%d\n", sensor.serverIdentity.serverChannelId);
+	return EXIT_SUCCESS;
+}

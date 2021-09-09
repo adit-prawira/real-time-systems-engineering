@@ -1,17 +1,6 @@
-11:40:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+15:10:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
 make -j3 all 
-qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
-src/TrafficLightServer.c: In function 'server':
-src/TrafficLightServer.c:95:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
-   pthread_exit(EXIT_FAILURE);
-                ^
-In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
-                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
-                 from src/TrafficLightServer.c:4:
-/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
- extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
-             ^
-qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+make: Nothing to be done for 'all'.
 
-11:40:28 Build Finished (took 472ms)
+15:10:48 Build Finished (took 79ms)
 
