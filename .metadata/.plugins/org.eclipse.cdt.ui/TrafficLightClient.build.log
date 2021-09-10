@@ -1,8 +1,12 @@
-15:10:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+15:51:55 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
 make -j3 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
 src/TrafficLightClient.c: In function 'client':
-src/TrafficLightClient.c:96:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+src/TrafficLightClient.c:142:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
    pthread_exit(EXIT_FAILURE);
                 ^
 In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
@@ -12,6 +16,8 @@ In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmg
  extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
              ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
 
-15:10:36 Build Finished (took 334ms)
+15:51:55 Build Finished (took 330ms)
 

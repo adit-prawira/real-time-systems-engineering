@@ -8,7 +8,8 @@
 #define FILE_LOCATION "/tmp/trafficLightServer.info"
 //#define FILE_LOCATION "/net/serverAditya/tmp/trafficLightServer.info"
 #define BUF_SIZE 100
-
+#define MESSAGE_SIZE 2
+#define N_ITERATIONS 10
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -21,13 +22,16 @@ typedef struct {
 typedef struct {
 	struct _pulse header;
 	int clientId;
-	int data;
-//	volatile char messageChar;
+//	int data;
+	volatile char data;
+	int delay;
+	enum states currentState;
 }messageData;
 
 typedef struct {
 	struct _pulse header;
 	char buf[BUF_SIZE];
+	enum states currentState;
 }replyData;
 
 typedef struct {
@@ -41,7 +45,6 @@ typedef struct {
 	replyData replyMessage;
 	serverIds serverIdentity;
 	serverParams params;
-	enum states currentState;
 	pthread_mutex_t mutex;
 }clientData;
 
@@ -77,29 +80,73 @@ void clientDataInit(clientData *clientSide){
 	clientSide->params.stayAlive = 0;
 	clientSide->params.living = 0;
 	clientSide->params.messageNum = 0;
-	clientSide->currentState = state0;
+	clientSide->message.currentState = state0;
+	clientSide->message.delay = 1;
 	pthread_mutex_init(&clientSide->mutex, NULL);
 	getServerInfo(&clientSide->serverIdentity);
 };
+
+void singlestep_trafficlight_statemachine_send(clientData *cd){
+	char buf[MESSAGE_SIZE] = {};
+	switch(cd->replyMessage.currentState){
+	case state0:
+		cd->message.currentState = state1;
+		cd->message.delay = 1;
+		break;
+	case state1:
+		cd->message.currentState = state2;
+		cd->message.delay = 1;
+		printf("\nPress 'n' to stop cars from North-South:\n");
+		gets(buf);
+		cd->message.data = buf[0];
+		break;
+	case state2:
+		cd->message.currentState = state3;
+		cd->message.delay = 2;
+		break;
+	case state3:
+		cd->message.delay = 1;
+		cd->message.currentState = state4;
+		break;
+	case state4:
+		cd->message.delay = 1;
+		cd->message.currentState = state5;
+		printf("\nPress 'e' to stop cars from East-West:\n");
+		gets(buf);
+		cd->message.data = buf[0];
+		break;
+	case state5:
+		cd->message.currentState = state6;
+		cd->message.delay = 2;
+		break;
+	case state6:
+		cd->message.delay = 1;
+		cd->message.currentState = state1;
+		break;
+	}
+}
 
 void *client(void *data){
 	clientData *td = (clientData*) data;
 	int index = 0;
 	int serverConnectionId;
+
 	printf("THREAD STATUS: Attempting to connect to server with process ID of %d\n", td->serverIdentity.serverProcessId);
 	printf("On Channel ID: %d\n", td->serverIdentity.serverChannelId);
 
 	serverConnectionId = ConnectAttach(ND_LOCAL_NODE, td->serverIdentity.serverProcessId, td->serverIdentity.serverChannelId, _NTO_SIDE_CHANNEL, 0);
 	printf("ConnectionId %d\n", serverConnectionId);
+
 	if(serverConnectionId == -1){
 		printf("ERROR: Unable to connect to the server!\n");
 		pthread_exit(EXIT_FAILURE);
 	}
+
 	printf("Client connected to the server\n");
-	for(index = 0; index < 5; index++){
+	for(index = 0; index < N_ITERATIONS; index++){
 		pthread_mutex_lock(&td->mutex);
-			td->message.data = 10+index;
-			printf("\nClient (ID: %d): Sending data packet with integer of %d\n", td->message.clientId, td->message.data);
+
+			printf("\nClient (ID: %d): Sending data packet with state number %d\n", td->message.clientId, td->message.currentState);
 			if(MsgSend(serverConnectionId, &td->message, sizeof(td->message),
 					&td->replyMessage, sizeof(td->replyMessage)) == -1){
 				printf("ERROR: Data has not been sent successfully or there is no reply being sent back from server\n");
@@ -107,12 +154,14 @@ void *client(void *data){
 			}else{
 				printf("----> Server side replying with: '%s'", td->replyMessage.buf);
 			}
+			singlestep_trafficlight_statemachine_send(td);
 		pthread_mutex_unlock(&td->mutex);
 	}
 	printf("\nNotify server to close connection\n");
 	ConnectDetach(serverConnectionId);
 	return 0;
 }
+
 int main(int argc, char *argv[]) {
 	clientData clientSide;
 	clientDataInit(&clientSide);
