@@ -1,6 +1,6 @@
-15:59:16 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+16:29:50 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
 make -j3 all 
 make: Nothing to be done for 'all'.
 
-15:59:16 Build Finished (took 67ms)
+16:29:50 Build Finished (took 73ms)
 

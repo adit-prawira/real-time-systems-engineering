@@ -14537,3 +14537,345 @@ build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficligh
 15:59:16 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
 make -j3 all 
 make: Nothing to be done for 'all'.
+16:18:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightServer.d,-MT,build/x86_64-debug/src/TrafficLightServer.o -o build/x86_64-debug/src/TrafficLightServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightServer.c
+src/TrafficLightServer.c: In function 'server':
+src/TrafficLightServer.c:153:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightServer.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightServer   build/x86_64-debug/src/TrafficLightServer.o  
+16:18:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'clientDataInit':
+src/TrafficLightClient.c:86:2: error: 'td' undeclared (first use in this function)
+  td->params.serverConnectionId=0;
+  ^
+src/TrafficLightClient.c:86:2: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:142:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightClient.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightClient.o] Error 1
+16:19:18 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:142:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
+16:19:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:22:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c: In function 'main':
+src/TrafficLightClient.c:177:85: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide->message.clientId, clientSide->message.currentState);
+                                                                                     ^
+src/TrafficLightClient.c:177:115: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide->message.clientId, clientSide->message.currentState);
+                                                                                                                   ^
+src/TrafficLightClient.c:178:24: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &td->message, sizeof(clientSide->message),
+                        ^
+src/TrafficLightClient.c:178:55: error: 'td' undeclared (first use in this function)
+   if(MsgSend(clientSide->params.serverConnectionId , &td->message, sizeof(clientSide->message),
+                                                       ^
+src/TrafficLightClient.c:178:55: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightClient.c:178:85: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &td->message, sizeof(clientSide->message),
+                                                                                     ^
+src/TrafficLightClient.c:179:16: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+     &clientSide->replyMessage, sizeof(clientSide->replyMessage)) == -1){
+                ^
+src/TrafficLightClient.c:179:49: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+     &clientSide->replyMessage, sizeof(clientSide->replyMessage)) == -1){
+                                                 ^
+src/TrafficLightClient.c:183:62: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+    printf("----> Server side replying with: '%s'", clientSide->replyMessage.buf); // print reply messages when client receive it from server
+                                                              ^
+src/TrafficLightClient.c:185:45: error: incompatible type for argument 1 of 'singlestep_trafficlight_statemachine_send'
+   singlestep_trafficlight_statemachine_send(clientSide); // Perform direct data mutation of the task in state machine based on replies
+                                             ^
+src/TrafficLightClient.c:91:6: note: expected 'clientData * {aka struct <anonymous> *}' but argument is of type 'clientData {aka struct <anonymous>}'
+ void singlestep_trafficlight_statemachine_send(clientData *cd){
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightClient.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightClient.o' failed
+16:22:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightClient.o' failed
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c: In function 'main':
+src/TrafficLightClient.c:177:85: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide->message.clientId, clientSide->message.currentState);
+                                                                                     ^
+src/TrafficLightClient.c:177:115: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide->message.clientId, clientSide->message.currentState);
+                                                                                                                   ^
+src/TrafficLightClient.c:178:24: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &clientSide->message, sizeof(clientSide->message),
+                        ^
+src/TrafficLightClient.c:178:65: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &clientSide->message, sizeof(clientSide->message),
+                                                                 ^
+src/TrafficLightClient.c:178:93: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &clientSide->message, sizeof(clientSide->message),
+                                                                                             ^
+src/TrafficLightClient.c:179:16: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+     &clientSide->replyMessage, sizeof(clientSide->replyMessage)) == -1){
+                ^
+src/TrafficLightClient.c:179:49: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+     &clientSide->replyMessage, sizeof(clientSide->replyMessage)) == -1){
+                                                 ^
+src/TrafficLightClient.c:183:62: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+    printf("----> Server side replying with: '%s'", clientSide->replyMessage.buf); // print reply messages when client receive it from server
+                                                              ^
+src/TrafficLightClient.c:185:45: error: incompatible type for argument 1 of 'singlestep_trafficlight_statemachine_send'
+   singlestep_trafficlight_statemachine_send(clientSide); // Perform direct data mutation of the task in state machine based on replies
+                                             ^
+src/TrafficLightClient.c:91:6: note: expected 'clientData * {aka struct <anonymous> *}' but argument is of type 'clientData {aka struct <anonymous>}'
+ void singlestep_trafficlight_statemachine_send(clientData *cd){
+      ^
+src/TrafficLightClient.c:188:16: error: 'td' undeclared (first use in this function)
+  ConnectDetach(td->params.serverConnectionId);
+                ^
+src/TrafficLightClient.c:188:16: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightClient.o] Error 1
+16:22:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c: In function 'main':
+src/TrafficLightClient.c:177:85: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightClient.o' failed
+   printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide->message.clientId, clientSide->message.currentState);
+                                                                                     ^
+src/TrafficLightClient.c:177:115: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide->message.clientId, clientSide->message.currentState);
+                                                                                                                   ^
+src/TrafficLightClient.c:178:24: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &clientSide->message, sizeof(clientSide->message),
+                        ^
+src/TrafficLightClient.c:178:65: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &clientSide->message, sizeof(clientSide->message),
+                                                                 ^
+src/TrafficLightClient.c:178:93: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+   if(MsgSend(clientSide->params.serverConnectionId , &clientSide->message, sizeof(clientSide->message),
+                                                                                             ^
+src/TrafficLightClient.c:179:16: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+     &clientSide->replyMessage, sizeof(clientSide->replyMessage)) == -1){
+                ^
+src/TrafficLightClient.c:179:49: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+     &clientSide->replyMessage, sizeof(clientSide->replyMessage)) == -1){
+                                                 ^
+src/TrafficLightClient.c:183:62: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+    printf("----> Server side replying with: '%s'", clientSide->replyMessage.buf); // print reply messages when client receive it from server
+                                                              ^
+src/TrafficLightClient.c:185:45: error: incompatible type for argument 1 of 'singlestep_trafficlight_statemachine_send'
+   singlestep_trafficlight_statemachine_send(clientSide); // Perform direct data mutation of the task in state machine based on replies
+                                             ^
+src/TrafficLightClient.c:91:6: note: expected 'clientData * {aka struct <anonymous> *}' but argument is of type 'clientData {aka struct <anonymous>}'
+ void singlestep_trafficlight_statemachine_send(clientData *cd){
+      ^
+src/TrafficLightClient.c:188:26: error: invalid type argument of '->' (have 'clientData {aka struct <anonymous>}')
+  ConnectDetach(clientSide->params.serverConnectionId);
+                          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightClient.o] Error 1
+16:23:44 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+src/TrafficLightClient.c: In function 'main':
+src/TrafficLightClient.c:185:45: error: incompatible type for argument 1 of 'singlestep_trafficlight_statemachine_send'
+   singlestep_trafficlight_statemachine_send(clientSide); // Perform direct data mutation of the task in state machine based on replies
+                                             ^
+src/TrafficLightClient.c:91:6: note: expected 'clientData * {aka struct <anonymous> *}' but argument is of type 'clientData {aka struct <anonymous>}'
+ void singlestep_trafficlight_statemachine_send(clientData *cd){
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightClient.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightClient.o] Error 1
+16:23:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
+16:24:07 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:24:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
+16:24:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:26:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:142:16: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_exit(EXIT_FAILURE);
+                ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
+16:26:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:29:50 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:29:56 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:17: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+    pthread_exit(EXIT_FAILURE);
+                 ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.

@@ -9,7 +9,8 @@
 //#define FILE_LOCATION "/net/serverAditya/tmp/trafficLightServer.info"
 #define BUF_SIZE 100
 #define MESSAGE_SIZE 2
-#define N_ITERATIONS 10
+#define N_ITERATIONS 10 // Iteration number can be customised
+
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -22,7 +23,6 @@ typedef struct {
 typedef struct {
 	struct _pulse header;
 	int clientId;
-//	int data;
 	volatile char data;
 	int delay;
 	enum states currentState;
@@ -38,6 +38,7 @@ typedef struct {
 	int messageNum;
 	int stayAlive;
 	int living;
+	int serverConnectionId;
 }serverParams;
 
 typedef struct {
@@ -82,6 +83,7 @@ void clientDataInit(clientData *clientSide){
 	clientSide->params.messageNum = 0;
 	clientSide->message.currentState = state0;
 	clientSide->message.delay = 1;
+	clientSide->params.serverConnectionId=0;
 	pthread_mutex_init(&clientSide->mutex, NULL);
 	getServerInfo(&clientSide->serverIdentity);
 };
@@ -124,39 +126,23 @@ void singlestep_trafficlight_statemachine_send(clientData *cd){
 	}
 }
 
+// client thread
 void *client(void *data){
 	clientData *td = (clientData*) data;
-	int index = 0;
-	int serverConnectionId;
 
 	printf("THREAD STATUS: Attempting to connect to server with process ID of %d\n", td->serverIdentity.serverProcessId);
 	printf("On Channel ID: %d\n", td->serverIdentity.serverChannelId);
 
-	serverConnectionId = ConnectAttach(ND_LOCAL_NODE, td->serverIdentity.serverProcessId, td->serverIdentity.serverChannelId, _NTO_SIDE_CHANNEL, 0);
-	printf("ConnectionId %d\n", serverConnectionId);
-
-	if(serverConnectionId == -1){
-		printf("ERROR: Unable to connect to the server!\n");
-		pthread_exit(EXIT_FAILURE);
-	}
+	pthread_mutex_lock(&td->mutex);
+		td->params.serverConnectionId = ConnectAttach(ND_LOCAL_NODE, td->serverIdentity.serverProcessId, td->serverIdentity.serverChannelId, _NTO_SIDE_CHANNEL, 0);
+		printf("ConnectionId %d\n", td->params.serverConnectionId);
+		if(td->params.serverConnectionId  == -1){
+			printf("ERROR: Unable to connect to the server!\n");
+			pthread_exit(EXIT_FAILURE);
+		}
+	pthread_mutex_unlock(&td->mutex);
 
 	printf("Client connected to the server\n");
-	for(index = 0; index < N_ITERATIONS; index++){
-		pthread_mutex_lock(&td->mutex);
-
-			printf("\nClient (ID: %d): Sending data packet with state number %d\n", td->message.clientId, td->message.currentState);
-			if(MsgSend(serverConnectionId, &td->message, sizeof(td->message),
-					&td->replyMessage, sizeof(td->replyMessage)) == -1){
-				printf("ERROR: Data has not been sent successfully or there is no reply being sent back from server\n");
-				break;
-			}else{
-				printf("----> Server side replying with: '%s'", td->replyMessage.buf);
-			}
-			singlestep_trafficlight_statemachine_send(td);
-		pthread_mutex_unlock(&td->mutex);
-	}
-	printf("\nNotify server to close connection\n");
-	ConnectDetach(serverConnectionId);
 	return 0;
 }
 
@@ -164,9 +150,24 @@ int main(int argc, char *argv[]) {
 	clientData clientSide;
 	clientDataInit(&clientSide);
 	pthread_t clientThread;
-
+	int index = 0;
 	pthread_create(&clientThread, NULL, client, &clientSide);
 	pthread_join(clientThread, NULL);
+
+	// After all connections have been made => start iteration of tasks
+	for(index = 0; index < N_ITERATIONS; index++){
+		printf("\nClient (ID: %d): Sending data packet with state number %d\n", clientSide.message.clientId, clientSide.message.currentState);
+		if(MsgSend(clientSide.params.serverConnectionId , &clientSide.message, sizeof(clientSide.message),
+				&clientSide.replyMessage, sizeof(clientSide.replyMessage)) == -1){
+			printf("ERROR: Data has not been sent successfully or there is no reply being sent back from server\n");
+			break;
+		}else{
+			printf("----> Server side replying with: '%s'", clientSide.replyMessage.buf); // print reply messages when client receive it from server
+		}
+		singlestep_trafficlight_statemachine_send(&clientSide); // Perform direct data mutation of the task in state machine based on replies
+	}
+	printf("\nNotify server to close connection\n");
+	ConnectDetach(clientSide.params.serverConnectionId);
 	printf("(MAIN) THREAD STATUS: Main thread terminating\n");
 
 	return EXIT_SUCCESS;

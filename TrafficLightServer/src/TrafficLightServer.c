@@ -22,7 +22,6 @@ typedef struct {
 typedef struct {
 	struct _pulse header;
 	int clientId;
-//	int data;
 	volatile char data;
 	int delay;
 	enum states currentState;
@@ -109,6 +108,7 @@ void pulseStateMachine(struct _pulse header, serverParams *params, int clientId)
 	}
 }
 
+// State Machine that will only print the received data from client
 void singlestep_trafficlight_statemachine_receive(sensorData *sd){
 	switch(sd->message.currentState){
 	case state0:
@@ -137,6 +137,7 @@ void singlestep_trafficlight_statemachine_receive(sensorData *sd){
 		printf("EWR-NSY(%d) -> Wait for %d second\n", sd->message.currentState, sd->message.delay);
 		break;
 	}
+	// this will notify the client that the state has been received by server
 	sd->replyMessage.currentState = sd->message.currentState;
 }
 // server thread
@@ -154,12 +155,14 @@ void *server(void *data){
 
 	printf("---> Server Process ID: %d\n", td->serverIdentity.serverProcessId);
 	printf("---> Server Channel ID: %d\n", td->serverIdentity.serverChannelId);
-	td->params.living = 1;
+	td->params.living = 1; // when all connection has been made, activated loop
 
 	while(td->params.living){
-		pthread_mutex_lock(&td->mutex);
+		pthread_mutex_lock(&td->mutex); // start locking
+
 			td->params.receiveId = MsgReceive(td->serverIdentity.serverChannelId, &td->message,
 					sizeof(td->message), NULL);
+
 			if(td->params.receiveId < 0){ // Receiving no messages
 				printf("ERROR: Failed to receive message\n");
 				break;
@@ -189,17 +192,19 @@ void *server(void *data){
 				printf("\nServer (TD: %d): Receive data packet from ClientID(%d) of state %d\n", td->serverIdentity.serverProcessId,
 						td->message.clientId, td->message.currentState);
 				printf("----> Replying with: '%s'\n", td->replyMessage.buf);
+
+				// Print the received data from client
 				singlestep_trafficlight_statemachine_receive(td);
-				sleep(td->message.delay);
-				MsgReply(td->params.receiveId, EOK, &td->replyMessage, sizeof(td->replyMessage));
+				sleep(td->message.delay); // the delay here will depends on what has been passed by client
+				MsgReply(td->params.receiveId, EOK, &td->replyMessage, sizeof(td->replyMessage)); // Send reply message to client
 			}else{
 				printf("\nERROR: Server received unrecognized entity, but could not handle it properly\n");
 			}
-		pthread_mutex_unlock(&td->mutex);
+		pthread_mutex_unlock(&td->mutex); // unlocking
 	}
 
 	printf("\nTHREAD STATUS: Server thread terminating\n");
-	ChannelDestroy(td->serverIdentity.serverChannelId);
+	ChannelDestroy(td->serverIdentity.serverChannelId); // Destroy connection to channel after all task has beeen completed
 	return 0;
 }
 
