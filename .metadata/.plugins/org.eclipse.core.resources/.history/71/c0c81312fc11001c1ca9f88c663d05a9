@@ -112,29 +112,29 @@ void pulseStateMachine(struct _pulse header, serverParams *params, int clientId)
 void singlestep_trafficlight_statemachine_receive(sensorData *sd){
 	switch(sd->message.currentState){
 	case state0:
-		printf("EWR-NSR(%d) -> Wait for %d second\n", sd->message.currentState, sd->message.delay);
+		printf("EWR-NSR(%d) -> Wait for 1 second\n", sd->message.currentState);
 		break;
 	case state1:
-		printf("EWR-NSR(%d) -> Wait for %d second\n", sd->message.currentState, sd->message.delay);
+		printf("EWR-NSR(%d) -> Wait for 1 second\n", sd->message.currentState);
 		printf("Waiting to receive signal...\n");
 		break;
 	case state2:
 		printf("Received '%c' -> stopping car from North-South Road\n", sd->message.data);
-		printf("EWG-NSR(%d) -> Wait for %d seconds\n", sd->message.currentState, sd->message.delay);
+		printf("EWG-NSR(%d) -> Wait for 2 seconds\n", sd->message.currentState);
 		break;
 	case state3:
-		printf("EWY-NSR(%d) -> Wait for %d second\n", sd->message.currentState, sd->message.delay);
+		printf("EWY-NSR(%d) -> Wait for 1 second\n", sd->message.currentState);
 		break;
 	case state4:
-		printf("EWR-NSR(%d) -> Wait for %d second\n", sd->message.currentState, sd->message.delay);
+		printf("EWR-NSR(%d) -> Wait for 1 second\n", sd->message.currentState);
 		printf("Waiting to receive signal...\n");
 		break;
 	case state5:
 		printf("Received '%c' -> stopping car from East-West Road\n", sd->message.data);
-		printf("EWR-NSG(%d) -> Wait for %d seconds\n", sd->message.currentState, sd->message.delay);
+		printf("EWR-NSG(%d) -> Wait for 2 seconds\n", sd->message.currentState);
 		break;
 	case state6:
-		printf("EWR-NSY(%d) -> Wait for %d second\n", sd->message.currentState, sd->message.delay);
+		printf("EWR-NSY(%d) -> Wait for 1 second\n", sd->message.currentState);
 		break;
 	}
 	sd->replyMessage.currentState = sd->message.currentState;

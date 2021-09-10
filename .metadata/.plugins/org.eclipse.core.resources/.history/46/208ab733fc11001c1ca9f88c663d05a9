@@ -91,22 +91,25 @@ void singlestep_trafficlight_statemachine_send(clientData *cd){
 	switch(cd->replyMessage.currentState){
 	case state0:
 		cd->message.currentState = state1;
+		cd->message.delay = 1;
 		break;
 	case state1:
 		cd->message.currentState = state2;
+		cd->message.delay = 1;
 		printf("\nPress 'n' to stop cars from North-South:\n");
 		gets(buf);
 		cd->message.data = buf[0];
 		cd->message.delay = 2;
 		break;
 	case state2:
-		cd->message.delay = 1;
 		cd->message.currentState = state3;
 		break;
 	case state3:
+		cd->message.delay = 1;
 		cd->message.currentState = state4;
 		break;
 	case state4:
+		cd->message.delay = 1;
 		cd->message.currentState = state5;
 		printf("\nPress 'e' to stop cars from East-West:\n");
 		gets(buf);
@@ -114,7 +117,6 @@ void singlestep_trafficlight_statemachine_send(clientData *cd){
 		cd->message.delay = 2;
 		break;
 	case state5:
-		cd->message.delay = 1;
 		cd->message.currentState = state6;
 		break;
 	case state6:
