@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+pthread_relock_t dataSource;
+
+void *producer(void *data){
+	return 0;
+}
+
+void *consumerOne(void *notUsed){
+	return 0;
+}
+
+void *consumerTwo(void *notUsed){
+
+}
+int main(int argc, char *argv[]){
+	return EXIT_SUCCESS;
+}

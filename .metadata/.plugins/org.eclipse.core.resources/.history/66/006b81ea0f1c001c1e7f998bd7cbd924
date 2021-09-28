@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+struct resource {
+	volatile char data1, data2;
+	volatile char data1Ready, data2Ready;
+}data;
+
+void *producer(void *notUsed){
+	int ID = pthread_self();
+	printf("STATUS (THREAD ID: %d): Producer Thread Starting...\n", ID);
+	char buf[3] = {};
+	strcpy(buf, "  ");
+	gets(buf);
+	if(pthread_sleepon_lock() == EOK){
+		data.data1 = buf[0];
+		data.data2 = buf[1];
+		data.data1Ready = 1;
+		data.data2Ready = 1;
+
+		// sending signal that data is ready
+		pthread_sleepon_signal(&data.data1Ready);
+		pthread_sleepon_signal(&data.data2Ready);
+
+		pthread_sleeon_unlock();
+	}
+	return 0;
+}
+
+void *consumerOne(void *notUsed){
+	int ID = pthread_self();
+	printf("STATUS (THREAD ID: %d): Consumer One Thread Starting...\n", ID);
+	if(pthread_sleeon_lock() == EOK){
+		while(!data.data1Ready){
+
+			pthread_sleepon_lock();
+			printf("RECEIVE: Consumer One receive '%c' from Producer\n", data.data1);
+		}
+	}
+	return 0;
+}
+void *consumerTwo(void *notUsed){
+	int ID = pthread_self();
+	printf("STATUS (THREAD ID: %d): Consumer One Thread Starting...\n", ID);
+	return 0;
+}
+
+int main(int argc, char *argv[]){
+	return EXIT_SUCCESS;
+}

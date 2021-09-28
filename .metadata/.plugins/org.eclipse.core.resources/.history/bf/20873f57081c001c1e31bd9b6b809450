@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+pthread_relock_t dataSource;
+
+struct resource{
+	volatile char byte1;
+	volatile char byte2;
+}data;
+
+void *producer(void *notUsed){
+	printf("STATUS (THREAD ID: %d): Producer Thread Starting...\n", pthread_self());
+	return 0;
+}
+
+void *consumerOne(void *notUsed){
+	printf("STATUS (THREAD ID: %d): Consumer One Thread Starting...\n", pthread_self());
+	return 0;
+}
+
+void *consumerTwo(void *notUsed){
+	printf("STATUS (THREAD ID: %d): Consumer Two Thread Starting...\n", pthread_self());
+	return 0;
+}
+
+int main(int argc, char *argv[]){
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,6 @@
+11:52:07 **** Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+11:52:07 Build Finished (took 112ms)
+

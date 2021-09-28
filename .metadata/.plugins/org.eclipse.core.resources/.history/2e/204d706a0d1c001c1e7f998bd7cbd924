@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+struct resource {
+	volatile char byte1, byte2;
+}data;
+void *producer(void *notUsed){
+	return 0;
+}
+void *consumerOne(void *notUsed){
+	return 0;
+}
+void *consumerTwo(void *notUsed){
+	return 0;
+}
+int main(void) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

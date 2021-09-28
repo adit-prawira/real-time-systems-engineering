@@ -3,13 +3,13 @@
 	<section name="ShowViewDialog">
 		<item value="304" key="DIALOG_WIDTH"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
-		<item value="com.qnx.tools.ide.sysinfo.internal.ui.systemview" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="org.eclipse.ui.navigator.ProjectExplorer" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="415" key="DIALOG_HEIGHT"/>
 		<item value="447" key="DIALOG_X_ORIGIN"/>
 		<item value="253" key="DIALOG_Y_ORIGIN"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="QNX System Information"/>
-			<item value="QNX Targets"/>
+			<item value="C/C++"/>
+			<item value="General"/>
 		</list>
 	</section>
 </section>

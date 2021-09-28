@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#define N 5
+int isOpen = 0; // initialise the status of the shower to be closed
+
+void *shower(void *notUsed){
+	return 0;
+}
+void getKey(void *notUsed){
+	return 0;
+}
+int main(int argc, char *argv[]) {
+
+	return EXIT_SUCCESS;
+}

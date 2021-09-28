@@ -1,0 +1,20 @@
+16:09:30 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:33:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(key);
+   ^
+src/BathroomCondvar.c:34:6: warning: implicit declaration of function 'tolower' [-Wimplicit-function-declaration]
+   if(tolower(key[0])=='o'){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomCondvar   build/x86_64-debug/src/BathroomCondvar.o  
+build/x86_64-debug/src/BathroomCondvar.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/BathroomCondvar//src/BathroomCondvar.c:33: warning: The 'gets' function is dangerous and should not be used.
+
+16:09:31 Build Finished (took 228ms)
+

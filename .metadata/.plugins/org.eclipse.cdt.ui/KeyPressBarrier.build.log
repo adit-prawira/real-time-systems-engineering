@@ -1,0 +1,13 @@
+23:05:45 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:13:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:13: warning: The 'gets' function is dangerous and should not be used.
+
+23:05:45 Build Finished (took 346ms)
+

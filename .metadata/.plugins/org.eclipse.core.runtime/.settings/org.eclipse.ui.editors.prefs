@@ -1,5 +1,6 @@
 AbstractTextEditor.Color.Background=44,47,61
 currentLineColor=79,107,118
+deletionIndicationColor=29,31,41
 eclipse.preferences.version=1
 lineNumberColor=155,212,196
 overviewRuler_migration=migrated_3.1

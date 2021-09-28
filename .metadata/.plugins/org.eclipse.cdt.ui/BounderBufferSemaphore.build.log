@@ -1,0 +1,26 @@
+18:58:21 **** Incremental Build of configuration x86_64-debug for project BounderBufferSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BounderBufferSemaphore.d,-MT,build/x86_64-debug/src/BounderBufferSemaphore.o -o build/x86_64-debug/src/BounderBufferSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BounderBufferSemaphore.c
+src/BounderBufferSemaphore.c: In function 'producer':
+src/BounderBufferSemaphore.c:42:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(*s);
+     ^
+src/BounderBufferSemaphore.c: In function 'main':
+src/BounderBufferSemaphore.c:69:20: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&empty, NULL, BUF_SIZE);
+                    ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+src/BounderBufferSemaphore.c:70:19: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&full, NULL, 0);
+                   ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BounderBufferSemaphore   build/x86_64-debug/src/BounderBufferSemaphore.o  
+
+18:58:21 Build Finished (took 312ms)
+

@@ -14879,3 +14879,1672 @@ In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmg
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
 build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
 /Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
+18:12:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:37:28 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:37:48 **** Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:39:17 **** Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/NativeMessagePassClient' failed
+make: *** [build/x86_64-debug/NativeMessagePassClient] Error 1
+22:40:11 **** Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:41:27 **** Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:41:34 **** Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/NativeMessagePassClient] Error 1
+Makefile:60: recipe for target 'build/x86_64-debug/NativeMessagePassClient' failed
+22:42:41 **** Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/NativeMessagePassClient.d,-MT,build/x86_64-debug/src/NativeMessagePassClient.o -o build/x86_64-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+src/NativeMessagePassClient.c: In function 'main':
+src/NativeMessagePassClient.c:48:6: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  int ret = 0;
+      ^
+src/NativeMessagePassClient.c: In function 'client':
+src/NativeMessagePassClient.c:85:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1); // wait for 5 seconds before sending another message packet
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+22:43:21 **** Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:43:27 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:43:38 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:44:59 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:46:22 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:46:52 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:47:04 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:47:10 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+23:11:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+23:11:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+23:27:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightClient.d,-MT,build/x86_64-debug/src/TrafficLightClient.o -o build/x86_64-debug/src/TrafficLightClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightClient.c
+src/TrafficLightClient.c: In function 'singlestep_trafficlight_statemachine_send':
+src/TrafficLightClient.c:100:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/TrafficLightClient.c: In function 'client':
+src/TrafficLightClient.c:141:17: warning: passing argument 1 of 'pthread_exit' makes pointer from integer without a cast [-Wint-conversion]
+    pthread_exit(EXIT_FAILURE);
+                 ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/resmgr.h:33:0,
+                 from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/iofunc.h:61,
+                 from src/TrafficLightClient.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:200:13: note: expected 'void *' but argument is of type 'int'
+ extern void pthread_exit(void *__value_ptr) __attribute__((__noreturn__));
+             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightClient   build/x86_64-debug/src/TrafficLightClient.o  
+build/x86_64-debug/src/TrafficLightClient.o: In function `singlestep_trafficlight_statemachine_send':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightClient//src/TrafficLightClient.c:100: warning: The 'gets' function is dangerous and should not be used.
+23:34:50 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+23:34:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+23:38:25 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:42:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:46:37 **** Build of configuration armv7le-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/Bathroom.d,-MT,build/armv7le-debug/src/Bathroom.o -o build/armv7le-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/Bathroom   build/armv7le-debug/src/Bathroom.o  
+22:01:29 **** Incremental Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c:7:1: error: unknown type name 'ptghread_mutex_t'
+ ptghread_mutex_t someoneIsBathing;
+ ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/Bathroom.o' failed
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:9:2: warning: implicit declaration of function 'pthread_mutex_lock' [-Wimplicit-function-declaration]
+  pthread_mutex_lock(&someoneIsBathing);
+  ^
+src/Bathroom.c:10:61: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+   printf("STATUS IN: Thread with ID %d is in the shower\n", pthread_self());
+                                                             ^
+src/Bathroom.c:11:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/Bathroom.c:12:3: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+   pritnf("STATUS OUT: Thread with ID %d is leaving the shower\n", pthread_self());
+   ^
+src/Bathroom.c:13:2: warning: implicit declaration of function 'pthread_mutex_unlock' [-Wimplicit-function-declaration]
+  pthread_mutex_unlock(&someoneIsBathing);
+  ^
+src/Bathroom.c: In function 'main':
+src/Bathroom.c:18:2: warning: implicit declaration of function 'pthread_mutex_init' [-Wimplicit-function-declaration]
+  pthread_mutex_init(&someoneIsBathing, NULL);
+  ^
+src/Bathroom.c:22:3: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+   pthread_create(&threadIds[i], NULL, shower, NULL);
+   ^
+src/Bathroom.c:24:17: error: 'N_TERATIONS' undeclared (first use in this function)
+  for(i = 0; i < N_TERATIONS; i++){
+                 ^
+src/Bathroom.c:24:17: note: each undeclared identifier is reported only once for each function it appears in
+src/Bathroom.c:25:3: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+   pthread_join(threadIds[i], NULL);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/Bathroom.o] Error 1
+22:02:12 **** Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c:7:1: error: unknown type name 'ptghread_mutex_t'
+Makefile:55: recipe for target 'build/x86_64-debug/src/Bathroom.o' failed
+ ptghread_mutex_t someoneIsBathing;
+ ^
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:9:2: warning: implicit declaration of function 'pthread_mutex_lock' [-Wimplicit-function-declaration]
+  pthread_mutex_lock(&someoneIsBathing);
+  ^
+src/Bathroom.c:10:61: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+   printf("STATUS IN: Thread with ID %d is in the shower\n", pthread_self());
+                                                             ^
+src/Bathroom.c:11:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/Bathroom.c:12:3: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+   pritnf("STATUS OUT: Thread with ID %d is leaving the shower\n", pthread_self());
+   ^
+src/Bathroom.c:13:2: warning: implicit declaration of function 'pthread_mutex_unlock' [-Wimplicit-function-declaration]
+  pthread_mutex_unlock(&someoneIsBathing);
+  ^
+src/Bathroom.c: In function 'main':
+src/Bathroom.c:18:2: warning: implicit declaration of function 'pthread_mutex_init' [-Wimplicit-function-declaration]
+  pthread_mutex_init(&someoneIsBathing, NULL);
+  ^
+src/Bathroom.c:22:3: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+   pthread_create(&threadIds[i], NULL, shower, NULL);
+   ^
+src/Bathroom.c:25:3: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+   pthread_join(threadIds[i], NULL);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/Bathroom.o] Error 1
+22:02:52 **** Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c:7:1: error: unknown type name 'pthread_mutex_t'
+ pthread_mutex_t someoneIsBathing;
+ ^
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:9:2: warning: implicit declaration of function 'pthread_mutex_lock' [-Wimplicit-function-declaration]
+  pthread_mutex_lock(&someoneIsBathing);
+  ^
+src/Bathroom.c:10:61: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+   printf("STATUS IN: Thread with ID %d is in the shower\n", pthread_self());
+                                                             ^
+src/Bathroom.c:11:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/Bathroom.c:12:3: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+   pritnf("STATUS OUT: Thread with ID %d is leaving the shower\n", pthread_self());
+   ^
+src/Bathroom.c:13:2: warning: implicit declaration of function 'pthread_mutex_unlock' [-Wimplicit-function-declaration]
+  pthread_mutex_unlock(&someoneIsBathing);
+  ^
+src/Bathroom.c: In function 'main':
+src/Bathroom.c:18:2: warning: implicit declaration of function 'pthread_mutex_init' [-Wimplicit-function-declaration]
+  pthread_mutex_init(&someoneIsBathing, NULL);
+  ^
+src/Bathroom.c:22:3: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+   pthread_create(&threadIds[i], NULL, shower, NULL);
+   ^
+src/Bathroom.c:25:3: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+   pthread_join(threadIds[i], NULL);
+   ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/Bathroom.o' failed
+make: *** [build/x86_64-debug/src/Bathroom.o] Error 1
+22:05:11 **** Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:12:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/Bathroom.c:13:3: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+   pritnf("STATUS OUT: Thread with ID %d is leaving the shower\n", pthread_self());
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Bathroom   build/x86_64-debug/src/Bathroom.o  
+build/x86_64-debug/src/Bathroom.o: In function `shower':
+/Users/adityaaaap/ide-7.0-workspace/Bathroom//src/Bathroom.c:13: undefined reference to `pritnf'
+Makefile:60: recipe for target 'build/x86_64-debug/Bathroom' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/Bathroom] Error 1
+22:05:54 **** Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:12:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Bathroom   build/x86_64-debug/src/Bathroom.o  
+   sleep(2);
+Makefile:60: recipe for target 'build/x86_64-debug/Bathroom' failed
+   ^
+src/Bathroom.c:13:3: warning: implicit declaration of function 'pritntf' [-Wimplicit-function-declaration]
+   pritntf("STATUS OUT: Thread with ID %d is leaving the shower\n", pthread_self());
+   ^
+build/x86_64-debug/src/Bathroom.o: In function `shower':
+/Users/adityaaaap/ide-7.0-workspace/Bathroom//src/Bathroom.c:13: undefined reference to `pritntf'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/Bathroom] Error 1
+22:06:21 **** Incremental Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:12:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Bathroom   build/x86_64-debug/src/Bathroom.o  
+22:06:59 **** Incremental Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:12:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Bathroom   build/x86_64-debug/src/Bathroom.o  
+22:11:40 **** Build of configuration armv7le-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/Bathroom.d,-MT,build/armv7le-debug/src/Bathroom.o -o build/armv7le-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/Bathroom   build/armv7le-debug/src/Bathroom.o  
+22:11:46 **** Incremental Build of configuration x86_64-debug for project Bathroom ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Bathroom.d,-MT,build/x86_64-debug/src/Bathroom.o -o build/x86_64-debug/src/Bathroom.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Bathroom.c
+src/Bathroom.c: In function 'shower':
+src/Bathroom.c:12:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Bathroom   build/x86_64-debug/src/Bathroom.o  
+22:12:13 **** Build of configuration armv7le-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/BathroomTimer.d,-MT,build/armv7le-debug/src/BathroomTimer.o -o build/armv7le-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/BathroomTimer   build/armv7le-debug/src/BathroomTimer.o  
+22:27:42 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c:12:1: error: unknown type name 'vois'
+ vois *shower(void * notUsed){
+ ^
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:28:2: warning: implicit declaration of function 'pthread_mnutex_init' [-Wimplicit-function-declaration]
+  pthread_mnutex_init(&someoneIsBathing);
+  ^
+src/BathroomTimer.c:29:2: warning: implicit declaration of function 'clock_getime' [-Wimplicit-function-declaration]
+  clock_getime(CLOCK_REALTIME, &deadline);
+  ^
+src/BathroomTimer.c:31:33: warning: passing argument 3 of 'pthread_create' from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread1, NULL, shower, NULL);
+                                 ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void * (*)(void *)' but argument is of type 'int * (*)(void *)'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/BathroomTimer.c:32:33: warning: passing argument 3 of 'pthread_create' from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread2, NULL, shower, NULL);
+                                 ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void * (*)(void *)' but argument is of type 'int * (*)(void *)'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomTimer.o' failed
+make: *** [build/x86_64-debug/src/BathroomTimer.o] Error 1
+22:27:53 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c:12:1: error: unknown type name 'vois'
+ vois *shower(void * notUsed){
+ ^
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:28:2: warning: implicit declaration of function 'pthread_mnutex_init' [-Wimplicit-function-declaration]
+  pthread_mnutex_init(&someoneIsBathing);
+  ^
+src/BathroomTimer.c:29:2: warning: implicit declaration of function 'clock_getime' [-Wimplicit-function-declaration]
+  clock_getime(CLOCK_REALTIME, &deadline);
+  ^
+src/BathroomTimer.c:31:33: warning: passing argument 3 of 'pthread_create' from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread1, NULL, shower, NULL);
+                                 ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void * (*)(void *)' but argument is of type 'int * (*)(void *)'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/BathroomTimer.c:32:33: warning: passing argument 3 of 'pthread_create' from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread2, NULL, shower, NULL);
+                                 ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void * (*)(void *)' but argument is of type 'int * (*)(void *)'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomTimer.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomTimer.o] Error 1
+22:28:03 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:28:2: warning: implicit declaration of function 'pthread_mnutex_init' [-Wimplicit-function-declaration]
+  pthread_mnutex_init(&someoneIsBathing);
+  ^
+src/BathroomTimer.c:29:2: warning: implicit declaration of function 'clock_getime' [-Wimplicit-function-declaration]
+  clock_getime(CLOCK_REALTIME, &deadline);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+build/x86_64-debug/src/BathroomTimer.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/BathroomTimer//src/BathroomTimer.c:28: undefined reference to `pthread_mnutex_init'
+/Users/adityaaaap/ide-7.0-workspace/BathroomTimer//src/BathroomTimer.c:29: undefined reference to `clock_getime'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/BathroomTimer] Error 1
+Makefile:60: recipe for target 'build/x86_64-debug/BathroomTimer' failed
+22:28:18 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:28:2: error: too few arguments to function 'pthread_mutex_init'
+  pthread_mutex_init(&someoneIsBathing);
+  ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:341:12: note: declared here
+ extern int pthread_mutex_init(pthread_mutex_t *__mutex, const pthread_mutexattr_t *__attr);
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomTimer.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomTimer.o] Error 1
+22:28:35 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+22:30:47 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:17:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:29:39: error: 'N_ITERATIONS' undeclared (first use in this function)
+  threadIds = malloc(sizeof(pthread_t)*N_ITERATIONS);
+                                       ^
+src/BathroomTimer.c:29:39: note: each undeclared identifier is reported only once for each function it appears in
+src/BathroomTimer.c:34:16: error: 'N_TERATIONS' undeclared (first use in this function)
+  for(i = 0; i< N_TERATIONS; i++){
+                ^
+src/BathroomTimer.c:38:16: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+   pthread_join(threadIds, NULL);
+                ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomTimer.o' failed
+make: *** [build/x86_64-debug/src/BathroomTimer.o] Error 1
+22:31:02 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:17:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:34:16: error: 'N_TERATIONS' undeclared (first use in this function)
+  for(i = 0; i< N_TERATIONS; i++){
+                ^
+src/BathroomTimer.c:34:16: note: each undeclared identifier is reported only once for each function it appears in
+src/BathroomTimer.c:38:16: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+   pthread_join(threadIds, NULL);
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomTimer.o' failed
+                ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomTimer.o] Error 1
+22:31:13 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:17:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:38:16: warning: passing argument 1 of 'pthread_join' makes integer from pointer without a cast [-Wint-conversion]
+   pthread_join(threadIds, NULL);
+                ^
+In file included from src/BathroomTimer.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:201:12: note: expected 'pthread_t {aka int}' but argument is of type 'pthread_t * {aka int *}'
+ extern int pthread_join(pthread_t __thr, void **__value_ptr);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+22:31:24 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:17:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+22:32:17 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomTimer.c: In function 'main':
+src/BathroomTimer.c:31:18: error: 'thread1' undeclared (first use in this function)
+  pthread_create(&thread1, NULL, shower, NULL);
+                  ^
+src/BathroomTimer.c:31:18: note: each undeclared identifier is reported only once for each function it appears in
+src/BathroomTimer.c:32:18: error: 'thread2' undeclared (first use in this function)
+  pthread_create(&thread2, NULL, shower, NULL);
+                  ^
+src/BathroomTimer.c:27:12: warning: unused variable 'threadIds' [-Wunused-variable]
+  pthread_t threadIds;
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomTimer.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomTimer.o] Error 1
+22:32:30 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+22:32:52 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(5);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+22:33:09 **** Incremental Build of configuration x86_64-debug for project BathroomTimer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomTimer.d,-MT,build/x86_64-debug/src/BathroomTimer.o -o build/x86_64-debug/src/BathroomTimer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomTimer.c
+src/BathroomTimer.c: In function 'shower':
+src/BathroomTimer.c:16:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomTimer   build/x86_64-debug/src/BathroomTimer.o  
+22:40:37 **** Build of configuration armv7le-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/KeyPressBarrier.d,-MT,build/armv7le-debug/src/KeyPressBarrier.o -o build/armv7le-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/KeyPressBarrier   build/armv7le-debug/src/KeyPressBarrier.o  
+22:57:01 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+src/KeyPressBarrier.c:33:3: warning: implicit declaration of function 'sached_yield' [-Wimplicit-function-declaration]
+   sached_yield();
+   ^
+src/KeyPressBarrier.c: In function 'main':
+src/KeyPressBarrier.c:49:13: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  threadKeys = malloc(sizeof(pthread_t)*n);
+             ^
+src/KeyPressBarrier.c:51:29: error: subscripted value is neither array nor pointer nor vector
+   pthread_create(&threadKeys[i], NULL, printKey, keys[i]);
+                             ^
+src/KeyPressBarrier.c:51:50: warning: passing argument 4 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+   pthread_create(&threadKeys[i], NULL, printKey, keys[i]);
+                                                  ^
+In file included from src/KeyPressBarrier.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'char'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressBarrier.c:44:26: warning: variable 'threadKeys' set but not used [-Wunused-but-set-variable]
+  pthread_t threadGetKey, threadKeys;
+                          ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/KeyPressBarrier.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/KeyPressBarrier.o] Error 1
+22:57:15 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+src/KeyPressBarrier.c:33:3: warning: implicit declaration of function 'sached_yield' [-Wimplicit-function-declaration]
+   sached_yield();
+   ^
+src/KeyPressBarrier.c: In function 'main':
+src/KeyPressBarrier.c:49:13: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  threadKeys = malloc(sizeof(pthread_t)*n);
+Makefile:55: recipe for target 'build/x86_64-debug/src/KeyPressBarrier.o' failed
+             ^
+src/KeyPressBarrier.c:51:29: error: subscripted value is neither array nor pointer nor vector
+   pthread_create(&threadKeys[i], NULL, printKey, &keys[i]);
+                             ^
+src/KeyPressBarrier.c:44:26: warning: variable 'threadKeys' set but not used [-Wunused-but-set-variable]
+  pthread_t threadGetKey, threadKeys;
+                          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/KeyPressBarrier.o] Error 1
+22:58:00 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+src/KeyPressBarrier.c:33:3: warning: implicit declaration of function 'sached_yield' [-Wimplicit-function-declaration]
+   sached_yield();
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:14: warning: The 'gets' function is dangerous and should not be used.
+build/x86_64-debug/src/KeyPressBarrier.o: In function `printKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:33: undefined reference to `sached_yield'
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressBarrier' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/KeyPressBarrier] Error 1
+22:58:10 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:14: warning: The 'gets' function is dangerous and should not be used.
+build/x86_64-debug/src/KeyPressBarrier.o: In function `printKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:33: undefined reference to `sached_yield'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/KeyPressBarrier] Error 1
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressBarrier' failed
+22:58:18 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:14: warning: The 'gets' function is dangerous and should not be used.
+22:59:25 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+src/KeyPressBarrier.c: In function 'main':
+src/KeyPressBarrier.c:48:12: warning: unused variable 'n' [-Wunused-variable]
+  int i =0, n = sizeof(keys)/sizeof(keys[0]);
+            ^
+src/KeyPressBarrier.c:48:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =0, n = sizeof(keys)/sizeof(keys[0]);
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:14: warning: The 'gets' function is dangerous and should not be used.
+23:00:38 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:14: warning: The 'gets' function is dangerous and should not be used.
+23:01:15 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+23:01:43 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:14:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c:12:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=0;
+      ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:28:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:14: warning: The 'gets' function is dangerous and should not be used.
+23:02:05 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:12:2: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+  gets(buf);
+  ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:25:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:12: warning: The 'gets' function is dangerous and should not be used.
+23:02:39 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:13:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:27:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:13: warning: The 'gets' function is dangerous and should not be used.
+23:03:08 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:13:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressBarrier.c: In function 'printKey':
+src/KeyPressBarrier.c:27:11: warning: comparison between pointer and integer
+    if(key == ch){
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:13: warning: The 'gets' function is dangerous and should not be used.
+23:05:02 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:13:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:13: warning: The 'gets' function is dangerous and should not be used.
+23:05:09 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:13:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:13: warning: The 'gets' function is dangerous and should not be used.
+23:05:45 **** Incremental Build of configuration x86_64-debug for project KeyPressBarrier ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressBarrier.d,-MT,build/x86_64-debug/src/KeyPressBarrier.o -o build/x86_64-debug/src/KeyPressBarrier.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressBarrier.c
+src/KeyPressBarrier.c: In function 'getKey':
+src/KeyPressBarrier.c:13:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressBarrier   build/x86_64-debug/src/KeyPressBarrier.o  
+build/x86_64-debug/src/KeyPressBarrier.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressBarrier//src/KeyPressBarrier.c:13: warning: The 'gets' function is dangerous and should not be used.
+10:42:49 **** Build of configuration armv7le-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/KeyPressRW.d,-MT,build/armv7le-debug/src/KeyPressRW.o -o build/armv7le-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/KeyPressRW   build/armv7le-debug/src/KeyPressRW.o  
+11:00:03 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressRW.d,-MT,build/x86_64-debug/src/KeyPressRW.o -o build/x86_64-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+src/KeyPressRW.c:6:1: error: unknown type name 'pthread_relock_t'
+ pthread_relock_t dataSource;
+ ^
+src/KeyPressRW.c: In function 'producer':
+src/KeyPressRW.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressRW.c:20:25: warning: passing argument 1 of 'pthread_rwlock_wrlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_wrlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:459:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_wrlock(pthread_rwlock_t *);
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/KeyPressRW.o' failed
+src/KeyPressRW.c:23:25: warning: passing argument 1 of 'pthread_rwlock_unlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_unlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:462:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_unlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c: In function 'consumerOne':
+src/KeyPressRW.c:35:25: warning: passing argument 1 of 'pthread_rwlock_rdlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_rdlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:456:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_rdlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:37:25: warning: passing argument 1 of 'pthread_rwlock_unlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_unlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:462:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_unlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/KeyPressRW.c: In function 'consumerTwo':
+src/KeyPressRW.c:53:25: warning: passing argument 1 of 'pthread_rwlock_rdlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_rdlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:456:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_rdlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:55:25: warning: passing argument 1 of 'pthread_rwlock_unlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_unlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:462:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_unlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c: In function 'main':
+src/KeyPressRW.c:67:22: warning: passing argument 1 of 'pthread_rwlock_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_rwlock_init(&dataSource);
+                      ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:455:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_init(pthread_rwlock_t *, const pthread_rwlockattr_t *);
+            ^
+src/KeyPressRW.c:67:2: error: too few arguments to function 'pthread_rwlock_init'
+  pthread_rwlock_init(&dataSource);
+  ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:455:12: note: declared here
+ extern int pthread_rwlock_init(pthread_rwlock_t *, const pthread_rwlockattr_t *);
+            ^
+src/KeyPressRW.c:70:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(producerThread, NULL, producer, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:71:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:72:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/KeyPressRW.o] Error 1
+11:00:44 **** Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressRW' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/KeyPressRW] Error 1
+11:01:15 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressRW' failed
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/KeyPressRW] Error 1
+11:01:31 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressRW' failed
+make: *** [build/x86_64-debug/KeyPressRW] Error 1
+11:02:46 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressRW' failed
+make: *** [build/x86_64-debug/KeyPressRW] Error 1
+11:09:02 **** Build of configuration armv7le-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/KeyPressRW.d,-MT,build/armv7le-debug/src/KeyPressRW.o -o build/armv7le-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/KeyPressRW   build/armv7le-debug/src/KeyPressRW.o  
+11:12:21 **** Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressRW.d,-MT,build/x86_64-debug/src/KeyPressRW.o -o build/x86_64-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+src/KeyPressRW.c:6:1: error: unknown type name 'pthread_relock_t'
+ pthread_relock_t dataSource;
+ ^
+src/KeyPressRW.c: In function 'producer':
+src/KeyPressRW.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/KeyPressRW.o' failed
+src/KeyPressRW.c:20:25: warning: passing argument 1 of 'pthread_rwlock_wrlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_wrlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:459:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_wrlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:23:25: warning: passing argument 1 of 'pthread_rwlock_unlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_unlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:462:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_unlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c: In function 'consumerOne':
+src/KeyPressRW.c:35:25: warning: passing argument 1 of 'pthread_rwlock_rdlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_rdlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:456:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_rdlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:37:25: warning: passing argument 1 of 'pthread_rwlock_unlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_unlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:462:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_unlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/KeyPressRW.c: In function 'consumerTwo':
+src/KeyPressRW.c:53:25: warning: passing argument 1 of 'pthread_rwlock_rdlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_rdlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:456:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_rdlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c:55:25: warning: passing argument 1 of 'pthread_rwlock_unlock' from incompatible pointer type [-Wincompatible-pointer-types]
+   pthread_rwlock_unlock(&dataSource);
+                         ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:462:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_unlock(pthread_rwlock_t *);
+            ^
+src/KeyPressRW.c: In function 'main':
+src/KeyPressRW.c:67:22: warning: passing argument 1 of 'pthread_rwlock_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_rwlock_init(&dataSource, NULL);
+                      ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:455:12: note: expected 'pthread_rwlock_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ extern int pthread_rwlock_init(pthread_rwlock_t *, const pthread_rwlockattr_t *);
+            ^
+src/KeyPressRW.c:70:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(producerThread, NULL, producer, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:71:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:72:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/KeyPressRW.o] Error 1
+11:12:34 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressRW.d,-MT,build/x86_64-debug/src/KeyPressRW.o -o build/x86_64-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+src/KeyPressRW.c: In function 'producer':
+src/KeyPressRW.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressRW.c: In function 'consumerOne':
+src/KeyPressRW.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/KeyPressRW.c: In function 'main':
+src/KeyPressRW.c:70:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(producerThread, NULL, producer, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:71:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:72:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:70:2: warning: 'producerThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(producerThread, NULL, producer, NULL);
+  ^
+src/KeyPressRW.c:71:2: warning: 'consumerOneThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+  ^
+src/KeyPressRW.c:72:2: warning: 'consumerTwoThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+build/x86_64-debug/src/KeyPressRW.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressRW//src/KeyPressRW.c:19: warning: The 'gets' function is dangerous and should not be used.
+11:13:11 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressRW.d,-MT,build/x86_64-debug/src/KeyPressRW.o -o build/x86_64-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+src/KeyPressRW.c: In function 'producer':
+src/KeyPressRW.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressRW.c: In function 'consumerOne':
+src/KeyPressRW.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/KeyPressRW.c: In function 'main':
+src/KeyPressRW.c:70:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(producerThread, NULL, producer, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:71:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:72:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:70:2: warning: 'producerThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(producerThread, NULL, producer, NULL);
+  ^
+src/KeyPressRW.c:71:2: warning: 'consumerOneThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+  ^
+src/KeyPressRW.c:72:2: warning: 'consumerTwoThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+build/x86_64-debug/src/KeyPressRW.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressRW//src/KeyPressRW.c:19: warning: The 'gets' function is dangerous and should not be used.
+11:14:50 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressRW.d,-MT,build/x86_64-debug/src/KeyPressRW.o -o build/x86_64-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+src/KeyPressRW.c: In function 'producer':
+src/KeyPressRW.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressRW.c: In function 'consumerOne':
+src/KeyPressRW.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+src/KeyPressRW.c: In function 'main':
+src/KeyPressRW.c:70:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:71:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:72:17: warning: passing argument 1 of 'pthread_create' makes pointer from integer without a cast [-Wint-conversion]
+  pthread_create(producerThread, NULL, producer, NULL);
+                 ^
+In file included from src/KeyPressRW.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'pthread_t * {aka int *}' but argument is of type 'pthread_t {aka int}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+src/KeyPressRW.c:70:2: warning: 'consumerOneThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(consumerOneThread, NULL, consumerOne, NULL);
+  ^
+src/KeyPressRW.c:71:2: warning: 'consumerTwoThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(consumerTwoThread, NULL, consumerTwo, NULL);
+  ^
+src/KeyPressRW.c:72:2: warning: 'producerThread' is used uninitialized in this function [-Wuninitialized]
+  pthread_create(producerThread, NULL, producer, NULL);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+build/x86_64-debug/src/KeyPressRW.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressRW//src/KeyPressRW.c:19: warning: The 'gets' function is dangerous and should not be used.
+11:16:57 **** Incremental Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressRW.d,-MT,build/x86_64-debug/src/KeyPressRW.o -o build/x86_64-debug/src/KeyPressRW.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressRW.c
+src/KeyPressRW.c: In function 'producer':
+src/KeyPressRW.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressRW.c: In function 'consumerOne':
+src/KeyPressRW.c:42:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressRW   build/x86_64-debug/src/KeyPressRW.o  
+build/x86_64-debug/src/KeyPressRW.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressRW//src/KeyPressRW.c:19: warning: The 'gets' function is dangerous and should not be used.
+11:25:17 **** Build of configuration armv7le-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/KeyPressSleeponLock.d,-MT,build/armv7le-debug/src/KeyPressSleeponLock.o -o build/armv7le-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/KeyPressSleeponLock   build/armv7le-debug/src/KeyPressSleeponLock.o  
+11:50:24 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressSleeponLock' failed
+make: *** [build/x86_64-debug/KeyPressSleeponLock] Error 1
+11:50:44 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+Makefile:60: recipe for target 'build/x86_64-debug/KeyPressSleeponLock' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/KeyPressSleeponLock] Error 1
+11:51:58 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+11:52:07 **** Build of configuration x86_64-debug for project KeyPressRW ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+11:52:34 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+11:53:50 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:15:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(buf, " " );
+  ^
+src/KeyPressSleeponLock.c:16:2: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+  gets(buf);
+  ^
+src/KeyPressSleeponLock.c: In function 'main':
+src/KeyPressSleeponLock.c:70:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(20);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:16: warning: The 'gets' function is dangerous and should not be used.
+11:54:32 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:16:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(buf, " " );
+  ^
+src/KeyPressSleeponLock.c:17:2: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+  gets(buf);
+  ^
+src/KeyPressSleeponLock.c: In function 'main':
+src/KeyPressSleeponLock.c:71:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(20);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:17: warning: The 'gets' function is dangerous and should not be used.
+11:54:46 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:16:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(buf, " " );
+  ^
+src/KeyPressSleeponLock.c:17:2: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+  gets(buf);
+  ^
+src/KeyPressSleeponLock.c: In function 'main':
+src/KeyPressSleeponLock.c:71:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(20);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:17: warning: The 'gets' function is dangerous and should not be used.
+11:54:57 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+11:58:54 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:18:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(buf, " " );
+   ^
+src/KeyPressSleeponLock.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:19: warning: The 'gets' function is dangerous and should not be used.
+12:00:04 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:18:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(buf, " " );
+   ^
+src/KeyPressSleeponLock.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:19: warning: The 'gets' function is dangerous and should not be used.
+12:01:08 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:01:11 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:03:15 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:07:12 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:18:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(buf, " " );
+   ^
+src/KeyPressSleeponLock.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:19: warning: The 'gets' function is dangerous and should not be used.
+12:07:25 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:15:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[3] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+12:08:14 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:09:45 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:10:36 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:15:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[3] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+12:11:22 **** Build of configuration armv7le-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/KeyPressSleeponLock.d,-MT,build/armv7le-debug/src/KeyPressSleeponLock.o -o build/armv7le-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/KeyPressSleeponLock   build/armv7le-debug/src/KeyPressSleeponLock.o  
+12:11:28 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:15:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[3] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+12:12:11 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:13:16 **** Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+12:14:59 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:18:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(buf, " " );
+   ^
+src/KeyPressSleeponLock.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+src/KeyPressSleeponLock.c:24:8: error: 'struct resource' has no member named 'data2Rweady'
+    data.data2Rweady = 1;
+        ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/KeyPressSleeponLock.o' failed
+make: *** [build/x86_64-debug/src/KeyPressSleeponLock.o] Error 1
+12:15:05 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:18:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(buf, " " );
+   ^
+src/KeyPressSleeponLock.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:19: warning: The 'gets' function is dangerous and should not be used.
+12:27:46 **** Build of configuration armv7le-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/BathroomCondvar.d,-MT,build/armv7le-debug/src/BathroomCondvar.o -o build/armv7le-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/BathroomCondvar   build/armv7le-debug/src/BathroomCondvar.o  
+16:05:20 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c:9:26: error: 'PTHREAD_' undeclared here (not in a function)
+ pthread_cond_t condVar = PTHREAD_+COND_INITIALIZER;
+                          ^
+src/BathroomCondvar.c:9:35: error: 'COND_INITIALIZER' undeclared here (not in a function)
+ pthread_cond_t condVar = PTHREAD_+COND_INITIALIZER;
+                                   ^
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:15:8: error: 'open' undeclared (first use in this function)
+  while(open==0){ // while shower is not opened
+        ^
+src/BathroomCondvar.c:15:8: note: each undeclared identifier is reported only once for each function it appears in
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:32:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(key);
+   ^
+src/BathroomCondvar.c:33:6: warning: implicit declaration of function 'toLower' [-Wimplicit-function-declaration]
+   if(toLower(key[0])=='o'){
+      ^
+src/BathroomCondvar.c:35:4: error: 'open' undeclared (first use in this function)
+    open = 1;
+    ^
+src/BathroomCondvar.c:37:4: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+    pritnf("<---- Shower is closed\n");
+    ^
+src/BathroomCondvar.c: In function 'main':
+src/BathroomCondvar.c:51:32: error: 'pthrwad_t' undeclared (first use in this function)
+  userThreadIds = malloc(sizeof(pthrwad_t)*N_USERS);
+                                ^
+src/BathroomCondvar.c:53:21: error: 'N' undeclared (first use in this function)
+  for(int i = 0; i < N; i++){
+                     ^
+src/BathroomCondvar.c:57:30: error: 'i' undeclared (first use in this function)
+   pthread_join(userThreadIds[i], NULL);
+                              ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomCondvar.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomCondvar.o' failed
+16:06:56 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:32:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomCondvar.o' failed
+   gets(key);
+   ^
+src/BathroomCondvar.c:33:6: warning: implicit declaration of function 'toLower' [-Wimplicit-function-declaration]
+   if(toLower(key[0])=='o'){
+      ^
+src/BathroomCondvar.c:37:4: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+    pritnf("<---- Shower is closed\n");
+    ^
+src/BathroomCondvar.c: In function 'main':
+src/BathroomCondvar.c:53:21: error: 'N' undeclared (first use in this function)
+  for(int i = 0; i < N; i++){
+                     ^
+src/BathroomCondvar.c:53:21: note: each undeclared identifier is reported only once for each function it appears in
+src/BathroomCondvar.c:57:30: error: 'i' undeclared (first use in this function)
+   pthread_join(userThreadIds[i], NULL);
+                              ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomCondvar.o] Error 1
+16:07:48 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:33:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(key);
+   ^
+src/BathroomCondvar.c:34:6: warning: implicit declaration of function 'toLower' [-Wimplicit-function-declaration]
+   if(toLower(key[0])=='o'){
+      ^
+src/BathroomCondvar.c:38:4: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+    pritnf("<---- Shower is closed\n");
+    ^
+src/BathroomCondvar.c: In function 'main':
+src/BathroomCondvar.c:55:21: error: 'N' undeclared (first use in this function)
+  for(int i = 0; i < N; i++){
+                     ^
+src/BathroomCondvar.c:55:21: note: each undeclared identifier is reported only once for each function it appears in
+Makefile:55: recipe for target 'build/x86_64-debug/src/BathroomCondvar.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/BathroomCondvar.o] Error 1
+16:08:15 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:33:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(key);
+   ^
+src/BathroomCondvar.c:34:6: warning: implicit declaration of function 'toLower' [-Wimplicit-function-declaration]
+   if(toLower(key[0])=='o'){
+      ^
+src/BathroomCondvar.c:38:4: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+    pritnf("<---- Shower is closed\n");
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomCondvar   build/x86_64-debug/src/BathroomCondvar.o  
+build/x86_64-debug/src/BathroomCondvar.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/BathroomCondvar//src/BathroomCondvar.c:33: warning: The 'gets' function is dangerous and should not be used.
+/Users/adityaaaap/ide-7.0-workspace/BathroomCondvar//src/BathroomCondvar.c:34: undefined reference to `toLower'
+/Users/adityaaaap/ide-7.0-workspace/BathroomCondvar//src/BathroomCondvar.c:38: undefined reference to `pritnf'
+Makefile:60: recipe for target 'build/x86_64-debug/BathroomCondvar' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/BathroomCondvar] Error 1
+16:08:50 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:33:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(key);
+   ^
+src/BathroomCondvar.c:34:6: warning: implicit declaration of function 'tolower' [-Wimplicit-function-declaration]
+   if(tolower(key[0])=='o'){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomCondvar   build/x86_64-debug/src/BathroomCondvar.o  
+build/x86_64-debug/src/BathroomCondvar.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/BathroomCondvar//src/BathroomCondvar.c:33: warning: The 'gets' function is dangerous and should not be used.
+16:09:30 **** Incremental Build of configuration x86_64-debug for project BathroomCondvar ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCondvar.d,-MT,build/x86_64-debug/src/BathroomCondvar.o -o build/x86_64-debug/src/BathroomCondvar.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCondvar.c
+src/BathroomCondvar.c: In function 'shower':
+src/BathroomCondvar.c:21:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  sleep(2);
+  ^
+src/BathroomCondvar.c: In function 'getKey':
+src/BathroomCondvar.c:33:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(key);
+   ^
+src/BathroomCondvar.c:34:6: warning: implicit declaration of function 'tolower' [-Wimplicit-function-declaration]
+   if(tolower(key[0])=='o'){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomCondvar   build/x86_64-debug/src/BathroomCondvar.o  
+build/x86_64-debug/src/BathroomCondvar.o: In function `getKey':
+/Users/adityaaaap/ide-7.0-workspace/BathroomCondvar//src/BathroomCondvar.c:33: warning: The 'gets' function is dangerous and should not be used.
+17:39:53 **** Build of configuration armv7le-debug for project BathroomSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/BathroomSemaphore.d,-MT,build/armv7le-debug/src/BathroomSemaphore.o -o build/armv7le-debug/src/BathroomSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomSemaphore.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/BathroomSemaphore   build/armv7le-debug/src/BathroomSemaphore.o  
+17:40:01 **** Incremental Build of configuration x86_64-debug for project BathroomSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomSemaphore.d,-MT,build/x86_64-debug/src/BathroomSemaphore.o -o build/x86_64-debug/src/BathroomSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomSemaphore.c
+src/BathroomSemaphore.c: In function 'shower':
+src/BathroomSemaphore.c:14:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomSemaphore.c: In function 'main':
+src/BathroomSemaphore.c:20:3: warning: implicit declaration of function 'pritnf' [-Wimplicit-function-declaration]
+   pritnf("Bathroom Semaphore Program is Runnning...\n");
+   ^
+src/BathroomSemaphore.c:21:31: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&someoneIsBathing, NULL, 1);
+                               ^
+In file included from src/BathroomSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomSemaphore   build/x86_64-debug/src/BathroomSemaphore.o  
+build/x86_64-debug/src/BathroomSemaphore.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/BathroomSemaphore//src/BathroomSemaphore.c:20: undefined reference to `pritnf'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/BathroomSemaphore' failed
+make: *** [build/x86_64-debug/BathroomSemaphore] Error 1
+17:40:15 **** Incremental Build of configuration x86_64-debug for project BathroomSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomSemaphore.d,-MT,build/x86_64-debug/src/BathroomSemaphore.o -o build/x86_64-debug/src/BathroomSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomSemaphore.c
+src/BathroomSemaphore.c: In function 'shower':
+src/BathroomSemaphore.c:14:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomSemaphore.c: In function 'main':
+src/BathroomSemaphore.c:21:31: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&someoneIsBathing, NULL, 1);
+                               ^
+In file included from src/BathroomSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomSemaphore   build/x86_64-debug/src/BathroomSemaphore.o  
+17:41:04 **** Incremental Build of configuration x86_64-debug for project BathroomSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomSemaphore.d,-MT,build/x86_64-debug/src/BathroomSemaphore.o -o build/x86_64-debug/src/BathroomSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomSemaphore.c
+src/BathroomSemaphore.c: In function 'shower':
+src/BathroomSemaphore.c:14:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomSemaphore.c: In function 'main':
+src/BathroomSemaphore.c:22:31: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&someoneIsBathing, NULL, 1);
+                               ^
+In file included from src/BathroomSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomSemaphore   build/x86_64-debug/src/BathroomSemaphore.o  
+18:04:22 **** Incremental Build of configuration x86_64-debug for project BathroomSemaphore ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:06:34 **** Build of configuration armv7le-debug for project BathroomCountingSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/BathroomCountingSemaphore.d,-MT,build/armv7le-debug/src/BathroomCountingSemaphore.o -o build/armv7le-debug/src/BathroomCountingSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCountingSemaphore.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/BathroomCountingSemaphore   build/armv7le-debug/src/BathroomCountingSemaphore.o  
+18:25:07 **** Incremental Build of configuration x86_64-debug for project BathroomCountingSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BathroomCountingSemaphore.d,-MT,build/x86_64-debug/src/BathroomCountingSemaphore.o -o build/x86_64-debug/src/BathroomCountingSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BathroomCountingSemaphore.c
+src/BathroomCountingSemaphore.c: In function 'shower':
+src/BathroomCountingSemaphore.c:20:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(2);
+   ^
+src/BathroomCountingSemaphore.c: In function 'main':
+src/BathroomCountingSemaphore.c:27:30: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+  sem_init(&peopleAreBathing, NULL, MAX_SEM_VALUE);
+                              ^
+In file included from src/BathroomCountingSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BathroomCountingSemaphore   build/x86_64-debug/src/BathroomCountingSemaphore.o  
+18:25:44 **** Incremental Build of configuration x86_64-debug for project BathroomCountingSemaphore ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:27:20 **** Incremental Build of configuration x86_64-debug for project BathroomCountingSemaphore ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:57:33 **** Build of configuration armv7le-debug for project BounderBufferSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/BounderBufferSemaphore.d,-MT,build/armv7le-debug/src/BounderBufferSemaphore.o -o build/armv7le-debug/src/BounderBufferSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BounderBufferSemaphore.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/BounderBufferSemaphore   build/armv7le-debug/src/BounderBufferSemaphore.o  
+18:57:38 **** Incremental Build of configuration x86_64-debug for project BounderBufferSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BounderBufferSemaphore.d,-MT,build/x86_64-debug/src/BounderBufferSemaphore.o -o build/x86_64-debug/src/BounderBufferSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BounderBufferSemaphore.c
+src/BounderBufferSemaphore.c: In function 'producer':
+src/BounderBufferSemaphore.c:42:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(*s);
+     ^
+src/BounderBufferSemaphore.c: In function 'main':
+src/BounderBufferSemaphore.c:69:20: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&empty, NULL, BUF_SIZE);
+                    ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+src/BounderBufferSemaphore.c:70:19: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&full, NULL, 0);
+                   ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BounderBufferSemaphore   build/x86_64-debug/src/BounderBufferSemaphore.o  
+18:58:02 **** Incremental Build of configuration x86_64-debug for project BounderBufferSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BounderBufferSemaphore.d,-MT,build/x86_64-debug/src/BounderBufferSemaphore.o -o build/x86_64-debug/src/BounderBufferSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BounderBufferSemaphore.c
+src/BounderBufferSemaphore.c: In function 'producer':
+src/BounderBufferSemaphore.c:42:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(*s);
+     ^
+src/BounderBufferSemaphore.c: In function 'main':
+src/BounderBufferSemaphore.c:69:20: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&empty, NULL, BUF_SIZE);
+                    ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+src/BounderBufferSemaphore.c:70:19: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&full, NULL, 0);
+                   ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BounderBufferSemaphore   build/x86_64-debug/src/BounderBufferSemaphore.o  
+18:58:21 **** Incremental Build of configuration x86_64-debug for project BounderBufferSemaphore ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/BounderBufferSemaphore.d,-MT,build/x86_64-debug/src/BounderBufferSemaphore.o -o build/x86_64-debug/src/BounderBufferSemaphore.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/BounderBufferSemaphore.c
+src/BounderBufferSemaphore.c: In function 'producer':
+src/BounderBufferSemaphore.c:42:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(*s);
+     ^
+src/BounderBufferSemaphore.c: In function 'main':
+src/BounderBufferSemaphore.c:69:20: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&empty, NULL, BUF_SIZE);
+                    ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+src/BounderBufferSemaphore.c:70:19: warning: passing argument 2 of 'sem_init' makes integer from pointer without a cast [-Wint-conversion]
+   sem_init(&full, NULL, 0);
+                   ^
+In file included from src/BounderBufferSemaphore.c:3:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/semaphore.h:56:12: note: expected 'int' but argument is of type 'void *'
+ extern int sem_init(sem_t *__sem, int __pshared, unsigned __value);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BounderBufferSemaphore   build/x86_64-debug/src/BounderBufferSemaphore.o  
+22:13:01 **** Build of configuration armv7le-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/CentralTrafficController.d,-MT,build/armv7le-debug/src/CentralTrafficController.o -o build/armv7le-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/CentralTrafficController   build/armv7le-debug/src/CentralTrafficController.o  

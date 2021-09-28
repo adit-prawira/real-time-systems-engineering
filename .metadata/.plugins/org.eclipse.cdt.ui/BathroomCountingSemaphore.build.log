@@ -1,0 +1,6 @@
+18:27:20 **** Incremental Build of configuration x86_64-debug for project BathroomCountingSemaphore ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+
+18:27:20 Build Finished (took 105ms)
+

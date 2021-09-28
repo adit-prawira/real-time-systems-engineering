@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+pthread_relock_t dataSource;
+
+struct resource{
+	volatile char byte1;
+	volatile char byte2;
+}data;
+void *producer(void *notUsed){
+	return 0;
+}
+
+void *consumerOne(void *notUsed){
+	return 0;
+}
+
+void *consumerTwo(void *notUsed){
+	return 0;
+}
+
+int main(int argc, char *argv[]){
+	return EXIT_SUCCESS;
+}

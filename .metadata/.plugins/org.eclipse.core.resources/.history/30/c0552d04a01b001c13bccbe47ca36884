@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <pthread.h>
+#include <string.h>
+#include <errno.h>
+
+pthread_mutex_t someoneIsBathing;
+
+struct timespec deadline;
+
+vois *shower(void * notUsed){
+	return 0;
+}
+int main(void) {
+	printf("Timed Bathroom Program Running...\n");
+
+	pthread_t thread1, thread2;
+	pthread_mnutex_init(&someoneIsBathing);
+	clock_getime(CLOCK_REALTIME, &deadline);
+	deadline.tv_sec +=1;
+	pthread_create(&thread1, NULL, shower, NULL);
+	pthread_create(&thread2, NULL, shower, NULL);
+
+	pthread_join(thread1, NULL);
+	pthread_join(thread2, NULL);
+
+	return EXIT_SUCCESS;
+}

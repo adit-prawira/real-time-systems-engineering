@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+struct resource {
+	volatile char data1, data2;
+	volatile char data1Ready, data2Ready;
+}data;
+
+void *producer(void *notUsed){
+	return 0;
+}
+void *consumerOne(void *notUsed){
+	return 0;
+}
+void *consumerTwo(void *notUsed){
+	return 0;
+}
+int main(int argc. char *argv[]) {
+	sleep(20); // allowing the thread to run for 20 seconds
+	return EXIT_SUCCESS;
+}

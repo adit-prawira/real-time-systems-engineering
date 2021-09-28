@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <semaphore.h>
+#include <pthread.h>
+
+// the example is to create 30 threads:
+// but only 5 thread at a time can be in the critical section
+// Then the semaphore only has a maximum value of 5
+#define N_THREADS 30
+#define MAX_SEM_VALUE 5
+
+sen_t soemoneIsBathing;
+void *shower(void * notUsed){
+	return 0;
+}
+int main(int argc, char *argv[]) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

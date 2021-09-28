@@ -1,0 +1,16 @@
+12:15:05 **** Incremental Build of configuration x86_64-debug for project KeyPressSleeponLock ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/KeyPressSleeponLock.d,-MT,build/x86_64-debug/src/KeyPressSleeponLock.o -o build/x86_64-debug/src/KeyPressSleeponLock.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/KeyPressSleeponLock.c
+src/KeyPressSleeponLock.c: In function 'producer':
+src/KeyPressSleeponLock.c:18:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(buf, " " );
+   ^
+src/KeyPressSleeponLock.c:19:3: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+   gets(buf);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/KeyPressSleeponLock   build/x86_64-debug/src/KeyPressSleeponLock.o  
+build/x86_64-debug/src/KeyPressSleeponLock.o: In function `producer':
+/Users/adityaaaap/ide-7.0-workspace/KeyPressSleeponLock//src/KeyPressSleeponLock.c:19: warning: The 'gets' function is dangerous and should not be used.
+
+12:15:05 Build Finished (took 409ms)
+

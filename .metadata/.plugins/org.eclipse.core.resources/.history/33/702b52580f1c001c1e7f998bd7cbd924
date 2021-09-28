@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+struct resource {
+	volatile char data1, data2;
+	volatile char data1Ready, data2Ready;
+}data;
+
+void *producer(void *notUsed){
+	printfint ID = pthread_self();
+	printf("STATUS (THREAD ID: %d): Producer Thread Starting...\n", ID);
+	char buf[3] = {};
+	strcpy(buf, "  ");
+
+	return 0;
+}
+void *consumerOne(void *notUsed){
+	return 0;
+}
+void *consumerTwo(void *notUsed){
+	return 0;
+}
+
+int main(int argc, char *argv[]){
+	return EXIT_SUCCESS;
+}

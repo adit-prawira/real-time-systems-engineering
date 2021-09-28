@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#define N_USERS 5
+#define BUF_SIZE 10
+
+int isOpen = 0; // initialize the status of the shower to be closed
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t condVar = PTHREAD_+COND_INITIALIZER;
+
+void *shower(void *notUsed){
+
+	return 0;
+}
+
+void *getKey(void *notUsed){
+	char key[BUF_SIZE] = {};
+	while(1){
+		gets(key);
+		if(toLower(key[0])=='o'){
+			printf("----> Shower is opened\n")
+			open = 1;
+		}
+	}
+	return 0;
+}
+int main(int argc, char *argv[]) {
+	printf("Bathroom CondVar Program Running...\n");
+	printf("Instructions:\n- Press 'o' to close the door\n- Press any key to close it\n");
+
+	pthread_t keyThread;
+	pthread_t *userThreadIds;
+	userThreadIds = malloc(sizeof(pthrwad_t)*N_USERS);
+	pthread_create(&keyThread, NULL, getKey, NULL);
+	for(int i = 0; i < N; i++){
+		pthread_create(&userThreadIds[i], NULL, shower, NULL);
+	}
+	for(int j = 0; j < N; j++){
+		pthread_join(userThreadIds[i], NULL);
+	}
+
+	printf("Main Thread Terminating...\n");
+	return EXIT_SUCCESS;
+}

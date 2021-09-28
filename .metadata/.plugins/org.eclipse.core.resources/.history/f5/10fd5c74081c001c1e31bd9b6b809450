@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+
+pthread_relock_t dataSource;
+
+struct resource{
+	volatile char byte1;
+	volatile char byte2;
+}data;
+
+void *producer(void *notUsed){
+	printf("STATUS (THREAD ID: %d): Producer Thread Starting...\n", pthread_self());
+	char buf[3] = {};
+	printf("Press 2 keys and press enter:\n");
+	while(1){
+		gets(buf);
+		pthread_rwlock_wrlock(&dataSource);
+			data.byte1 = buf[0];
+			data.byte2 = buf[1];
+		pthread_rwlock_unlock(&dataSource);
+	}
+	return 0;
+}
+
+void *consumerOne(void *notUsed){
+	printf("STATUS (THREAD ID: %d): Consumer One Thread Starting...\n", pthread_self());
+	return 0;
+}
+
+void *consumerTwo(void *notUsed){
+	printf("STATUS (THREAD ID: %d): Consumer Two Thread Starting...\n", pthread_self());
+	return 0;
+}
+
+int main(int argc, char *argv[]){
+	return EXIT_SUCCESS;
+}

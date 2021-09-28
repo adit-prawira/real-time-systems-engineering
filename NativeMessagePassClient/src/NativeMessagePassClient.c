@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <sys/dispatch.h>
-//#define ATTACH_POINT "adityaNet"
-#define ATTACH_POINT "/net/serverAditya/dev/name/local/adityaNet"
+#define ATTACH_POINT "adityaNet"
+//#define ATTACH_POINT "/net/serverAditya/dev/name/local/adityaNet"
 //#define ATTACH_POINT  "/net/clientAditya/dev/name/global/adityaNet"
 
 #define BUF_SIZE 100
@@ -56,7 +56,7 @@ int main(void) {
 int client(char *serverName){
 	messageData message;
 	reply replyMessage;
-	message.clientId = 600;
+	message.clientId = 610;
 	message.header.type = 0x22;
 	message.header.subtype = 0x00;
 	int serverConnectionId = 0, index = 0;

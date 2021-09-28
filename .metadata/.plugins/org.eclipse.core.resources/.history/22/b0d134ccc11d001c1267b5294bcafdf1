@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#define N 5
+int isOpen = 0; // initialize the status of the shower to be closed
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t condVar = PTHREAD_+COND_INITIALIZER;
+
+void *shower(void *notUsed){
+	return 0;
+}
+void *getKey(void *notUsed){
+	return 0;
+}
+int main(int argc, char *argv[]) {
+
+	return EXIT_SUCCESS;
+}
