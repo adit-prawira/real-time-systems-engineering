@@ -16548,3 +16548,1203 @@ qcc -Vgcc_ntox86_64 -o build/x86_64-debug/BounderBufferSemaphore   build/x86_64-
 make -j3 all 
 qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/CentralTrafficController.d,-MT,build/armv7le-debug/src/CentralTrafficController.o -o build/armv7le-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
 qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/CentralTrafficController   build/armv7le-debug/src/CentralTrafficController.o  
+00:27:23 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:11:9: error: duplicate member 'sival_int'
+   void *sival_int;
+         ^
+src/CentralTrafficController.c:33:2: error: unknown type name 'msh_header_t'
+  msh_header_t header;
+  ^
+src/CentralTrafficController.c:34:11: error: 'BUF_SIZE' undeclared here (not in a function)
+  char buf[BUF_SIZE];
+           ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:41:6: warning: variable 'returnedValue' set but not used [-Wunused-but-set-variable]
+  int returnedValue = 0;
+      ^
+src/CentralTrafficController.c: In function 'replyDataInit':
+src/CentralTrafficController.c:48:14: error: request for member 'type' in something not a structure or union
+  data->header.type = type;
+              ^
+src/CentralTrafficController.c:49:14: error: request for member 'subtype' in something not a structure or union
+  data->header.subtype = subtype;
+              ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:54:14: warning: unused variable 'message' [-Wunused-variable]
+  messageData message;
+              ^
+src/CentralTrafficController.c:53:17: warning: unused variable 'attach' [-Wunused-variable]
+  name_attach_t *attach;
+                 ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+00:28:10 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:41:6: warning: variable 'returnedValue' set but not used [-Wunused-but-set-variable]
+  int returnedValue = 0;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:54:14: warning: unused variable 'message' [-Wunused-variable]
+  messageData message;
+              ^
+src/CentralTrafficController.c:53:17: warning: unused variable 'attach' [-Wunused-variable]
+  name_attach_t *attach;
+                 ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+00:28:52 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:41:6: warning: unused variable 'returnedValue' [-Wunused-variable]
+  int returnedValue = server();
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:53:14: warning: unused variable 'message' [-Wunused-variable]
+  messageData message;
+              ^
+src/CentralTrafficController.c:52:17: warning: unused variable 'attach' [-Wunused-variable]
+  name_attach_t *attach;
+                 ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+00:29:17 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:53:14: warning: unused variable 'message' [-Wunused-variable]
+  messageData message;
+              ^
+src/CentralTrafficController.c:52:17: warning: unused variable 'attach' [-Wunused-variable]
+  name_attach_t *attach;
+                 ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+00:33:05 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:58:14: warning: unused variable 'message' [-Wunused-variable]
+  messageData message;
+              ^
+src/CentralTrafficController.c:57:17: warning: unused variable 'attach' [-Wunused-variable]
+  name_attach_t *attach;
+                 ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+01:19:15 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'pulseStateMachine':
+src/CentralTrafficController.c:54:2: error: case label not within a switch statement
+  case _PULSE_CODE_DISCONNECT:
+  ^
+src/CentralTrafficController.c:56:6: error: 'stayAlive' undeclared (first use in this function)
+   if(stayAlive == 0){
+      ^
+src/CentralTrafficController.c:56:6: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:64:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:65:2: error: case label not within a switch statement
+  case _PULSE_CODE_UNBLOCK: // receiveId associated with the blocking message
+  ^
+src/CentralTrafficController.c:68:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:69:2: error: case label not within a switch statement
+  case _PULSE_CODE_COIDDEATH: // Received an ID of a connection that was attached to a destroyed channel
+  ^
+src/CentralTrafficController.c:71:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:72:2: error: case label not within a switch statement
+  case _PULSE_CODE_THREADDEATH: // Received an ID of a thread that just died
+  ^
+src/CentralTrafficController.c:74:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:75:2: error: 'default' label not within a switch statement
+  default:
+  ^
+src/CentralTrafficController.c:77:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:123:14: error: 'receiveId' undeclared (first use in this function)
+     MsgReply(receiveId, EOK, NULL, 0); // reply with EOK (a constant that means no error)
+              ^
+src/CentralTrafficController.c:139:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+    sleep(1);
+    ^
+src/CentralTrafficController.c:89:52: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int receivedId = 0, isLiving = 0, messageNum = 0, stayAlive = 0;
+                                                    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:19:25 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'pulseStateMachine':
+src/CentralTrafficController.c:54:2: error: case label not within a switch statement
+  case _PULSE_CODE_DISCONNECT:
+  ^
+src/CentralTrafficController.c:56:6: error: 'stayAlive' undeclared (first use in this function)
+   if(stayAlive == 0){
+      ^
+src/CentralTrafficController.c:56:6: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:64:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:65:2: error: case label not within a switch statement
+  case _PULSE_CODE_UNBLOCK: // receiveId associated with the blocking message
+  ^
+src/CentralTrafficController.c:68:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:69:2: error: case label not within a switch statement
+  case _PULSE_CODE_COIDDEATH: // Received an ID of a connection that was attached to a destroyed channel
+  ^
+src/CentralTrafficController.c:71:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:72:2: error: case label not within a switch statement
+  case _PULSE_CODE_THREADDEATH: // Received an ID of a thread that just died
+  ^
+src/CentralTrafficController.c:74:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c:75:2: error: 'default' label not within a switch statement
+  default:
+  ^
+src/CentralTrafficController.c:77:3: error: break statement not within loop or switch
+   break;
+   ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:139:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c:89:52: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int receivedId = 0, isLiving = 0, messageNum = 0, stayAlive = 0;
+                                                    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:20:11 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'pulseStateMachine':
+src/CentralTrafficController.c:57:6: error: 'stayAlive' undeclared (first use in this function)
+   if(stayAlive == 0){
+      ^
+src/CentralTrafficController.c:57:6: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:141:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c:91:52: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int receivedId = 0, isLiving = 0, messageNum = 0, stayAlive = 0;
+                                                    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:20:31 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:4: error: too few arguments to function 'pulseStateMachine'
+    pulseStateMachine(message, messageNum);
+    ^
+src/CentralTrafficController.c:51:6: note: declared here
+ void pulseStateMachine(messageData msg, int messageNum, int stayAlive){
+      ^
+src/CentralTrafficController.c:141:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c:91:52: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int receivedId = 0, isLiving = 0, messageNum = 0, stayAlive = 0;
+                                                    ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:20:49 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:141:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+01:32:14 **** Build of configuration armv7le-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrafficLightLocalController.d,-MT,build/armv7le-debug/src/TrafficLightLocalController.o -o build/armv7le-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrafficLightLocalController   build/armv7le-debug/src/TrafficLightLocalController.o  
+01:35:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+01:35:13 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:41:1: error: expected ';', identifier or '(' before 'int'
+ int server();
+ ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:144:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+01:36:18 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:145:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+01:39:54 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:147:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:08:48 **** Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:60:2: error: too many arguments to function 'puts'
+  puts("STARTING: %s is Running...", hostname);
+  ^
+In file included from src/CentralTrafficController.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:177:12: note: declared here
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+ extern int puts(const char *__s);
+            ^
+src/CentralTrafficController.c:62:2: error: too many arguments to function 'puts'
+  puts("TERMINATING: %s is Terminating...\n", hostname);
+  ^
+In file included from src/CentralTrafficController.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:177:12: note: declared here
+ extern int puts(const char *__s);
+            ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:154:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+12:09:14 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:154:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:14:39 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:14:46 **** Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:54:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:56:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/TrafficLightLocalController.c:58:2: error: too many arguments to function 'puts'
+  puts("STARTING: %s is Running...\n", hostname);
+  ^
+In file included from src/TrafficLightLocalController.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:177:12: note: declared here
+ extern int puts(const char *__s);
+            ^
+src/TrafficLightLocalController.c:60:2: error: too many arguments to function 'puts'
+  puts("TERMINATING: %s is Terminating...\n", hostname);
+  ^
+In file included from src/TrafficLightLocalController.c:1:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdio.h:177:12: note: declared here
+ extern int puts(const char *__s);
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+            ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:89:4: error: break statement not within loop or switch
+    break;
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+12:15:01 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:54:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:56:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:89:4: error: break statement not within loop or switch
+    break;
+    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+12:15:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:54:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:56:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:16:04 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:16:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:16:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:17:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:19:17 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:20:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:23:37 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:153:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:23:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:24:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/TrafficLightLocalController.c:60:6: warning: variable 'returnedValue' set but not used [-Wunused-but-set-variable]
+  int returnedValue = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:26:12 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:26:52 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:27:59 **** Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:28:22 **** Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:29:14 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/NativeMessagePassClient.d,-MT,build/x86_64-debug/src/NativeMessagePassClient.o -o build/x86_64-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+src/NativeMessagePassClient.c: In function 'main':
+src/NativeMessagePassClient.c:48:6: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  int ret = 0;
+      ^
+src/NativeMessagePassClient.c: In function 'client':
+src/NativeMessagePassClient.c:86:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1); // wait for 5 seconds before sending another message packet
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+12:29:59 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:31:10 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:31:25 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:31:40 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:32:12 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:32:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:32:44 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:34:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:37:24 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:153:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:37:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:39:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:42:34 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:46:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:47:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+12:47:46 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:153:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:47:56 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:52:39 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:153:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:52:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:53:18 **** Build of configuration x86_64-debug for project ConnectMessagePassServer ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/ConnectMessagePassServer.d,-MT,build/x86_64-debug/src/ConnectMessagePassServer.o -o build/x86_64-debug/src/ConnectMessagePassServer.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/ConnectMessagePassServer.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/ConnectMessagePassServer   build/x86_64-debug/src/ConnectMessagePassServer.o  
+12:53:27 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:53:51 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:54:29 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/NativeMessagePassClient.d,-MT,build/x86_64-debug/src/NativeMessagePassClient.o -o build/x86_64-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+src/NativeMessagePassClient.c: In function 'main':
+src/NativeMessagePassClient.c:48:6: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  int ret = 0;
+      ^
+src/NativeMessagePassClient.c: In function 'client':
+src/NativeMessagePassClient.c:86:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1); // wait for 5 seconds before sending another message packet
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+12:55:19 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:61:6: warning: unused variable 'returnedValue' [-Wunused-variable]
+  int returnedValue = server();
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:153:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+12:55:31 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+12:56:12 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/NativeMessagePassClient.d,-MT,build/x86_64-debug/src/NativeMessagePassClient.o -o build/x86_64-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+src/NativeMessagePassClient.c: In function 'main':
+src/NativeMessagePassClient.c:48:6: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  int ret = 0;
+      ^
+src/NativeMessagePassClient.c: In function 'client':
+src/NativeMessagePassClient.c:86:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1); // wait for 5 seconds before sending another message packet
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+12:56:51 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/NativeMessagePassClient.d,-MT,build/x86_64-debug/src/NativeMessagePassClient.o -o build/x86_64-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+src/NativeMessagePassClient.c: In function 'main':
+src/NativeMessagePassClient.c:48:6: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  int ret = 0;
+      ^
+src/NativeMessagePassClient.c: In function 'client':
+src/NativeMessagePassClient.c:86:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1); // wait for 5 seconds before sending another message packet
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+13:02:09 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:61:6: warning: unused variable 'returnedValue' [-Wunused-variable]
+  int returnedValue = server();
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:155:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+13:02:22 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:02:40 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/NativeMessagePassClient.d,-MT,build/x86_64-debug/src/NativeMessagePassClient.o -o build/x86_64-debug/src/NativeMessagePassClient.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/NativeMessagePassClient.c
+src/NativeMessagePassClient.c: In function 'main':
+src/NativeMessagePassClient.c:48:6: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  int ret = 0;
+      ^
+src/NativeMessagePassClient.c: In function 'client':
+src/NativeMessagePassClient.c:86:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1); // wait for 5 seconds before sending another message packet
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/NativeMessagePassClient   build/x86_64-debug/src/NativeMessagePassClient.o  
+13:03:05 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:03:18 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:03:21 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassClient ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:04:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+13:04:23 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+13:05:14 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:56:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:58:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:61:6: warning: unused variable 'returnedValue' [-Wunused-variable]
+  int returnedValue = server();
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:155:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+13:05:25 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/TrafficLightLocalController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+13:06:58 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:55:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:57:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:60:6: warning: unused variable 'returnedValue' [-Wunused-variable]
+  int returnedValue = server();
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:154:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+13:07:02 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:08:42 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:10:39 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:11:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:11:29 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+01:46:13 **** Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'SensorDataInit':
+src/CentralTrafficController.c:84:30: error: assignment to expression with array type
+  data->reply.replySourceName = hostname;
+                              ^
+src/CentralTrafficController.c: At top level:
+src/CentralTrafficController.c:86:7: error: conflicting types for 'server'
+ void *server(void *data){
+       ^
+src/CentralTrafficController.c:49:5: note: previous declaration of 'server' was here
+ int server();
+     ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:96:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:130:45: error: 'message' undeclared (first use in this function)
+    if(sd->message.header.type > _IO_BASE && message.header.type <= _IO_MAX){
+                                             ^
+src/CentralTrafficController.c:130:45: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:140:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+    sleep(1);
+    ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:165:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:167:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:171:46: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(&serverThread, NULL, server, sensor);
+                                              ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/dispatch.h:22:0,
+                 from src/CentralTrafficController.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'SensorData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:47:39 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'SensorDataInit':
+src/CentralTrafficController.c:83:30: error: assignment to expression with array type
+  data->reply.replySourceName = hostname;
+                              ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:95:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:129:45: error: 'message' undeclared (first use in this function)
+    if(sd->message.header.type > _IO_BASE && message.header.type <= _IO_MAX){
+                                             ^
+src/CentralTrafficController.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:139:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:164:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:166:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:170:46: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(&serverThread, NULL, server, sensor);
+                                              ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/dispatch.h:22:0,
+                 from src/CentralTrafficController.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'SensorData {aka struct <anonymous>}'
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:50:52 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'SensorDataInit':
+src/CentralTrafficController.c:83:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(data->reply.replySourceName, hostname);
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:95:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:129:45: error: 'message' undeclared (first use in this function)
+    if(sd->message.header.type > _IO_BASE && message.header.type <= _IO_MAX){
+                                             ^
+src/CentralTrafficController.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:139:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:164:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:166:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:170:46: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(&serverThread, NULL, server, sensor);
+                                              ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/dispatch.h:22:0,
+                 from src/CentralTrafficController.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'SensorData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:51:07 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'SensorDataInit':
+src/CentralTrafficController.c:83:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(data->reply.replySourceName, hostname);
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:95:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:139:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:164:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:166:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+src/CentralTrafficController.c:170:46: error: incompatible type for argument 4 of 'pthread_create'
+  pthread_create(&serverThread, NULL, server, sensor);
+                                              ^
+In file included from /Users/adityaaaap/qnx700/target/qnx7/usr/include/sys/dispatch.h:22:0,
+                 from src/CentralTrafficController.c:4:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/pthread.h:197:12: note: expected 'void *' but argument is of type 'SensorData {aka struct <anonymous>}'
+ extern int pthread_create(pthread_t *__thr, const pthread_attr_t *__attr, void *(*__start_routine)(void *), void *__arg);
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+01:51:33 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'SensorDataInit':
+src/CentralTrafficController.c:83:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(data->reply.replySourceName, hostname);
+  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:95:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:139:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:164:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(hostname, '\0', 100);
+  ^
+src/CentralTrafficController.c:166:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+01:54:25 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:96:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:140:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(1);
+    ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:167:2: warning: implicit declaration of function 'gethostname' [-Wimplicit-function-declaration]
+  gethostname(hostname, sizeof(hostname));
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+01:55:50 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:96:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+02:25:08 **** Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:59:2: warning: implicit declaration of function 'srtrcpy' [-Wimplicit-function-declaration]
+  srtrcpy(sensor->message.clientName, hostname);
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:82:85: error: 'message' undeclared (first use in this function)
+   printf("SENDING: ClientID(%d) sending value of %d with %d bytes of memory size\n",message.clientId, message.data, sizeof(message));
+                                                                                     ^
+src/TrafficLightLocalController.c:82:85: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightLocalController.c:83:62: error: 'reply' undeclared (first use in this function)
+   if(MsgSend(serverConnectionId, &message, sizeof(message), &reply, sizeof(reply))){
+                                                              ^
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:105:12: error: redeclaration of 'clientThread' with no linkage
+  pthread_t clientThread;
+            ^
+src/TrafficLightLocalController.c:103:12: note: previous declaration of 'clientThread' was here
+  pthread_t clientThread;
+            ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+02:25:33 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:59:2: warning: implicit declaration of function 'srtrcpy' [-Wimplicit-function-declaration]
+  srtrcpy(sensor->message.clientName, hostname);
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:82:107: error: 'message' undeclared (first use in this function)
+   printf("SENDING: ClientID(%d) sending value of %d with %d bytes of memory size\n",cd->message.clientId, message.data, sizeof(message));
+                                                                                                           ^
+src/TrafficLightLocalController.c:82:107: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightLocalController.c:88:41: error: 'reply' undeclared (first use in this function)
+    printf("----> RECEIVED REPLY: %s\n", reply.buf);
+                                         ^
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:106:12: error: redeclaration of 'clientThread' with no linkage
+  pthread_t clientThread;
+            ^
+src/TrafficLightLocalController.c:104:12: note: previous declaration of 'clientThread' was here
+  pthread_t clientThread;
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+02:25:52 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:59:2: warning: implicit declaration of function 'srtrcpy' [-Wimplicit-function-declaration]
+  srtrcpy(sensor->message.clientName, hostname);
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:82:107: error: 'message' undeclared (first use in this function)
+   printf("SENDING: ClientID(%d) sending value of %d with %d bytes of memory size\n",cd->message.clientId, message.data, sizeof(message));
+                                                                                                           ^
+src/TrafficLightLocalController.c:82:107: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+02:26:07 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:59:2: warning: implicit declaration of function 'srtrcpy' [-Wimplicit-function-declaration]
+  srtrcpy(sensor->message.clientName, hostname);
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:86:92: error: 'message' undeclared (first use in this function)
+    printf("ERROR: Message of size %d bytes and value of %d is failed to be sent\n", sizeof(message), message.data);
+                                                                                            ^
+src/TrafficLightLocalController.c:86:92: note: each undeclared identifier is reported only once for each function it appears in
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+02:26:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:59:2: warning: implicit declaration of function 'srtrcpy' [-Wimplicit-function-declaration]
+  srtrcpy(sensor->message.clientName, hostname);
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+build/x86_64-debug/src/TrafficLightLocalController.o: In function `SensorDataInit':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightLocalController//src/TrafficLightLocalController.c:59: undefined reference to `srtrcpy'
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightLocalController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrafficLightLocalController] Error 1
+02:26:31 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:59:2: warning: implicit declaration of function 'srtcpy' [-Wimplicit-function-declaration]
+  srtcpy(sensor->message.clientName, hostname);
+  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+build/x86_64-debug/src/TrafficLightLocalController.o: In function `SensorDataInit':
+/Users/adityaaaap/ide-7.0-workspace/TrafficLightLocalController//src/TrafficLightLocalController.c:59: undefined reference to `srtcpy'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightLocalController' failed
+make: *** [build/x86_64-debug/TrafficLightLocalController] Error 1
+02:26:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+02:33:47 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'SensorDataInit':
+src/CentralTrafficController.c:86:22: error: 'sensor' undeclared (first use in this function)
+  pthread_mutex_init(&sensor->mutex, NULL);
+                      ^
+src/CentralTrafficController.c:86:22: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+02:34:30 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+02:37:10 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+02:39:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+02:40:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  

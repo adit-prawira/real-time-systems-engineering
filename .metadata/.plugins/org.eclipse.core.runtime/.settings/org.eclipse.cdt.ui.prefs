@@ -10,6 +10,7 @@ c_operators=237,120,134
 c_single_line_comment=172,172,172
 c_string=247,209,116
 c_type=238,121,135
+content_assist_proposals_foreground=36,36,36
 eclipse.preferences.version=1
 org.eclipse.cdt.internal.ui.text.doctools.multi=98,98,98
 org.eclipse.cdt.internal.ui.text.doctools.recognizedTag=30,120,155

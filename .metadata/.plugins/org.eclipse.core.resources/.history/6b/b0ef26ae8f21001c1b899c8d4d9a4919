@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+#include <sys/dispatch.h>
+
+#define ATTACH_POINT "/net/CTC/dev/name/local/CTC"
+
+int main(int agrc, char *argv[]) {
+	puts("Hello World!!!"); /* prints Hello World!!! */
+	return EXIT_SUCCESS;
+}

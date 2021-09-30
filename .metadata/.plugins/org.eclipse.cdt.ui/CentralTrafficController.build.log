@@ -1,7 +1,11 @@
-22:13:01 **** Build of configuration armv7le-debug for project CentralTrafficController ****
+02:34:30 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
 make -j3 all 
-qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/CentralTrafficController.d,-MT,build/armv7le-debug/src/CentralTrafficController.o -o build/armv7le-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
-qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/CentralTrafficController   build/armv7le-debug/src/CentralTrafficController.o  
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
 
-22:13:01 Build Finished (took 366ms)
+02:34:31 Build Finished (took 553ms)
 

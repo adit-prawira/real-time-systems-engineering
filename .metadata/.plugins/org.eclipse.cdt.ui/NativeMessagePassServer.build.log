@@ -1,6 +1,6 @@
-22:47:10 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
+13:08:42 **** Incremental Build of configuration x86_64-debug for project NativeMessagePassServer ****
 make -j3 all 
 make: Nothing to be done for 'all'.
 
-22:47:10 Build Finished (took 84ms)
+13:08:42 Build Finished (took 81ms)
 
