@@ -17955,3 +17955,738 @@ make: Nothing to be done for 'all'.
 19:16:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
+19:35:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:88:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:56:59 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:112:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+19:57:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:73:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:113:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:117:71: error: 'MessageData {aka struct <anonymous>}' has no member named 'clientName'
+  printf("THREAD STARTING: %s client thread starting...\n", cd->message.clientName);
+                                                                       ^
+src/TrafficLightLocalController.c:123:14: error: 'MessageData {aka struct <anonymous>}' has no member named 'data'
+   cd->message.data = 10+index;
+              ^
+src/TrafficLightLocalController.c:125:96: error: 'MessageData {aka struct <anonymous>}' has no member named 'clientId'
+   printf("SENDING: ClientID(%d) sending value of %d with %d bytes of memory size\n",cd->message.clientId,
+                                                                                                ^
+src/TrafficLightLocalController.c:126:16: error: 'MessageData {aka struct <anonymous>}' has no member named 'data'
+     cd->message.data, sizeof(cd->message));
+                ^
+src/TrafficLightLocalController.c:130:38: error: 'MessageData {aka struct <anonymous>}' has no member named 'data'
+      sizeof(cd->message), cd->message.data);
+                                      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+19:58:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:73:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:113:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:123:28: warning: passing argument 1 of 'trafficLightStateMachine' from incompatible pointer type [-Wincompatible-pointer-types]
+   trafficLightStateMachine(&cd);
+                            ^
+src/TrafficLightLocalController.c:79:6: note: expected 'SensorData * {aka struct <anonymous> *}' but argument is of type 'SensorData ** {aka struct <anonymous> **}'
+ void trafficLightStateMachine(SensorData *sensor){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:58:55 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:59:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:73:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:113:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:01:16 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:112:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:01:21 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:03:07 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:73:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:117:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:04:01 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:112:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:04:06 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:19 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:27 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:04:45 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:112:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:04:50 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:08:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c:43:2: error: expected ':', ',', ';', '}' or '__attribute__' before 'int'
+  int name[BUF_SIZE];
+  ^
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:73:30: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'id'
+  sensor->message.trafficLight.id = clientId;
+                              ^
+src/TrafficLightLocalController.c:74:30: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'waitTime'
+  sensor->message.trafficLight.waitTime = 1;
+                              ^
+src/TrafficLightLocalController.c:75:30: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'color'
+  sensor->message.trafficLight.color = RED;
+                              ^
+src/TrafficLightLocalController.c:76:37: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'name'
+  strcpy(sensor->message.trafficLight.name, hostname);
+                                     ^
+src/TrafficLightLocalController.c: In function 'trafficLightStateMachine':
+src/TrafficLightLocalController.c:91:31: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'waitTime'
+   sensor->message.trafficLight.waitTime = 3;
+                               ^
+src/TrafficLightLocalController.c:95:31: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'waitTime'
+   sensor->message.trafficLight.waitTime = 1;
+                               ^
+src/TrafficLightLocalController.c:102:31: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'waitTime'
+   sensor->message.trafficLight.waitTime = 3;
+                               ^
+src/TrafficLightLocalController.c:106:31: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'waitTime'
+   sensor->message.trafficLight.waitTime = 1;
+                               ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:120:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:124:84: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'name'
+  printf("THREAD STARTING: %s client thread starting...\n", cd->message.trafficLight.name);
+                                                                                    ^
+src/TrafficLightLocalController.c:133:29: error: 'TrafficLightSettings {aka struct <anonymous>}' has no member named 'id'
+     cd->message.trafficLight.id, cd->currentState, sizeof(cd->message));
+                             ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+20:08:55 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:75:37: error: assignment to expression with array type
+  sensor->message.trafficLight.color = RED;
+                                     ^
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:120:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+20:09:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:15:13: warning: passing argument 2 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+ #define RED 'R'
+             ^
+src/TrafficLightLocalController.c:75:45: note: in expansion of macro 'RED'
+  strcpy(sensor->message.trafficLight.color, RED);
+                                             ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'const char *' but argument is of type 'int'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:120:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:09:45 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:120:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:19:36 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:112:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:19:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:140:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:28:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:140:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:28:59 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:140:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:33:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c:18:0: warning: "RAND_MAX" redefined
+ #define RAND_MAX 999
+ ^
+In file included from src/TrafficLightLocalController.c:2:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdlib.h:65:0: note: this is the location of the previous definition
+ #define RAND_MAX        32767u
+ ^
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:141:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:186:38: error: too many arguments to function 'rand'
+  SensorDataInit(&sensor, 0x22, 0x00, rand(RAND_MIN, RAND_MAX), hostname);
+                                      ^
+In file included from src/TrafficLightLocalController.c:2:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/stdlib.h:123:12: note: declared here
+ extern int rand(void);
+            ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+20:34:26 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:76:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:140:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:38:50 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:135:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:39:24 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:40:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:135:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:41:13 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:41:18 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:41:24 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:19: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:41:34 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:19: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:41:57 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:19: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:42:25 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:43:13: error: 'COLOR_CODE_SIZE' undeclared here (not in a function)
+  char color[COLOR_CODE_SIZE];
+             ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:115:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:124:6: warning: implicit declaration of function 'kbit' [-Wimplicit-function-declaration]
+   if(kbit()){
+      ^
+src/CentralTrafficController.c:125:8: warning: implicit declaration of function 'getch' [-Wimplicit-function-declaration]
+    m = getch();
+        ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:42:44 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:115:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:124:6: warning: implicit declaration of function 'kbit' [-Wimplicit-function-declaration]
+   if(kbit()){
+      ^
+src/CentralTrafficController.c:125:8: warning: implicit declaration of function 'getch' [-Wimplicit-function-declaration]
+    m = getch();
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:124: undefined reference to `kbit'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:125: undefined reference to `getch'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:43:15 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:115:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:124:6: warning: implicit declaration of function 'kbhit' [-Wimplicit-function-declaration]
+   if(kbhit()){
+      ^
+src/CentralTrafficController.c:125:8: warning: implicit declaration of function 'getch' [-Wimplicit-function-declaration]
+    m = getch();
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:124: undefined reference to `kbhit'
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:125: undefined reference to `getch'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:43:27 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:20: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:44:30 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:20: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:44:40 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:19: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:44:49 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:125:6: warning: implicit declaration of function 'kbhit' [-Wimplicit-function-declaration]
+   if(kbhit()){
+      ^
+src/CentralTrafficController.c:126:8: warning: implicit declaration of function 'getch' [-Wimplicit-function-declaration]
+    m = getch();
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:125: undefined reference to `kbhit'
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:126: undefined reference to `getch'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:47:04 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:19: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:48:56 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:125:6: warning: implicit declaration of function 'kbhit' [-Wimplicit-function-declaration]
+   if(kbhit()){
+      ^
+src/CentralTrafficController.c:126:8: warning: implicit declaration of function 'getch' [-Wimplicit-function-declaration]
+    m = getch();
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:125: undefined reference to `kbhit'
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:126: undefined reference to `getch'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:52:12 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:125:6: warning: implicit declaration of function 'getch' [-Wimplicit-function-declaration]
+   if(getch()){
+      ^
+src/CentralTrafficController.c:110:6: warning: unused variable 'm' [-Wunused-variable]
+  int m = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `server':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:125: undefined reference to `getch'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:53:17 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:19: fatal error: conio.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:53:27 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:110:6: warning: unused variable 'm' [-Wunused-variable]
+  int m = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:53:50 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:02:14 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:135:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:03:42 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:114:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+21:03:47 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:04:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:05:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:135:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:07:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:77:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:142:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:135:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:07:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:09:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:78:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:136:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:10:01 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:10:06 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:10:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
