@@ -45,7 +45,7 @@ LaunchTargetManager/configs/ThreadPrinting=com.qnx.tools.ide.target.qconn\:192.1
 LaunchTargetManager/configs/ThreadPrints=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/ThreadState=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/TrafficLightClient=com.qnx.tools.ide.target.qconn\:192.168.1.118
-LaunchTargetManager/configs/TrafficLightLocalController=com.qnx.tools.ide.target.qconn\:192.168.1.228
+LaunchTargetManager/configs/TrafficLightLocalController=com.qnx.tools.ide.target.qconn\:192.168.1.92
 LaunchTargetManager/configs/TrafficLightMqReceive=com.qnx.tools.ide.target.qconn\:192.168.1.91
 LaunchTargetManager/configs/TrafficLightMqSend=com.qnx.tools.ide.target.qconn\:192.168.1.118
 LaunchTargetManager/configs/TrafficLightSM=com.qnx.tools.ide.target.qconn\:192.168.1.118
@@ -115,7 +115,7 @@ com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadPrints/activeLa
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/ThreadState/activeLaunchMode=run
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightClient/activeLaunchMode=run
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightClient/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.118
-com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightLocalController/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.228
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightLocalController/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.92
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightMqReceive/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.92
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightMqSend/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.1.118
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/TrafficLightServer/activeLaunchMode=run

@@ -1,2 +1,4 @@
 1632837350493	Delete resource '192.168.1.91'
 1632839218624	Delete resource '192.168.1.223'
+1633020591002	Delete resource 'CentralTrafficController/src/sensordata'
+1633020928110	Delete resource 'TrafficLightLocalController/src/sensordata.h'

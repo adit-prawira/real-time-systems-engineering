@@ -1,0 +1,51 @@
+/*
+ * sensordata.h
+ *
+ *  Created on: 1Oct.,2021
+ *      Author: adityaaaap
+ */
+#include <pthread.h>
+#ifndef SENSORDATA_H_
+#define SENSORDATA_H_
+
+typedef union{
+	union{
+		_Uint32t sival_int;
+		void *sival_ptr;
+	};
+	_Uint32t dummy[4];
+}_CustomSignalValue;
+
+typedef struct _CustomPulse{
+	_Uint16t type;
+	_Uint16t subtype;
+	_Int8t code;
+	_Uint8t zero[3];
+	_CustomSignalValue value;
+	_Uint8t zero2[2];
+	_Int32t serverConnectionId;
+}msg_header_t;
+
+typedef struct {
+	msg_header_t header;
+	int clientId;
+	char clientName[BUF_SIZE];
+	int data;
+}MessageData;
+
+typedef struct {
+	msg_header_t header;
+	char buf[BUF_SIZE];
+	char replySourceName[BUF_SIZE];
+}ReplyData;
+
+typedef struct {
+	MessageData message;
+	ReplyData reply;
+	pthread_mutex_t mutex;
+	pthread_cond_t condVar;
+	name_attach_t *attach;
+	int dataIsReady;
+}SensorData;
+
+#endif /* SENSORDATA_H_ */

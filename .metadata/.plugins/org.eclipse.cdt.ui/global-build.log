@@ -17748,3 +17748,210 @@ src/TrafficLightLocalController.c:73:10: warning: return makes pointer from inte
    return EXIT_FAILURE;
           ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+02:53:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c:9:24: fatal error: sensordata.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+02:54:11 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+In file included from src/TrafficLightLocalController.c:9:0:
+src/sensordata.h:32:18: error: 'BUF_SIZE' undeclared here (not in a function)
+  char clientName[BUF_SIZE];
+                  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:35:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+02:55:30 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+02:56:52 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+14:21:16 **** Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+14:21:28 **** Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:22:24 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+14:23:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:56:04 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:30:14: error: field 'color' has incomplete type
+  enum colors color;
+              ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:109:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+18:57:30 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:12:58: error: redeclaration of enumerator 'state6'
+  state0, state1, state2, state3, state4, state5, state6, state6, state7 , state8, state9, state10
+                                                          ^
+src/CentralTrafficController.c:12:50: note: previous definition of 'state6' was here
+  state0, state1, state2, state3, state4, state5, state6, state6, state7 , state8, state9, state10
+                                                  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+18:58:09 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:116:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+18:58:15 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:92:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:00:25 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:92:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:03:34 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:04:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:92:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:07:45 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:09:47 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:10:48 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:89:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:133:38: error: invalid suffix "Z0" on integer constant
+  SensorDataInit(&sensor, 0x22, 0x00, 6Z0, hostname);
+                                      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+19:11:03 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:89:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:11:29 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+19:11:34 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:12:17 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c:16:58: error: redeclaration of enumerator 'state6'
+  state0, state1, state2, state3, state4, state5, state6, state6, state7 , state8, state9, state10
+                                                          ^
+src/TrafficLightLocalController.c:16:50: note: previous definition of 'state6' was here
+  state0, state1, state2, state3, state4, state5, state6, state6, state7 , state8, state9, state10
+                                                  ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:92:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+19:12:36 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:90:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:12:49 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:13:51 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:15:16 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:73:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+19:15:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:16:57 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.

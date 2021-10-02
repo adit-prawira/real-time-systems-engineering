@@ -1,11 +1,6 @@
-02:34:30 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+19:13:51 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
 make -j3 all 
-qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
-src/CentralTrafficController.c: In function 'server':
-src/CentralTrafficController.c:100:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
-   return EXIT_FAILURE;
-          ^
-qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+make: Nothing to be done for 'all'.
 
-02:34:31 Build Finished (took 553ms)
+19:13:51 Build Finished (took 75ms)
 
