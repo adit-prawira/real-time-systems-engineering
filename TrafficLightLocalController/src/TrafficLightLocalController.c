@@ -16,7 +16,8 @@
 #define RED "R"
 #define YELLOW "Y"
 #define GREEN "G"
-
+#define RY_DELAY 2
+#define G_DELAY 4
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -52,7 +53,11 @@ typedef struct {
 	msg_header_t header;
 	TrafficLightSettings trafficLight;
 }MessageData;
-
+typedef struct{
+	msg_header_t header;
+	int clientId;
+	volatile char data;
+}InstructionCommand;
 typedef struct {
 	msg_header_t header;
 	char buf[BUF_SIZE];
@@ -62,6 +67,7 @@ typedef struct {
 typedef struct {
 	MessageData message;
 	ReplyData reply;
+	InstructionCommand instruction;
 	pthread_mutex_t mutex;
 	pthread_cond_t condVar;
 	name_attach_t *attach;
@@ -73,7 +79,7 @@ typedef struct {
 void SensorDataInit(SensorData *sensor,_Uint16t type, _Uint16t subtype, int clientId, char *hostname ){
 	sensor->currentState = state0;
 	sensor->message.trafficLight.id = clientId;
-	sensor->message.trafficLight.waitTime = 1;
+	sensor->message.trafficLight.waitTime = RY_DELAY;
 	strcpy(sensor->message.trafficLight.color, RED);
 	strcpy(sensor->message.trafficLight.name, hostname);
 	sensor->message.header.type = type;
@@ -96,14 +102,14 @@ void trafficLightStateMachine(SensorData *sensor){
 		sensor->currentState = state2;
 		break;
 	case state2:
-		sensor->message.trafficLight.waitTime = 3;
+		sensor->message.trafficLight.waitTime = G_DELAY;
 		sprintf(sensor->message.trafficLight.message,
 				"EWG-NSR(%d) -> Wait for %d seconds", sensor->currentState,
 				sensor->message.trafficLight.waitTime);
 		sensor->currentState = state3;
 		break;
 	case state3:
-		sensor->message.trafficLight.waitTime = 1;
+		sensor->message.trafficLight.waitTime = RY_DELAY;
 		sprintf(sensor->message.trafficLight.message,
 				"EWY-NSR(%d) -> Wait for %d second", sensor->currentState,
 				sensor->message.trafficLight.waitTime);
@@ -116,14 +122,14 @@ void trafficLightStateMachine(SensorData *sensor){
 		sensor->currentState = state5;
 		break;
 	case state5:
-		sensor->message.trafficLight.waitTime = 3;
+		sensor->message.trafficLight.waitTime = G_DELAY;
 		sprintf(sensor->message.trafficLight.message,
 				"EWR-NSG(%d) -> Wait for %d seconds", sensor->currentState,
 				sensor->message.trafficLight.waitTime);
 		sensor->currentState = state6;
 		break;
 	case state6:
-		sensor->message.trafficLight.waitTime = 1;
+		sensor->message.trafficLight.waitTime = RY_DELAY;
 		sprintf(sensor->message.trafficLight.message,
 				"EWR-NSY(%d) -> Wait for %d second", sensor->currentState,
 				sensor->message.trafficLight.waitTime);
@@ -163,6 +169,7 @@ void *client(void *data){
 		}else{
 			printf("----> RECEIVED REPLY: %s\n", cd->reply.buf);
 		}
+		sleep(cd->message.trafficLight.waitTime);
 		pthread_cond_signal(&cd->condVar);
 		pthread_mutex_unlock(&cd->mutex);
 	}

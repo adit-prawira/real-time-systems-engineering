@@ -18690,3 +18690,337 @@ make: Nothing to be done for 'all'.
 21:10:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
+19:12:15 **** Build of configuration armv7le-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrainController.d,-MT,build/armv7le-debug/src/TrainController.o -o build/armv7le-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrainController   build/armv7le-debug/src/TrainController.o  
+20:10:42 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:114:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:11:22 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:114:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:11:54 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:78:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:136:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:13:12 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:14:01 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+20:17:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:79:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:137:30: warning: unused variable 'index' [-Wunused-variable]
+  int serverConnectionId = 0, index = 0;
+                              ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+20:25:56 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:114:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:126:3: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if(ch=fgetc(stdin)){
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:37:32 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:21: fatal error: windows.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:40:35 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:9:21: fatal error: WebView.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:44:17 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:114:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:126:7: error: 'c' undeclared (first use in this function)
+   if((c=getchar())){
+       ^
+src/CentralTrafficController.c:126:7: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:108:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:44:31 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:114:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:46:52 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:11:21: fatal error: stropts.h: No such file or directory
+compilation terminated.
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:47:15 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function '_kbhit':
+src/CentralTrafficController.c:70:12: error: unknown type name 'bool'
+     static bool initialized = false;
+            ^
+src/CentralTrafficController.c:70:31: error: 'false' undeclared (first use in this function)
+     static bool initialized = false;
+                               ^
+src/CentralTrafficController.c:70:31: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:74:9: error: unknown type name 'termios'
+         termios term;
+         ^
+src/CentralTrafficController.c:75:26: warning: passing argument 2 of 'tcgetattr' from incompatible pointer type [-Wincompatible-pointer-types]
+         tcgetattr(STDIN, &term);
+                          ^
+In file included from src/CentralTrafficController.c:10:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/termios.h:291:16: note: expected 'struct termios *' but argument is of type 'int *'
+ extern int     tcgetattr(int __fildes, struct termios * __termios_p);
+                ^
+src/CentralTrafficController.c:76:13: error: request for member 'c_lflag' in something not a structure or union
+         term.c_lflag &= ~ICANON;
+             ^
+src/CentralTrafficController.c:77:35: warning: passing argument 3 of 'tcsetattr' from incompatible pointer type [-Wincompatible-pointer-types]
+         tcsetattr(STDIN, TCSANOW, &term);
+                                   ^
+In file included from src/CentralTrafficController.c:10:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/termios.h:293:16: note: expected 'const struct termios *' but argument is of type 'int *'
+ extern int     tcsetattr(int __fildes, int __opt_act, const struct termios * __termios_p);
+                ^
+src/CentralTrafficController.c:79:23: error: 'true' undeclared (first use in this function)
+         initialized = true;
+                       ^
+src/CentralTrafficController.c:83:5: warning: implicit declaration of function 'ioctl' [-Wimplicit-function-declaration]
+     ioctl(STDIN, FIONREAD, &bytesWaiting);
+     ^
+src/CentralTrafficController.c:83:18: error: 'FIONREAD' undeclared (first use in this function)
+     ioctl(STDIN, FIONREAD, &bytesWaiting);
+                  ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+20:50:37 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:50:58 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+20:51:14 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function '_kbhit':
+src/CentralTrafficController.c:84:12: error: 'bytesWaiting' undeclared (first use in this function)
+     return bytesWaiting;
+            ^
+src/CentralTrafficController.c:84:12: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c:70:17: warning: unused variable 'initialized' [-Wunused-variable]
+     static bool initialized = false;
+                 ^
+src/CentralTrafficController.c:69:22: warning: unused variable 'STDIN' [-Wunused-variable]
+     static const int STDIN = 0;
+                      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function '_kbhit':
+src/CentralTrafficController.c:85:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:51:32 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function '_kbhit':
+src/CentralTrafficController.c:70:17: warning: unused variable 'initialized' [-Wunused-variable]
+     static bool initialized = false;
+                 ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:51:47 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function '_kbhit':
+src/CentralTrafficController.c:74:9: error: unknown type name 'termios'
+         termios term;
+         ^
+src/CentralTrafficController.c:75:26: warning: passing argument 2 of 'tcgetattr' from incompatible pointer type [-Wincompatible-pointer-types]
+         tcgetattr(STDIN, &term);
+                          ^
+In file included from src/CentralTrafficController.c:10:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/termios.h:291:16: note: expected 'struct termios *' but argument is of type 'int *'
+ extern int     tcgetattr(int __fildes, struct termios * __termios_p);
+                ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+src/CentralTrafficController.c:76:13: error: request for member 'c_lflag' in something not a structure or union
+         term.c_lflag &= ~ICANON;
+             ^
+src/CentralTrafficController.c:77:35: warning: passing argument 3 of 'tcsetattr' from incompatible pointer type [-Wincompatible-pointer-types]
+         tcsetattr(STDIN, TCSANOW, &term);
+                                   ^
+In file included from src/CentralTrafficController.c:10:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/termios.h:293:16: note: expected 'const struct termios *' but argument is of type 'int *'
+ extern int     tcsetattr(int __fildes, int __opt_act, const struct termios * __termios_p);
+                ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+20:52:40 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+20:59:13 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:128:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+21:00:25 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+21:00:45 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:134:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+21:29:03 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c:53:11: error: unknown type name 'byte'
+  volatile byte commandCode;
+           ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+21:29:46 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+21:30:50 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:38:35 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:130:6: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:151:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+21:39:33 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:151:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  

@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ATTACH_POINT" key="selection"/>
+		<item value="clientId" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="clientId"/>
+			<item value="replyMessageString"/>
+			<item value="reply.buf"/>
+			<item value="reply."/>
 			<item value="serverName"/>
 			<item value="_customSignalValue"/>
 			<item value="messageData"/>
 			<item value="replyData"/>
-			<item value="receiveId"/>
-			<item value="Received"/>
-			<item value="received"/>
-			<item value="receive "/>
 		</list>
 		<list key="replacehistory">
+			<item value="reply.replyMessageString"/>
 			<item value="ATTACH_POINT"/>
 			<item value="_CustomSignalValue"/>
 			<item value="MessageData"/>
@@ -25,7 +26,6 @@
 			<item value="receivedId"/>
 			<item value="serverConnectionId"/>
 			<item value="serverProcessId"/>
-			<item value="replyMessage"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

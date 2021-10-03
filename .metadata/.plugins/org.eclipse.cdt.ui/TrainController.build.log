@@ -1,0 +1,7 @@
+19:12:15 **** Build of configuration armv7le-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrainController.d,-MT,build/armv7le-debug/src/TrainController.o -o build/armv7le-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrainController   build/armv7le-debug/src/TrainController.o  
+
+19:12:15 Build Finished (took 337ms)
+
