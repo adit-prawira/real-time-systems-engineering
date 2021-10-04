@@ -1,4 +1,4 @@
-#include <stdio.h>
+		#include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
@@ -51,7 +51,12 @@ typedef struct {
 	msg_header_t header;
 	TrafficLightSettings trafficLight;
 }MessageData;
-
+typedef struct{
+	msg_header_t header;
+	int clientId;
+	volatile char data;
+	int instructionReady;
+}InstructionCommand;
 typedef struct {
 	msg_header_t header;
 	char buf[BUF_SIZE];
@@ -61,6 +66,7 @@ typedef struct {
 typedef struct {
 	MessageData message;
 	ReplyData reply;
+	InstructionCommand instruction;
 	pthread_mutex_t mutex;
 	pthread_cond_t condVar;
 	name_attach_t *attach;
@@ -125,15 +131,46 @@ void SensorDataInit(SensorData *sensor, char *hostname,_Uint16t type, _Uint16t s
 	pthread_cond_init(&sensor->condVar, NULL);
 	sensor->dataIsReady = 0;
 }
-void *client(void *notUsed){
+void *client(void *data){
 	int ch;
+	int serverConnectionId = 0;
+	SensorData *cd = (SensorData*)data;
+	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_TC);
+	serverConnectionId = name_open(ATTACH_POINT_TC, 0);
+	printf("Returned Connection ID: %d\n", serverConnectionId);
+	if(serverConnectionId == -1){
+		// Logs error and exit the program early if it is connection is failed to be performed
+		printf("ERROR: Unable to connect to the server with the given name of %s\n", ATTACH_POINT_TC);
+		return EXIT_FAILURE;
+	}
+	printf("SUCCESS: Connected to the server %s\n", ATTACH_POINT_TC);
 	printf("THREAD STARTING: Keyboard Event thread starting...\n");
 	while(true){
 		if(keyboardEventListener()){
+			pthread_mutex_lock(&cd->mutex);
+			while(!cd->instruction.instructionReady){
+				pthread_cond_wait(&cd->condVar, &cd->mutex);
+			}
 			ch = getchar();
+			cd->instruction.data = ch;
 			printf("\nKEBOARD EVENT: Keyboard event is pressed %c\n", ch);
+			cd->instruction.instructionReady = 1;
+			printf("SENDING: ClientID(%d) sending value of %c with %d bytes of memory size\n",
+							cd->instruction.clientId, cd->instruction.data, sizeof(cd->instruction));
+			if(MsgSend(serverConnectionId, &cd->instruction, sizeof(cd->instruction),
+					&cd->reply, sizeof(cd->reply))){
+				printf("ERROR: Message of size %d bytes and value of %c is failed to be sent\n",
+									sizeof(cd->instruction), cd->instruction.data);
+				break;
+			}else{
+				printf("----> RECEIVED REPLY: %s\n", cd->reply.buf);
+			}
+			pthread_cond_signal(&cd->condVar);
+			pthread_mutex_unlock(&cd->mutex);
 		}
 	}
+	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
+	name_close(serverConnectionId);
 	printf("THREAD TERMINATING: Keyboard Event thread terminating...\n");
 	return 0;
 }
@@ -200,7 +237,7 @@ void *server(void *data){
 			sd->dataIsReady = 0;
 			pthread_cond_signal(&sd->condVar);
 		}else{
-			printf("ERROR: CTC received unrecognized entity, but unable to handle it properly\n");
+			printf("\nError: Server received unrecognized entity, but could not handle it correctly\n");
 		}
 	}
 	name_detach(sd->attach, 0);
@@ -229,7 +266,7 @@ int main(int argc, char *argv[]){
 	printf("STARTING: %s is Running...\n", hostname);
 	SensorDataInit(&sensor, hostname, 0x01, 0x00);
 	pthread_create(&ctcServerThread, NULL, server, &sensor);
-	pthread_create(&ctcClientThread, NULL, client, NULL);
+	pthread_create(&ctcClientThread, NULL, client, &sensor);
 	pthread_join(ctcServerThread, NULL);
 	pthread_join(ctcClientThread, NULL);
 	printf("TERMINATING: %s is Terminating...\n", hostname);

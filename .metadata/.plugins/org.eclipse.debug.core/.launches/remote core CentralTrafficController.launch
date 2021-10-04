@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.qnx.tools.ide.qde.ui.QDERemoteCoreLaunch">
+<booleanAttribute key="com.qnx.tools.ide.qde.core.LOAD_FROM_TARGET" value="true"/>
+<stringAttribute key="com.qnx.tools.ide.qde.core.REMOTE_COREFILE_PATH" value="/root/CentralTrafficController.core"/>
+<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="192.168.1.178"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController/build/x86_64-debug/CentralTrafficController"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="CentralTrafficController"/>
+</launchConfiguration>
