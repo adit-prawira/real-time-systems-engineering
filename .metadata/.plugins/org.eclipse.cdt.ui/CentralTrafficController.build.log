@@ -1,6 +1,6 @@
-21:32:53 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+11:16:47 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
 
-21:32:53 Build Finished (took 145ms)
+11:16:47 Build Finished (took 74ms)
 

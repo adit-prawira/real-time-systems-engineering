@@ -10,10 +10,12 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #include <stdbool.h>
+#include <time.h>
 
 #define COLOR_CODE_SIZE 2
 #define ATTACH_POINT_TC "TC"
 #define BUF_SIZE 100
+#define COMMAND_SIZE 2
 
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
@@ -50,12 +52,7 @@ typedef struct {
 	msg_header_t header;
 	TrafficLightSettings trafficLight;
 }MessageData;
-typedef struct{
-	msg_header_t header;
-	int clientId;
-	volatile char data;
-	int instructionReady;
-}InstructionCommand;
+
 typedef struct {
 	msg_header_t header;
 	char buf[BUF_SIZE];
@@ -65,15 +62,41 @@ typedef struct {
 typedef struct {
 	MessageData message;
 	ReplyData reply;
-	InstructionCommand instruction;
 	pthread_mutex_t mutex;
 	pthread_cond_t condVar;
 	name_attach_t *attach;
 	enum states currentState;
 	int dataIsReady;
 }SensorData;
-void pulseStateMachine(InstructionCommand instruction, int stayAlive, int messageNum){
-	printf("----> CTC Received a pulse from ClientID(%d)\n", instruction.clientId);
+
+typedef struct {
+	msg_header_t header;
+	volatile char data;
+	int id;
+
+} InstructionData;
+
+typedef struct{
+	InstructionData instruction;
+	ReplyData reply;
+	pthread_mutex_t mutex;
+	pthread_cond_t condVar;
+	name_attach_t *attach;
+	char sourceName[BUF_SIZE];
+	int dataIsReady;
+}InstructionCommand;
+
+void InstructionCommandInit(InstructionCommand *ic, char *hostname,_Uint16t type, _Uint16t subtype){
+	ic->reply.header.type = type;
+	ic->reply.header.subtype = subtype;
+	strcpy(ic->reply.replySourceName, hostname);
+	pthread_mutex_init(&ic->mutex, NULL);
+	pthread_cond_init(&ic->condVar, NULL);
+	ic->dataIsReady = 0;
+};
+
+void pulseStateMachine(InstructionData instruction, int stayAlive, int messageNum){
+	printf("----> CTC Received a pulse from ClientID(%d)\n", instruction.id);
 	printf("----> Received Message Header Code: %d\n", instruction.header.code);
 	switch(instruction.header.code){
 	case _PULSE_CODE_DISCONNECT:
@@ -82,9 +105,9 @@ void pulseStateMachine(InstructionCommand instruction, int stayAlive, int messag
 			// if received pulse to disconnect => disconnect all its connection by running name_close
 			// for each name_open()
 			ConnectDetach(instruction.header.serverConnectionId); // pass serverConnectionId to detach
-			printf("Detaching: Server is requested to detach from ClientId(%d)\n", instruction.clientId);
+			printf("Detaching: Server is requested to detach from ClientId(%d)\n", instruction.id);
 		}else{
-			printf("Rejected: Server is requested to detach from ClientId(%d) but rejected\n", instruction.clientId);
+			printf("Rejected: Server is requested to detach from ClientId(%d) but rejected\n", instruction.id);
 		}
 		break;
 	case _PULSE_CODE_UNBLOCK: // receiveId associated with the blocking instruction
@@ -102,13 +125,14 @@ void pulseStateMachine(InstructionCommand instruction, int stayAlive, int messag
 		break;
 	}
 }
+
 // This thread will listen to CTCT regarding the given input or key pressed from Central Controller
 // Those key press will determine changes of sequences of the traffic light system
 void *server(void *data){
-	SensorData *sd = (SensorData*)data;
+	InstructionCommand *ic = (InstructionCommand*)data;
 	int receiveId = 0, isLiving = 0;
 	int messageNum = 0, stayAlive = 0;
-	if((sd->attach = name_attach(NULL, ATTACH_POINT_TC, 0))==NULL){
+	if((ic->attach = name_attach(NULL, ATTACH_POINT_TC, 0))==NULL){
 		// if name is not attached successfully exit the program early
 		printf("ERROR: Failed to compute name_attach on ATTACH_POINT_TC: %s\n", ATTACH_POINT_TC);
 		printf("----> Another server may run the same ATTACH_POINT_TC name or GNS service has not yet started");
@@ -117,13 +141,13 @@ void *server(void *data){
 	printf("THREAD STARTING: %s server thread is starting...\n", ATTACH_POINT_TC);
 	printf("TC Listening for CTC ATTACH_POINT_TC: %s\n", ATTACH_POINT_TC);
 
-	pthread_mutex_lock(&sd->mutex);
+	pthread_mutex_lock(&ic->mutex);
 	isLiving = 1;
 	while(isLiving){
-		while(sd->instruction.instructionReady){
-			pthread_cond_wait(&sd->condVar, &sd->mutex);
+		while(ic->dataIsReady){
+			pthread_cond_wait(&ic->condVar, &ic->mutex);
 		}
-		receiveId = MsgReceive(sd->attach->chid, &sd->instruction, sizeof(sd->instruction), NULL);
+		receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
 
 		if(receiveId == -1){
 			// break the loop early if there is no received message Id returned from MsgReceive
@@ -132,12 +156,12 @@ void *server(void *data){
 		}
 
 		if(receiveId == 0){
-			pulseStateMachine(sd->instruction, stayAlive, messageNum);
+			pulseStateMachine(ic->instruction, stayAlive, messageNum);
 		}
 		if(receiveId > 0){
 			messageNum++;
 
-			if(sd->instruction.header.type == _IO_CONNECT){
+			if(ic->instruction.header.type == _IO_CONNECT){
 				// The case when client sending message that GNS service is running/succesfully connected
 				MsgReply(receiveId, EOK, NULL, 0); // reply with EOK (a constant that means no error)
 				printf("\nClient Send Message: GNS Server is running...\n");
@@ -147,36 +171,29 @@ void *server(void *data){
 			}
 
 			// receiving some other IO => reject it
-			if(sd->instruction.header.type > _IO_BASE && sd->instruction.header.type <= _IO_MAX){
+			if(ic->instruction.header.type > _IO_BASE && ic->instruction.header.type <= _IO_MAX){
 				MsgError(receiveId, ENOSYS); // Send error of Function isn't implemented (ENOSYS)
 				printf("ERROR: CTC received other IO messages and reject it\n");
 				continue;
 			}
 
-			sprintf(sd->reply.buf, "Message number %d received", messageNum);
+			sprintf(ic->reply.buf, "Message number %d received", messageNum);
 			printf("RECEIVED KEY COMMAND FROM (ClientID:%d) with value of %c\n----> %s\n",
-					sd->instruction.clientId, sd->instruction.data);
-			printf("----> REPLYING: '%s'\n",sd->reply.buf);
-			MsgReply(receiveId, EOK, &sd->reply, sizeof(sd->reply)); // Send reply to clients (L1, and L2)
-			sd->dataIsReady = 0;
-			pthread_cond_signal(&sd->condVar);
+					ic->instruction.id, ic->instruction.data);
+			printf("----> REPLYING: '%s'\n",ic->reply.buf);
+			MsgReply(receiveId, EOK, &ic->reply, sizeof(ic->reply)); // Send reply to clients (L1, and L2)
+			ic->dataIsReady = 0;
+			pthread_cond_signal(&ic->condVar);
 		}else{
 			printf("ERROR: CTC received unrecognized entity, but unable to handle it properly\n");
 		}
 	}
-	name_detach(sd->attach, 0);
-	pthread_mutex_unlock(&sd->mutex);
+	name_detach(ic->attach, 0);
+	pthread_mutex_unlock(&ic->mutex);
 	printf("THREAD TERMINATING: %s server is terminating...\n", ATTACH_POINT_TC);
 	return 0;
 }
-void SensorDataInit(SensorData *sensor, char *hostname,_Uint16t type, _Uint16t subtype){
-	sensor->reply.header.type = type;
-	sensor->reply.header.subtype = subtype;
-	strcpy(sensor->reply.replySourceName, hostname);
-	pthread_mutex_init(&sensor->mutex, NULL);
-	pthread_cond_init(&sensor->condVar, NULL);
-	sensor->dataIsReady = 0;
-}
+
 
 int main(void) {
 	printf("_CustomSignalValue = %d bytes\n", sizeof(_CustomSignalValue));
@@ -194,7 +211,7 @@ int main(void) {
 	gethostname(hostname, sizeof(hostname));
 
 	printf("STARTING: %s is Running...\n", hostname);
-	SensorDataInit(&sensor, hostname, 0x03, 0x00);
+	InstructionCommandInit(&sensor, hostname, 0x33, 0x00);
 	pthread_create(&tcServerThread, NULL, server, &sensor);
 	pthread_join(tcServerThread, NULL);
 	printf("TERMINATING: %s is Terminating...\n", hostname);

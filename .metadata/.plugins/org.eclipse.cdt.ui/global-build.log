@@ -19363,3 +19363,648 @@ make: Nothing to be done for 'all'.
 21:33:19 **** Incremental Build of configuration x86_64-debug for project TrainController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
+10:16:03 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+10:23:57 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:151:32: error: unknown type name 'q'
+   if(keyboardEventListener()){ q
+                                ^
+src/CentralTrafficController.c:152:23: error: expected declaration specifiers or '...' before '&' token
+    pthread_mutex_lock(&cd->mutex);
+                       ^
+src/CentralTrafficController.c:156:4: warning: implicit declaration of function 'getsbuf' [-Wimplicit-function-declaration]
+    getsbuf(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+10:24:13 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:156:4: warning: implicit declaration of function 'getsbuf' [-Wimplicit-function-declaration]
+    getsbuf(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:158:4: warning: 'ch' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    printf("\nKEBOARD EVENT: Keyboard event is pressed %c\n", ch);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:156: undefined reference to `getsbuf'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+10:24:22 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:156:4: warning: implicit declaration of function 'getbuf' [-Wimplicit-function-declaration]
+    getbuf(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:158:4: warning: 'ch' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    printf("\nKEBOARD EVENT: Keyboard event is pressed %c\n", ch);
+    ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:156: undefined reference to `getbuf'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+10:25:14 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:156:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:156: warning: The 'gets' function is dangerous and should not be used.
+10:25:22 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+10:26:32 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:156:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:156: warning: The 'gets' function is dangerous and should not be used.
+10:27:45 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+10:28:24 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:138:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:29:31 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:138:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:31:06 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:139:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:138:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:168:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:32:34 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:147:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:140:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:138:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:171:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:34:08 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:147:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:140:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:138:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:171:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:35:08 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:147:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:140:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:138:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:136:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:169:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:243:29: warning: unused variable 'ctcClientThread' [-Wunused-variable]
+  pthread_t ctcServerThread, ctcClientThread;
+                             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:37:53 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+10:41:02 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:157:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c:153:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:186:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:261:29: warning: unused variable 'ctcClientThread' [-Wunused-variable]
+  pthread_t ctcServerThread, ctcClientThread;
+                             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:42:04 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:157:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:189:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:183:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:44:19 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:171:11: error: expected expression before '=' token
+    if(ch!=='\0'){
+           ^
+src/CentralTrafficController.c:157:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:192:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:186:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+10:44:26 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:157:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:192:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:186:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:44:55 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:157:14: warning: unused variable 'cd' [-Wunused-variable]
+  SensorData *cd = (SensorData*)data;
+              ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:192:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:186:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:45:57 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:175:4: warning: implicit declaration of function 'pthread_mutext_unlock' [-Wimplicit-function-declaration]
+    pthread_mutext_unlock(&cd->mutex);
+    ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:194:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:188:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:175: undefined reference to `pthread_mutext_unlock'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+10:46:10 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:164:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:155:7: warning: unused variable 'buf' [-Wunused-variable]
+  char buf[COMMAND_SIZE] = {};
+       ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:194:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:188:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+10:59:34 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:167:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:173:24: error: 'cd' undeclared (first use in this function)
+    pthread_mutex_lock(&cd->mutex);
+                        ^
+src/CentralTrafficController.c:173:24: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:200:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:283:2: warning: implicit declaration of function 'InstructionCommandInit' [-Wimplicit-function-declaration]
+  InstructionCommandInit(&cmd, hostname, 0x03, 0x00);
+  ^
+src/CentralTrafficController.c:285:50: error: 'scmd' undeclared (first use in this function)
+  pthread_create(&ctcClientThread, NULL, client, &scmd);
+                                                  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+10:59:41 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:167:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c:173:24: error: 'cd' undeclared (first use in this function)
+    pthread_mutex_lock(&cd->mutex);
+                        ^
+src/CentralTrafficController.c:173:24: note: each undeclared identifier is reported only once for each function it appears in
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:200:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:283:2: warning: implicit declaration of function 'InstructionCommandInit' [-Wimplicit-function-declaration]
+  InstructionCommandInit(&cmd, hostname, 0x03, 0x00);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+11:00:45 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:167:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:200:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'main':
+src/CentralTrafficController.c:283:2: warning: implicit declaration of function 'InstructionCommandInit' [-Wimplicit-function-declaration]
+  InstructionCommandInit(&cmd, hostname, 0x03, 0x00);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:283: undefined reference to `InstructionCommandInit'
+Makefile:60: recipe for target 'build/x86_64-debug/CentralTrafficController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/CentralTrafficController] Error 1
+11:01:10 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:167:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:200:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+11:02:35 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:167:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:200:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+11:10:34 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:172:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:205:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+11:13:51 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'pulseStateMachine':
+src/TrainController.c:99:70: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'clientId'
+  printf("----> CTC Received a pulse from ClientID(%d)\n", instruction.clientId);
+                                                                      ^
+src/TrainController.c:100:64: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'header'
+  printf("----> Received Message Header Code: %d\n", instruction.header.code);
+                                                                ^
+src/TrainController.c:101:20: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'header'
+  switch(instruction.header.code){
+                    ^
+src/TrainController.c:107:29: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'header'
+    ConnectDetach(instruction.header.serverConnectionId); // pass serverConnectionId to detach
+                             ^
+src/TrainController.c:108:86: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'clientId'
+    printf("Detaching: Server is requested to detach from ClientId(%d)\n", instruction.clientId);
+                                                                                      ^
+src/TrainController.c:110:98: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'clientId'
+    printf("Rejected: Server is requested to detach from ClientId(%d) but rejected\n", instruction.clientId);
+                                                                                                  ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:159:22: error: incompatible type for argument 1 of 'pulseStateMachine'
+    pulseStateMachine(ic->instruction, stayAlive, messageNum);
+                      ^
+src/TrainController.c:98:6: note: expected 'InstructionCommand {aka struct <anonymous>}' but argument is of type 'InstructionData {aka struct <anonymous>}'
+ void pulseStateMachine(InstructionCommand instruction, int stayAlive, int messageNum){
+      ^
+src/TrainController.c:182:21: error: 'InstructionData {aka struct <anonymous>}' has no member named 'clientId'
+      ic->instruction.clientId, ic->instruction.data);
+                     ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+src/TrainController.c: In function 'main':
+src/TrainController.c:214:2: warning: implicit declaration of function 'SensorDataInit' [-Wimplicit-function-declaration]
+  SensorDataInit(&sensor, hostname, 0x03, 0x00);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+11:14:04 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'pulseStateMachine':
+src/TrainController.c:99:70: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'clientId'
+  printf("----> CTC Received a pulse from ClientID(%d)\n", instruction.clientId);
+                                                                      ^
+src/TrainController.c:100:64: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'header'
+  printf("----> Received Message Header Code: %d\n", instruction.header.code);
+                                                                ^
+src/TrainController.c:101:20: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'header'
+  switch(instruction.header.code){
+                    ^
+src/TrainController.c:107:29: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'header'
+    ConnectDetach(instruction.header.serverConnectionId); // pass serverConnectionId to detach
+                             ^
+src/TrainController.c:108:86: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'clientId'
+    printf("Detaching: Server is requested to detach from ClientId(%d)\n", instruction.clientId);
+                                                                                      ^
+src/TrainController.c:110:98: error: 'InstructionCommand {aka struct <anonymous>}' has no member named 'clientId'
+    printf("Rejected: Server is requested to detach from ClientId(%d) but rejected\n", instruction.clientId);
+                                                                                                  ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:159:22: error: incompatible type for argument 1 of 'pulseStateMachine'
+    pulseStateMachine(ic->instruction, stayAlive, messageNum);
+                      ^
+src/TrainController.c:98:6: note: expected 'InstructionCommand {aka struct <anonymous>}' but argument is of type 'InstructionData {aka struct <anonymous>}'
+ void pulseStateMachine(InstructionCommand instruction, int stayAlive, int messageNum){
+      ^
+src/TrainController.c: In function 'main':
+src/TrainController.c:214:2: warning: implicit declaration of function 'SensorDataInit' [-Wimplicit-function-declaration]
+  SensorDataInit(&sensor, hostname, 0x03, 0x00);
+  ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+11:14:33 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c: In function 'main':
+src/TrainController.c:214:2: warning: implicit declaration of function 'SensorDataInit' [-Wimplicit-function-declaration]
+  SensorDataInit(&sensor, hostname, 0x03, 0x00);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+build/x86_64-debug/src/TrainController.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrainController//src/TrainController.c:214: undefined reference to `SensorDataInit'
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrainController] Error 1
+Makefile:60: recipe for target 'build/x86_64-debug/TrainController' failed
+11:14:53 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c: In function 'main':
+src/TrainController.c:214:2: warning: implicit declaration of function 'InstructionDataInit' [-Wimplicit-function-declaration]
+  InstructionDataInit(&sensor, hostname, 0x33, 0x00);
+  ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+build/x86_64-debug/src/TrainController.o: In function `main':
+/Users/adityaaaap/ide-7.0-workspace/TrainController//src/TrainController.c:214: undefined reference to `InstructionDataInit'
+Makefile:60: recipe for target 'build/x86_64-debug/TrainController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrainController] Error 1
+11:15:17 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c: In function 'main':
+src/TrainController.c:214:25: warning: passing argument 1 of 'InstructionCommandInit' from incompatible pointer type [-Wincompatible-pointer-types]
+  InstructionCommandInit(&sensor, hostname, 0x33, 0x00);
+                         ^
+src/TrainController.c:89:6: note: expected 'InstructionCommand * {aka struct <anonymous> *}' but argument is of type 'SensorData * {aka struct <anonymous> *}'
+ void InstructionCommandInit(InstructionCommand *ic, char *hostname,_Uint16t type, _Uint16t subtype){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+11:15:53 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+11:16:47 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.

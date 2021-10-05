@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.qnx.tools.ide.qde.ui.QDELaunch">
 <booleanAttribute key="auto_pick_program" value="false"/>
-<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="192.168.1.118"/>
+<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="192.168.1.93"/>
 <booleanAttribute key="defaults_pending" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="build/armv7le-debug/TestFix"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="TestFix"/>

@@ -1,6 +1,6 @@
-21:33:19 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+11:15:53 **** Incremental Build of configuration x86_64-debug for project TrainController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
 
-21:33:19 Build Finished (took 93ms)
+11:15:53 Build Finished (took 72ms)
 

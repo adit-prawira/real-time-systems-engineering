@@ -1,4 +1,4 @@
-		#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
@@ -10,11 +10,13 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #include <stdbool.h>
+#include <time.h>
 
 #define COLOR_CODE_SIZE 2
 #define ATTACH_POINT_CTC "CTC"
 #define ATTACH_POINT_TC "/net/TC/dev/name/local/TC"
 #define BUF_SIZE 100
+#define COMMAND_SIZE 2
 
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
@@ -51,12 +53,7 @@ typedef struct {
 	msg_header_t header;
 	TrafficLightSettings trafficLight;
 }MessageData;
-typedef struct{
-	msg_header_t header;
-	int clientId;
-	volatile char data;
-	int instructionReady;
-}InstructionCommand;
+
 typedef struct {
 	msg_header_t header;
 	char buf[BUF_SIZE];
@@ -66,7 +63,6 @@ typedef struct {
 typedef struct {
 	MessageData message;
 	ReplyData reply;
-	InstructionCommand instruction;
 	pthread_mutex_t mutex;
 	pthread_cond_t condVar;
 	name_attach_t *attach;
@@ -74,23 +70,61 @@ typedef struct {
 	int dataIsReady;
 }SensorData;
 
+typedef struct {
+	msg_header_t header;
+	volatile char data;
+	int id;
 
-int keyboardEventListener() {
-    static const int STDIN = 0;
-    static bool initialized = false;
+} InstructionData;
 
-    if (!initialized) {
-        // Use termios to turn off line buffering
-        struct termios term;
-        tcgetattr(STDIN, &term);
-        term.c_lflag &= ~ICANON; // apply bitwise compliment operator on Canonical input mode => not this will enable line editing mode in console
-        tcsetattr(STDIN, TCSANOW, &term); // check if change is made immediately
-        setbuf(stdin, NULL);
-        initialized = true;
-    }
-    int bytesWaiting;
-    ioctl(STDIN, FIONREAD, &bytesWaiting); // apply command to get numbber of bytes to read
-    return bytesWaiting;
+typedef struct{
+	InstructionData instruction;
+	ReplyData reply;
+	pthread_mutex_t mutex;
+	pthread_cond_t condVar;
+	name_attach_t *attach;
+	char sourceName[BUF_SIZE];
+	int dataIsReady;
+}InstructionCommand;
+
+void SensorDataInit(SensorData *sensor, char *hostname,_Uint16t type, _Uint16t subtype){
+	sensor->reply.header.type = type;
+	sensor->reply.header.subtype = subtype;
+	strcpy(sensor->reply.replySourceName, hostname);
+	pthread_mutex_init(&sensor->mutex, NULL);
+	pthread_cond_init(&sensor->condVar, NULL);
+	sensor->dataIsReady = 0;
+}
+
+void InstructionCommandInit(InstructionCommand *ic,char *hostname, _Uint16t type, _Uint16t subtype){
+	time_t secondsFromEpoch = time(NULL);
+	srand(secondsFromEpoch);
+	int clientId = rand();
+	ic->instruction.header.type = type;
+	ic->instruction.header.subtype = subtype;
+	ic->instruction.id = clientId;
+	strcpy(ic->sourceName, hostname);
+	pthread_mutex_init(&ic->mutex, NULL);
+	pthread_cond_init(&ic->condVar, NULL);
+}
+
+int _keyboardEventListener() {
+	static const int STDIN = 0;
+	static bool initialized = false;
+
+	if (! initialized) {
+		// Use termios to turn off line buffering
+		struct termios term;
+		tcgetattr(STDIN, &term);
+		term.c_lflag &= ~ICANON; // apply bitwise compliment operator on Canonical input mode => not this will enable line editing mode in console
+		tcsetattr(STDIN, TCSANOW, &term);// check if change is made immediately
+		setbuf(stdin, NULL);
+		initialized = true;
+	}
+
+	int bytesWaiting;
+	ioctl(STDIN, FIONREAD, &bytesWaiting);// apply command to get numbber of bytes to read
+	return bytesWaiting;
 }
 
 void pulseStateMachine(MessageData message, int stayAlive, int messageNum){
@@ -123,18 +157,12 @@ void pulseStateMachine(MessageData message, int stayAlive, int messageNum){
 		break;
 	}
 }
-void SensorDataInit(SensorData *sensor, char *hostname,_Uint16t type, _Uint16t subtype){
-	sensor->reply.header.type = type;
-	sensor->reply.header.subtype = subtype;
-	strcpy(sensor->reply.replySourceName, hostname);
-	pthread_mutex_init(&sensor->mutex, NULL);
-	pthread_cond_init(&sensor->condVar, NULL);
-	sensor->dataIsReady = 0;
-}
+
+
 void *client(void *data){
 	int ch;
 	int serverConnectionId = 0;
-	SensorData *cd = (SensorData*)data;
+	InstructionCommand *cmd = (InstructionCommand*)data;
 	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_TC);
 	serverConnectionId = name_open(ATTACH_POINT_TC, 0);
 	printf("Returned Connection ID: %d\n", serverConnectionId);
@@ -145,28 +173,19 @@ void *client(void *data){
 	}
 	printf("SUCCESS: Connected to the server %s\n", ATTACH_POINT_TC);
 	printf("THREAD STARTING: Keyboard Event thread starting...\n");
-	while(true){
-		if(keyboardEventListener()){
-			pthread_mutex_lock(&cd->mutex);
-			while(!cd->instruction.instructionReady){
-				pthread_cond_wait(&cd->condVar, &cd->mutex);
-			}
+	while(serverConnectionId){
+		if(_keyboardEventListener()){
+			pthread_mutex_lock(&cmd->mutex);
+//			while(!cmd->dataIsReady){
+//				pthread_cond_wait(&cmd->condVar, &cmd->mutex);
+//			}
 			ch = getchar();
-			cd->instruction.data = ch;
-			printf("\nKEBOARD EVENT: Keyboard event is pressed %c\n", ch);
-			cd->instruction.instructionReady = 1;
-			printf("SENDING: ClientID(%d) sending value of %c with %d bytes of memory size\n",
-							cd->instruction.clientId, cd->instruction.data, sizeof(cd->instruction));
-			if(MsgSend(serverConnectionId, &cd->instruction, sizeof(cd->instruction),
-					&cd->reply, sizeof(cd->reply))){
-				printf("ERROR: Message of size %d bytes and value of %c is failed to be sent\n",
-									sizeof(cd->instruction), cd->instruction.data);
-				break;
-			}else{
-				printf("----> RECEIVED REPLY: %s\n", cd->reply.buf);
+			if(ch!='\0' && ch!='\n'){
+				printf("Keyboard Event detected: %c\n", ch);
 			}
-			pthread_cond_signal(&cd->condVar);
-			pthread_mutex_unlock(&cd->mutex);
+
+			pthread_mutex_unlock(&cmd->mutex);
+
 		}
 	}
 	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
@@ -178,7 +197,6 @@ void *server(void *data){
 	SensorData *sd = (SensorData*)data;
 	int receiveId = 0, isLiving = 0;
 	int messageNum = 0, stayAlive = 0;
-
 	// creating a global name which is located in /dev/<hostname>/local/<ATTACH_POINT_CTC>
 	if((sd->attach = name_attach(NULL, ATTACH_POINT_CTC, 0)) == NULL){
 		// if name is not attached successfully exit the program early
@@ -256,6 +274,8 @@ int main(int argc, char *argv[]){
 	printf("SensorData = %d bytes\n", sizeof(SensorData));
 
 	SensorData sensor;
+	InstructionCommand cmd;
+
 	pthread_t ctcServerThread, ctcClientThread;
 
 	char hostname[100];
@@ -265,8 +285,9 @@ int main(int argc, char *argv[]){
 
 	printf("STARTING: %s is Running...\n", hostname);
 	SensorDataInit(&sensor, hostname, 0x01, 0x00);
+	InstructionCommandInit(&cmd, hostname, 0x03, 0x00);
 	pthread_create(&ctcServerThread, NULL, server, &sensor);
-	pthread_create(&ctcClientThread, NULL, client, &sensor);
+	pthread_create(&ctcClientThread, NULL, client, &cmd);
 	pthread_join(ctcServerThread, NULL);
 	pthread_join(ctcClientThread, NULL);
 	printf("TERMINATING: %s is Terminating...\n", hostname);
