@@ -127,6 +127,7 @@ int _keyboardEventListener() {
 	return bytesWaiting;
 }
 
+// Standard Pulse State Machine Handler
 void pulseStateMachine(MessageData message, int stayAlive, int messageNum){
 	printf("----> CTC Received a pulse from ClientID(%d)\n", message.trafficLight.id);
 	printf("----> Received Message Header Code: %d\n", message.header.code);
@@ -167,14 +168,19 @@ void *client(void *data){
 	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_TC);
 	serverConnectionId = name_open(ATTACH_POINT_TC, 0);
 	printf("Returned Connection ID: %d\n", serverConnectionId);
-	if(serverConnectionId == -1){
+	while(serverConnectionId == -1){
 		// Logs error and exit the program early if it is connection is failed to be performed
 		printf("ERROR: Unable to connect to the server with the given name of %s\n", ATTACH_POINT_TC);
-		return EXIT_FAILURE;
+		printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_TC);
+		serverConnectionId = name_open(ATTACH_POINT_TC, 0);
+		if(serverConnectionId != -1){
+			break;
+		}
+		sleep(2);
 	}
 	printf("SUCCESS: Connected to the server %s\n", ATTACH_POINT_TC);
 	printf("THREAD STARTING: Keyboard Event thread starting...\n");
-	while(true){
+	while(serverConnectionId){
 
 		if(_keyboardEventListener()){
 			pthread_mutex_lock(&ic->mutex);
@@ -204,6 +210,7 @@ void *client(void *data){
 		pthread_cond_signal(&ic->condVar);
 		pthread_mutex_unlock(&ic->mutex);
 	}
+
 	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
 	name_close(serverConnectionId);
 	printf("THREAD TERMINATING: Keyboard Event thread terminating...\n");
