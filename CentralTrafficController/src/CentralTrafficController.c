@@ -162,7 +162,8 @@ void pulseStateMachine(MessageData message, int stayAlive, int messageNum){
 void *client(void *data){
 	int ch;
 	int serverConnectionId = 0;
-	InstructionCommand *cmd = (InstructionCommand*)data;
+	int buf[COMMAND_SIZE] = {};
+	InstructionCommand *ic = (InstructionCommand*)data;
 	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_TC);
 	serverConnectionId = name_open(ATTACH_POINT_TC, 0);
 	printf("Returned Connection ID: %d\n", serverConnectionId);
@@ -173,20 +174,35 @@ void *client(void *data){
 	}
 	printf("SUCCESS: Connected to the server %s\n", ATTACH_POINT_TC);
 	printf("THREAD STARTING: Keyboard Event thread starting...\n");
-	while(serverConnectionId){
+	while(true){
+
 		if(_keyboardEventListener()){
-			pthread_mutex_lock(&cmd->mutex);
-//			while(!cmd->dataIsReady){
-//				pthread_cond_wait(&cmd->condVar, &cmd->mutex);
-//			}
-			ch = getchar();
+			pthread_mutex_lock(&ic->mutex);
+			gets(buf);
+			ch = buf[0];
 			if(ch!='\0' && ch!='\n'){
-				printf("Keyboard Event detected: %c\n", ch);
+				ic->instruction.data = ch;
+				printf("Keyboard Event detected: %c\n", ic->instruction.data);
+				ic->dataIsReady = 1;
 			}
-
-			pthread_mutex_unlock(&cmd->mutex);
-
+			while(!ic->dataIsReady){
+				pthread_cond_wait(&ic->condVar, &ic->mutex);
+			}
+			printf("SENDING: ClientID(%d) sending command key of '%c' with %d bytes of memory size\n",
+							ic->instruction.id, ic->instruction.data, sizeof(ic->instruction));
+			// Send Messages and receive reply from TC
+			if(MsgSend(serverConnectionId, &ic->instruction, sizeof(ic->instruction),
+					&ic->reply, sizeof(ic->reply)) == -1){
+				printf("ERROR: Instruction of size %d bytes is failed to be sent\n",
+						sizeof(ic->instruction));
+				break;
+			}else{
+				printf("----> RECEIVED REPLY: %s\n", ic->reply.buf);
+			}
 		}
+
+		pthread_cond_signal(&ic->condVar);
+		pthread_mutex_unlock(&ic->mutex);
 	}
 	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
 	name_close(serverConnectionId);
@@ -248,7 +264,7 @@ void *server(void *data){
 			}
 
 			sprintf(sd->reply.buf, "Message number %d received", messageNum);
-			printf("RECEIVED CONFIG From %s(ClientID:%d):\n----> %s\n",
+			printf("CTC RECEIVED CONFIG From %s(ClientID:%d):\n----> %s\n",
 					sd->message.trafficLight.name, sd->message.trafficLight.id, sd->message.trafficLight.message);
 			printf("----> REPLYING: '%s'\n",sd->reply.buf);
 			MsgReply(receiveId, EOK, &sd->reply, sizeof(sd->reply)); // Send reply to clients (L1, and L2)

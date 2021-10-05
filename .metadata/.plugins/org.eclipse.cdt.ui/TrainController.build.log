@@ -1,6 +1,11 @@
-11:15:53 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+02:20:54 **** Incremental Build of configuration x86_64-debug for project TrainController ****
 make -j3 all 
-make: Nothing to be done for 'all'.
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
 
-11:15:53 Build Finished (took 72ms)
+02:20:55 Build Finished (took 447ms)
 

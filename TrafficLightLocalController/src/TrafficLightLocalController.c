@@ -163,7 +163,7 @@ void *client(void *data){
 		printf("SENDING: ClientID(%d) sending value of state %d with %d bytes of memory size\n",
 				cd->message.trafficLight.id, cd->currentState, sizeof(cd->message));
 		if(MsgSend(serverConnectionId, &cd->message, sizeof(cd->message),
-				&cd->reply, sizeof(cd->reply))){
+				&cd->reply, sizeof(cd->reply))==-1){
 			printf("ERROR: Message of size %d bytes and value of %d is failed to be sent\n",
 					sizeof(cd->message), cd->currentState);
 			break;
