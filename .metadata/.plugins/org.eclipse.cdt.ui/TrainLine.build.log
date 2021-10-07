@@ -1,0 +1,7 @@
+22:19:35 **** Build of configuration armv7le-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrainLine.d,-MT,build/armv7le-debug/src/TrainLine.o -o build/armv7le-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrainLine   build/armv7le-debug/src/TrainLine.o  
+
+22:19:35 Build Finished (took 348ms)
+

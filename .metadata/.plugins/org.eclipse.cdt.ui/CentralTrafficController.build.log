@@ -1,6 +1,17 @@
-02:45:31 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+22:35:01 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
 make -j3 all 
-make: Nothing to be done for 'all'.
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:187:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:229:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:187: warning: The 'gets' function is dangerous and should not be used.
 
-02:45:31 Build Finished (took 88ms)
+22:35:02 Build Finished (took 394ms)
 

@@ -17,6 +17,7 @@
 #define ATTACH_POINT_TC "/net/TC/dev/name/local/TC"
 #define BUF_SIZE 100
 #define COMMAND_SIZE 2
+#define RECONNECT_INTERVAL 2
 
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
@@ -74,7 +75,7 @@ typedef struct {
 	msg_header_t header;
 	volatile char data;
 	int id;
-
+	char sourceName[BUF_SIZE];
 } InstructionData;
 
 typedef struct{
@@ -83,11 +84,11 @@ typedef struct{
 	pthread_mutex_t mutex;
 	pthread_cond_t condVar;
 	name_attach_t *attach;
-	char sourceName[BUF_SIZE];
 	int dataIsReady;
 }InstructionCommand;
 
-void SensorDataInit(SensorData *sensor, char *hostname,_Uint16t type, _Uint16t subtype){
+void SensorDataInit(SensorData *sensor, char *hostname,
+		_Uint16t type, _Uint16t subtype){
 	sensor->reply.header.type = type;
 	sensor->reply.header.subtype = subtype;
 	strcpy(sensor->reply.replySourceName, hostname);
@@ -96,14 +97,12 @@ void SensorDataInit(SensorData *sensor, char *hostname,_Uint16t type, _Uint16t s
 	sensor->dataIsReady = 0;
 }
 
-void InstructionCommandInit(InstructionCommand *ic,char *hostname, _Uint16t type, _Uint16t subtype){
-	time_t secondsFromEpoch = time(NULL);
-	srand(secondsFromEpoch);
-	int clientId = rand();
+void InstructionCommandInit(InstructionCommand *ic,int clientId, char *hostname,
+		_Uint16t type, _Uint16t subtype){
 	ic->instruction.header.type = type;
 	ic->instruction.header.subtype = subtype;
 	ic->instruction.id = clientId;
-	strcpy(ic->sourceName, hostname);
+	strcpy(ic->instruction.sourceName, hostname);
 	pthread_mutex_init(&ic->mutex, NULL);
 	pthread_cond_init(&ic->condVar, NULL);
 }
@@ -111,8 +110,7 @@ void InstructionCommandInit(InstructionCommand *ic,char *hostname, _Uint16t type
 int _keyboardEventListener() {
 	static const int STDIN = 0;
 	static bool initialized = false;
-
-	if (! initialized) {
+	if (!initialized) {
 		// Use termios to turn off line buffering
 		struct termios term;
 		tcgetattr(STDIN, &term);
@@ -121,7 +119,6 @@ int _keyboardEventListener() {
 		setbuf(stdin, NULL);
 		initialized = true;
 	}
-
 	int bytesWaiting;
 	ioctl(STDIN, FIONREAD, &bytesWaiting);// apply command to get numbber of bytes to read
 	return bytesWaiting;
@@ -168,6 +165,10 @@ void *client(void *data){
 	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_TC);
 	serverConnectionId = name_open(ATTACH_POINT_TC, 0);
 	printf("Returned Connection ID: %d\n", serverConnectionId);
+
+	// When TC is not started yet, it will attempt to find connection with it, until
+	// TC is activated without interrupting the other process which is to listen to
+	// any changes made by traffic light
 	while(serverConnectionId == -1){
 		// Logs error and exit the program early if it is connection is failed to be performed
 		printf("ERROR: Unable to connect to the server with the given name of %s\n", ATTACH_POINT_TC);
@@ -176,12 +177,11 @@ void *client(void *data){
 		if(serverConnectionId != -1){
 			break;
 		}
-		sleep(2);
+		sleep(RECONNECT_INTERVAL); // attempting
 	}
 	printf("SUCCESS: Connected to the server %s\n", ATTACH_POINT_TC);
-	printf("THREAD STARTING: Keyboard Event thread starting...\n");
+	printf("THREAD STARTING: Keyboard Event thread starting...\n"); // Logs out that the connection has been made and confirmed
 	while(serverConnectionId){
-
 		if(_keyboardEventListener()){
 			pthread_mutex_lock(&ic->mutex);
 			gets(buf);
@@ -189,11 +189,13 @@ void *client(void *data){
 			if(ch!='\0' && ch!='\n'){
 				ic->instruction.data = ch;
 				printf("Keyboard Event detected: %c\n", ic->instruction.data);
-				ic->dataIsReady = 1;
+				ic->dataIsReady = 1; // flasg that data is ready
 			}
+			// Awaiting for data to be consumed by TC
 			while(!ic->dataIsReady){
 				pthread_cond_wait(&ic->condVar, &ic->mutex);
 			}
+
 			printf("SENDING: ClientID(%d) sending command key of '%c' with %d bytes of memory size\n",
 							ic->instruction.id, ic->instruction.data, sizeof(ic->instruction));
 			// Send Messages and receive reply from TC
@@ -203,19 +205,18 @@ void *client(void *data){
 						sizeof(ic->instruction));
 				break;
 			}else{
-				printf("----> RECEIVED REPLY: %s\n", ic->reply.buf);
+				printf("----> RECEIVED REPLY from %s: %s\n",ic->reply.replySourceName, ic->reply.buf);
 			}
+			pthread_cond_signal(&ic->condVar); // signal TC that is ready to be consumed
+			pthread_mutex_unlock(&ic->mutex);
 		}
-
-		pthread_cond_signal(&ic->condVar);
-		pthread_mutex_unlock(&ic->mutex);
 	}
-
 	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
 	name_close(serverConnectionId);
 	printf("THREAD TERMINATING: Keyboard Event thread terminating...\n");
 	return 0;
 }
+
 void *server(void *data){
 	SensorData *sd = (SensorData*)data;
 	int receiveId = 0, isLiving = 0;
@@ -273,7 +274,7 @@ void *server(void *data){
 			sprintf(sd->reply.buf, "Message number %d received", messageNum);
 			printf("CTC RECEIVED CONFIG From %s(ClientID:%d):\n----> %s\n",
 					sd->message.trafficLight.name, sd->message.trafficLight.id, sd->message.trafficLight.message);
-			printf("----> REPLYING: '%s'\n",sd->reply.buf);
+			printf("----> REPLYING to %s: '%s'\n", sd->message.trafficLight.name, sd->reply.buf);
 			MsgReply(receiveId, EOK, &sd->reply, sizeof(sd->reply)); // Send reply to clients (L1, and L2)
 			sd->dataIsReady = 0;
 			pthread_cond_signal(&sd->condVar);
@@ -295,24 +296,31 @@ int main(int argc, char *argv[]){
 	printf("MessageData = %d bytes\n", sizeof(MessageData));
 	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
 	printf("SensorData = %d bytes\n", sizeof(SensorData));
+	printf("InstructionCommand = %d bytes\n", sizeof(InstructionCommand));
 
 	SensorData sensor;
 	InstructionCommand cmd;
-
 	pthread_t ctcServerThread, ctcClientThread;
 
 	char hostname[100];
+	time_t secondsFromEpoch = time(NULL);
+	srand(secondsFromEpoch);
+	int clientId = rand();
 	memset(hostname, '\0', 100);
 	hostname[99] = '\n';
 	gethostname(hostname, sizeof(hostname));
 
 	printf("STARTING: %s is Running...\n", hostname);
+
 	SensorDataInit(&sensor, hostname, 0x01, 0x00);
-	InstructionCommandInit(&cmd, hostname, 0x03, 0x00);
+	InstructionCommandInit(&cmd, clientId, hostname, 0x03, 0x00);
+
 	pthread_create(&ctcServerThread, NULL, server, &sensor);
 	pthread_create(&ctcClientThread, NULL, client, &cmd);
+
 	pthread_join(ctcServerThread, NULL);
 	pthread_join(ctcClientThread, NULL);
+
 	printf("TERMINATING: %s is Terminating...\n", hostname);
 
 	return EXIT_SUCCESS;

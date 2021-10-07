@@ -13,10 +13,11 @@
 #include <time.h>
 
 #define COLOR_CODE_SIZE 2
-#define ATTACH_POINT_TC "TC"
 #define BUF_SIZE 100
 #define COMMAND_SIZE 2
 
+#define ATTACH_POINT_TC "TC"
+#define ATTACH_POINT_X1 "/net/X1/dev/name/local/X1"
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -73,7 +74,7 @@ typedef struct {
 	msg_header_t header;
 	volatile char data;
 	int id;
-
+	char sourceName[BUF_SIZE];
 } InstructionData;
 
 typedef struct{
@@ -82,7 +83,6 @@ typedef struct{
 	pthread_mutex_t mutex;
 	pthread_cond_t condVar;
 	name_attach_t *attach;
-	char sourceName[BUF_SIZE];
 	int dataIsReady;
 }InstructionCommand;
 
@@ -141,26 +141,25 @@ void *server(void *data){
 	printf("THREAD STARTING: %s server thread is starting...\n", ATTACH_POINT_TC);
 	printf("TC Listening for CTC ATTACH_POINT_TC: %s\n", ATTACH_POINT_TC);
 
-	pthread_mutex_lock(&ic->mutex);
 	isLiving = 1;
 	while(isLiving){
+		pthread_mutex_lock(&ic->mutex);
+		// Awaiting for data provided by CTC to be ready
 		while(ic->dataIsReady){
 			pthread_cond_wait(&ic->condVar, &ic->mutex);
 		}
+		// receive data from CTC
 		receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
-
 		if(receiveId == -1){
 			// break the loop early if there is no received message Id returned from MsgReceive
 			printf("ERROR: Failed to receive message from MsgReceive\n");
 			break;
 		}
-
 		if(receiveId == 0){
 			pulseStateMachine(ic->instruction, stayAlive, messageNum);
 		}
 		if(receiveId > 0){
 			messageNum++;
-
 			if(ic->instruction.header.type == _IO_CONNECT){
 				// The case when client sending message that GNS service is running/succesfully connected
 				MsgReply(receiveId, EOK, NULL, 0); // reply with EOK (a constant that means no error)
@@ -169,27 +168,26 @@ void *server(void *data){
 				messageNum--; // reduce number of messages because it has been replied
 				continue; // go back to the start if the loop
 			}
-
 			// receiving some other IO => reject it
 			if(ic->instruction.header.type > _IO_BASE && ic->instruction.header.type <= _IO_MAX){
 				MsgError(receiveId, ENOSYS); // Send error of Function isn't implemented (ENOSYS)
-				printf("ERROR: CTC received other IO messages and reject it\n");
+				printf("ERROR: TC received other IO messages and reject it\n");
 				continue;
 			}
-
 			sprintf(ic->reply.buf, "Message number %d received", messageNum);
-			printf("TC RECEIVED KEY COMMAND FROM (ClientID:%d) with value of %c\n",
+			printf("TC RECEIVED KEY COMMAND FROM %s(ClientID:%d) with value of %c\n", ic->instruction.sourceName,
 					ic->instruction.id, ic->instruction.data);
-			printf("----> REPLYING: '%s'\n",ic->reply.buf);
+			printf("----> REPLYING to %s: '%s'\n", ic->instruction.sourceName, ic->reply.buf);
 			MsgReply(receiveId, EOK, &ic->reply, sizeof(ic->reply)); // Send reply to clients (L1, and L2)
-			ic->dataIsReady = 0;
-			pthread_cond_signal(&ic->condVar);
+			ic->dataIsReady = 0; // flags that data has been consumed
+			pthread_cond_signal(&ic->condVar); // send signal to CTC
 		}else{
-			printf("ERROR: CTC received unrecognized entity, but unable to handle it properly\n");
+			printf("ERROR: TC received unrecognized entity, but unable to handle it properly\n");
 		}
+		pthread_mutex_unlock(&ic->mutex);
 	}
+
 	name_detach(ic->attach, 0);
-	pthread_mutex_unlock(&ic->mutex);
 	printf("THREAD TERMINATING: %s server is terminating...\n", ATTACH_POINT_TC);
 	return 0;
 }
@@ -201,6 +199,7 @@ int main(void) {
 	printf("MessageData = %d bytes\n", sizeof(MessageData));
 	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
 	printf("SensorData = %d bytes\n", sizeof(SensorData));
+	printf("InstructionCommand = %d bytes\n", sizeof(InstructionCommand));
 
 	InstructionCommand command;
 	pthread_t tcServerThread;
@@ -209,7 +208,7 @@ int main(void) {
 	memset(hostname, '\0', 100);
 	hostname[99] = '\n';
 	gethostname(hostname, sizeof(hostname));
-
+	printf("huh %s\n", hostname);
 	printf("STARTING: %s is Running...\n", hostname);
 	InstructionCommandInit(&command, hostname, 0x33, 0x00);
 	pthread_create(&tcServerThread, NULL, server, &command);

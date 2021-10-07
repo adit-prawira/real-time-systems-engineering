@@ -168,7 +168,7 @@ void *client(void *data){
 					sizeof(cd->message), cd->currentState);
 			break;
 		}else{
-			printf("----> RECEIVED REPLY: %s\n", cd->reply.buf);
+			printf("----> RECEIVED REPLY from %s: %s\n", cd->reply.replySourceName, cd->reply.buf);
 		}
 		sleep(cd->message.trafficLight.waitTime);
 		pthread_cond_signal(&cd->condVar);
