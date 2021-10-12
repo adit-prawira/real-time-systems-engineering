@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="dataIsReady" key="selection"/>
+		<item value="X1" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="X1"/>
+			<item value="index"/>
+			<item value="temp"/>
+			<item value="tempName"/>
+			<item value="ic-&gt;sourceName"/>
+			<item value="instruction.sourceName"/>
+			<item value="sourceName"/>
 			<item value="dataIsReady"/>
-			<item value="clientId"/>
-			<item value="init"/>
-			<item value="ATTACH_POINT"/>
-			<item value="In"/>
-			<item value="InstructionCommand"/>
-			<item value="InstructionData"/>
-			<item value="serverThread"/>
 		</list>
 		<list key="replacehistory">
+			<item value="originalReplyName"/>
 			<item value="SensorData"/>
 			<item value="InstructionCommand"/>
 			<item value="ctcServerThread"/>
@@ -25,7 +26,6 @@
 			<item value="keyboardEventListener"/>
 			<item value="reply.replyMessageString"/>
 			<item value="ATTACH_POINT"/>
-			<item value="_CustomSignalValue"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -15,9 +15,10 @@
 #define COLOR_CODE_SIZE 2
 #define BUF_SIZE 100
 #define COMMAND_SIZE 2
-
+#define RECONNECT_INTERVAL 2
 #define ATTACH_POINT_TC "TC"
 #define ATTACH_POINT_X1 "/net/X1/dev/name/local/X1"
+
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -86,6 +87,7 @@ typedef struct{
 	int dataIsReady;
 }InstructionCommand;
 
+// Initialize instruction data as a reply to CTC
 void InstructionCommandInit(InstructionCommand *ic, char *hostname,_Uint16t type, _Uint16t subtype){
 	ic->reply.header.type = type;
 	ic->reply.header.subtype = subtype;
@@ -95,6 +97,7 @@ void InstructionCommandInit(InstructionCommand *ic, char *hostname,_Uint16t type
 	ic->dataIsReady = 0;
 };
 
+// GENERIC PULSE STATE MACHINE
 void pulseStateMachine(InstructionData instruction, int stayAlive, int messageNum){
 	printf("----> CTC Received a pulse from ClientID(%d)\n", instruction.id);
 	printf("----> Received Message Header Code: %d\n", instruction.header.code);
@@ -126,64 +129,105 @@ void pulseStateMachine(InstructionData instruction, int stayAlive, int messageNu
 	}
 }
 
+
 // This thread will listen to CTCT regarding the given input or key pressed from Central Controller
 // Those key press will determine changes of sequences of the traffic light system
 void *server(void *data){
 	InstructionCommand *ic = (InstructionCommand*)data;
 	int receiveId = 0, isLiving = 0;
 	int messageNum = 0, stayAlive = 0;
+	int serverConnectionId = 0;
+
 	if((ic->attach = name_attach(NULL, ATTACH_POINT_TC, 0))==NULL){
 		// if name is not attached successfully exit the program early
 		printf("ERROR: Failed to compute name_attach on ATTACH_POINT_TC: %s\n", ATTACH_POINT_TC);
 		printf("----> Another server may run the same ATTACH_POINT_TC name or GNS service has not yet started");
 		return EXIT_FAILURE;
 	}
+	// made connection to X1
+	serverConnectionId = name_open(ATTACH_POINT_X1, 0);
+	while(serverConnectionId == -1){
+		// Logs error and exit the program early if it is connection is failed to be performed
+		printf("ERROR: Unable to connect to the server with the given name of %s\n", ATTACH_POINT_X1);
+		printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_X1);
+		serverConnectionId = name_open(ATTACH_POINT_X1, 0);
+		if(serverConnectionId != -1){
+			break;
+		}
+		sleep(RECONNECT_INTERVAL); // attempting
+	}
+	printf("\nSUCCESS: Connected to the server %s\n", ATTACH_POINT_X1);
 	printf("THREAD STARTING: %s server thread is starting...\n", ATTACH_POINT_TC);
 	printf("TC Listening for CTC ATTACH_POINT_TC: %s\n", ATTACH_POINT_TC);
 
 	isLiving = 1;
 	while(isLiving){
 		pthread_mutex_lock(&ic->mutex);
-		// Awaiting for data provided by CTC to be ready
-		while(ic->dataIsReady){
-			pthread_cond_wait(&ic->condVar, &ic->mutex);
-		}
-		// receive data from CTC
-		receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
-		if(receiveId == -1){
-			// break the loop early if there is no received message Id returned from MsgReceive
-			printf("ERROR: Failed to receive message from MsgReceive\n");
-			break;
-		}
-		if(receiveId == 0){
-			pulseStateMachine(ic->instruction, stayAlive, messageNum);
-		}
-		if(receiveId > 0){
-			messageNum++;
-			if(ic->instruction.header.type == _IO_CONNECT){
-				// The case when client sending message that GNS service is running/succesfully connected
-				MsgReply(receiveId, EOK, NULL, 0); // reply with EOK (a constant that means no error)
-				printf("\nClient Send Message: GNS Server is running...\n");
-				printf("\n----------> Replying with: EOK('no error')\n");
-				messageNum--; // reduce number of messages because it has been replied
-				continue; // go back to the start if the loop
+			// Awaiting for data provided by CTC to be ready
+			while(ic->dataIsReady){
+				pthread_cond_wait(&ic->condVar, &ic->mutex);
 			}
-			// receiving some other IO => reject it
-			if(ic->instruction.header.type > _IO_BASE && ic->instruction.header.type <= _IO_MAX){
-				MsgError(receiveId, ENOSYS); // Send error of Function isn't implemented (ENOSYS)
-				printf("ERROR: TC received other IO messages and reject it\n");
-				continue;
+			// receive data from CTC
+			receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
+			if(receiveId == -1){
+				// break the loop early if there is no received message Id returned from MsgReceive
+				printf("ERROR: Failed to receive message from MsgReceive\n");
+				break;
 			}
-			sprintf(ic->reply.buf, "Message number %d received", messageNum);
-			printf("TC RECEIVED KEY COMMAND FROM %s(ClientID:%d) with value of %c\n", ic->instruction.sourceName,
-					ic->instruction.id, ic->instruction.data);
-			printf("----> REPLYING to %s: '%s'\n", ic->instruction.sourceName, ic->reply.buf);
-			MsgReply(receiveId, EOK, &ic->reply, sizeof(ic->reply)); // Send reply to clients (L1, and L2)
-			ic->dataIsReady = 0; // flags that data has been consumed
-			pthread_cond_signal(&ic->condVar); // send signal to CTC
-		}else{
-			printf("ERROR: TC received unrecognized entity, but unable to handle it properly\n");
-		}
+			if(receiveId == 0){
+				pulseStateMachine(ic->instruction, stayAlive, messageNum);
+			}
+			if(receiveId > 0){
+				messageNum++;
+				if(ic->instruction.header.type == _IO_CONNECT){
+					// The case when client sending message that GNS service is running/successfully connected
+					MsgReply(receiveId, EOK, NULL, 0); // reply with EOK (a constant that means no error)
+					printf("\nClient Send Message: GNS Server is running...\n");
+					printf("\n----------> Replying with: EOK('no error')\n");
+					messageNum--; // reduce number of messages because it has been replied
+					continue; // go back to the start if the loop
+				}
+
+				// receiving some other IO => reject it
+				if(ic->instruction.header.type > _IO_BASE && ic->instruction.header.type <= _IO_MAX){
+					MsgError(receiveId, ENOSYS); // Send error of Function isn't implemented (ENOSYS)
+					printf("ERROR: TC received other IO messages and reject it\n");
+					continue;
+				}
+
+				sprintf(ic->reply.buf, "Message number %d received", messageNum);
+				printf("TC RECEIVED KEY COMMAND FROM %s(ClientID:%d) with value of %c\n", ic->instruction.sourceName,
+						ic->instruction.id, ic->instruction.data);
+				printf("----> REPLYING to %s: '%s'\n", ic->instruction.sourceName, ic->reply.buf);
+
+				MsgReply(receiveId, EOK, &ic->reply, sizeof(ic->reply)); // Send reply to clients (L1, and L2)
+
+				printf("SENDING: ClientID(%d) sending command key of '%c' with %d bytes of memory size\n",
+								ic->instruction.id, ic->instruction.data, sizeof(ic->instruction));
+				printf("Source name: %s\n", ic->instruction.sourceName);
+				printf("Reply source name: %s\n", ic->reply.replySourceName);
+
+				// Make TC as source and X1 as reply
+				strcpy(ic->instruction.sourceName, "TC");
+				// Send Messages and receive reply from TC
+				if(MsgSend(serverConnectionId, &ic->instruction, sizeof(ic->instruction),
+						&ic->reply, sizeof(ic->reply)) == -1){
+					printf("ERROR: Instruction of size %d bytes is failed to be sent\n",
+							sizeof(ic->instruction));
+					break;
+				}else{
+					printf("----> RECEIVED REPLY from %s: %s\n",ic->reply.replySourceName, ic->reply.buf);
+				}
+
+				// TODO: Make sure source names are not hard coded
+				// Reset the name back to its initial state
+//				strcpy(ic->instruction.sourceName, "CTC");
+//				strcpy(ic->reply.replySourceName, "TC");
+				ic->dataIsReady = 0; // flags that data has been consumed
+				pthread_cond_signal(&ic->condVar); // send signal to CTC
+			}else{
+				printf("ERROR: TC received unrecognized entity, but unable to handle it properly\n");
+			}
 		pthread_mutex_unlock(&ic->mutex);
 	}
 
@@ -208,7 +252,7 @@ int main(void) {
 	memset(hostname, '\0', 100);
 	hostname[99] = '\n';
 	gethostname(hostname, sizeof(hostname));
-	printf("huh %s\n", hostname);
+
 	printf("STARTING: %s is Running...\n", hostname);
 	InstructionCommandInit(&command, hostname, 0x33, 0x00);
 	pthread_create(&tcServerThread, NULL, server, &command);

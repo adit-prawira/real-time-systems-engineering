@@ -1,7 +1,15 @@
-22:19:35 **** Build of configuration armv7le-debug for project TrainLine ****
+22:21:58 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
 make -j3 all 
-qcc -Vgcc_ntoarmv7le -c -Wp,-MMD,build/armv7le-debug/src/TrainLine.d,-MT,build/armv7le-debug/src/TrainLine.o -o build/armv7le-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
-qcc -Vgcc_ntoarmv7le -o build/armv7le-debug/TrainLine   build/armv7le-debug/src/TrainLine.o  
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:197:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
 
-22:19:35 Build Finished (took 348ms)
+22:21:58 Build Finished (took 398ms)
 

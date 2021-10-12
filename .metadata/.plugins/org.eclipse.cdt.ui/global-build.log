@@ -21044,3 +21044,1502 @@ src/TrainController.c:139:10: warning: return makes pointer from integer without
    return EXIT_FAILURE;
           ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+17:56:53 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c:154:38: error: 'IO_CONNECT' undeclared (first use in this function)
+    if(ic->instruction.header.type == IO_CONNECT){
+                                      ^
+src/TrainLine.c:154:38: note: each undeclared identifier is reported only once for each function it appears in
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+src/TrainLine.c:192:12: warning: unused variable 'x1ServerThread' [-Wunused-variable]
+  pthread_t x1ServerThread;
+            ^
+src/TrainLine.c:191:21: warning: unused variable 'command' [-Wunused-variable]
+  InstructionCommand command;
+                     ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainLine.o' failed
+make: *** [build/x86_64-debug/src/TrainLine.o] Error 1
+17:57:15 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+src/TrainLine.c:192:12: warning: unused variable 'x1ServerThread' [-Wunused-variable]
+  pthread_t x1ServerThread;
+            ^
+src/TrainLine.c:191:21: warning: unused variable 'command' [-Wunused-variable]
+  InstructionCommand command;
+                     ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+18:00:33 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'client':
+src/TrainController.c:143:6: warning: unused variable 'buf' [-Wunused-variable]
+  int buf[COMMAND_SIZE] = {};
+      ^
+src/TrainController.c:141:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:246:7: error: expected expression before ')' token
+    if()
+       ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:00:45 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'client':
+src/TrainController.c:143:6: warning: unused variable 'buf' [-Wunused-variable]
+  int buf[COMMAND_SIZE] = {};
+      ^
+src/TrainController.c:141:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:03:19 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'client':
+src/TrainController.c:143:6: warning: unused variable 'buf' [-Wunused-variable]
+  int buf[COMMAND_SIZE] = {};
+      ^
+src/TrainController.c:141:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c: In function 'main':
+src/TrainController.c:287:15: error: 'tcClinetThread' undeclared (first use in this function)
+  pthread_join(tcClinetThread, NULL);
+               ^
+src/TrainController.c:287:15: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:03:36 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'client':
+src/TrainController.c:143:6: warning: unused variable 'buf' [-Wunused-variable]
+  int buf[COMMAND_SIZE] = {};
+      ^
+src/TrainController.c:141:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:05:54 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'client':
+src/TrainController.c:143:6: warning: unused variable 'buf' [-Wunused-variable]
+  int buf[COMMAND_SIZE] = {};
+      ^
+src/TrainController.c:141:6: warning: unused variable 'ch' [-Wunused-variable]
+  int ch;
+      ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:06:02 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:06:13 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:06:37 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:07:01 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:08:27 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+18:08:42 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:14:01 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'client':
+src/TrainController.c:155:6: warning: implicit declaration of function '_keyboardEventListener' [-Wimplicit-function-declaration]
+   if(_keyboardEventListener()){
+      ^
+src/TrainController.c:157:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+build/x86_64-debug/src/TrainController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/TrainController//src/TrainController.c:157: warning: The 'gets' function is dangerous and should not be used.
+/Users/adityaaaap/ide-7.0-workspace/TrainController//src/TrainController.c:155: undefined reference to `_keyboardEventListener'
+Makefile:60: recipe for target 'build/x86_64-debug/TrainController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrainController] Error 1
+18:14:59 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:15:22 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:16:16 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:16:21 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+18:17:22 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:17:26 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:17:31 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:18:29 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:20:04 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:22:47 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c:168:76: error: 'sic' undeclared (first use in this function)
+      ic->instruction.sourceName, ic->instruction.id, ic->instruction.data, sic->reply.buf);
+                                                                            ^
+src/TrainLine.c:168:76: note: each undeclared identifier is reported only once for each function it appears in
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainLine.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainLine.o] Error 1
+18:22:57 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+18:23:18 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+18:28:33 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:137:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:195:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+18:29:48 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:260:31: error: assignment to expression with array type
+    ic->instruction.sourceName = ic->reply.replySourceName;
+                               ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:30:18 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:202:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:30:47 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:36:04 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:140:27: error: expected expression before '{' token
+  char tempName[BUF_SIZE = {};
+                           ^
+src/TrainController.c:228:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^
+src/TrainController.c:251:1: error: expected declaration or statement at end of input
+ }
+ ^
+src/TrainController.c:139:6: warning: unused variable 'serverConnectionId' [-Wunused-variable]
+  int serverConnectionId = 0;
+      ^
+src/TrainController.c:138:22: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+                      ^
+src/TrainController.c:138:6: warning: unused variable 'messageNum' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+      ^
+src/TrainController.c:137:21: warning: unused variable 'isLiving' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+                     ^
+src/TrainController.c:137:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+      ^
+src/TrainController.c:136:22: warning: unused variable 'ic' [-Wunused-variable]
+  InstructionCommand *ic = (InstructionCommand*)data;
+                      ^
+src/TrainController.c:251:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:36:12 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:140:27: error: expected expression before '{' token
+  char tempName[BUF_SIZE = {};
+                           ^
+src/TrainController.c:228:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^
+src/TrainController.c:251:1: error: expected declaration or statement at end of input
+ }
+ ^
+src/TrainController.c:139:6: warning: unused variable 'serverConnectionId' [-Wunused-variable]
+  int serverConnectionId = 0;
+      ^
+src/TrainController.c:138:22: warning: unused variable 'stayAlive' [-Wunused-variable]
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+  int messageNum = 0, stayAlive = 0;
+                      ^
+src/TrainController.c:138:6: warning: unused variable 'messageNum' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+      ^
+src/TrainController.c:137:21: warning: unused variable 'isLiving' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+                     ^
+src/TrainController.c:137:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+      ^
+src/TrainController.c:136:22: warning: unused variable 'ic' [-Wunused-variable]
+  InstructionCommand *ic = (InstructionCommand*)data;
+                      ^
+src/TrainController.c:251:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:36:22 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:213:39: error: 'temp' undeclared (first use in this function)
+    strcpy(ic->instruction.sourceName, temp);
+                                       ^
+src/TrainController.c:213:39: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:36:54 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:37:18 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:42:10 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:140:27: error: expected expression before '{' token
+  char tempName[BUF_SIZE = {};
+                           ^
+src/TrainController.c:227:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^
+src/TrainController.c:250:1: error: expected declaration or statement at end of input
+ }
+ ^
+src/TrainController.c:139:6: warning: unused variable 'serverConnectionId' [-Wunused-variable]
+  int serverConnectionId = 0;
+      ^
+src/TrainController.c:138:22: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+                      ^
+src/TrainController.c:138:6: warning: unused variable 'messageNum' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+      ^
+src/TrainController.c:137:21: warning: unused variable 'isLiving' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+                     ^
+src/TrainController.c:137:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+      ^
+src/TrainController.c:136:22: warning: unused variable 'ic' [-Wunused-variable]
+  InstructionCommand *ic = (InstructionCommand*)data;
+                      ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+src/TrainController.c:250:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:43:34 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:140:27: error: expected expression before '{' token
+  char tempName[BUF_SIZE = {};
+                           ^
+src/TrainController.c:227:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^
+src/TrainController.c:250:1: error: expected declaration or statement at end of input
+ }
+ ^
+src/TrainController.c:139:6: warning: unused variable 'serverConnectionId' [-Wunused-variable]
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+  int serverConnectionId = 0;
+      ^
+src/TrainController.c:138:22: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+                      ^
+src/TrainController.c:138:6: warning: unused variable 'messageNum' [-Wunused-variable]
+  int messageNum = 0, stayAlive = 0;
+      ^
+src/TrainController.c:137:21: warning: unused variable 'isLiving' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+                     ^
+src/TrainController.c:137:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, isLiving = 0;
+      ^
+src/TrainController.c:136:22: warning: unused variable 'ic' [-Wunused-variable]
+  InstructionCommand *ic = (InstructionCommand*)data;
+                      ^
+src/TrainController.c:250:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+18:43:51 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:44:12 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:45:34 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:46:51 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:47:01 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:47:02 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:47:14 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:50:20 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:53:37 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:54:20 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+18:55:47 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+18:56:06 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:01:48 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:161:9: error: 'originalReplyName' undeclared (first use in this function)
+  strcpy(originalReplyName, ic->reply.replySourceName);
+         ^
+src/TrainController.c:161:9: note: each undeclared identifier is reported only once for each function it appears in
+src/TrainController.c:203:9: error: incompatible types when assigning to type 'InstructionCommand {aka struct <anonymous>}' from type 'InstructionCommand * {aka struct <anonymous> *}'
+    temp = ic;
+         ^
+src/TrainController.c:204:15: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+    strcpy(temp->instruction, ic->reply.replySourceName);
+               ^
+src/TrainController.c:206:40: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+    if(MsgSend(serverConnectionId, &temp->instruction, sizeof(temp->instruction),
+                                        ^
+src/TrainController.c:206:66: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+    if(MsgSend(serverConnectionId, &temp->instruction, sizeof(temp->instruction),
+                                                                  ^
+src/TrainController.c:207:11: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+      &temp->reply, sizeof(temp->reply)) == -1){
+           ^
+src/TrainController.c:207:31: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+      &temp->reply, sizeof(temp->reply)) == -1){
+                               ^
+src/TrainController.c:209:18: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+       sizeof(temp->instruction));
+                  ^
+src/TrainController.c:212:53: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+     printf("----> RECEIVED REPLY from %s: %s\n",temp->reply.replySourceName, temp->reply.buf);
+                                                     ^
+src/TrainController.c:212:82: error: invalid type argument of '->' (have 'InstructionCommand {aka struct <anonymous>}')
+     printf("----> RECEIVED REPLY from %s: %s\n",temp->reply.replySourceName, temp->reply.buf);
+                                                                                  ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+19:03:23 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:161:9: error: 'originalReplyName' undeclared (first use in this function)
+  strcpy(originalReplyName, ic->reply.replySourceName);
+         ^
+src/TrainController.c:161:9: note: each undeclared identifier is reported only once for each function it appears in
+src/TrainController.c:204:11: error: incompatible type for argument 1 of 'strcpy'
+    strcpy(temp->instruction, ic->reply.replySourceName);
+           ^
+In file included from src/TrainController.c:4:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'InstructionData {aka struct <anonymous>}'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+19:03:39 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:161:9: error: 'originalReplyName' undeclared (first use in this function)
+  strcpy(originalReplyName, ic->reply.replySourceName);
+         ^
+src/TrainController.c:161:9: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+19:03:50 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:04:04 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:05:39 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:06:00 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:07:33 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:08:13 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:08:55 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:10:11 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:208:36: error: 'temp' undeclared (first use in this function)
+    if(MsgSend(serverConnectionId, &temp->instruction, sizeof(temp->instruction),
+                                    ^
+src/TrainController.c:208:36: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+19:10:28 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:205:4: error: 'temp' undeclared (first use in this function)
+    temp = ic;
+    ^
+src/TrainController.c:205:4: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+19:10:36 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:13:26 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:13:27 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:14:33 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:15:50 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+19:17:31 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+19:18:22 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:135:22: warning: unused variable 'original' [-Wunused-variable]
+  InstructionCommand *original = ic;
+                      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+16:52:43 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:53:15 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+16:53:25 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:135:22: warning: unused variable 'original' [-Wunused-variable]
+  InstructionCommand *original = ic;
+                      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+16:55:46 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+13:59:57 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'resetSourceNames':
+src/TrainController.c:99:29: error: assignment to expression with array type
+  ic->instruction.sourceName = "CTC";
+                             ^
+src/TrainController.c:100:28: error: assignment to expression with array type
+  ic->reply.replySourceName = "TC";
+                            ^
+src/TrainController.c: In function 'server':
+src/TrainController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainController.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainController.o' failed
+14:00:40 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:02:35 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainController.c:221:22: warning: passing argument 1 of 'resetSourceNames' from incompatible pointer type [-Wincompatible-pointer-types]
+     resetSourceNames(&ic);
+                      ^
+src/TrainController.c:98:6: note: expected 'InstructionCommand * {aka struct <anonymous> *}' but argument is of type 'InstructionCommand ** {aka struct <anonymous> **}'
+ void resetSourceNames(InstructionCommand *ic){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:02:46 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:03:27 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:04:04 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:146:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:05:51 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:26:28 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:27:47 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:18:15 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:96:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:178:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:227:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ATTACH_POINT_X1, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:230:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:232:63: error: 'ATTACH_POITNB' undeclared (first use in this function)
+  printf("THREAD STARTING: %s server thread is starting...\n", ATTACH_POITNB)
+                                                               ^
+src/TrafficLightLocalController.c:232:63: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightLocalController.c:234:2: error: expected ';' before 'return'
+  return 0;
+  ^
+src/TrafficLightLocalController.c:225:20: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+                    ^
+src/TrafficLightLocalController.c:225:6: warning: unused variable 'isLiving' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+      ^
+src/TrafficLightLocalController.c:224:21: warning: unused variable 'messageNum' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+                     ^
+src/TrafficLightLocalController.c:224:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+      ^
+src/TrafficLightLocalController.c:235:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+21:18:29 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:96:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:178:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:227:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ATTACH_POINT_X1, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:230:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:225:20: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+                    ^
+src/TrafficLightLocalController.c:225:6: warning: unused variable 'isLiving' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+      ^
+src/TrafficLightLocalController.c:224:21: warning: unused variable 'messageNum' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+                     ^
+src/TrafficLightLocalController.c:224:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:23:40 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+/Users/adityaaaap/qnx700/target/qnx7/x86_64/lib/crt1.o: In function `_start':
+(.text+0xc1): undefined reference to `main'
+Makefile:60: recipe for target 'build/x86_64-debug/TrafficLightLocalController' failed
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/TrafficLightLocalController] Error 1
+21:23:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:177:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:226:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ic->reply.replySourceName, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:227:76: error: 'ATTACH_POINT_X1' undeclared (first use in this function)
+   printf("ERROR: Failed to compiute name_attach on ATTACH_POINT_X1: %s\n", ATTACH_POINT_X1);
+                                                                            ^
+src/TrafficLightLocalController.c:227:76: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightLocalController.c:229:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:224:20: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+                    ^
+src/TrafficLightLocalController.c:224:6: warning: unused variable 'isLiving' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+      ^
+src/TrafficLightLocalController.c:223:21: warning: unused variable 'messageNum' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+                     ^
+src/TrafficLightLocalController.c:223:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+21:24:09 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:177:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:226:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ic->reply.replySourceName, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:229:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:224:20: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+                    ^
+src/TrafficLightLocalController.c:224:6: warning: unused variable 'isLiving' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+      ^
+src/TrafficLightLocalController.c:223:21: warning: unused variable 'messageNum' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+                     ^
+src/TrafficLightLocalController.c:223:6: warning: unused variable 'receiveId' [-Wunused-variable]
+  int receiveId = 0, messageNum = 0;
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:55:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:258:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ic->reply.replySourceName, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:261:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:275:39: error: 'satyAlive' undeclared (first use in this function)
+    pulseStateMachine(ic->instruction, satyAlive, messageNum);
+                                       ^
+src/TrafficLightLocalController.c:275:39: note: each undeclared identifier is reported only once for each function it appears in
+src/TrafficLightLocalController.c:256:7: warning: unused variable 'sourceName' [-Wunused-variable]
+  char sourceName[BUF_SIZE] = {};
+       ^
+src/TrafficLightLocalController.c:255:20: warning: unused variable 'stayAlive' [-Wunused-variable]
+  int isLiving = 0, stayAlive = 0;
+                    ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrafficLightLocalController.o' failed
+make: *** [build/x86_64-debug/src/TrafficLightLocalController.o] Error 1
+21:55:49 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:258:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ic->reply.replySourceName, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:261:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:256:7: warning: unused variable 'sourceName' [-Wunused-variable]
+  char sourceName[BUF_SIZE] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:56:37 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:56:42 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:57:08 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:258:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, ic->reply.replySourceName, 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:261:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:256:7: warning: unused variable 'sourceName' [-Wunused-variable]
+  char sourceName[BUF_SIZE] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:57:32 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:258:17: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  if((ic->attach = name_attach(NULL, "L1", 0) == NULL)){
+                 ^
+src/TrafficLightLocalController.c:261:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:256:7: warning: unused variable 'sourceName' [-Wunused-variable]
+  char sourceName[BUF_SIZE] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:58:19 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:261:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c:256:7: warning: unused variable 'sourceName' [-Wunused-variable]
+  char sourceName[BUF_SIZE] = {};
+       ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:58:51 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:260:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+21:59:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:59:26 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:00:00 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:00:20 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'makeConnection':
+src/TrainLine.c:134:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  serverConnectionId = name_open(attachName, 0);
+                     ^
+src/TrainLine.c:135:27: warning: comparison between pointer and integer
+  while(serverConnectionId == -1){
+                           ^
+src/TrainLine.c:139:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   serverConnectionId = name_open(attachName, 0);
+                      ^
+src/TrainLine.c:140:25: warning: comparison between pointer and integer
+   if(serverConnectionId != -1){
+                         ^
+src/TrainLine.c: In function 'sendCommandReceivedCommand':
+src/TrainLine.c:154:3: error: break statement not within loop or switch
+   break;
+   ^
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:173:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c:215:31: warning: passing argument 1 of 'sendCommandReceivedCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+    sendCommandReceivedCommand(&ic, serverConnectionIdL1);
+                               ^
+src/TrainLine.c:146:6: note: expected 'InstructionCommand * {aka struct <anonymous> *}' but argument is of type 'InstructionCommand ** {aka struct <anonymous> **}'
+ void sendCommandReceivedCommand(InstructionCommand *ic, int serverConnectionId){
+      ^
+src/TrainLine.c:216:31: warning: passing argument 1 of 'sendCommandReceivedCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+    sendCommandReceivedCommand(&ic, serverConnectionIdL2);
+                               ^
+src/TrainLine.c:146:6: note: expected 'InstructionCommand * {aka struct <anonymous> *}' but argument is of type 'InstructionCommand ** {aka struct <anonymous> **}'
+ void sendCommandReceivedCommand(InstructionCommand *ic, int serverConnectionId){
+      ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:241:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainLine.o' failed
+make: *** [build/x86_64-debug/src/TrainLine.o] Error 1
+22:00:42 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'makeConnection':
+src/TrainLine.c:134:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  serverConnectionId = name_open(attachName, 0);
+                     ^
+src/TrainLine.c:135:27: warning: comparison between pointer and integer
+  while(serverConnectionId == -1){
+                           ^
+src/TrainLine.c:139:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   serverConnectionId = name_open(attachName, 0);
+                      ^
+src/TrainLine.c:140:25: warning: comparison between pointer and integer
+   if(serverConnectionId != -1){
+                         ^
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:172:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c:214:31: warning: passing argument 1 of 'sendCommandReceivedCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+    sendCommandReceivedCommand(&ic, serverConnectionIdL1);
+                               ^
+src/TrainLine.c:146:6: note: expected 'InstructionCommand * {aka struct <anonymous> *}' but argument is of type 'InstructionCommand ** {aka struct <anonymous> **}'
+ void sendCommandReceivedCommand(InstructionCommand *ic, int serverConnectionId){
+      ^
+src/TrainLine.c:215:31: warning: passing argument 1 of 'sendCommandReceivedCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+    sendCommandReceivedCommand(&ic, serverConnectionIdL2);
+                               ^
+src/TrainLine.c:146:6: note: expected 'InstructionCommand * {aka struct <anonymous> *}' but argument is of type 'InstructionCommand ** {aka struct <anonymous> **}'
+ void sendCommandReceivedCommand(InstructionCommand *ic, int serverConnectionId){
+      ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:240:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+22:01:48 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:03:58 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'makeConnection':
+src/TrainLine.c:134:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  serverConnectionId = name_open(attachName, 0);
+                     ^
+src/TrainLine.c:135:27: warning: comparison between pointer and integer
+  while(serverConnectionId == -1){
+                           ^
+src/TrainLine.c:139:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   serverConnectionId = name_open(attachName, 0);
+                      ^
+src/TrainLine.c:140:25: warning: comparison between pointer and integer
+   if(serverConnectionId != -1){
+                         ^
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:156:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:252:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+22:05:47 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:06:58 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:260:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+22:07:12 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'makeConnection':
+src/TrainLine.c:134:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  serverConnectionId = name_open(attachName, 0);
+                     ^
+src/TrainLine.c:135:27: warning: comparison between pointer and integer
+  while(serverConnectionId == -1){
+                           ^
+src/TrainLine.c:139:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   serverConnectionId = name_open(attachName, 0);
+                      ^
+src/TrainLine.c:140:25: warning: comparison between pointer and integer
+   if(serverConnectionId != -1){
+                         ^
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:156:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c:152:32: warning: unused variable 'serverConnectionIdL2' [-Wunused-variable]
+  int serverConnectionIdL1 = 0, serverConnectionIdL2 = 0;
+                                ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:252:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+22:07:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:09:11 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'makeConnection':
+src/TrainLine.c:134:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  serverConnectionId = name_open(attachName, 0);
+                     ^
+src/TrainLine.c:135:27: warning: comparison between pointer and integer
+  while(serverConnectionId == -1){
+                           ^
+src/TrainLine.c:139:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   serverConnectionId = name_open(attachName, 0);
+                      ^
+src/TrainLine.c:140:25: warning: comparison between pointer and integer
+   if(serverConnectionId != -1){
+                         ^
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:156:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c:152:32: warning: unused variable 'serverConnectionIdL2' [-Wunused-variable]
+  int serverConnectionIdL1 = 0, serverConnectionIdL2 = 0;
+                                ^
+src/TrainLine.c:152:6: warning: unused variable 'serverConnectionIdL1' [-Wunused-variable]
+  int serverConnectionIdL1 = 0, serverConnectionIdL2 = 0;
+      ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:252:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+22:09:49 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:197:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+22:10:09 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:10:52 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:237:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:193: warning: The 'gets' function is dangerous and should not be used.
+22:11:17 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:11:59 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+22:12:26 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:12:45 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:13:29 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:13:39 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:260:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'main':
+src/TrafficLightLocalController.c:314:26: warning: unused variable 'serverThread' [-Wunused-variable]
+  pthread_t clientThread, serverThread;
+                          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+22:15:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:15:54 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:17:43 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:18:37 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+22:20:19 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:237:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:193: warning: The 'gets' function is dangerous and should not be used.
+22:21:27 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:21:28 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+22:21:58 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:139:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:197:6: warning: unused variable 'clientId' [-Wunused-variable]
+  int clientId = rand();
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+22:22:14 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:145:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+22:22:46 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:208:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:260:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+22:23:05 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
