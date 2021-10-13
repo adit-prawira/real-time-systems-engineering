@@ -23533,3 +23533,95 @@ qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x8
 15:09:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
+20:57:35 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'sendCommandToAll':
+src/TrainLine.c:310:66: error: 'path' undeclared (first use in this function)
+  printf("THREAD TERMINATING: %s client thread is starting...\n", path);
+                                                                  ^
+src/TrainLine.c:310:66: note: each undeclared identifier is reported only once for each function it appears in
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/TrainLine.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/TrainLine.o' failed
+20:57:52 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+20:58:27 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:00:54 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:338:45: warning: unused variable 'x1ClientThread2' [-Wunused-variable]
+  pthread_t x1ServerThread, x1ClientThread1, x1ClientThread2;
+                                             ^
+src/TrainLine.c:338:28: warning: unused variable 'x1ClientThread1' [-Wunused-variable]
+  pthread_t x1ServerThread, x1ClientThread1, x1ClientThread2;
+                            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+21:03:42 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:266:12: warning: unused variable 'x1ClientThread' [-Wunused-variable]
+  pthread_t x1ClientThread;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+21:04:22 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+21:05:39 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:266:12: warning: unused variable 'x1ClientThread' [-Wunused-variable]
+  pthread_t x1ClientThread;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+21:08:12 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:256:12: warning: unused variable 'x1ClientThread' [-Wunused-variable]
+  pthread_t x1ClientThread;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+21:12:23 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:143:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrainLine.c: In function 'main':
+src/TrainLine.c:256:12: warning: unused variable 'x1ClientThread' [-Wunused-variable]
+  pthread_t x1ClientThread;
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  

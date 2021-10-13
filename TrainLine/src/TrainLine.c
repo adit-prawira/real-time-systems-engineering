@@ -19,7 +19,6 @@
 #define BUF_SIZE 100
 #define COMMAND_SIZE 2
 #define RECONNECT_INTERVAL 2
-int commandIsReady = 0;
 
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
@@ -149,11 +148,6 @@ void *server(void *data){
 	while(isLiving){
 		pthread_mutex_lock(&ic->mutex);
 
-		// wait for client threads in this file to consume the received command
-		while(commandIsReady){
-			pthread_cond_wait(&ic->condVar, &ic->mutex);
-		}
-
 		receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
 		if(receiveId == -1){
 			printf("ERROR: Failed to receive message from MsgReceive\n");
@@ -183,7 +177,6 @@ void *server(void *data){
 			printf("----> REPLYING to %s: '%s'\n", ic->instruction.sourceName, ic->reply.buf);
 			MsgReply(receiveId, EOK, &ic->reply, sizeof(ic->reply));
 			ic->dataIsReady = 0;
-			commandIsReady = 1;
 			pthread_cond_signal(&ic->condVar); // signal conditional variable
 		}else{
 			printf("\nERROR: Server received unrecognized entity, but could not handle it correctly\n");
@@ -221,11 +214,9 @@ void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
 	printf("THREAD STARTING: Transferring command key thread starting...\n");
 	while(serverConnectionId){
 		pthread_mutex_lock(&ic->mutex);
-		while(!commandIsReady){
-			pthread_cond_wait(&ic->condVar, &ic->mutex);
-		}
 		icCopy->instruction.id = clientId;
 		strcpy(icCopy->instruction.sourceName, "X1");
+		printf("\n TRANSFER DATA FROM X1 to %s of key='%c'\n", path, icCopy->instruction.data);
 		if(MsgSend(serverConnectionId, &icCopy->instruction, sizeof(icCopy->instruction),
 				&icCopy->reply, sizeof(icCopy->reply)) == -1){
 			printf("ERROR: Instruction of size %d bytes is failed to be sent\n",
@@ -234,7 +225,6 @@ void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
 		}else{
 			printf("----> RECEIVED REPLY from %s: %s\n",icCopy->reply.replySourceName, icCopy->reply.buf);
 		}
-		commandIsReady = 0; // flag that data of command received has been consumed
 		pthread_cond_signal(&ic->condVar);
 		pthread_mutex_unlock(&ic->mutex);
 	}
@@ -242,6 +232,7 @@ void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
 	name_close(serverConnectionId);
 	printf("THREAD TERMINATING: %s client thread is starting...\n", path);
 }
+
 
 // client thread to send data to L2
 void *client1(void*data){
@@ -258,10 +249,11 @@ void *client2(void*data){
 	return 0;
 }
 
+
 int main(void) {
 	InstructionCommand command;
 	pthread_t x1ServerThread, x1ClientThread1, x1ClientThread2;
-
+	pthread_t x1ClientThread;
 	char hostname[100];
 	memset(hostname, '\0', 100);
 	hostname[99] = '\n';
@@ -272,10 +264,12 @@ int main(void) {
 	InstructionCommandInit(&command, hostname, 0x44, 0x00);
 
 	pthread_create(&x1ServerThread, NULL, server, &command);
+//	pthread_create(&x1ClientThread, NULL, clientAll, &command);
 	pthread_create(&x1ClientThread1, NULL, client1, &command);
 	pthread_create(&x1ClientThread2, NULL, client2, &command);
 
 	pthread_join(x1ServerThread, NULL);
+//	pthread_join(x1ClientThread, NULL);
 	pthread_join(x1ClientThread1, NULL);
 	pthread_join(x1ClientThread2, NULL);
 
