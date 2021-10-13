@@ -18,7 +18,7 @@
 #define RECONNECT_INTERVAL 2
 #define ATTACH_POINT_TC "TC"
 #define ATTACH_POINT_X1 "/net/X1/dev/name/local/X1"
-
+int commandIsReady = 0;
 enum states {
 	state0, state1, state2, state3, state4, state5, state6
 };
@@ -85,8 +85,6 @@ typedef struct{
 	pthread_cond_t condVar;
 	name_attach_t *attach;
 	int dataIsReady;
-	int commandIsReady;
-	char targetPath[BUF_SIZE];
 }InstructionCommand;
 
 // Initialize instruction data as a reply to CTC
@@ -138,7 +136,6 @@ void *server(void *data){
 	InstructionCommand *ic = (InstructionCommand*)data;
 	int receiveId = 0, isLiving = 0;
 	int messageNum = 0, stayAlive = 0;
-	int serverConnectionId = 0;
 
 	if((ic->attach = name_attach(NULL, ATTACH_POINT_TC, 0))==NULL){
 		// if name is not attached successfully exit the program early
@@ -146,19 +143,7 @@ void *server(void *data){
 		printf("----> Another server may run the same ATTACH_POINT_TC name or GNS service has not yet started");
 		return EXIT_FAILURE;
 	}
-	// made connection to X1
-	serverConnectionId = name_open(ATTACH_POINT_X1, 0);
-	while(serverConnectionId == -1){
-		// Logs error and exit the program early if it is connection is failed to be performed
-		printf("ERROR: Unable to connect to the server with the given name of %s\n", ATTACH_POINT_X1);
-		printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", ATTACH_POINT_X1);
-		serverConnectionId = name_open(ATTACH_POINT_X1, 0);
-		if(serverConnectionId != -1){
-			break;
-		}
-		sleep(RECONNECT_INTERVAL); // attempting
-	}
-	printf("\nSUCCESS: Connected to the server %s\n", ATTACH_POINT_X1);
+
 	printf("THREAD STARTING: %s server thread is starting...\n", ATTACH_POINT_TC);
 	printf("TC Listening for CTC ATTACH_POINT_TC: %s\n", ATTACH_POINT_TC);
 
@@ -167,6 +152,9 @@ void *server(void *data){
 		pthread_mutex_lock(&ic->mutex);
 			// Awaiting for data provided by CTC to be ready
 			while(ic->dataIsReady){
+				pthread_cond_wait(&ic->condVar, &ic->mutex);
+			}
+			while(commandIsReady){
 				pthread_cond_wait(&ic->condVar, &ic->mutex);
 			}
 			// receive data from CTC
@@ -206,26 +194,9 @@ void *server(void *data){
 
 				printf("SENDING: ClientID(%d) sending command key of '%c' with %d bytes of memory size\n",
 								ic->instruction.id, ic->instruction.data, sizeof(ic->instruction));
-				printf("Source name: %s\n", ic->instruction.sourceName);
-				printf("Reply source name: %s\n", ic->reply.replySourceName);
 
-				// Make TC as source and X1 as reply
-				strcpy(ic->instruction.sourceName, "TC");
-				// Send Messages and receive reply from TC
-				if(MsgSend(serverConnectionId, &ic->instruction, sizeof(ic->instruction),
-						&ic->reply, sizeof(ic->reply)) == -1){
-					printf("ERROR: Instruction of size %d bytes is failed to be sent\n",
-							sizeof(ic->instruction));
-					break;
-				}else{
-					printf("----> RECEIVED REPLY from %s: %s\n",ic->reply.replySourceName, ic->reply.buf);
-				}
-
-				// TODO: Make sure source names are not hard coded
-				// Reset the name back to its initial state
-				strcpy(ic->instruction.sourceName, "CTC");
-				strcpy(ic->reply.replySourceName, "TC");
 				ic->dataIsReady = 0; // flags that data has been consumed
+				commandIsReady = 1;
 				pthread_cond_signal(&ic->condVar); // send signal to CTC
 			}else{
 				printf("ERROR: TC received unrecognized entity, but unable to handle it properly\n");
@@ -238,6 +209,58 @@ void *server(void *data){
 	return 0;
 }
 
+void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
+	InstructionCommand *icCopy = ic;
+	time_t secondsFromEpoch = time(NULL);
+	srand(secondsFromEpoch);
+	int clientId = rand();
+
+	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", path);
+	serverConnectionId = name_open(path, 0);
+	printf("THREAD STARTING: %s client thread is starting...\n", path);
+
+	while(serverConnectionId == -1){
+		printf("ERROR: Unable to connect to the server with the given name of %s\n", path);
+		printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", path);
+		serverConnectionId = name_open(path, 0);
+		if(serverConnectionId != -1){
+			break;
+		}
+		sleep(RECONNECT_INTERVAL); // attempting
+	}
+
+	printf("SUCCESS: Connected to the server %s\n", path);
+	printf("THREAD STARTING: Transferring command key thread starting...\n");
+	while(serverConnectionId){
+		pthread_mutex_lock(&ic->mutex);
+		while(!commandIsReady){
+			pthread_cond_wait(&ic->condVar, &ic->mutex);
+		}
+		icCopy->instruction.id = clientId;
+		strcpy(icCopy->instruction.sourceName, "X1");
+		if(MsgSend(serverConnectionId, &icCopy->instruction, sizeof(icCopy->instruction),
+				&icCopy->reply, sizeof(icCopy->reply)) == -1){
+			printf("ERROR: Instruction of size %d bytes is failed to be sent\n",
+					sizeof(icCopy->instruction));
+			break;
+		}else{
+			printf("----> RECEIVED REPLY from %s: %s\n",icCopy->reply.replySourceName, icCopy->reply.buf);
+		}
+		commandIsReady = 0;
+		pthread_cond_signal(&ic->condVar);
+		pthread_mutex_unlock(&ic->mutex);
+	}
+	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
+	name_close(serverConnectionId);
+	printf("THREAD TERMINATING: %s client thread is starting...\n", path);
+}
+
+void *client(void*data){
+	int serverConnectionId = 0;
+	InstructionCommand *ic = (InstructionCommand*)data;
+	sendCommand(ic, serverConnectionId, ATTACH_POINT_X1);
+	return 0;
+}
 
 int main(void) {
 	printf("_CustomSignalValue = %d bytes\n", sizeof(_CustomSignalValue));
@@ -248,7 +271,7 @@ int main(void) {
 	printf("InstructionCommand = %d bytes\n", sizeof(InstructionCommand));
 
 	InstructionCommand command;
-	pthread_t tcServerThread;
+	pthread_t tcServerThread, tcClientThread;
 
 	char hostname[100];
 	memset(hostname, '\0', 100);
@@ -258,7 +281,9 @@ int main(void) {
 	printf("STARTING: %s is Running...\n", hostname);
 	InstructionCommandInit(&command, hostname, 0x33, 0x00);
 	pthread_create(&tcServerThread, NULL, server, &command);
+	pthread_create(&tcClientThread, NULL, client, &command);
 	pthread_join(tcServerThread, NULL);
+	pthread_join(tcClientThread, NULL);
 	printf("TERMINATING: %s is Terminating...\n", hostname);
 
 	return EXIT_SUCCESS;

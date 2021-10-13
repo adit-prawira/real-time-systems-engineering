@@ -85,8 +85,6 @@ typedef struct{
 	pthread_cond_t condVar;
 	name_attach_t *attach;
 	int dataIsReady;
-	int commandIsReady;
-	char targetPath[BUF_SIZE];
 }InstructionCommand;
 
 // Initialize sensor data as reply to TC

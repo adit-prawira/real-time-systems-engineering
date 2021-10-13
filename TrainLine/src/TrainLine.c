@@ -190,6 +190,7 @@ void *server(void *data){
 	printf("THREAD TERMINATING: %s server terminating...\n", ATTACH_POINT_X1);
 	return 0;
 }
+
 void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
 	InstructionCommand *icCopy = ic;
 	time_t secondsFromEpoch = time(NULL);
