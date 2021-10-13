@@ -23410,3 +23410,126 @@ src/TrainController.c:144:10: warning: return makes pointer from integer without
    return EXIT_FAILURE;
           ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:50:16 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+14:51:29 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:238:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:193: warning: The 'gets' function is dangerous and should not be used.
+14:51:56 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+make: Nothing to be done for 'all'.
+14:53:38 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c:195:11: error: empty character constant
+    if(ch!='' && ch!=' '){
+           ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:238:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+cc: /Users/adityaaaap/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/CentralTrafficController.o' failed
+make: *** [build/x86_64-debug/src/CentralTrafficController.o] Error 1
+14:54:00 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:238:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:193: warning: The 'gets' function is dangerous and should not be used.
+14:54:24 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:238:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:193: warning: The 'gets' function is dangerous and should not be used.
+15:07:30 **** Incremental Build of configuration x86_64-debug for project CentralTrafficController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/CentralTrafficController.d,-MT,build/x86_64-debug/src/CentralTrafficController.o -o build/x86_64-debug/src/CentralTrafficController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/CentralTrafficController.c
+src/CentralTrafficController.c: In function 'client':
+src/CentralTrafficController.c:193:4: warning: implicit declaration of function 'gets' [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+src/CentralTrafficController.c: In function 'server':
+src/CentralTrafficController.c:239:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/CentralTrafficController   build/x86_64-debug/src/CentralTrafficController.o  
+build/x86_64-debug/src/CentralTrafficController.o: In function `client':
+/Users/adityaaaap/ide-7.0-workspace/CentralTrafficController//src/CentralTrafficController.c:193: warning: The 'gets' function is dangerous and should not be used.
+15:07:35 **** Incremental Build of configuration x86_64-debug for project TrainController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainController.d,-MT,build/x86_64-debug/src/TrainController.o -o build/x86_64-debug/src/TrainController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainController.c
+src/TrainController.c: In function 'server':
+src/TrainController.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainController   build/x86_64-debug/src/TrainController.o  
+15:07:40 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
+15:08:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrafficLightLocalController.d,-MT,build/x86_64-debug/src/TrafficLightLocalController.o -o build/x86_64-debug/src/TrafficLightLocalController.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrafficLightLocalController.c
+src/TrafficLightLocalController.c: In function 'SensorDataInit':
+src/TrafficLightLocalController.c:95:9: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  strcpy(sensor->message.trafficLight.name, hostname);
+         ^
+In file included from src/TrafficLightLocalController.c:6:0:
+/Users/adityaaaap/qnx700/target/qnx7/usr/include/string.h:77:14: note: expected 'char *' but argument is of type 'int *'
+ extern char *strcpy(char *__s1, const char *__s2);
+              ^
+src/TrafficLightLocalController.c: In function 'client':
+src/TrafficLightLocalController.c:209:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+src/TrafficLightLocalController.c: In function 'server':
+src/TrafficLightLocalController.c:261:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrafficLightLocalController   build/x86_64-debug/src/TrafficLightLocalController.o  
+15:09:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+make -j3 all 
+make: Nothing to be done for 'all'.

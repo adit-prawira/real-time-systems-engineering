@@ -263,13 +263,6 @@ void *client(void*data){
 }
 
 int main(void) {
-	printf("_CustomSignalValue = %d bytes\n", sizeof(_CustomSignalValue));
-	printf("msg_header_t = %d bytes\n", sizeof(msg_header_t));
-	printf("MessageData = %d bytes\n", sizeof(MessageData));
-	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
-	printf("SensorData = %d bytes\n", sizeof(SensorData));
-	printf("InstructionCommand = %d bytes\n", sizeof(InstructionCommand));
-
 	InstructionCommand command;
 	pthread_t tcServerThread, tcClientThread;
 
@@ -279,11 +272,15 @@ int main(void) {
 	gethostname(hostname, sizeof(hostname));
 
 	printf("STARTING: %s is Running...\n", hostname);
+
 	InstructionCommandInit(&command, hostname, 0x33, 0x00);
+
 	pthread_create(&tcServerThread, NULL, server, &command);
 	pthread_create(&tcClientThread, NULL, client, &command);
+
 	pthread_join(tcServerThread, NULL);
 	pthread_join(tcClientThread, NULL);
+
 	printf("TERMINATING: %s is Terminating...\n", hostname);
 
 	return EXIT_SUCCESS;

@@ -1,6 +1,6 @@
-13:26:35 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
+15:09:04 **** Incremental Build of configuration x86_64-debug for project TrafficLightLocalController ****
 make -j3 all 
 make: Nothing to be done for 'all'.
 
-13:26:35 Build Finished (took 78ms)
+15:09:04 Build Finished (took 72ms)
 

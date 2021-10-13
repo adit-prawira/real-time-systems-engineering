@@ -148,9 +148,12 @@ void *server(void *data){
 	isLiving = 1;
 	while(isLiving){
 		pthread_mutex_lock(&ic->mutex);
+
+		// wait for client threads in this file to consume the received command
 		while(commandIsReady){
 			pthread_cond_wait(&ic->condVar, &ic->mutex);
 		}
+
 		receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
 		if(receiveId == -1){
 			printf("ERROR: Failed to receive message from MsgReceive\n");
@@ -159,6 +162,7 @@ void *server(void *data){
 		if(receiveId == 0){
 			pulseStateMachine(ic->instruction, stayAlive, messageNum);
 		}
+
 		if(receiveId > 0){
 			messageNum++;
 			if(ic->instruction.header.type == _IO_CONNECT){
@@ -186,13 +190,15 @@ void *server(void *data){
 		}
 		pthread_mutex_unlock(&ic->mutex);
 	}
+
 	name_detach(ic->attach, 0);
 	printf("THREAD TERMINATING: %s server terminating...\n", ATTACH_POINT_X1);
 	return 0;
 }
 
+// Help function that will send message received to each corresponding path
 void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
-	InstructionCommand *icCopy = ic;
+	InstructionCommand *icCopy = ic; // create a copy of InstructionCommand instance
 	time_t secondsFromEpoch = time(NULL);
 	srand(secondsFromEpoch);
 	int clientId = rand();
@@ -228,7 +234,7 @@ void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
 		}else{
 			printf("----> RECEIVED REPLY from %s: %s\n",icCopy->reply.replySourceName, icCopy->reply.buf);
 		}
-		commandIsReady = 0;
+		commandIsReady = 0; // flag that data of command received has been consumed
 		pthread_cond_signal(&ic->condVar);
 		pthread_mutex_unlock(&ic->mutex);
 	}
@@ -237,12 +243,14 @@ void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
 	printf("THREAD TERMINATING: %s client thread is starting...\n", path);
 }
 
+// client thread to send data to L2
 void *client1(void*data){
 	int serverConnectionId = 0;
 	InstructionCommand *ic = (InstructionCommand*)data;
 	sendCommand(ic, serverConnectionId, ATTACH_POINT_L1);
 	return 0;
 }
+// client thread to send data to L2
 void *client2(void*data){
 	int serverConnectionId = 0;
 	InstructionCommand *ic = (InstructionCommand*)data;
@@ -251,13 +259,6 @@ void *client2(void*data){
 }
 
 int main(void) {
-	printf("_CustomSignalValue = %d bytes\n", sizeof(_CustomSignalValue));
-	printf("msg_header_t = %d bytes\n", sizeof(msg_header_t));
-	printf("MessageData = %d bytes\n", sizeof(MessageData));
-	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
-	printf("SensorData = %d bytes\n", sizeof(SensorData));
-	printf("InstructionCommand = %d bytes\n", sizeof(InstructionCommand));
-
 	InstructionCommand command;
 	pthread_t x1ServerThread, x1ClientThread1, x1ClientThread2;
 
@@ -267,13 +268,17 @@ int main(void) {
 	gethostname(hostname, sizeof(hostname));
 
 	printf("STARTING: %s is Running...\n", hostname);
+
 	InstructionCommandInit(&command, hostname, 0x44, 0x00);
+
 	pthread_create(&x1ServerThread, NULL, server, &command);
 	pthread_create(&x1ClientThread1, NULL, client1, &command);
 	pthread_create(&x1ClientThread2, NULL, client2, &command);
+
 	pthread_join(x1ServerThread, NULL);
 	pthread_join(x1ClientThread1, NULL);
 	pthread_join(x1ClientThread2, NULL);
+
 	printf("TERMINATING: %s is Terminating...\n", hostname);
 	return EXIT_SUCCESS;
 }

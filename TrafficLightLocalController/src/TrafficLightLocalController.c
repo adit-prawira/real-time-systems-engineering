@@ -304,28 +304,29 @@ void *server(void *data){
 	printf("THREAD TERMINATING: %s server terminating...\n", ic->reply.replySourceName);
 	return 0;
 }
-int main(int agrc, char *argv[]) {
-	printf("_CustomSignalValue = %d bytes\n", sizeof(_CustomSignalValue));
-	printf("msg_header_t = %d bytes\n", sizeof(msg_header_t));
-	printf("MessageData = %d bytes\n", sizeof(MessageData));
-	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
 
+int main(int agrc, char *argv[]) {
 	SensorData sensor;
 	InstructionCommand cmd;
 	pthread_t clientThread, serverThread;
+
 	char hostname[100];
 	time_t secondsFromEpoch = time(NULL);
 	srand(secondsFromEpoch);
 	int clientId = rand();
+
 	memset(hostname, '\0', 100);
 	hostname[99] = '\n';
 	gethostname(hostname, sizeof(hostname));
 
 	printf("STARTING: %s is Running...\n", hostname);
+
 	SensorDataInit(&sensor, 0x22, 0x00, clientId, hostname);
 	InstructionCommandInit(&cmd, hostname, 0x55, 0x00);
+
 	pthread_create(&serverThread, NULL, server, &cmd);
 	pthread_create(&clientThread, NULL, client, &sensor);
+
 	pthread_join(serverThread, NULL);
 	pthread_join(clientThread, NULL);
 

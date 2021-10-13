@@ -1,6 +1,11 @@
-14:34:37 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
+15:07:40 **** Incremental Build of configuration x86_64-debug for project TrainLine ****
 make -j3 all 
-make: Nothing to be done for 'all'.
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/TrainLine.d,-MT,build/x86_64-debug/src/TrainLine.o -o build/x86_64-debug/src/TrainLine.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/TrainLine.c
+src/TrainLine.c: In function 'server':
+src/TrainLine.c:144:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return EXIT_FAILURE;
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/TrainLine   build/x86_64-debug/src/TrainLine.o  
 
-14:34:37 Build Finished (took 84ms)
+15:07:41 Build Finished (took 285ms)
 
