@@ -85,6 +85,8 @@ typedef struct{
 	pthread_cond_t condVar;
 	name_attach_t *attach;
 	int dataIsReady;
+	int commandIsReady;
+	char targetPath[BUF_SIZE];
 }InstructionCommand;
 
 // Initialize instruction data as a reply to CTC
@@ -221,8 +223,8 @@ void *server(void *data){
 
 				// TODO: Make sure source names are not hard coded
 				// Reset the name back to its initial state
-//				strcpy(ic->instruction.sourceName, "CTC");
-//				strcpy(ic->reply.replySourceName, "TC");
+				strcpy(ic->instruction.sourceName, "CTC");
+				strcpy(ic->reply.replySourceName, "TC");
 				ic->dataIsReady = 0; // flags that data has been consumed
 				pthread_cond_signal(&ic->condVar); // send signal to CTC
 			}else{

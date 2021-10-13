@@ -1,0 +1,269 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/dispatch.h>
+#include <pthread.h>
+#include <sys/syspage.h>
+#include <unistd.h>
+#include <sys/select.h>
+#include <termios.h>
+#include <sys/ioctl.h>
+#include <stdbool.h>
+#include <time.h>
+
+#define COLOR_CODE_SIZE 2
+#define ATTACH_POINT_L1 "/net/L1/dev/name/local/L1"
+#define ATTACH_POINT_L2 "/net/L1/dev/name/local/L2"
+#define ATTACH_POINT_X1 "X1"
+#define BUF_SIZE 100
+#define COMMAND_SIZE 2
+#define RECONNECT_INTERVAL 2
+int commandIsReady = 0;
+
+enum states {
+	state0, state1, state2, state3, state4, state5, state6
+};
+
+typedef union{
+	union{
+		_Uint32t sival_int;
+		void *sival_ptr;
+	};
+	_Uint32t dummy[4];
+}_CustomSignalValue;
+
+typedef struct _CustomPulse{
+	_Uint16t type;
+	_Uint16t subtype;
+	_Int8t code;
+	_Uint8t zero[3];
+	_CustomSignalValue value;
+	_Uint8t zero2[2];
+	_Int32t serverConnectionId;
+}msg_header_t;
+
+typedef struct {
+	int name[BUF_SIZE];
+	int id;
+	int waitTime;
+	int living;
+	char message[BUF_SIZE];
+	char color[COLOR_CODE_SIZE];
+} TrafficLightSettings;
+
+typedef struct {
+	msg_header_t header;
+	TrafficLightSettings trafficLight;
+}MessageData;
+
+typedef struct {
+	msg_header_t header;
+	char buf[BUF_SIZE];
+	char replySourceName[BUF_SIZE];
+}ReplyData;
+
+typedef struct {
+	MessageData message;
+	ReplyData reply;
+	pthread_mutex_t mutex;
+	pthread_cond_t condVar;
+	name_attach_t *attach;
+	enum states currentState;
+	int dataIsReady;
+}SensorData;
+
+typedef struct {
+	msg_header_t header;
+	volatile char data;
+	int id;
+	char sourceName[BUF_SIZE];
+} InstructionData;
+
+typedef struct{
+	InstructionData instruction;
+	ReplyData reply;
+	pthread_mutex_t mutex;
+	pthread_cond_t condVar;
+	name_attach_t *attach;
+	int dataIsReady;
+	int commandIsReady;
+	char targetPath[BUF_SIZE];
+}InstructionCommand;
+
+// Initialize instruction data as a reply to TC
+void InstructionCommandInit(InstructionCommand *ic, char *hostname,_Uint16t type, _Uint16t subtype){
+	ic->reply.header.type = type;
+	ic->reply.header.subtype = subtype;
+	strcpy(ic->reply.replySourceName, hostname);
+	pthread_mutex_init(&ic->mutex, NULL);
+	pthread_cond_init(&ic->condVar, NULL);
+	ic->dataIsReady = 0;
+};
+
+// GENERIC PULSE STATE MACHINE
+void pulseStateMachine(InstructionData instruction, int stayAlive, int messageNum){
+	printf("----> CTC Received a pulse from ClientID(%d)\n", instruction.id);
+	printf("----> Received Message Header Code: %d\n", instruction.header.code);
+	switch(instruction.header.code){
+	case _PULSE_CODE_DISCONNECT:
+		printf("Pulse STATUS CODE: %d\n", _PULSE_CODE_DISCONNECT);
+		if(stayAlive == 0){
+			// if received pulse to disconnect => disconnect all its connection by running name_close
+			// for each name_open()
+			ConnectDetach(instruction.header.serverConnectionId); // pass serverConnectionId to detach
+			printf("Detaching: Server is requested to detach from ClientId(%d)\n", instruction.id);
+		}else{
+			printf("Rejected: Server is requested to detach from ClientId(%d) but rejected\n", instruction.id);
+		}
+		break;
+	case _PULSE_CODE_UNBLOCK: // receiveId associated with the blocking instruction
+		// Gives the option to reply back to the client now or later after being hit by a signal or a time out
+		printf("\nServer Received: _PULSE_CODE_UNBLOCK after %d messages\n", messageNum);
+		break;
+	case _PULSE_CODE_COIDDEATH: // Received an ID of a connection that was attached to a destroyed channel
+		printf("\nServer Received: _PULSE_CODE_COIDDEATH after %d messages\n", messageNum);
+		break;
+	case _PULSE_CODE_THREADDEATH: // Received an ID of a thread that just died
+		printf("\nServer Received: _PULSE_CODE_THREADDEATH after %d messages\n", messageNum);
+		break;
+	default:
+		printf("\nServer Received: Unrecognized pulse detected after %d messages\n", messageNum);
+		break;
+	}
+}
+
+// Server thread that will listen to TC
+void *server(void *data){
+	InstructionCommand *ic = (InstructionCommand*)data;
+	int receiveId = 0, isLiving = 0;
+	int messageNum = 0, stayAlive = 0;
+	if((ic->attach = name_attach(NULL, ATTACH_POINT_X1, 0)) == NULL){
+		printf("ERROR: Failed to compute name_attach on ATTACH_POINT_X1: %s\n", ATTACH_POINT_X1);
+		printf("----> Another server may run the same ATTACH_POINT_X1 name or GNS service has not yet started");
+		return EXIT_FAILURE;
+	}
+	printf("THREAD STARTING: %s server thread is starting...\n", ATTACH_POINT_X1);
+	printf("X1 listening for TC ATTACH_POINT_X1: %s\n", ATTACH_POINT_X1);
+	isLiving = 1;
+	while(isLiving){
+		pthread_mutex_lock(&ic->mutex);
+		while(commandIsReady){
+			pthread_cond_wait(&ic->condVar, &ic->mutex);
+		}
+		receiveId = MsgReceive(ic->attach->chid, &ic->instruction, sizeof(ic->instruction), NULL);
+		if(receiveId == -1){
+			printf("ERROR: Failed to receive message from MsgReceive\n");
+			break;
+		}
+		if(receiveId == 0){
+			pulseStateMachine(ic->instruction, stayAlive, messageNum);
+		}
+		if(receiveId > 0){
+			messageNum++;
+			if(ic->instruction.header.type == _IO_CONNECT){
+				MsgReply(receiveId, EOK, NULL, 0);
+				printf("\nClient Send Message: GNS Server is running...\n");
+				printf("\n----------> Replying with: EOK('no error')\n");
+				messageNum--;
+				continue;
+			}
+			if(ic->instruction.header.type > _IO_BASE && ic->instruction.header.type <= _IO_MAX){
+				MsgError(receiveId, ENOSYS);
+				printf("ERROR: X1 received other IO messages and reject it\n");
+				continue;
+			}
+			sprintf(ic->reply.buf, "Message number %d received", messageNum);
+			printf("X1 RECEIVED KEY COMMAND From %s(ClientID: %d) with value of %c:\n----> %s\n",
+					ic->instruction.sourceName, ic->instruction.id, ic->instruction.data, ic->reply.buf);
+			printf("----> REPLYING to %s: '%s'\n", ic->instruction.sourceName, ic->reply.buf);
+			MsgReply(receiveId, EOK, &ic->reply, sizeof(ic->reply));
+			ic->dataIsReady = 0;
+			commandIsReady = 1;
+			pthread_cond_signal(&ic->condVar); // signal conditional variable
+		}else{
+			printf("\nERROR: Server received unrecognized entity, but could not handle it correctly\n");
+		}
+		pthread_mutex_unlock(&ic->mutex);
+	}
+	name_detach(ic->attach, 0);
+	printf("THREAD TERMINATING: %s server terminating...\n", ATTACH_POINT_X1);
+	return 0;
+}
+void sendCommand(InstructionCommand *ic, int serverConnectionId, char *path){
+	InstructionCommand *icCopy = ic;
+	time_t secondsFromEpoch = time(NULL);
+	srand(secondsFromEpoch);
+	int clientId = rand();
+
+	printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", path);
+	serverConnectionId = name_open(path, 0);
+	printf("THREAD STARTING: %s client thread is starting...\n", path);
+
+	while(serverConnectionId == -1){
+		printf("ERROR: Unable to connect to the server with the given name of %s\n", path2);
+		printf("ATTEMPTING TO CONNECT: Attempting to connect to server %s\n", path2);
+		serverConnectionId = name_open(path, 0);
+		if(serverConnectionId != -1){
+			break;
+		}
+		sleep(RECONNECT_INTERVAL); // attempting
+	}
+
+	printf("SUCCESS: Connected to the server %s\n", path);
+	printf("THREAD STARTING: Transferring command key thread starting...\n");
+	while(serverConnectionId){
+		pthread_mutex_lock(&ic->mutex);
+		while(!commandIsReady){
+			pthread_cond_wait(&ic->condVar, &ic->mutex);
+		}
+		icCopy->instruction.id = clientId;
+		strcpy(icCopy->instruction.sourceName, "X1");
+		if(MsgSend(serverConnectionId, &icCopy->instruction, sizeof(icCopy->instruction),
+				&icCopy->reply, sizeof(icCopy->reply)) == -1){
+			printf("ERROR: Instruction of size %d bytes is failed to be sent\n",
+					sizeof(icCopy->instruction));
+			break;
+		}else{
+			printf("----> RECEIVED REPLY from %s: %s\n",icCopy->reply.replySourceName, icCopy->reply.buf);
+		}
+		commandIsReady = 0;
+		pthread_cond_signal(&ic->condVar);
+		pthread_mutex_unlock(&ic->mutex);
+	}
+	printf("CLOSE CONNECTION: Sending message to server of closing connection\n");
+	name_close(serverConnectionId);
+	printf("THREAD TERMINATING: %s client thread is starting...\n", path);
+}
+void *client(void*data){
+	int serverConnectionId = 0;
+	char path[BUF_SIZE] = {}, path2[BUF_SIZE] = {};
+	strcpy(path, ATTACH_POINT_L1);
+
+	return 0;
+}
+int main(void) {
+	printf("_CustomSignalValue = %d bytes\n", sizeof(_CustomSignalValue));
+	printf("msg_header_t = %d bytes\n", sizeof(msg_header_t));
+	printf("MessageData = %d bytes\n", sizeof(MessageData));
+	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
+	printf("SensorData = %d bytes\n", sizeof(SensorData));
+	printf("InstructionCommand = %d bytes\n", sizeof(InstructionCommand));
+
+	InstructionCommand command, commandToSend;
+	pthread_t x1ServerThread, x1ClientThread;
+
+	char hostname[100];
+	memset(hostname, '\0', 100);
+	hostname[99] = '\n';
+	gethostname(hostname, sizeof(hostname));
+
+	printf("STARTING: %s is Running...\n", hostname);
+	InstructionCommandInit(&command, hostname, 0x44, 0x00);
+	pthread_create(&x1ServerThread, NULL, server, &command);
+	pthread_create(&x1ClientThread, NULL, client, &command);
+	pthread_join(x1ServerThread, NULL);
+	pthread_join(x1ClientThread, NULL);
+	printf("TERMINATING: %s is Terminating...\n", hostname);
+	return EXIT_SUCCESS;
+}

@@ -84,6 +84,8 @@ typedef struct{
 	pthread_cond_t condVar;
 	name_attach_t *attach;
 	int dataIsReady;
+	int commandIsReady;
+	char targetPath[BUF_SIZE];
 }InstructionCommand;
 
 // Initialize sensor data struct
@@ -192,6 +194,7 @@ void pulseStateMachine(InstructionData instruction, int stayAlive, int messageNu
 		break;
 	}
 }
+
 // Client thread which will send the current state and settings of traffic light to be displayed
 // on CTC monitor
 void *client(void *data){
@@ -310,8 +313,8 @@ int main(int agrc, char *argv[]) {
 	printf("ReplyData = %d bytes\n", sizeof(ReplyData));
 
 	SensorData sensor;
-//	InstructionCommand cmd;
-	pthread_t clientThread;//, serverThread;
+	InstructionCommand cmd;
+	pthread_t clientThread, serverThread;
 	char hostname[100];
 	time_t secondsFromEpoch = time(NULL);
 	srand(secondsFromEpoch);
@@ -322,10 +325,10 @@ int main(int agrc, char *argv[]) {
 
 	printf("STARTING: %s is Running...\n", hostname);
 	SensorDataInit(&sensor, 0x22, 0x00, clientId, hostname);
-//	InstructionCommandInit(&cmd, hostname, 0x55, 0x00);
-//	pthread_create(&serverThread, NULL, server, &cmd);
+	InstructionCommandInit(&cmd, hostname, 0x55, 0x00);
+	pthread_create(&serverThread, NULL, server, &cmd);
 	pthread_create(&clientThread, NULL, client, &sensor);
-//	pthread_join(serverThread, NULL);
+	pthread_join(serverThread, NULL);
 	pthread_join(clientThread, NULL);
 
 	printf("TERMINATING: %s is Terminating...\n", hostname);
